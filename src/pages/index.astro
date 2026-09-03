@@ -9,7 +9,7 @@ import Pricing from '../components/Pricing.astro';
 import FAQ from '../components/FAQ.astro';
 import DownloadCta from '../components/DownloadCta.astro';
 import Footer from '../components/Footer.astro';
-import { site, faqs } from '../data/site';
+import { site, faqs, howItWorks } from '../data/site';
 
 const title = `${site.name} — ${site.tagline}`;
 
@@ -47,6 +47,17 @@ const jsonLd = [
         '@type': 'Answer',
         text: faq.answer,
       },
+    })),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'Cách Thuốc ơi tạo lịch nhắc uống thuốc từ ảnh đơn thuốc',
+    step: howItWorks.map((item) => ({
+      '@type': 'HowToStep',
+      position: Number(item.step),
+      name: item.title,
+      text: item.body,
     })),
   },
 ];
