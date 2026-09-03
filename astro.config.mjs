@@ -2,8 +2,7 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 
-// TODO: thay bằng domain thật khi có (ảnh hưởng canonical URL, sitemap, OG url).
-const SITE_URL = "https://thuocoi.app";
+const SITE_URL = "https://thuocoi.com";
 
 // GitHub Pages là bản xem thử tạm thời trước khi có domain thật (Cloudflare Pages).
 // Repo là project page (không phải <user>.github.io) nên phải phục vụ dưới đường dẫn con

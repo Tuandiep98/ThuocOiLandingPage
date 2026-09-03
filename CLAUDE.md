@@ -31,6 +31,7 @@ There are no automated tests in this repo (no test framework installed) — `ast
 **Design tokens live in `src/styles/global.css`** as CSS custom properties (`--pine`, `--leaf`, `--amber`, `--paper`, the `--fs-*` type scale, `--space-*`). Component `<style>` blocks are Astro-scoped (auto-hashed), so styling a new component should reference the tokens rather than hardcoding colors/sizes. Fonts (`Baloo 2` for display/headings, `Be Vietnam Pro` for body) are self-hosted via `@fontsource/*` imports in `global.css`, not loaded from Google Fonts CDN — both packages ship Vietnamese-subset glyphs, which matters since this site is Vietnamese-only (`lang="vi"`, no i18n routing).
 
 **SEO/AI-crawler surface is spread across a few specific files** — when changing site-wide metadata, all of these may need updating together:
+
 - `src/layouts/BaseLayout.astro` — `<head>`: title/description/canonical, OG/Twitter tags, favicon links, and renders a `jsonLd` prop (array of schema.org objects) as `<script type="application/ld+json">` blocks.
 - `src/pages/index.astro` — builds the actual `jsonLd` array (`MobileApplication` + `FAQPage`, the latter generated from `faqs` in `site.ts` so the visible FAQ text and the structured data can't drift apart).
 - `public/robots.txt`, `public/llms.txt` — llms.txt is the emerging AI-crawler convention (Markdown summary of what the product is/does/costs); keep it in sync with `site.ts` facts, don't let it drift into marketing copy.
@@ -43,8 +44,7 @@ There are no automated tests in this repo (no test framework installed) — `ast
 
 ## Known placeholders to resolve before shipping
 
-- `SITE_URL` in `astro.config.mjs` and the `Sitemap:` line in `public/robots.txt` are both hardcoded to `https://thuocoi.app` — update both together once a real domain is chosen.
 - Privacy/terms: the footer (`legalLinks` in `src/data/site.ts`) links out to the app's real legal pages at `tuandiep98.github.io/ThuocOiPublicPage/#/privacy?lang=vi` and `#/terms?lang=vi` rather than reproducing that text here — that site fetches the current version live from Supabase (see its own `src/lib/legal-documents.ts`), so copying the markdown into this repo would go stale. Keep linking out; don't inline legal copy.
 - Pro/Family plan prices in `plans` (`src/data/site.ts`) show "Xem giá trong ứng dụng" (see price in-app) rather than a number, since the source README does not list actual VND/USD prices — fill in real prices there if/when available instead of guessing.
-- No hosting/deploy target is configured yet (no `vercel.json`/Cloudflare Pages config/GitHub Actions deploy workflow) — this repo only builds to `dist/` locally so far.
+- GitHub Pages (`.github/workflows/deploy-github-pages.yml`) auto-deploys `main` to `tuandiep98.github.io/ThuocOiLandingPage/` as a temporary preview. Production hosting is Cloudflare Pages (connected via their dashboard to this repo's `main` branch, build command `npm run build`, output `dist` — no in-repo config file needed), serving the real domain `thuocoi.com`.
 - `jsonLd` in `src/pages/index.astro` (`MobileApplication`) intentionally has no `aggregateRating`/`review` — the App Store listing (checked via the public iTunes lookup API, `id6804452525`) has 0 ratings as of the app's 2026-08-31 release. Google requires one of those two fields for the rich-result star rating; add a real `aggregateRating` once the app has genuine reviews — never fabricate one.

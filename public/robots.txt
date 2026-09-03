@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://thuocoi.app/sitemap-index.xml
+Sitemap: https://thuocoi.com/sitemap-index.xml
