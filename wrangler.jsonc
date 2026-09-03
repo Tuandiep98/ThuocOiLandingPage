@@ -1,0 +1,11 @@
+{
+  // Trang tĩnh hoàn toàn (Astro output: "static") — khai báo sẵn để Cloudflare deploy
+  // thẳng thư mục dist/ dạng Workers Static Assets, không tự chạy "astro add cloudflare"
+  // (adapter SSR đó đang lỗi với Astro 7.x: MISSING_EXPORT renderForPrerender).
+  "name": "thuocoilandingpage",
+  "compatibility_date": "2026-09-03",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page",
+  },
+}
