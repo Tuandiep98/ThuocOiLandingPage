@@ -13,7 +13,11 @@ export const site = {
 
 export const storeLinks = {
   appStore: 'https://apps.apple.com/us/app/thu%E1%BB%91c-%C6%A1i/id6804452525',
+  // Số ID App Store thuần (không phải bundle ID) — dùng cho thẻ meta Smart App Banner của Safari.
+  appStoreId: '6804452525',
   googlePlay: 'https://play.google.com/store/apps/details?id=com.tuandiep.thuocoi',
+  // Package name Android — dùng cho thẻ meta google-play-app (banner tương đương trên Chrome/Android).
+  androidPackageId: 'com.tuandiep.thuocoi',
 };
 
 // Trang pháp lý chính thức (nguồn dữ liệu sống — không copy nội dung vào đây để tránh lệch phiên bản).

@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Không tìm thấy trang — Thuốc ơi" description="Trang bạn tìm không tồn tại hoặc đã được chuyển.">
+  <Header />
+  <main id="noi-dung-chinh">
+    <section class="section">
+      <div class="wrap not-found">
+        <h1>Không tìm thấy trang này</h1>
+        <p>Có thể đường dẫn đã đổi hoặc gõ chưa đúng. Quay lại trang chủ để xem thông tin về Thuốc ơi.</p>
+        <a class="btn btn-primary" href={import.meta.env.BASE_URL}>Về trang chủ</a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .not-found {
+    text-align: center;
+    padding-block: var(--space-6);
+    max-width: 32rem;
+  }
+
+  .not-found p {
+    margin-top: var(--space-2);
+    color: var(--ink-soft);
+    font-size: var(--fs-lead);
+  }
+
+  .not-found .btn {
+    margin-top: var(--space-4);
+  }
+</style>
