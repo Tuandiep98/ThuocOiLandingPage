@@ -25,10 +25,11 @@ Vào repo trên GitHub → **Settings** → **Pages** → mục **Build and depl
 - `SITE_URL` (`astro.config.mjs`), dòng `Sitemap:` (`public/robots.txt`), và `site.url` (`src/data/site.ts`) đã cập nhật sang `https://thuocoi.com`.
 - Google Search Console: property `thuocoi.com` đã verify (DNS TXT), đã Request Indexing cho trang chủ. Submit sitemap thủ công (`sitemap-index.xml`) đang báo lỗi "Invalid sitemap address" — nhiều khả năng do cache cũ từ lúc domain mới mua chưa sẵn sàng, thử lại sau vài giờ; không chặn indexing vì Google vẫn tự đọc dòng `Sitemap:` trong `robots.txt`.
 
+- Bing Webmaster Tools: đã verify (import từ Google Search Console) và đã submit sitemap.
+
 Còn lại:
 
-- Bing Webmaster Tools: chưa làm — thêm site, verify (có thể import từ Google Search Console), submit sitemap.
-- Thử submit lại sitemap trên Google Search Console sau khi cache hết hạn.
+- Thử submit lại sitemap trên Google Search Console sau khi cache hết hạn (lỗi "Invalid sitemap address" tạm thời, không chặn indexing).
 
 ## Giai đoạn 3 — Việc để dành, chưa cần gấp
 
