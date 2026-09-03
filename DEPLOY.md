@@ -23,13 +23,10 @@ Vào repo trên GitHub → **Settings** → **Pages** → mục **Build and depl
 - **Trục trặc gặp phải**: lần build đầu tiên fail — Cloudflare tự chạy `astro add cloudflare` (cài adapter SSR) vì không thấy sẵn file cấu hình wrangler, và bản adapter đó lỗi với Astro 7.2.10 (`MISSING_EXPORT renderForPrerender`). Fix: thêm `wrangler.jsonc` vào repo khai báo thẳng `assets.directory: "./dist"` (không adapter, không binding) — Cloudflare không cần tự đoán cấu hình nữa, deploy thẳng `dist/` tĩnh. Xem chi tiết trong `CLAUDE.md` mục Deployment.
 - Domain `thuocoi.com` + `www.thuocoi.com` đã gắn vào Worker qua **Settings → Domains & Routes**, toggle Production đã bật, DNS + SSL hoạt động — đã xác nhận `https://thuocoi.com` trả về đúng nội dung trang.
 - `SITE_URL` (`astro.config.mjs`), dòng `Sitemap:` (`public/robots.txt`), và `site.url` (`src/data/site.ts`) đã cập nhật sang `https://thuocoi.com`.
-- Google Search Console: property `thuocoi.com` đã verify (DNS TXT), đã Request Indexing cho trang chủ. Submit sitemap thủ công (`sitemap-index.xml`) đang báo lỗi "Invalid sitemap address" — nhiều khả năng do cache cũ từ lúc domain mới mua chưa sẵn sàng, thử lại sau vài giờ; không chặn indexing vì Google vẫn tự đọc dòng `Sitemap:` trong `robots.txt`.
+- Google Search Console: property `thuocoi.com` đã verify (DNS TXT), đã Request Indexing cho trang chủ, sitemap submit thành công (Status: Success — lỗi "Invalid sitemap address" lúc đầu chỉ là cache tạm thời từ lúc domain mới mua, tự hết sau khi thử lại).
+- Bing Webmaster Tools: đã verify (import từ Google Search Console) và đã submit sitemap thành công (Status: Success).
 
-- Bing Webmaster Tools: đã verify (import từ Google Search Console) và đã submit sitemap.
-
-Còn lại:
-
-- Thử submit lại sitemap trên Google Search Console sau khi cache hết hạn (lỗi "Invalid sitemap address" tạm thời, không chặn indexing).
+Giai đoạn 2 đã hoàn tất toàn bộ.
 
 ## Giai đoạn 3 — Việc để dành, chưa cần gấp
 
