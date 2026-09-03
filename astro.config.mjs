@@ -14,7 +14,7 @@ const isGithubPagesBuild = process.env.GITHUB_PAGES === 'true';
 // https://astro.build/config
 export default defineConfig({
   site: SITE_URL,
-  base: isGithubPagesBuild ? '/ThuocOiLandingPage' : '/',
+  base: isGithubPagesBuild ? '/ThuocOiLandingPage/' : '/',
   integrations: [sitemap()],
   compressHTML: true,
   build: {
