@@ -1,11 +1,9 @@
 /* Fonts: tự host qua @fontsource — không gọi CDN ngoài, kiểm soát được subset tiếng Việt */
-@import '@fontsource/baloo-2/600.css';
-@import '@fontsource/baloo-2/700.css';
-@import '@fontsource/baloo-2/800.css';
-@import '@fontsource/be-vietnam-pro/400.css';
-@import '@fontsource/be-vietnam-pro/500.css';
-@import '@fontsource/be-vietnam-pro/600.css';
-@import '@fontsource/be-vietnam-pro/700.css';
+@import "@fontsource/baloo-2/700.css";
+@import "@fontsource/baloo-2/800.css";
+@import "@fontsource/be-vietnam-pro/400.css";
+@import "@fontsource/be-vietnam-pro/600.css";
+@import "@fontsource/be-vietnam-pro/700.css";
 
 :root {
   /* Màu thương hiệu — lấy từ icon & ảnh chụp màn hình thật của ứng dụng Thuốc ơi */
@@ -23,8 +21,8 @@
   --line: #dbe8dc;
   --line-strong: #b9d2bd;
 
-  --font-display: 'Baloo 2', 'Be Vietnam Pro', sans-serif;
-  --font-body: 'Be Vietnam Pro', system-ui, sans-serif;
+  --font-display: "Baloo 2", "Be Vietnam Pro", sans-serif;
+  --font-body: "Be Vietnam Pro", system-ui, sans-serif;
 
   --fs-body: 1.125rem;
   --fs-small: 0.9375rem;
@@ -45,7 +43,8 @@
   --radius-lg: 2rem;
   --radius-pill: 999px;
 
-  --shadow-soft: 0 1px 2px rgba(14, 59, 46, 0.06), 0 12px 28px -14px rgba(14, 59, 46, 0.22);
+  --shadow-soft:
+    0 1px 2px rgba(14, 59, 46, 0.06), 0 12px 28px -14px rgba(14, 59, 46, 0.22);
 
   --content-width: 72rem;
 
@@ -163,7 +162,10 @@ button {
   cursor: pointer;
   text-decoration: none;
   line-height: 1.2;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background-color 0.15s ease;
 }
 
 .btn:hover {
