@@ -16,26 +16,19 @@ Vào repo trên GitHub → **Settings** → **Pages** → mục **Build and depl
 - Favicon/manifest icon dùng đường dẫn tuyệt đối tĩnh trong `public/site.webmanifest` nên trên GitHub Pages có thể lệch — không ảnh hưởng nội dung trang.
 - `robots.txt`/sitemap vẫn khai domain thật — không sao vì bản này không cần Google lập chỉ mục.
 
-## Giai đoạn 2 — Domain + hosting chính thức (Cloudflare)
+## Giai đoạn 2 — Domain + hosting chính thức (Cloudflare) — Đã xong
 
-Việc bạn tự làm (cần tài khoản + thanh toán của bạn):
+- Domain `thuocoi.com` mua qua Cloudflare Registrar.
+- Hosting: **Cloudflare Workers (Static Assets)**, project tên `thuocoilandingpage` — **không phải "Pages" cổ điển** như dự tính ban đầu, vì luồng "Connect to Git" hiện tại của Cloudflare tạo Worker thay vì Pages project cho Astro. Connect qua dashboard tới repo `Tuandiep98/ThuocOiLandingPage`, nhánh `main`, build command `npm run build`, output `dist`.
+- **Trục trặc gặp phải**: lần build đầu tiên fail — Cloudflare tự chạy `astro add cloudflare` (cài adapter SSR) vì không thấy sẵn file cấu hình wrangler, và bản adapter đó lỗi với Astro 7.2.10 (`MISSING_EXPORT renderForPrerender`). Fix: thêm `wrangler.jsonc` vào repo khai báo thẳng `assets.directory: "./dist"` (không adapter, không binding) — Cloudflare không cần tự đoán cấu hình nữa, deploy thẳng `dist/` tĩnh. Xem chi tiết trong `CLAUDE.md` mục Deployment.
+- Domain `thuocoi.com` + `www.thuocoi.com` đã gắn vào Worker qua **Settings → Domains & Routes**, toggle Production đã bật, DNS + SSL hoạt động — đã xác nhận `https://thuocoi.com` trả về đúng nội dung trang.
+- `SITE_URL` (`astro.config.mjs`), dòng `Sitemap:` (`public/robots.txt`), và `site.url` (`src/data/site.ts`) đã cập nhật sang `https://thuocoi.com`.
+- Google Search Console: property `thuocoi.com` đã verify (DNS TXT), đã Request Indexing cho trang chủ. Submit sitemap thủ công (`sitemap-index.xml`) đang báo lỗi "Invalid sitemap address" — nhiều khả năng do cache cũ từ lúc domain mới mua chưa sẵn sàng, thử lại sau vài giờ; không chặn indexing vì Google vẫn tự đọc dòng `Sitemap:` trong `robots.txt`.
 
-1. ~~Tạo tài khoản tại dash.cloudflare.com (nếu chưa có).~~
-2. ~~**Domain Registration → Register a Domain** → mua domain.~~ **Xong — domain là `thuocoi.com`.**
-3. **Workers & Pages → Create → Pages → Connect to Git** → chọn repo `Tuandiep98/ThuocOiLandingPage`, nhánh `main`.
-   - Framework preset: **Astro**
-   - Build command: `npm run build`
-   - Build output directory: `dist`
-4. Sau khi deploy lần đầu thành công → tab **Custom domains** trong project Pages → thêm `thuocoi.com` (DNS + SSL tự nối vì cùng tài khoản).
+Còn lại:
 
-Việc tôi đã làm sau khi bạn báo đã mua domain:
-
-- Cập nhật `SITE_URL` trong `astro.config.mjs`, dòng `Sitemap:` trong `public/robots.txt`, và `site.url` trong `src/data/site.ts` sang `https://thuocoi.com`.
-- Build, kiểm tra, commit — nếu bước 3-4 đã xong thì push lên `main` để Cloudflare tự deploy lại.
-
-Còn lại (sau khi bước 3-4 xong):
-
-- Hướng dẫn khai báo Google Search Console + Bing Webmaster Tools, submit sitemap.
+- Bing Webmaster Tools: chưa làm — thêm site, verify (có thể import từ Google Search Console), submit sitemap.
+- Thử submit lại sitemap trên Google Search Console sau khi cache hết hạn.
 
 ## Giai đoạn 3 — Việc để dành, chưa cần gấp
 

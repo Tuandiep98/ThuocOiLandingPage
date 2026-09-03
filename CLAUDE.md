@@ -42,9 +42,14 @@ There are no automated tests in this repo (no test framework installed) — `ast
 
 **Heading hierarchy is intentionally exactly one `<h1>` (hero) → four `<h2>`s (one per major section: How it works, Features, Pricing, FAQ) → `<h3>`s for repeated items within each (steps/features/plans/FAQ questions).** This is deliberate for SEO/AI-parsing, not incidental — preserve it when adding sections rather than reaching for `<h4>`/skipping levels or using non-heading tags for section titles.
 
+## Deployment
+
+Production is **Cloudflare Workers Static Assets** (not classic Cloudflare Pages), serving the real domain `thuocoi.com` — connected via the Cloudflare dashboard to this repo's `main` branch (build command `npm run build`, output `dist`). `wrangler.jsonc` at the repo root declares `assets.directory: "./dist"` with no adapter and no bindings; it exists specifically so Cloudflare's Git-connected build doesn't auto-run `astro add cloudflare` (its framework auto-config for Astro), which installs the `@astrojs/cloudflare` SSR adapter — unneeded since this site is fully static (`output: "static"`), and at the time this was set up, broken against Astro 7.x (`MISSING_EXPORT renderForPrerender`). Don't remove `wrangler.jsonc` or let it drift into declaring an adapter/bindings unless the site actually gains a server-rendered route.
+
+`.github/workflows/deploy-github-pages.yml` separately auto-deploys `main` to `tuandiep98.github.io/ThuocOiLandingPage/` as a secondary preview (GitHub Pages, `base: /ThuocOiLandingPage/`) — this runs in parallel with Cloudflare and isn't the production target.
+
 ## Known placeholders to resolve before shipping
 
 - Privacy/terms: the footer (`legalLinks` in `src/data/site.ts`) links out to the app's real legal pages at `tuandiep98.github.io/ThuocOiPublicPage/#/privacy?lang=vi` and `#/terms?lang=vi` rather than reproducing that text here — that site fetches the current version live from Supabase (see its own `src/lib/legal-documents.ts`), so copying the markdown into this repo would go stale. Keep linking out; don't inline legal copy.
 - Pro/Family plan prices in `plans` (`src/data/site.ts`) show "Xem giá trong ứng dụng" (see price in-app) rather than a number, since the source README does not list actual VND/USD prices — fill in real prices there if/when available instead of guessing.
-- GitHub Pages (`.github/workflows/deploy-github-pages.yml`) auto-deploys `main` to `tuandiep98.github.io/ThuocOiLandingPage/` as a temporary preview. Production hosting is Cloudflare Pages (connected via their dashboard to this repo's `main` branch, build command `npm run build`, output `dist` — no in-repo config file needed), serving the real domain `thuocoi.com`.
 - `jsonLd` in `src/pages/index.astro` (`MobileApplication`) intentionally has no `aggregateRating`/`review` — the App Store listing (checked via the public iTunes lookup API, `id6804452525`) has 0 ratings as of the app's 2026-08-31 release. Google requires one of those two fields for the rich-result star rating; add a real `aggregateRating` once the app has genuine reviews — never fabricate one.
