@@ -1,0 +1,85 @@
+---
+import { Image } from 'astro:assets';
+import icon from '../assets/brand/icon_light.png';
+import { site, legalLinks } from '../data/site';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="top-row">
+      <div class="brand">
+        <Image src={icon} alt="" width={32} height={32} class="icon" />
+        <span>{site.name}</span>
+      </div>
+      <nav class="legal-links" aria-label="Pháp lý">
+        <a href={legalLinks.privacy}>Chính sách quyền riêng tư</a>
+        <a href={legalLinks.terms}>Điều khoản sử dụng</a>
+      </nav>
+    </div>
+    <p class="disclaimer">
+      Thuốc ơi hỗ trợ lên lịch uống thuốc, không thay thế tư vấn, chẩn đoán hay điều trị của bác sĩ hoặc dược sĩ.
+    </p>
+    <p class="copyright">© {year} {site.name}.</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid var(--line);
+    padding-block: var(--space-4);
+    background: var(--paper-raised);
+  }
+
+  .footer-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .top-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2);
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--pine);
+  }
+
+  .icon {
+    border-radius: 7px;
+  }
+
+  .legal-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+
+  .legal-links a {
+    color: var(--ink-soft);
+    font-size: var(--fs-small);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line-strong);
+  }
+
+  .legal-links a:hover {
+    color: var(--pine);
+    border-color: var(--pine);
+  }
+
+  .disclaimer,
+  .copyright {
+    color: var(--ink-soft);
+    font-size: var(--fs-small);
+  }
+</style>

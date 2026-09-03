@@ -1,0 +1,23 @@
+# Thuốc ơi
+
+> Ứng dụng di động (iOS, Android) hỗ trợ lên lịch uống thuốc thông minh: chụp/quét đơn thuốc, AI đọc và trích xuất thông tin thuốc, tự sinh lịch nhắc theo buổi, rồi nhắc đúng giờ bằng thông báo/báo thức trên điện thoại. Hướng tới người dùng Việt Nam, gồm cả người chăm sóc đang quản lý thuốc cho cha mẹ lớn tuổi.
+
+## Sản phẩm là gì
+
+- Chụp hoặc tải lên tối đa 5 ảnh đơn thuốc (hoặc tệp PDF); AI đọc chữ, nhận diện bác sĩ/chẩn đoán/danh sách thuốc, rồi sinh lịch nhắc theo buổi sáng/trưa/chiều/tối/trước khi ngủ.
+- Người dùng luôn xem lại và xác nhận thông tin trước khi lịch nhắc được tạo; đoạn đọc không chắc chắn được đánh dấu rõ.
+- Có thể dùng hoàn toàn không cần AI: nhập tay tên thuốc, liều dùng, giờ uống.
+- Nhắc thuốc qua thông báo ngay trên điện thoại, không cần mạng; trên iOS 26 trở lên có thể bật báo thức riêng để vẫn kêu khi máy đang im lặng hoặc ở chế độ Tập trung.
+- Hỗ trợ chia sẻ trong nhóm Gia đình (mời bằng mã QR dùng một lần) để theo dõi đơn thuốc và tiến trình uống thuốc của người thân.
+- Không đặt quảng cáo trong ứng dụng; không dùng dữ liệu sức khoẻ để nhắm mục tiêu quảng cáo.
+- Thuốc ơi không thay thế tư vấn, chẩn đoán hoặc điều trị của bác sĩ hay dược sĩ.
+
+## Mô hình giá (freemium)
+
+- Miễn phí: nhập thuốc thủ công, nhắc thuốc, lịch sử cho bản thân không giới hạn; tối đa 3 lượt quét đơn bằng AI mỗi tháng.
+- Pro: tối đa 30 lượt quét đơn bằng AI mỗi tháng; nhóm gia đình tối đa 2 thành viên.
+- Gia đình: tối đa 5 thành viên, 150 lượt quét đơn bằng AI mỗi tháng dùng chung cho cả nhóm.
+
+## Trang
+
+- [Trang chủ](/): tổng quan tính năng, cách hoạt động, bảng giá, câu hỏi thường gặp.

@@ -1,0 +1,85 @@
+---
+import { faqs } from '../data/site';
+---
+
+<section class="section" id="cau-hoi" aria-labelledby="faq-heading">
+  <div class="wrap narrow">
+    <div class="section-head">
+      <h2 id="faq-heading">Câu hỏi thường gặp</h2>
+    </div>
+
+    <div class="list">
+      {
+        faqs.map((faq, index) => (
+          <details class="item" open={index === 0}>
+            <summary>
+              <h3>{faq.question}</h3>
+              <span class="chevron" aria-hidden="true" />
+            </summary>
+            <p>{faq.answer}</p>
+          </details>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .narrow {
+    max-width: 48rem;
+  }
+
+  .list {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .item {
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    background: var(--paper-raised);
+    padding: 1.1rem 1.3rem;
+  }
+
+  .item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2);
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .item summary h3 {
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: var(--pine);
+  }
+
+  .chevron {
+    flex-shrink: 0;
+    width: 1.1rem;
+    height: 1.1rem;
+    border-right: 2px solid var(--leaf-deep);
+    border-bottom: 2px solid var(--leaf-deep);
+    transform: rotate(45deg);
+    transition: transform 0.2s ease;
+    margin-top: -0.3rem;
+  }
+
+  .item[open] .chevron {
+    transform: rotate(-135deg);
+    margin-top: 0.3rem;
+  }
+
+  .item p {
+    margin-top: 0.75rem;
+    color: var(--ink-soft);
+    max-width: 42rem;
+  }
+</style>

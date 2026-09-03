@@ -1,0 +1,123 @@
+---
+import { Image } from 'astro:assets';
+import heroShot from '../assets/brand/screenshot_iphone_06.png';
+import { storeLinks } from '../data/site';
+---
+
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="copy">
+      <h1>Một tấm ảnh đơn thuốc, cả nhà biết khi nào uống thuốc</h1>
+      <p class="lead">
+        Thuốc ơi đọc đơn thuốc bằng AI, tự xếp lịch nhắc theo từng buổi sáng, trưa, tối và
+        nhắc đúng giờ — kể cả khi điện thoại đang im lặng.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href={storeLinks.appStore}>Tải trên App Store</a>
+        <a class="btn btn-ghost" href={storeLinks.googlePlay}>Tải trên Google Play</a>
+      </div>
+      <p class="fineprint">
+        Miễn phí nhập thuốc thủ công và nhắc thuốc không giới hạn. Không quảng cáo.
+      </p>
+    </div>
+
+    <div class="art" aria-hidden="false">
+      <div class="art-panel">
+        <Image
+          src={heroShot}
+          alt="Màn hình chính ứng dụng Thuốc ơi trên iPhone, hiển thị nhóm gia đình và các lời nhắc uống thuốc trong ngày hôm nay"
+          widths={[320, 480, 645]}
+          sizes="(min-width: 64rem) 28rem, 80vw"
+          loading="eager"
+          fetchpriority="high"
+          class="phone"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding-block: var(--space-5) var(--space-6);
+    overflow: hidden;
+  }
+
+  .hero-grid {
+    display: grid;
+    gap: var(--space-5);
+    align-items: center;
+  }
+
+  .copy h1 {
+    font-size: var(--fs-h1);
+  }
+
+  .lead {
+    margin-top: var(--space-3);
+    font-size: var(--fs-lead);
+    color: var(--ink-soft);
+    max-width: 34rem;
+  }
+
+  .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: var(--space-4);
+  }
+
+  .fineprint {
+    margin-top: var(--space-2);
+    font-size: var(--fs-small);
+    color: var(--ink-soft);
+  }
+
+  .art {
+    display: flex;
+    justify-content: center;
+  }
+
+  .art-panel {
+    position: relative;
+    width: 100%;
+    max-width: 26rem;
+    background: linear-gradient(165deg, var(--pine) 0%, #0a2820 100%);
+    border-radius: var(--radius-lg);
+    padding: var(--space-3);
+    display: flex;
+    justify-content: center;
+    isolation: isolate;
+    overflow: hidden;
+  }
+
+  .art-panel::before {
+    content: '';
+    position: absolute;
+    width: 16rem;
+    height: 16rem;
+    background: var(--leaf);
+    opacity: 0.25;
+    border-radius: 50%;
+    top: -6rem;
+    right: -5rem;
+    z-index: -1;
+  }
+
+  .phone {
+    width: 100%;
+    max-width: 20rem;
+    height: auto;
+    border-radius: 1.25rem;
+  }
+
+  @media (min-width: 64rem) {
+    .hero-grid {
+      grid-template-columns: 1.1fr 0.9fr;
+    }
+
+    .art {
+      justify-content: flex-end;
+    }
+  }
+</style>

@@ -1,0 +1,88 @@
+---
+import { howItWorks } from '../data/site';
+---
+
+<section class="section" id="cach-hoat-dong" aria-labelledby="how-heading">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="how-heading">Từ ảnh chụp đến lời nhắc, qua ba bước</h2>
+      <p>Mỗi bước một việc, để bạn luôn biết ứng dụng đang đọc gì và có thể sửa lại trước khi lịch được tạo.</p>
+    </div>
+
+    <ol class="steps">
+      {
+        howItWorks.map((item) => (
+          <li class="step">
+            <span class="num" aria-hidden="true">{item.step}</span>
+            <h3>{item.title}</h3>
+            <p>{item.body}</p>
+          </li>
+        ))
+      }
+    </ol>
+
+    <p class="disclaimer">
+      Thuốc ơi không thay thế tư vấn, chẩn đoán của bác sĩ hoặc dược sĩ. Hãy đối chiếu lịch được tạo với đơn thuốc gốc.
+    </p>
+  </div>
+</section>
+
+<style>
+  .steps {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--space-4);
+    counter-reset: step;
+  }
+
+  .step {
+    position: relative;
+    padding-left: 3.75rem;
+  }
+
+  .num {
+    position: absolute;
+    left: 0;
+    top: -0.1rem;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--leaf-deep);
+    width: 2.75rem;
+    height: 2.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--leaf-tint);
+    border-radius: var(--radius-sm);
+  }
+
+  .step h3 {
+    font-size: var(--fs-h3);
+  }
+
+  .step p {
+    margin-top: 0.5rem;
+    color: var(--ink-soft);
+    max-width: 42rem;
+  }
+
+  .disclaimer {
+    margin-top: var(--space-4);
+    padding: var(--space-2) var(--space-3);
+    background: var(--amber-tint);
+    border-left: 3px solid var(--amber);
+    border-radius: var(--radius-sm);
+    color: var(--ink-soft);
+    font-size: var(--fs-small);
+    max-width: 42rem;
+  }
+
+  @media (min-width: 48rem) {
+    .steps {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

@@ -1,0 +1,96 @@
+---
+import { Image } from 'astro:assets';
+import { features } from '../data/site';
+
+const images = import.meta.glob<{ default: ImageMetadata }>('../assets/brand/*.png', {
+  eager: true,
+});
+
+function imageFor(name: string) {
+  const entry = images[`../assets/brand/${name}`];
+  if (!entry) throw new Error(`Missing brand image: ${name}`);
+  return entry.default;
+}
+---
+
+<section class="section" id="tinh-nang" aria-labelledby="features-heading">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="features-heading">Những gì Thuốc ơi thực sự làm</h2>
+      <p>Ảnh chụp thật từ ứng dụng, không phải hình minh hoạ.</p>
+    </div>
+
+    <div class="rows">
+      {
+        features.map((feature, index) => (
+          <article class={`row ${index % 2 === 1 ? 'reverse' : ''}`}>
+            <div class="shot">
+              <Image
+                src={imageFor(feature.image)}
+                alt={feature.imageAlt}
+                widths={[240, 360, 480]}
+                sizes="(min-width: 64rem) 20rem, 60vw"
+                loading="lazy"
+              />
+            </div>
+            <div class="text">
+              <h3>{feature.title}</h3>
+              <p>{feature.body}</p>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .rows {
+    display: grid;
+    gap: var(--space-6);
+  }
+
+  .row {
+    display: grid;
+    gap: var(--space-4);
+    align-items: center;
+  }
+
+  .shot {
+    display: flex;
+    justify-content: center;
+  }
+
+  .shot :global(img) {
+    width: 100%;
+    max-width: 16rem;
+    height: auto;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .text h3 {
+    font-size: var(--fs-h3);
+  }
+
+  .text p {
+    margin-top: var(--space-2);
+    color: var(--ink-soft);
+    font-size: var(--fs-lead);
+    max-width: 30rem;
+  }
+
+  @media (min-width: 56rem) {
+    .row {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .row.reverse .shot {
+      order: 2;
+    }
+
+    .row.reverse .text {
+      order: 1;
+    }
+  }
+</style>
