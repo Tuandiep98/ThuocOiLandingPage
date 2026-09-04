@@ -93,6 +93,24 @@ fact — same posture as the footer disclaimer. Never invent statistics, studies
 of angles not yet covered. This file is the source of truth for "what's been covered"; read it
 first, don't start from a blank slate each session.
 
+**Trigger: user asks to create a blog post.** When the user's message asks to create/write a blog
+post (e.g. "tạo blog", "viết bài blog hôm nay", "tạo bài viết mới") — not a request to discuss the
+workflow or edit an existing post — run this flow:
+
+1. Check `blog-notes.md` for an entry already dated today (entries are grouped under `## YYYY-MM-DD`
+   headers). If today already has one, stop and tell the user — the cap is one post per day, don't
+   generate a second one unless they explicitly ask to override it.
+2. Otherwise pick the next angle from the backlog list in `blog-notes.md` (or propose a new one if
+   the backlog is exhausted), and write one post meeting every requirement above (grounding,
+   heading discipline, frontmatter, CTA/internal links).
+3. Run `npx astro check` and `npm run build` to confirm it builds cleanly; delete the test `dist/`
+   output afterward (gitignored — never commit it).
+4. **Stop here — do not commit or push.** Summarize what was generated (title, target keyword,
+   segment, one-line description of the angle) and wait for the user to explicitly confirm.
+5. Only after the user confirms: update `blog-notes.md` (new dated entry + trimmed backlog),
+   commit, and push to `main`. Cloudflare's Git-connected build auto-deploys on push to `main` (see
+   Deployment below) — pushing is what makes the post go live, so never push before confirmation.
+
 ## Deployment
 
 Production is **Cloudflare Workers Static Assets** (not classic Cloudflare Pages), serving the real domain `thuocoi.com` — connected via the Cloudflare dashboard to this repo's `main` branch (build command `npm run build`, output `dist`). `wrangler.jsonc` at the repo root declares `assets.directory: "./dist"` with no adapter and no bindings; it exists specifically so Cloudflare's Git-connected build doesn't auto-run `astro add cloudflare` (its framework auto-config for Astro), which installs the `@astrojs/cloudflare` SSR adapter — unneeded since this site is fully static (`output: "static"`), and at the time this was set up, broken against Astro 7.x (`MISSING_EXPORT renderForPrerender`). Don't remove `wrangler.jsonc` or let it drift into declaring an adapter/bindings unless the site actually gains a server-rendered route.
