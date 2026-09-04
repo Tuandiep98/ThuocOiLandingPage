@@ -11,13 +11,11 @@ import DownloadCta from '../components/DownloadCta.astro';
 import BlogTeaser from '../components/BlogTeaser.astro';
 import Footer from '../components/Footer.astro';
 import { site, storeLinks, faqs, howItWorks } from '../data/site';
+import { withBase } from '../lib/base';
 
 const title = `${site.name} — ${site.tagline}`;
 
-// Base path-aware vì build GitHub Pages phục vụ dưới /ThuocOiLandingPage/ (xem astro.config.mjs).
-const rawBase = import.meta.env.BASE_URL;
-const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
-const logoURL = new URL(`${base}icon-512.png`, site.url).toString();
+const logoURL = new URL(withBase('icon-512.png'), site.url).toString();
 
 const organization = {
   '@context': 'https://schema.org',

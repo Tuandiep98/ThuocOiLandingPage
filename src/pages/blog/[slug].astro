@@ -44,7 +44,12 @@ const jsonLd = [
         <p class="eyebrow">{segment}</p>
         <h1>{title}</h1>
         <p class="post-date">
-          Cập nhật {publishDate.toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' })}
+          Đăng ngày {publishDate.toLocaleDateString('vi-VN', {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric',
+            timeZone: 'UTC',
+          })}
         </p>
         <div class="prose">
           <Content />
