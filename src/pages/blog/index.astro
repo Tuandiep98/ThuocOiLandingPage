@@ -1,0 +1,103 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { site } from '../../data/site';
+import { withBase } from '../../lib/base';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
+);
+
+const title = `Bài viết — ${site.name}`;
+const description =
+  'Hướng dẫn quản lý thuốc, chăm sóc người thân và đọc hiểu đơn thuốc, từ đội ngũ Thuốc ơi.';
+---
+
+<BaseLayout title={title} description={description}>
+  <Header />
+  <main id="noi-dung-chinh">
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h1>Bài viết</h1>
+          <p>{description}</p>
+        </div>
+        <ul class="post-list">
+          {
+            posts.map((post) => (
+              <li>
+                <a href={withBase(`blog/${post.id}/`)}>
+                  <p class="eyebrow">{post.data.segment}</p>
+                  <h2>{post.data.title}</h2>
+                  <p>{post.data.description}</p>
+                  <span class="meta">
+                    {post.data.publishDate.toLocaleDateString('vi-VN', {
+                      day: '2-digit',
+                      month: '2-digit',
+                      year: 'numeric',
+                    })}
+                  </span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .post-list {
+    list-style: none;
+    margin: var(--space-4) 0 0;
+    padding: 0;
+    display: grid;
+    gap: var(--space-3);
+  }
+
+  .post-list li a {
+    display: block;
+    padding: var(--space-3);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    background: var(--paper-raised);
+    text-decoration: none;
+    transition:
+      border-color 0.15s ease,
+      transform 0.15s ease;
+  }
+
+  .post-list li a:hover {
+    border-color: var(--leaf);
+    transform: translateY(-2px);
+  }
+
+  .eyebrow {
+    color: var(--leaf-deep);
+    font-weight: 700;
+    font-size: var(--fs-small);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .post-list h2 {
+    margin-top: 0.35rem;
+    font-size: var(--fs-h3);
+  }
+
+  .post-list p:not(.eyebrow) {
+    margin-top: var(--space-1);
+    color: var(--ink-soft);
+  }
+
+  .post-list .meta {
+    display: block;
+    margin-top: var(--space-2);
+    font-size: var(--fs-small);
+    color: var(--ink-soft);
+  }
+</style>

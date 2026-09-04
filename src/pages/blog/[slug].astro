@@ -1,0 +1,165 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { site, storeLinks } from '../../data/site';
+import { withBase } from '../../lib/base';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const { title, description, publishDate, segment } = post.data;
+
+const pageTitle = `${title} — ${site.name}`;
+const pageURL = new URL(withBase(`blog/${post.id}/`), site.url).toString();
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: title,
+    description,
+    datePublished: publishDate.toISOString(),
+    inLanguage: 'vi',
+    author: { '@type': 'Organization', name: site.name, url: site.url },
+    publisher: { '@type': 'Organization', name: site.name, url: site.url },
+    mainEntityOfPage: pageURL,
+  },
+];
+---
+
+<BaseLayout title={pageTitle} description={description} jsonLd={jsonLd}>
+  <Header />
+  <main id="noi-dung-chinh">
+    <article class="section">
+      <div class="wrap post-wrap">
+        <p class="eyebrow">{segment}</p>
+        <h1>{title}</h1>
+        <p class="post-date">
+          Cập nhật {publishDate.toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' })}
+        </p>
+        <div class="prose">
+          <Content />
+        </div>
+        <div class="post-cta">
+          <h2>Thử Thuốc ơi ngay hôm nay</h2>
+          <p>
+            Chụp một tấm ảnh đơn thuốc, để Thuốc ơi tự xếp lịch nhắc theo từng buổi — miễn phí
+            nhập thuốc thủ công và nhắc thuốc không giới hạn.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href={storeLinks.appStore}>Tải trên App Store</a>
+            <a class="btn btn-ghost" href={storeLinks.googlePlay}>Tải trên Google Play</a>
+          </div>
+          <p class="post-links">
+            Xem thêm <a href={withBase('#tinh-nang')}>tính năng</a> hoặc{' '}
+            <a href={withBase('#bang-gia')}>bảng giá</a> trên trang chủ.
+          </p>
+        </div>
+      </div>
+    </article>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .post-wrap {
+    max-width: 42rem;
+  }
+
+  .eyebrow {
+    color: var(--leaf-deep);
+    font-weight: 700;
+    font-size: var(--fs-small);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .post-wrap h1 {
+    margin-top: 0.5rem;
+    font-size: var(--fs-h1);
+  }
+
+  .post-date {
+    margin-top: var(--space-2);
+    color: var(--ink-soft);
+    font-size: var(--fs-small);
+  }
+
+  .prose {
+    margin-top: var(--space-4);
+  }
+
+  .prose :global(h2) {
+    font-size: var(--fs-h3);
+    margin-top: var(--space-4);
+  }
+
+  .prose :global(h3) {
+    font-size: 1.25rem;
+    margin-top: var(--space-3);
+  }
+
+  .prose :global(p) {
+    margin-top: var(--space-2);
+    color: var(--ink-soft);
+  }
+
+  .prose :global(ul),
+  .prose :global(ol) {
+    margin-top: var(--space-2);
+    padding-left: 1.25rem;
+    color: var(--ink-soft);
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .prose :global(a) {
+    color: var(--pine);
+  }
+
+  .prose :global(strong) {
+    color: var(--ink);
+  }
+
+  .post-cta {
+    margin-top: var(--space-5);
+    padding: var(--space-4);
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+  }
+
+  .post-cta h2 {
+    font-size: var(--fs-h3);
+  }
+
+  .post-cta p {
+    margin-top: var(--space-2);
+    color: var(--ink-soft);
+  }
+
+  .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: var(--space-3);
+  }
+
+  .post-links {
+    margin-top: var(--space-3);
+    font-size: var(--fs-small);
+  }
+
+  .post-links a {
+    color: var(--pine);
+  }
+</style>

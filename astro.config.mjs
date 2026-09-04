@@ -17,8 +17,10 @@ export default defineConfig({
   integrations: [sitemap()],
   compressHTML: true,
   build: {
-    // 'always' thay vì 'auto': trang chỉ có 1 route nên toàn bộ CSS (~20KB) nên nhúng thẳng
-    // vào <head> thay vì 2 file .css riêng (chặn render, PSI đo mất ~1.6s trước khi thấy chữ).
-    inlineStylesheets: "always",
+    // 'auto' (mặc định Astro): trang nào ít CSS thì nhúng thẳng vào <head>, trang nào nhiều CSS
+    // thì tách file .css riêng để cache được giữa các trang. Trước đây dùng 'always' vì site chỉ
+    // có 1 route (landing page) nên nhúng toàn bộ luôn tốt hơn hẳn — từ khi có thêm blog nhiều
+    // trang, 'always' sẽ nhúng lại y hệt phần CSS dùng chung trên mỗi trang, không cache được.
+    inlineStylesheets: "auto",
   },
 });

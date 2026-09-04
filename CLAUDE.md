@@ -42,6 +42,57 @@ There are no automated tests in this repo (no test framework installed) — `ast
 
 **Heading hierarchy is intentionally exactly one `<h1>` (hero) → four `<h2>`s (one per major section: How it works, Features, Pricing, FAQ) → `<h3>`s for repeated items within each (steps/features/plans/FAQ questions).** This is deliberate for SEO/AI-parsing, not incidental — preserve it when adding sections rather than reaching for `<h4>`/skipping levels or using non-heading tags for section titles.
 
+## Blog content workflow
+
+This site runs a **one-post-per-day** content workflow targeting long-tail informational search
+queries the landing page itself doesn't cover — the landing page targets branded/transactional
+intent ("Thuốc ơi", "app nhắc uống thuốc"), the blog targets top-of-funnel questions people search
+before they know the app exists ("cách quản lý thuốc cho người già", "đơn thuốc bác sĩ ghi tắt
+nghĩa là gì").
+
+**Where posts live:** `src/content/blog/*.md`, defined by the `blog` collection in
+`src/content.config.ts` (Astro content layer, `glob()` loader). Rendered at `/blog/<slug>/` via
+`src/pages/blog/[slug].astro`; `src/pages/blog/index.astro` lists all posts newest-first. Both
+pages reuse `Header`/`Footer`/`BaseLayout` directly, same pattern as `index.astro`/`404.astro` —
+no separate blog layout component.
+
+**Topic strategy — repetition across posts is fine, segment/angle is not.** Multiple posts can
+cover the same core message (e.g. "quản lý thuốc cho người già") as long as each targets a
+distinct angle: an audience segment (người già sống một mình / con cái chăm sóc từ xa / người
+chăm sóc chuyên nghiệp / người trẻ tự quản lý bệnh mãn tính), or a distinct sub-topic (đọc hiểu
+đơn thuốc, lịch uống thuốc mẫu, dấu hiệu quên liều). Don't just reword an existing post — change
+who it's for or what specific problem it solves. Check `blog-notes.md` before starting a new post
+so the angle isn't already covered.
+
+**Grounding — same rule as the rest of the site** ([[feedback-design-grounding]]-style: no
+invented product claims). Anything the post says the app *does* must trace back to `site.ts` /
+the real app's README/CLAUDE.md. General health/caregiving advice not about the app can be
+written from general knowledge, but keep it high-level and safe (e.g. explain the *shape* of a
+prescription's dosage instructions, not a table of specific medical abbreviations that could be
+wrong) and always point to "hỏi lại bác sĩ/dược sĩ" rather than asserting anything as medical
+fact — same posture as the footer disclaimer. Never invent statistics, studies, or reviews.
+
+**Per-post requirements (all must hold before a post counts as done):**
+
+- Frontmatter: `title`, `description` (~120–160 chars, unique per post), `publishDate`,
+  `keyword` (primary target query, used for `blog-notes.md` tracking — not rendered, not a meta
+  keywords tag), `segment` (rendered as the eyebrow label on the post).
+- Exactly one `<h1>` (post title, from frontmatter — not repeated in the Markdown body), `<h2>`
+  for major sections within the post, `<h3>` only if a section genuinely needs sub-points — same
+  no-skipped-levels discipline as the landing page.
+- At least one internal link back to a landing page section (via `withBase('#tinh-nang')` /
+  `#bang-gia`, already wired into the post layout's CTA block) and the CTA block linking to
+  `storeLinks.appStore`/`storeLinks.googlePlay` from `site.ts` — don't hardcode URLs in post
+  Markdown.
+- No hero image unless a real app screenshot is genuinely relevant to that post's content — don't
+  add stock photography or invented illustrations (same rule as the rest of the site).
+- `npx astro check` and `npm run build` both clean before considering the post done.
+
+**End-of-day logging:** after a post is implemented and building cleanly, append an entry to
+`blog-notes.md` (repo root) — slug, title, target keyword + segment — and update the backlog list
+of angles not yet covered. This file is the source of truth for "what's been covered"; read it
+first, don't start from a blank slate each session.
+
 ## Deployment
 
 Production is **Cloudflare Workers Static Assets** (not classic Cloudflare Pages), serving the real domain `thuocoi.com` — connected via the Cloudflare dashboard to this repo's `main` branch (build command `npm run build`, output `dist`). `wrangler.jsonc` at the repo root declares `assets.directory: "./dist"` with no adapter and no bindings; it exists specifically so Cloudflare's Git-connected build doesn't auto-run `astro add cloudflare` (its framework auto-config for Astro), which installs the `@astrojs/cloudflare` SSR adapter — unneeded since this site is fully static (`output: "static"`), and at the time this was set up, broken against Astro 7.x (`MISSING_EXPORT renderForPrerender`). Don't remove `wrangler.jsonc` or let it drift into declaring an adapter/bindings unless the site actually gains a server-rendered route.
