@@ -25,6 +25,14 @@ workflow"). Đọc file này trước khi viết bài mới — mục đích ch�
   trung vào lịch sinh hoạt bận rộn/hay thay đổi, lời nhắc theo buổi thay vì giờ cố định, theo dõi
   tỉ lệ tuân thủ liệu trình, và báo thức riêng iOS 26 khi điện thoại im lặng/Tập trung.
 
+## 2026-09-06
+
+- `nhap-tay-hay-quet-ai-chon-cach-them-thuoc` — "Nhập tay hay quét AI: nên chọn cách nào để thêm
+  đơn thuốc?" — keyword: `nhập đơn thuốc bằng AI hay thủ công` — segment: người dùng cân nhắc
+  cách thêm đơn thuốc phù hợp. Sub-topic so sánh 2 luồng nhập thuốc thật của app (quét AI ảnh/PDF
+  vs nhập tay), khi nào nên dùng cách nào, và cách phân bổ lượt quét AI hằng tháng (3 lượt Free /
+  30 Pro / 150 Gia đình) hợp lý — không phải biến thể segment người già/người trẻ đã làm trước.
+
 ## Backlog góc độ chưa làm
 
 Tham khảo trước khi chọn góc độ cho bài tiếp theo, để không lặp lại:
@@ -32,5 +40,4 @@ Tham khảo trước khi chọn góc độ cho bài tiếp theo, để không l�
 - Người chăm sóc chuyên nghiệp / điều dưỡng tại nhà (khác "con cái chăm sóc từ xa" đã làm)
 - Lịch uống thuốc mẫu theo từng loại bệnh phổ biến
 - Dấu hiệu và hậu quả thực tế của việc quên liều hoặc uống trùng liều
-- Khi nào nên nhập tay, khi nào nên quét AI — so sánh 2 luồng nhập thuốc của app
 - Chuẩn bị gì trước một lần tái khám để đơn thuốc mới không bị đọc nhầm
