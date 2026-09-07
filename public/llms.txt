@@ -21,3 +21,7 @@
 ## Trang
 
 - [Trang chủ](/): tổng quan tính năng, cách hoạt động, bảng giá, câu hỏi thường gặp.
+- [Chính sách quyền riêng tư](/legal/privacy/) ([English](/legal/privacy/en/))
+- [Điều khoản sử dụng](/legal/terms/) ([English](/legal/terms/en/))
+- [Yêu cầu xoá tài khoản](/legal/account-deletion/) ([English](/legal/account-deletion/en/))
+- [Hỗ trợ](/legal/support/) ([English](/legal/support/en/))

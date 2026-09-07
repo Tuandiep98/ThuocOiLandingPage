@@ -1,0 +1,164 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { site } from '../data/site';
+
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
+interface Props {
+  title: string;
+  description?: string;
+  locale: 'vi' | 'en';
+  headings: Heading[];
+  altLocaleHref: string;
+  eyebrow?: string;
+  meta?: string;
+}
+
+const { title, description, locale, headings, altLocaleHref, eyebrow, meta } = Astro.props;
+
+const sections = headings.filter((h) => h.depth === 2);
+const switchLabel = locale === 'vi' ? 'Read this page in English' : 'Xem trang này bằng tiếng Việt';
+const tocLabel = locale === 'vi' ? 'Mục lục' : 'On this page';
+
+// Tiêu đề tài liệu Supabase (privacy/terms) đã tự kèm "— Thuốc ơi" sẵn; tiêu đề trang tĩnh
+// (account-deletion/support) thì chưa — chỉ nối thêm site.name khi title chưa có sẵn.
+const pageTitle = title.includes(site.name) ? title : `${title} — ${site.name}`;
+---
+
+<BaseLayout title={pageTitle} description={description} lang={locale}>
+  <Header />
+  <main id="noi-dung-chinh">
+    <article class="section">
+      <div class="wrap legal-wrap">
+        {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+        <h1>{title}</h1>
+        {meta && <p class="legal-meta">{meta}</p>}
+        <p class="lang-switch"><a href={altLocaleHref}>{switchLabel}</a></p>
+
+        {
+          sections.length > 0 && (
+            <nav class="toc" aria-label={tocLabel}>
+              <p class="toc-label">{tocLabel}</p>
+              <ul>
+                {sections.map((heading) => (
+                  <li><a href={`#${heading.slug}`}>{heading.text}</a></li>
+                ))}
+              </ul>
+            </nav>
+          )
+        }
+
+        <div class="prose">
+          <slot />
+        </div>
+      </div>
+    </article>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .legal-wrap {
+    max-width: 42rem;
+  }
+
+  .eyebrow {
+    color: var(--leaf-deep);
+    font-weight: 700;
+    font-size: var(--fs-small);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .legal-wrap h1 {
+    margin-top: 0.5rem;
+    font-size: var(--fs-h1);
+  }
+
+  .legal-meta {
+    margin-top: var(--space-2);
+    color: var(--ink-soft);
+    font-size: var(--fs-small);
+  }
+
+  .lang-switch {
+    margin-top: var(--space-1);
+    font-size: var(--fs-small);
+  }
+
+  .lang-switch a {
+    color: var(--pine);
+  }
+
+  .toc {
+    margin-top: var(--space-4);
+    padding: var(--space-3);
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+  }
+
+  .toc-label {
+    font-weight: 700;
+    font-size: var(--fs-small);
+    color: var(--pine);
+  }
+
+  .toc ul {
+    margin-top: var(--space-1);
+    padding-left: 1.25rem;
+    display: grid;
+    gap: 0.4rem;
+  }
+
+  .toc a {
+    color: var(--ink-soft);
+    font-size: var(--fs-small);
+  }
+
+  .toc a:hover {
+    color: var(--pine);
+  }
+
+  .prose {
+    margin-top: var(--space-4);
+  }
+
+  .prose :global(h2) {
+    font-size: var(--fs-h3);
+    margin-top: var(--space-4);
+  }
+
+  .prose :global(h3) {
+    font-size: 1.25rem;
+    margin-top: var(--space-3);
+  }
+
+  .prose :global(p) {
+    margin-top: var(--space-2);
+    color: var(--ink-soft);
+  }
+
+  .prose :global(ul),
+  .prose :global(ol) {
+    margin-top: var(--space-2);
+    padding-left: 1.25rem;
+    color: var(--ink-soft);
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .prose :global(a) {
+    color: var(--pine);
+  }
+
+  .prose :global(strong) {
+    color: var(--ink);
+  }
+</style>

@@ -1,0 +1,36 @@
+---
+import { render } from 'astro:content';
+import LegalLayout from '../../../layouts/LegalLayout.astro';
+import { getLegalEntries } from '../../../lib/legal/entries';
+import { withBase } from '../../../lib/base';
+
+export async function getStaticPaths() {
+  const entries = await getLegalEntries('vi');
+  return entries.map((item) => ({ params: { slug: item.slug }, props: item }));
+}
+
+const { slug, kind, entry } = Astro.props;
+const { Content, headings } = await render(entry);
+
+const eyebrow = kind === 'page' ? entry.data.kicker : undefined;
+const meta =
+  kind === 'document'
+    ? `Phiên bản ${entry.data.version} — có hiệu lực từ ${entry.data.effectiveAt.toLocaleDateString('vi-VN', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+        timeZone: 'UTC',
+      })}`
+    : undefined;
+---
+
+<LegalLayout
+  title={entry.data.title}
+  locale="vi"
+  headings={headings}
+  altLocaleHref={withBase(`legal/${slug}/en/`)}
+  eyebrow={eyebrow}
+  meta={meta}
+>
+  <Content />
+</LegalLayout>

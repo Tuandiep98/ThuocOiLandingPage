@@ -21,10 +21,14 @@ export const storeLinks = {
   androidPackageId: "com.tuandiep.thuocoi",
 };
 
-// Trang pháp lý chính thức (nguồn dữ liệu sống — không copy nội dung vào đây để tránh lệch phiên bản).
+// Trang pháp lý — nội dung Privacy/Terms fetch từ Supabase lúc build (xem content.config.ts,
+// collection legalDocuments), account-deletion/support là nội dung tĩnh (collection legalPages).
+// Path tương đối, bọc qua withBase() ở nơi render — theo đúng quy ước withBase() của repo.
 export const legalLinks = {
-  privacy: "https://tuandiep98.github.io/ThuocOiPublicPage/#/privacy?lang=vi",
-  terms: "https://tuandiep98.github.io/ThuocOiPublicPage/#/terms?lang=vi",
+  privacy: "legal/privacy/",
+  terms: "legal/terms/",
+  accountDeletion: "legal/account-deletion/",
+  support: "legal/support/",
 };
 
 export const trustPoints = [

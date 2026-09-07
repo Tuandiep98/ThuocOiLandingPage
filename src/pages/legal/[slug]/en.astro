@@ -1,0 +1,36 @@
+---
+import { render } from 'astro:content';
+import LegalLayout from '../../../layouts/LegalLayout.astro';
+import { getLegalEntries } from '../../../lib/legal/entries';
+import { withBase } from '../../../lib/base';
+
+export async function getStaticPaths() {
+  const entries = await getLegalEntries('en');
+  return entries.map((item) => ({ params: { slug: item.slug }, props: item }));
+}
+
+const { slug, kind, entry } = Astro.props;
+const { Content, headings } = await render(entry);
+
+const eyebrow = kind === 'page' ? entry.data.kicker : undefined;
+const meta =
+  kind === 'document'
+    ? `Version ${entry.data.version} — effective ${entry.data.effectiveAt.toLocaleDateString('en-US', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+        timeZone: 'UTC',
+      })}`
+    : undefined;
+---
+
+<LegalLayout
+  title={entry.data.title}
+  locale="en"
+  headings={headings}
+  altLocaleHref={withBase(`legal/${slug}/`)}
+  eyebrow={eyebrow}
+  meta={meta}
+>
+  <Content />
+</LegalLayout>

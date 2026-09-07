@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import icon from '../assets/brand/icon_light.png';
 import { site, legalLinks } from '../data/site';
+import { withBase } from '../lib/base';
 
 const year = new Date().getFullYear();
 ---
@@ -14,8 +15,10 @@ const year = new Date().getFullYear();
         <span>{site.name}</span>
       </div>
       <nav class="legal-links" aria-label="Pháp lý">
-        <a href={legalLinks.privacy}>Chính sách quyền riêng tư</a>
-        <a href={legalLinks.terms}>Điều khoản sử dụng</a>
+        <a href={withBase(legalLinks.privacy)}>Chính sách quyền riêng tư</a>
+        <a href={withBase(legalLinks.terms)}>Điều khoản sử dụng</a>
+        <a href={withBase(legalLinks.accountDeletion)}>Xoá tài khoản</a>
+        <a href={withBase(legalLinks.support)}>Hỗ trợ</a>
       </nav>
     </div>
     <p class="disclaimer">

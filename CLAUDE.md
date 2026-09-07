@@ -111,6 +111,46 @@ workflow or edit an existing post — run this flow:
    commit, and push to `main`. Cloudflare's Git-connected build auto-deploys on push to `main` (see
    Deployment below) — pushing is what makes the post go live, so never push before confirmation.
 
+## Legal pages (privacy, terms, account deletion, support)
+
+`/legal/privacy/`, `/legal/terms/`, `/legal/account-deletion/`, `/legal/support/` (plus an
+`/en/` variant of each — these 4 pages are bilingual, the only bilingual section of an otherwise
+Vietnamese-only site) live entirely in this repo, replacing what used to be a separate site
+(`ThuocOiPublicPage`, kept around only as a temporary redirect target — do not resurrect content
+there instead of here).
+
+**Two content collections in `src/content.config.ts`, not one** — a collection can only have one
+loader:
+
+- `legalDocuments` — Privacy Policy/Terms of Service. A custom loader (`src/lib/legal/loader.ts`,
+  `supabaseLegalLoader`) fetches the 4 rows (privacy/terms × vi/en) from a Supabase Postgres view,
+  `legal_document_current`, **at build time** — not runtime. Nothing client-side ever touches
+  Supabase; the anon key only runs inside the Node build process. The loader throws (failing the
+  whole build) on any non-2xx response or a row count ≠ 1 for any document_type/locale
+  combination — never silently ship a page missing its legal content.
+- `legalPages` — account-deletion/support, static bilingual Markdown in `src/content/legal/*.md`,
+  loaded via `glob()` exactly like the `blog` collection (not Supabase-backed; edit these files
+  directly for copy changes).
+
+`src/lib/legal/entries.ts` (`getLegalEntries(locale)`) merges both collections into one slug list
+per locale, consumed by the two route files `src/pages/legal/[slug]/index.astro` (vi) and
+`.../en.astro` (en) — two explicit files rather than an Astro optional-param route, and rendered
+through the shared `src/layouts/LegalLayout.astro` (build-time table of contents from each
+entry's `headings`, a language-switch link, no client JS).
+
+**Env vars**: `SUPABASE_URL`/`SUPABASE_ANON_KEY`, read via `import.meta.env` in
+`content.config.ts` — deliberately **not** `PUBLIC_`/`VITE_`-prefixed, since nothing client-side
+should ever need them. Required in three places to build successfully: a local `.env` (see
+`.env.example`, already gitignored), the `SUPABASE_URL`/`SUPABASE_ANON_KEY` GitHub Actions repo
+secrets (wired into `.github/workflows/deploy-github-pages.yml`), and Cloudflare's dashboard
+environment variables for the Git-connected production build (not represented in any repo file —
+configure manually in Workers & Pages → this project → Settings → Variables and Secrets).
+
+**Rebuilds are manual.** A new Supabase-published legal document does not auto-trigger a
+Cloudflare rebuild (deliberately — no webhook was set up). After publishing a new version in
+Supabase, someone needs to manually redeploy (push a commit, or "Retry deployment" in the
+Cloudflare dashboard) for the change to actually appear on `thuocoi.com`.
+
 ## Deployment
 
 Production is **Cloudflare Workers Static Assets** (not classic Cloudflare Pages), serving the real domain `thuocoi.com` — connected via the Cloudflare dashboard to this repo's `main` branch (build command `npm run build`, output `dist`). `wrangler.jsonc` at the repo root declares `assets.directory: "./dist"` with no adapter and no bindings; it exists specifically so Cloudflare's Git-connected build doesn't auto-run `astro add cloudflare` (its framework auto-config for Astro), which installs the `@astrojs/cloudflare` SSR adapter — unneeded since this site is fully static (`output: "static"`), and at the time this was set up, broken against Astro 7.x (`MISSING_EXPORT renderForPrerender`). Don't remove `wrangler.jsonc` or let it drift into declaring an adapter/bindings unless the site actually gains a server-rendered route.
@@ -119,6 +159,5 @@ Production is **Cloudflare Workers Static Assets** (not classic Cloudflare Pages
 
 ## Known placeholders to resolve before shipping
 
-- Privacy/terms: the footer (`legalLinks` in `src/data/site.ts`) links out to the app's real legal pages at `tuandiep98.github.io/ThuocOiPublicPage/#/privacy?lang=vi` and `#/terms?lang=vi` rather than reproducing that text here — that site fetches the current version live from Supabase (see its own `src/lib/legal-documents.ts`), so copying the markdown into this repo would go stale. Keep linking out; don't inline legal copy.
 - Pro/Family plan prices in `plans` (`src/data/site.ts`) show "Xem giá trong ứng dụng" (see price in-app) rather than a number, since the source README does not list actual VND/USD prices — fill in real prices there if/when available instead of guessing.
 - `jsonLd` in `src/pages/index.astro` (`MobileApplication`) intentionally has no `aggregateRating`/`review` — the App Store listing (checked via the public iTunes lookup API, `id6804452525`) has 0 ratings as of the app's 2026-08-31 release. Google requires one of those two fields for the rich-result star rating; add a real `aggregateRating` once the app has genuine reviews — never fabricate one.
