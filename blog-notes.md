@@ -33,11 +33,19 @@ workflow"). Đọc file này trước khi viết bài mới — mục đích ch�
   vs nhập tay), khi nào nên dùng cách nào, và cách phân bổ lượt quét AI hằng tháng (3 lượt Free /
   30 Pro / 150 Gia đình) hợp lý — không phải biến thể segment người già/người trẻ đã làm trước.
 
+## 2026-09-07
+
+- `nguoi-cham-soc-chuyen-nghiep-quan-ly-thuoc-nguoi-gia` — "Người chăm sóc thuê ngoài quản lý
+  thuốc cho người già như thế nào?" — keyword: `quản lý thuốc cho người già thuê người chăm sóc`
+  — segment: người chăm sóc chuyên nghiệp / điều dưỡng tại nhà. Khác "con cái chăm sóc từ xa" đã
+  làm — người chăm sóc chuyên nghiệp ở cạnh trực tiếp nên cần *ghi nhận/báo cáo lại* cho gia đình
+  bằng số liệu (tiến trình liều đã uống), không phải *biết từ xa*. Khai thác nhóm Gia đình mời
+  bằng QR không giới hạn huyết thống, và quét AI đơn mới sau tái khám.
+
 ## Backlog góc độ chưa làm
 
 Tham khảo trước khi chọn góc độ cho bài tiếp theo, để không lặp lại:
 
-- Người chăm sóc chuyên nghiệp / điều dưỡng tại nhà (khác "con cái chăm sóc từ xa" đã làm)
 - Lịch uống thuốc mẫu theo từng loại bệnh phổ biến
 - Dấu hiệu và hậu quả thực tế của việc quên liều hoặc uống trùng liều
 - Chuẩn bị gì trước một lần tái khám để đơn thuốc mới không bị đọc nhầm
