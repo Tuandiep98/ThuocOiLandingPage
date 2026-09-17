@@ -15,6 +15,14 @@ const blog = defineCollection({
     // Phân khúc/góc nhìn của bài — hiển thị làm eyebrow trên trang bài viết, đồng thời là căn cứ
     // để bài sau không trùng góc độ với bài trước dù cùng chủ đề gốc (xem CLAUDE.md).
     segment: z.string(),
+    // Tiêu đề/mô tả CTA cuối bài tuỳ biến theo chủ đề — không có thì rơi về mặc định trong
+    // [slug].astro. Hàng nút App Store/Google Play luôn cố định, không tuỳ biến (xem CLAUDE.md).
+    ctaTitle: z.string().optional(),
+    ctaDescription: z.string().optional(),
+    // Tham chiếu tới một `tag` trong src/data/blog-images.ts — CHỈ được chọn từ danh sách đã
+    // duyệt sẵn đó (không tự tạo crop mới), và chỉ khi `usedWhen` khớp thật với nội dung bài.
+    // Đa số bài không cần ảnh — để trống là bình thường (xem CLAUDE.md).
+    imageTag: z.string().optional(),
   }),
 });
 

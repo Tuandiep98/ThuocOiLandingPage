@@ -1,9 +1,11 @@
 ---
+import { Image } from 'astro:assets';
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { site, storeLinks } from '../../data/site';
+import { findBlogImage } from '../../data/blog-images';
 import { withBase } from '../../lib/base';
 
 export async function getStaticPaths() {
@@ -16,10 +18,61 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
-const { title, description, publishDate, segment } = post.data;
+const { title, description, publishDate, segment, ctaTitle, ctaDescription, imageTag } =
+  post.data;
+
+const DEFAULT_CTA_TITLE = 'Thử Thuốc ơi ngay hôm nay';
+const DEFAULT_CTA_DESCRIPTION =
+  'Chụp một tấm ảnh đơn thuốc, để Thuốc ơi tự xếp lịch nhắc theo từng buổi — miễn phí nhập thuốc thủ công và nhắc thuốc không giới hạn.';
+
+// Ảnh blog (tuỳ chọn) — chỉ resolve khi frontmatter khai `imageTag` khớp một entry đã duyệt sẵn
+// trong src/data/blog-images.ts (xem CLAUDE.md, không tự crop/chọn ảnh ngoài danh sách đó).
+const blogImageFiles = import.meta.glob<{ default: ImageMetadata }>(
+  '../../assets/brand/blog/*.png',
+  { eager: true },
+);
+const curatedImage = findBlogImage(imageTag);
+const heroImage = curatedImage ? blogImageFiles[`../../assets/brand/blog/${curatedImage.file}`]?.default : undefined;
+
+// Bài viết liên quan — so khớp từ trong keyword+segment với các bài khác, hoàn toàn tự động, không
+// cần tác giả khai báo gì thêm (áp dụng luôn cho toàn bộ bài cũ, không cần backfill).
+// Loại các từ xuất hiện ở gần như mọi bài (chủ đề chung của cả blog) để phần overlap còn lại phản
+// ánh đúng góc độ/sub-topic riêng của từng bài, thay vì lúc nào cũng khớp vì cùng nói về "thuốc".
+const COMMON_WORDS = new Set([
+  'thuốc', 'đơn', 'uống', 'người', 'dùng', 'cách', 'việc', 'cần', 'khi', 'bằng', 'hay', 'cho',
+  'của', 'các', 'một', 'này', 'đó', 'lịch', 'nhắc', 'ứng', 'dụng', 'ơi', 'thêm', 'phù', 'hợp',
+  'quản', 'sao', 'không', 'còn', 'vẫn', 'rồi', 'nên', 'với', 'trên', 'từng',
+]);
+
+function tokenize(text: string): string[] {
+  return text
+    .toLowerCase()
+    .normalize('NFC')
+    .split(/[^\p{L}\p{N}]+/u)
+    .filter((word) => word.length > 2 && !COMMON_WORDS.has(word));
+}
+
+const allPosts = await getCollection('blog');
+const currentTokens = new Set(tokenize(`${post.data.keyword} ${segment}`));
+const relatedPosts = allPosts
+  .filter((other) => other.id !== post.id)
+  .map((other) => {
+    const tokens = tokenize(`${other.data.keyword} ${other.data.segment}`);
+    const overlap = tokens.filter((token) => currentTokens.has(token)).length;
+    return { post: other, overlap };
+  })
+  .filter((entry) => entry.overlap > 0)
+  .sort(
+    (a, b) =>
+      b.overlap - a.overlap || b.post.data.publishDate.valueOf() - a.post.data.publishDate.valueOf(),
+  )
+  .slice(0, 2)
+  .map((entry) => entry.post);
 
 const pageTitle = `${title} — ${site.name}`;
 const pageURL = new URL(withBase(`blog/${post.id}/`), site.url).toString();
+const homeURL = new URL(withBase(''), site.url).toString();
+const blogIndexURL = new URL(withBase('blog/'), site.url).toString();
 
 const jsonLd = [
   {
@@ -33,6 +86,15 @@ const jsonLd = [
     publisher: { '@type': 'Organization', name: site.name, url: site.url },
     mainEntityOfPage: pageURL,
   },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: site.name, item: homeURL },
+      { '@type': 'ListItem', position: 2, name: 'Bài viết', item: blogIndexURL },
+      { '@type': 'ListItem', position: 3, name: title, item: pageURL },
+    ],
+  },
 ];
 ---
 
@@ -41,6 +103,9 @@ const jsonLd = [
   <main id="noi-dung-chinh">
     <article class="section">
       <div class="wrap post-wrap">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href={withBase('')}>Trang chủ</a> / <a href={withBase('blog/')}>Bài viết</a> / <span aria-current="page">{title}</span>
+        </nav>
         <p class="eyebrow">{segment}</p>
         <h1>{title}</h1>
         <p class="post-date">
@@ -51,15 +116,39 @@ const jsonLd = [
             timeZone: 'UTC',
           })}
         </p>
+        {
+          heroImage && curatedImage && (
+            <div class="post-image">
+              <Image
+                src={heroImage}
+                alt={curatedImage.alt}
+                widths={[320, 480, 640]}
+                sizes="(min-width: 42rem) 42rem, 100vw"
+                loading="eager"
+              />
+            </div>
+          )
+        }
         <div class="prose">
           <Content />
         </div>
+        {
+          relatedPosts.length > 0 && (
+            <div class="related-posts">
+              <h2>Bài viết liên quan</h2>
+              <ul>
+                {relatedPosts.map((related) => (
+                  <li>
+                    <a href={withBase(`blog/${related.id}/`)}>{related.data.title}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )
+        }
         <div class="post-cta">
-          <h2>Thử Thuốc ơi ngay hôm nay</h2>
-          <p>
-            Chụp một tấm ảnh đơn thuốc, để Thuốc ơi tự xếp lịch nhắc theo từng buổi — miễn phí
-            nhập thuốc thủ công và nhắc thuốc không giới hạn.
-          </p>
+          <h2>{ctaTitle ?? DEFAULT_CTA_TITLE}</h2>
+          <p>{ctaDescription ?? DEFAULT_CTA_DESCRIPTION}</p>
           <div class="cta-row">
             <a class="btn btn-primary" href={storeLinks.appStore}>Tải trên App Store</a>
             <a class="btn btn-ghost" href={storeLinks.googlePlay}>Tải trên Google Play</a>
@@ -80,7 +169,21 @@ const jsonLd = [
     max-width: 42rem;
   }
 
+  .breadcrumb {
+    font-size: var(--fs-small);
+    color: var(--ink-soft);
+  }
+
+  .breadcrumb a {
+    color: var(--ink-soft);
+  }
+
+  .breadcrumb a:hover {
+    color: var(--pine);
+  }
+
   .eyebrow {
+    margin-top: var(--space-2);
     color: var(--leaf-deep);
     font-weight: 700;
     font-size: var(--fs-small);
@@ -97,6 +200,17 @@ const jsonLd = [
     margin-top: var(--space-2);
     color: var(--ink-soft);
     font-size: var(--fs-small);
+  }
+
+  .post-image {
+    margin-top: var(--space-4);
+  }
+
+  .post-image :global(img) {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
   }
 
   .prose {
@@ -133,6 +247,25 @@ const jsonLd = [
 
   .prose :global(strong) {
     color: var(--ink);
+  }
+
+  .related-posts {
+    margin-top: var(--space-5);
+  }
+
+  .related-posts h2 {
+    font-size: var(--fs-h3);
+  }
+
+  .related-posts ul {
+    margin-top: var(--space-2);
+    padding-left: 1.25rem;
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .related-posts a {
+    color: var(--pine);
   }
 
   .post-cta {

@@ -83,9 +83,22 @@ fact — same posture as the footer disclaimer. Never invent statistics, studies
 - At least one internal link back to a landing page section (via `withBase('#tinh-nang')` /
   `#bang-gia`, already wired into the post layout's CTA block) and the CTA block linking to
   `storeLinks.appStore`/`storeLinks.googlePlay` from `site.ts` — don't hardcode URLs in post
-  Markdown.
-- No hero image unless a real app screenshot is genuinely relevant to that post's content — don't
-  add stock photography or invented illustrations (same rule as the rest of the site).
+  Markdown. Related-post links and the breadcrumb are rendered automatically by
+  `[slug].astro` (word-overlap on `keyword`+`segment` across the whole collection) — nothing to
+  author here.
+- **CTA customization (new posts only — do not retrofit posts published before 2026-09-17):**
+  set frontmatter `ctaTitle`/`ctaDescription` to copy specific to this post's segment/feature
+  angle (grounded in `site.ts`, same posture as the rest of the post — don't invent claims).
+  Omitting them falls back to the site-wide default CTA in `[slug].astro`; the download-button
+  row (`storeLinks.appStore`/`googlePlay`) and the "xem thêm tính năng/bảng giá" links are always
+  the shared hardcoded markup — never customize those.
+- **Image (optional, most posts should still have none):** only set frontmatter `imageTag` to a
+  `tag` from `src/data/blog-images.ts` (`blogImages`), and only when that entry's `usedWhen`
+  genuinely matches this post's core focus. Never invent a new crop, never pick a tag whose
+  `usedWhen` doesn't truly fit — if nothing in that list matches, leave `imageTag` unset. New
+  crops (via `scripts/prepare-blog-image.mjs`, sourced from real screenshots in
+  `src/assets/brand/*.png`) are added to `blog-images.ts` by hand in an interactive session, not
+  by the two automated routines.
 - `npx astro check` and `npm run build` both clean before considering the post done.
 
 **End-of-day logging:** after a post is implemented and building cleanly, append an entry to
