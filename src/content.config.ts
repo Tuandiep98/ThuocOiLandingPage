@@ -1,10 +1,10 @@
-import { defineCollection } from 'astro:content';
-import { glob } from 'astro/loaders';
-import { z } from 'astro/zod';
-import { supabaseLegalLoader } from './lib/legal/loader';
+import { defineCollection } from "astro:content";
+import { glob } from "astro/loaders";
+import { z } from "astro/zod";
+import { supabaseLegalLoader } from "./lib/legal/loader";
 
 const blog = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/blog' }),
+  loader: glob({ pattern: "**/*.md", base: "./src/content/blog" }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
@@ -23,6 +23,19 @@ const blog = defineCollection({
     // duyệt sẵn đó (không tự tạo crop mới), và chỉ khi `usedWhen` khớp thật với nội dung bài.
     // Đa số bài không cần ảnh — để trống là bình thường (xem CLAUDE.md).
     imageTag: z.string().optional(),
+    // Ngày cập nhật nội dung gần nhất (job bảo trì buổi tối set khi làm mới bài cũ) — xuất thành
+    // dateModified trong JSON-LD và dòng "Cập nhật ngày" trên trang. Không set nếu chưa sửa gì.
+    updatedDate: z.coerce.date().optional(),
+    // FAQ cuối bài — vừa render thành mục "Câu hỏi thường gặp", vừa sinh FAQPage JSON-LD từ cùng
+    // một nguồn để text hiển thị và structured data không lệch nhau (giống FAQ trang chủ).
+    faqs: z
+      .array(z.object({ question: z.string(), answer: z.string() }))
+      .optional(),
+    // Nguồn tham khảo — CHỈ các trang chính thống đã mở và kiểm tra được (Bộ Y tế, Cục Quản lý
+    // Dược, WHO, bệnh viện lớn…). Không có nguồn kiểm chứng được thì để trống, không bịa link.
+    sources: z
+      .array(z.object({ title: z.string(), url: z.string().url() }))
+      .optional(),
   }),
 });
 
@@ -39,11 +52,11 @@ const legalDocuments = defineCollection({
 // Account-deletion / support — nội dung tĩnh song ngữ, không qua Supabase, cùng cơ chế glob() với
 // blog để dùng chung pipeline render markdown.
 const legalPages = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/legal' }),
+  loader: glob({ pattern: "**/*.md", base: "./src/content/legal" }),
   schema: z.object({
     title: z.string(),
-    locale: z.enum(['vi', 'en']),
-    page: z.enum(['account-deletion', 'support']),
+    locale: z.enum(["vi", "en"]),
+    page: z.enum(["account-deletion", "support"]),
     // Nhãn eyebrow hiển thị phía trên tiêu đề — cùng vị trí/kiểu với "segment" của blog.
     kicker: z.string(),
   }),

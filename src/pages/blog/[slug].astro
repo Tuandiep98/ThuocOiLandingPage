@@ -18,8 +18,26 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
-const { title, description, publishDate, segment, ctaTitle, ctaDescription, imageTag } =
-  post.data;
+const {
+  title,
+  description,
+  publishDate,
+  updatedDate,
+  segment,
+  ctaTitle,
+  ctaDescription,
+  imageTag,
+  faqs,
+  sources,
+} = post.data;
+
+const formatDate = (date: Date) =>
+  date.toLocaleDateString('vi-VN', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+    timeZone: 'UTC',
+  });
 
 const DEFAULT_CTA_TITLE = 'Thử Thuốc ơi ngay hôm nay';
 const DEFAULT_CTA_DESCRIPTION =
@@ -81,6 +99,7 @@ const jsonLd = [
     headline: title,
     description,
     datePublished: publishDate.toISOString(),
+    dateModified: (updatedDate ?? publishDate).toISOString(),
     inLanguage: 'vi',
     author: { '@type': 'Organization', name: site.name, url: site.url },
     publisher: { '@type': 'Organization', name: site.name, url: site.url },
@@ -95,6 +114,20 @@ const jsonLd = [
       { '@type': 'ListItem', position: 3, name: title, item: pageURL },
     ],
   },
+  // FAQPage sinh từ cùng mảng `faqs` render bên dưới — text hiển thị và structured data không lệch.
+  ...(faqs && faqs.length > 0
+    ? [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: faqs.map((faq) => ({
+            '@type': 'Question',
+            name: faq.question,
+            acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+          })),
+        },
+      ]
+    : []),
 ];
 ---
 
@@ -109,12 +142,9 @@ const jsonLd = [
         <p class="eyebrow">{segment}</p>
         <h1>{title}</h1>
         <p class="post-date">
-          Đăng ngày {publishDate.toLocaleDateString('vi-VN', {
-            day: '2-digit',
-            month: '2-digit',
-            year: 'numeric',
-            timeZone: 'UTC',
-          })}
+          Biên tập bởi <a href={withBase('chinh-sach-bien-tap/')}>đội ngũ {site.name}</a> · Đăng ngày{' '}
+          {formatDate(publishDate)}
+          {updatedDate && <> · Cập nhật ngày {formatDate(updatedDate)}</>}
         </p>
         {
           heroImage && curatedImage && (
@@ -132,6 +162,41 @@ const jsonLd = [
         <div class="prose">
           <Content />
         </div>
+        {
+          faqs && faqs.length > 0 && (
+            <section class="post-faq">
+              <h2>Câu hỏi thường gặp</h2>
+              {faqs.map((faq) => (
+                <>
+                  <h3>{faq.question}</h3>
+                  <p>{faq.answer}</p>
+                </>
+              ))}
+            </section>
+          )
+        }
+        {
+          sources && sources.length > 0 && (
+            <section class="post-sources">
+              <h2>Nguồn tham khảo</h2>
+              <ul>
+                {sources.map((source) => (
+                  <li>
+                    <a href={source.url} rel="noopener" target="_blank">
+                      {source.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )
+        }
+        <p class="post-disclaimer">
+          Bài viết chỉ mang tính thông tin chung, không thay thế tư vấn, chẩn đoán hay điều trị của bác
+          sĩ, dược sĩ. Không tự ý bắt đầu, ngừng hay thay đổi liều thuốc — hãy hỏi lại bác sĩ hoặc dược
+          sĩ đã kê đơn khi có thắc mắc. Xem thêm{' '}
+          <a href={withBase('chinh-sach-bien-tap/')}>chính sách biên tập</a>.
+        </p>
         {
           relatedPosts.length > 0 && (
             <div class="related-posts">
@@ -198,6 +263,52 @@ const jsonLd = [
 
   .post-date {
     margin-top: var(--space-2);
+    color: var(--ink-soft);
+    font-size: var(--fs-small);
+  }
+
+  .post-date a {
+    color: var(--ink-soft);
+  }
+
+  .post-faq,
+  .post-sources {
+    margin-top: var(--space-5);
+  }
+
+  .post-faq h2,
+  .post-sources h2 {
+    font-size: var(--fs-h3);
+  }
+
+  .post-faq h3 {
+    font-size: 1.125rem;
+    margin-top: var(--space-3);
+  }
+
+  .post-faq p {
+    margin-top: 0.5rem;
+    color: var(--ink-soft);
+  }
+
+  .post-sources ul {
+    margin-top: var(--space-2);
+    padding-left: 1.25rem;
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .post-sources a,
+  .post-disclaimer a {
+    color: var(--pine);
+  }
+
+  .post-disclaimer {
+    margin-top: var(--space-4);
+    padding: var(--space-3);
+    border-left: 3px solid var(--amber);
+    background: var(--paper-raised);
+    border-radius: var(--radius-md);
     color: var(--ink-soft);
     font-size: var(--fs-small);
   }

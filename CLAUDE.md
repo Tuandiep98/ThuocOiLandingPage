@@ -44,85 +44,125 @@ There are no automated tests in this repo (no test framework installed) — `ast
 
 ## Blog content workflow
 
-This site runs a **one-post-per-day** content workflow targeting long-tail informational search
-queries the landing page itself doesn't cover — the landing page targets branded/transactional
-intent ("Thuốc ơi", "app nhắc uống thuốc"), the blog targets top-of-funnel questions people search
-before they know the app exists ("cách quản lý thuốc cho người già", "đơn thuốc bác sĩ ghi tắt
-nghĩa là gì").
+This site runs a **one-new-post-per-day** content workflow targeting informational search queries
+the landing page itself doesn't cover — the landing page targets branded/transactional intent
+("Thuốc ơi", "app nhắc uống thuốc"), the blog targets questions people search before they know the
+app exists ("quên uống thuốc 1 lần có sao không", "cách đọc đơn thuốc").
 
 **Where posts live:** `src/content/blog/*.md`, defined by the `blog` collection in
 `src/content.config.ts` (Astro content layer, `glob()` loader). Rendered at `/blog/<slug>/` via
 `src/pages/blog/[slug].astro`; `src/pages/blog/index.astro` lists all posts newest-first. Both
 pages reuse `Header`/`Footer`/`BaseLayout` directly, same pattern as `index.astro`/`404.astro` —
-no separate blog layout component.
+no separate blog layout component. `[slug].astro` also renders, automatically: the byline
+("Biên tập bởi đội ngũ Thuốc ơi" → `/chinh-sach-bien-tap/`), the per-post medical disclaimer, the
+FAQ section + `FAQPage` JSON-LD (from frontmatter `faqs`), the sources list (from `sources`),
+`dateModified` (from `updatedDate`), related posts and the breadcrumb — nothing to author for these
+beyond the frontmatter fields.
 
-**Topic strategy — repetition across posts is fine, segment/angle is not.** Multiple posts can
-cover the same core message (e.g. "quản lý thuốc cho người già") as long as each targets a
-distinct angle: an audience segment (người già sống một mình / con cái chăm sóc từ xa / người
-chăm sóc chuyên nghiệp / người trẻ tự quản lý bệnh mãn tính), or a distinct sub-topic (đọc hiểu
-đơn thuốc, lịch uống thuốc mẫu, dấu hiệu quên liều). Don't just reword an existing post — change
-who it's for or what specific problem it solves. Check `blog-notes.md` before starting a new post
-so the angle isn't already covered.
+**Editorial policy page:** `src/pages/chinh-sach-bien-tap.astro` describes the real process (AI-
+assisted drafting, reviewed by the team before publishing, periodic refresh, **no doctor/pharmacist
+review yet**). Keep it truthful — if a real licensed reviewer ever joins, update that page and only
+then consider adding a `reviewedBy` field. Never claim or imply a post was written/reviewed by a
+bác sĩ/dược sĩ otherwise.
 
-**Grounding — same rule as the rest of the site** ([[feedback-design-grounding]]-style: no
-invented product claims). Anything the post says the app *does* must trace back to `site.ts` /
-the real app's README/CLAUDE.md. General health/caregiving advice not about the app can be
-written from general knowledge, but keep it high-level and safe (e.g. explain the *shape* of a
-prescription's dosage instructions, not a table of specific medical abbreviations that could be
-wrong) and always point to "hỏi lại bác sĩ/dược sĩ" rather than asserting anything as medical
-fact — same posture as the footer disclaimer. Never invent statistics, studies, or reviews.
+**Topic strategy — search demand first, not audience-slicing.** The first ~43 posts (2026-09-04 →
+2026-09-26) sliced one message ("the app helps X remember meds") across ever-narrower audience
+segments; that produced near-zero-volume keywords and templated near-duplicate posts (a Google
+scaled-content / helpful-content risk, worse on a young domain in a YMYL niche). Don't add more
+posts of that shape. New posts should target a real question people search, within these clusters
+(backlog in `blog-notes.md`):
+
+1. Uống thuốc đúng cách — general principles (quên liều, trước/sau ăn, khoảng cách giữa các liều,
+   bảo quản thuốc), always deferring specifics to the leaflet + bác sĩ/dược sĩ.
+2. Đơn thuốc & giấy tờ y tế — đọc đơn, đơn thuốc điện tử, lĩnh thuốc BHYT, mất đơn thuốc. Only state
+   policy/procedure facts that were verified against an official source in the same session.
+3. Thói quen dùng thuốc cho bệnh mạn tính phổ biến (tăng huyết áp, tiểu đường, mỡ máu, tuyến giáp…)
+   — angle is habit/adherence/reminders, never drug choice or dosing.
+4. Chăm sóc người thân (người già, trẻ nhỏ) — already heavily covered; prefer refreshing existing
+   posts over new ones here.
+5. Seasonal — mùa cúm/sốt xuất huyết ("khi nào cần đi khám", never which drug), mang thuốc về quê
+   ăn Tết (publish from mid-December), nhập học, du lịch hè. Check `blog-notes.md`'s seasonal list.
+
+Before writing, check `blog-notes.md` so the query isn't already covered (by keyword *intent*, not
+just wording) — if an existing post covers the same intent, refresh that post instead.
+
+**Post format (new posts):**
+
+- Right under the title (first paragraph of the body): a direct 40–60-word answer to the target
+  question — this is what AI answer engines / featured snippets quote.
+- `## ` sections that genuinely answer the question; checklist or table only where it helps.
+- A `## Khi nào nên hỏi bác sĩ, dược sĩ` section (or equivalent) with concrete "see a professional"
+  triggers, phrased generally.
+- App mention ≈ at most a quarter of the post, in one section — not every section a feature pitch.
+- Frontmatter `faqs` with 3–4 real follow-up questions (plain-text answers, same guardrails).
+- Frontmatter `sources`: only official pages (Bộ Y tế / Cục Quản lý Dược / WHO / major hospitals)
+  that were actually fetched and confirmed to support the claim in this session. If nothing could
+  be verified, omit `sources` — never invent or guess a URL.
+
+**Guardrails — YMYL + Vietnamese drug-advertising law (Luật Dược, Luật Quảng cáo). A post that
+would need to break any of these to be useful should not be written.**
+
+- Never name a specific drug/brand/active ingredient together with a dose or use; never recommend,
+  compare, or rate medicines; never say "chữa khỏi", "cam kết", "hiệu quả 100%".
+- Never tell the reader to start, stop, skip, double up, or change a dose — "quên liều thì làm gì"
+  must defer to the leaflet and the prescriber/pharmacist.
+- Never diagnose, never interpret symptoms beyond "đi khám/gọi cấp cứu khi…".
+- Never invent statistics, studies, quotes, testimonials, or reviews.
+- Never claim or imply authorship/review by a doctor or pharmacist.
+- Off-limits topics entirely: thuốc gây nghiện/hướng thần, phá thai, thuốc giảm cân, thuốc cường
+  dương, tự mua/tự dùng kháng sinh, liều thuốc cho trẻ em hoặc phụ nữ mang thai.
+- Anything the post says the app *does* must trace back to `site.ts` / the real app's
+  README/CLAUDE.md (e.g. the app does not check drug interactions — don't imply it).
 
 **Per-post requirements (all must hold before a post counts as done):**
 
 - Frontmatter: `title`, `description` (~120–160 chars, unique per post), `publishDate`,
   `keyword` (primary target query, used for `blog-notes.md` tracking — not rendered, not a meta
-  keywords tag), `segment` (rendered as the eyebrow label on the post).
+  keywords tag), `segment` (rendered as the eyebrow label on the post), `faqs`, and `sources` when
+  verified sources exist. Set `updatedDate` only when an existing post's content is refreshed.
 - Exactly one `<h1>` (post title, from frontmatter — not repeated in the Markdown body), `<h2>`
   for major sections within the post, `<h3>` only if a section genuinely needs sub-points — same
-  no-skipped-levels discipline as the landing page.
-- At least one internal link back to a landing page section (via `withBase('#tinh-nang')` /
-  `#bang-gia`, already wired into the post layout's CTA block) and the CTA block linking to
-  `storeLinks.appStore`/`storeLinks.googlePlay` from `site.ts` — don't hardcode URLs in post
-  Markdown. Related-post links and the breadcrumb are rendered automatically by
-  `[slug].astro` (word-overlap on `keyword`+`segment` across the whole collection) — nothing to
-  author here.
+  no-skipped-levels discipline as the landing page. (The FAQ block renders its own `<h2>`/`<h3>`.)
+- The CTA block (rendered by `[slug].astro`) links to `storeLinks.appStore`/`googlePlay` and
+  `#tinh-nang`/`#bang-gia` — don't hardcode those URLs in post Markdown. Internal links to other
+  relevant posts (`/blog/<slug>/`) inside the body are encouraged where they genuinely help.
 - **CTA customization (new posts only — do not retrofit posts published before 2026-09-17):**
-  set frontmatter `ctaTitle`/`ctaDescription` to copy specific to this post's segment/feature
-  angle (grounded in `site.ts`, same posture as the rest of the post — don't invent claims).
-  Omitting them falls back to the site-wide default CTA in `[slug].astro`; the download-button
-  row (`storeLinks.appStore`/`googlePlay`) and the "xem thêm tính năng/bảng giá" links are always
-  the shared hardcoded markup — never customize those.
+  set frontmatter `ctaTitle`/`ctaDescription` to copy specific to this post's angle (grounded in
+  `site.ts`). Omitting them falls back to the site-wide default CTA in `[slug].astro`; the
+  download-button row and the "xem thêm tính năng/bảng giá" links are always the shared hardcoded
+  markup — never customize those.
 - **Image (optional, most posts should still have none):** only set frontmatter `imageTag` to a
   `tag` from `src/data/blog-images.ts` (`blogImages`), and only when that entry's `usedWhen`
-  genuinely matches this post's core focus. Never invent a new crop, never pick a tag whose
-  `usedWhen` doesn't truly fit — if nothing in that list matches, leave `imageTag` unset. New
-  crops (via `scripts/prepare-blog-image.mjs`, sourced from real screenshots in
-  `src/assets/brand/*.png`) are added to `blog-images.ts` by hand in an interactive session, not
+  genuinely matches this post's core focus. Never invent a new crop — if nothing matches, leave
+  `imageTag` unset. New crops (via `scripts/prepare-blog-image.mjs`, sourced from real screenshots
+  in `src/assets/brand/*.png`) are added to `blog-images.ts` by hand in an interactive session, not
   by the two automated routines.
-- `npx astro check` and `npm run build` both clean before considering the post done.
+- `npx astro check` and `npm run build` both clean before considering the post done. The build
+  needs `SUPABASE_URL`/`SUPABASE_ANON_KEY` (see Legal pages below).
 
-**End-of-day logging:** after a post is implemented and building cleanly, append an entry to
-`blog-notes.md` (repo root) — slug, title, target keyword + segment — and update the backlog list
-of angles not yet covered. This file is the source of truth for "what's been covered"; read it
-first, don't start from a blank slate each session.
+**`blog-notes.md`** (repo root) is the source of truth for what's covered: one entry per post under
+a `## YYYY-MM-DD` header (slug, title, keyword, segment, angle), a `## Bài đã làm mới` log for
+refreshes, and the backlog/seasonal lists. Read it first, never start from a blank slate.
 
-**Trigger: user asks to create a blog post.** When the user's message asks to create/write a blog
-post (e.g. "tạo blog", "viết bài blog hôm nay", "tạo bài viết mới") — not a request to discuss the
-workflow or edit an existing post — run this flow:
+**Automated routines (Claude Code cloud routines, two per day, both open PRs — never push to
+`main`):**
 
-1. Check `blog-notes.md` for an entry already dated today (entries are grouped under `## YYYY-MM-DD`
-   headers). If today already has one, stop and tell the user — the cap is one post per day, don't
-   generate a second one unless they explicitly ask to override it.
-2. Otherwise pick the next angle from the backlog list in `blog-notes.md` (or propose a new one if
-   the backlog is exhausted), and write one post meeting every requirement above (grounding,
-   heading discipline, frontmatter, CTA/internal links).
-3. Run `npx astro check` and `npm run build` to confirm it builds cleanly; delete the test `dist/`
-   output afterward (gitignored — never commit it).
-4. **Stop here — do not commit or push.** Summarize what was generated (title, target keyword,
-   segment, one-line description of the angle) and wait for the user to explicitly confirm.
-5. Only after the user confirms: update `blog-notes.md` (new dated entry + trimmed backlog),
-   commit, and push to `main`. Cloudflare's Git-connected build auto-deploys on push to `main` (see
-   Deployment below) — pushing is what makes the post go live, so never push before confirmation.
+- **Morning (~09:00 giờ VN) — new post.** Skip if `blog-notes.md` already has an entry dated today.
+  Otherwise pick the top backlog item (or research a new question in the clusters above), write one
+  post meeting everything above, update `blog-notes.md`, run check + build, commit on a branch
+  `blog/YYYY-MM-DD`, push that branch and open a PR to `main`.
+- **Evening (~20:00 giờ VN) — maintenance, no new post.** Refresh one existing post (prefer the
+  oldest not yet refreshed: add answer-first intro, `faqs`, verified `sources`, internal links,
+  guardrail fixes, trim repetitive feature pitch; set `updatedDate`), and top up the backlog to at
+  least 10 items with real search questions in the clusters. Log it under `## Bài đã làm mới`.
+  Branch `blog-maintenance/YYYY-MM-DD`, PR to `main`.
+- The user reviews and merges PRs; merging to `main` is what deploys (Cloudflare, see Deployment).
+
+**Trigger: user asks to create a blog post interactively** (e.g. "tạo blog", "viết bài blog hôm
+nay") — same rules: check today's entry in `blog-notes.md` (one new post per day unless the user
+explicitly overrides), write the post, run check + build (delete `dist/` afterwards), then **stop
+and summarize — do not commit or push** until the user confirms; after confirmation, update
+`blog-notes.md`, commit and push to `main`.
 
 ## Legal pages (privacy, terms, account deletion, support)
 

@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { site } from '../data/site';
+import { withBase } from '../lib/base';
+
+// Trang chính sách biên tập — tín hiệu E-E-A-T cho nội dung sức khoẻ (YMYL). Chỉ mô tả đúng quy
+// trình thật đang chạy (xem CLAUDE.md, mục "Blog content workflow"); không nhận có bác sĩ/dược sĩ
+// duyệt bài chừng nào chưa có người thật đứng tên.
+const description =
+  'Cách đội ngũ Thuốc ơi soạn, kiểm tra và cập nhật bài viết về thuốc và sức khoẻ: nguyên tắc nội dung, nguồn tham khảo và giới hạn của thông tin.';
+---
+
+<BaseLayout title={`Chính sách biên tập — ${site.name}`} description={description}>
+  <Header />
+  <main id="noi-dung-chinh">
+    <article class="section">
+      <div class="wrap policy">
+        <h1>Chính sách biên tập</h1>
+        <p class="lead">
+          Các bài viết trên blog {site.name} nhằm giúp người đọc hiểu và duy trì thói quen dùng thuốc
+          đúng theo chỉ định của bác sĩ. Trang này giải thích bài viết được soạn thế nào và giới hạn
+          của chúng.
+        </p>
+
+        <h2>Ai soạn bài viết</h2>
+        <p>
+          Bài viết do đội ngũ {site.name} biên tập, có sử dụng công cụ AI hỗ trợ soạn thảo. Bài mới
+          được đội ngũ duyệt trước khi đăng, và các bài đã đăng được rà soát, cập nhật định kỳ — ngày
+          cập nhật gần nhất hiển thị ngay dưới tiêu đề mỗi bài.
+        </p>
+        <p>
+          Bài viết hiện chưa được bác sĩ hoặc dược sĩ thẩm định chuyên môn. Vì vậy chúng tôi chỉ viết
+          ở mức thông tin chung về thói quen và cách tổ chức việc dùng thuốc, không đưa ra lời khuyên
+          điều trị.
+        </p>
+
+        <h2>Nguyên tắc nội dung</h2>
+        <ul>
+          <li>Không nêu tên thuốc, biệt dược hay liều dùng cụ thể; không so sánh hiệu quả giữa các thuốc.</li>
+          <li>Không hướng dẫn tự bắt đầu, ngừng hay thay đổi liều thuốc; không chẩn đoán bệnh.</li>
+          <li>Không đưa số liệu, nghiên cứu hay lời chứng thực nào không kiểm chứng được.</li>
+          <li>
+            Mọi mô tả về tính năng của ứng dụng {site.name} đều dựa trên tính năng thật đang có, không
+            hứa hẹn tính năng chưa có.
+          </li>
+          <li>Mỗi bài đều nhắc người đọc hỏi lại bác sĩ hoặc dược sĩ khi có thắc mắc về thuốc của mình.</li>
+        </ul>
+
+        <h2>Nguồn tham khảo</h2>
+        <p>
+          Khi bài viết dẫn thông tin cụ thể, chúng tôi ưu tiên nguồn chính thống như Bộ Y tế, Cục
+          Quản lý Dược, Tổ chức Y tế Thế giới (WHO) và các bệnh viện, và liệt kê ở cuối bài. Tờ hướng
+          dẫn sử dụng đi kèm thuốc và chỉ định của bác sĩ luôn là thông tin cần ưu tiên hơn bài viết.
+        </p>
+
+        <h2>Giới hạn của thông tin</h2>
+        <p>
+          Nội dung trên blog không thay thế tư vấn, chẩn đoán hay điều trị của bác sĩ, dược sĩ. Nếu
+          có triệu chứng bất thường hoặc tình huống khẩn cấp, hãy liên hệ cơ sở y tế gần nhất. Nếu
+          phát hiện thông tin chưa chính xác trong bài viết, vui lòng báo cho chúng tôi qua trang{' '}
+          <a href={withBase('legal/support/')}>Hỗ trợ</a> để được sửa.
+        </p>
+      </div>
+    </article>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .policy {
+    max-width: 42rem;
+  }
+
+  .policy h1 {
+    font-size: var(--fs-h1);
+  }
+
+  .lead {
+    margin-top: var(--space-2);
+    font-size: var(--fs-lead);
+    color: var(--ink-soft);
+  }
+
+  .policy h2 {
+    font-size: var(--fs-h3);
+    margin-top: var(--space-4);
+  }
+
+  .policy p,
+  .policy ul {
+    margin-top: var(--space-2);
+    color: var(--ink-soft);
+  }
+
+  .policy ul {
+    padding-left: 1.25rem;
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .policy a {
+    color: var(--pine);
+  }
+</style>
