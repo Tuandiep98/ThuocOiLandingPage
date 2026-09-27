@@ -150,12 +150,12 @@ refreshes, and the backlog/seasonal lists. Read it first, never start from a bla
 - **Morning (~09:00 giờ VN) — new post.** Skip if `blog-notes.md` already has an entry dated today.
   Otherwise pick the top backlog item (or research a new question in the clusters above), write one
   post meeting everything above, update `blog-notes.md`, run check + build, commit on a branch
-  `blog/YYYY-MM-DD`, push that branch and open a PR to `main`.
+  `claude/blog-YYYY-MM-DD`, push that branch and open a PR to `main`.
 - **Evening (~20:00 giờ VN) — maintenance, no new post.** Refresh one existing post (prefer the
   oldest not yet refreshed: add answer-first intro, `faqs`, verified `sources`, internal links,
   guardrail fixes, trim repetitive feature pitch; set `updatedDate`), and top up the backlog to at
   least 10 items with real search questions in the clusters. Log it under `## Bài đã làm mới`.
-  Branch `blog-maintenance/YYYY-MM-DD`, PR to `main`.
+  Branch `claude/blog-maintenance-YYYY-MM-DD`, PR to `main`.
 - The user reviews and merges PRs; merging to `main` is what deploys (Cloudflare, see Deployment).
 
 **Trigger: user asks to create a blog post interactively** (e.g. "tạo blog", "viết bài blog hôm
