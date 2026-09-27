@@ -583,6 +583,18 @@ workflow"). Đọc file này trước khi viết bài mới — mục đích ch�
   người qua nhóm Gia đình). Không đưa hướng dẫn xử trí cụ thể khi quên liều hay tên thuốc/liều
   dùng — chỉ khuyến cáo hỏi lại bác sĩ/dược sĩ hoặc trao đổi thêm với chồng/vợ mình.
 
+## 2026-09-27
+
+- `quen-uong-thuoc-1-lan-co-sao-khong` — "Quên uống thuốc 1 lần có sao không?" — keyword: `quên
+  uống thuốc 1 lần có sao không` — cụm Uống thuốc đúng cách (backlog #1). Góc độ: trả lời trực
+  tiếp câu hỏi "có sao không", giải thích vì sao không có một quy tắc xử trí chung cho mọi loại
+  thuốc (khác thuốc, khác cách xử trí quên liều), liệt kê các tình huống nên chủ động hỏi ngay
+  bác sĩ/dược sĩ, không đưa ra bất kỳ hướng dẫn uống bù/bỏ liều cụ thể nào. Liên kết nội bộ tới
+  bài `dau-hieu-quen-lieu-uong-trung-lieu-thuoc` (đã dùng trong backlog gợi ý). Nguồn tham khảo:
+  trang "Làm gì khi quên uống thuốc huyết áp?" của Sở Y tế Nghệ An (yte.nghean.gov.vn) — chỉ dùng
+  để minh hoạ rằng cách xử trí quên liều khác nhau theo từng loại thuốc, không trích dẫn hướng
+  dẫn xử trí cụ thể của nguồn này vào bài.
+
 ## Bài đã làm mới
 
 Nhật ký job bảo trì buổi tối — mỗi dòng: ngày, slug, đã sửa gì. Ưu tiên làm mới bài cũ nhất chưa
@@ -597,26 +609,23 @@ câu hỏi người dùng thật sự tìm, theo cụm chủ đề — không c�
 đầu. Lấy từ trên xuống; bỏ qua mục nào trùng ý định tìm kiếm với bài đã có (khi đó làm mới bài cũ).
 Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
 
-1. `quên uống thuốc 1 lần có sao không` — cụm Uống thuốc đúng cách. Chỉ nói nguyên tắc chung (xem
-   tờ hướng dẫn, hỏi dược sĩ), không hướng dẫn uống bù/gấp đôi. Liên kết tới
-   `dau-hieu-quen-lieu-uong-trung-lieu-thuoc`.
-2. `đơn thuốc điện tử là gì` — cụm Đơn thuốc & giấy tờ. Chỉ viết thông tin chính sách đã kiểm chứng
+1. `đơn thuốc điện tử là gì` — cụm Đơn thuốc & giấy tờ. Chỉ viết thông tin chính sách đã kiểm chứng
    được từ nguồn Bộ Y tế trong cùng phiên; không kiểm chứng được thì hoãn.
-3. `cách bảo quản thuốc tại nhà khi trời nóng ẩm` — cụm Uống thuốc đúng cách. Nguyên tắc chung (nhiệt
+2. `cách bảo quản thuốc tại nhà khi trời nóng ẩm` — cụm Uống thuốc đúng cách. Nguyên tắc chung (nhiệt
    độ, độ ẩm, ánh sáng, để xa tầm tay trẻ em), dẫn về hướng dẫn trên bao bì.
-4. `uống thuốc cách nhau bao lâu` — cụm Uống thuốc đúng cách. Giải thích vì sao đơn ghi "cách nhau
+3. `uống thuốc cách nhau bao lâu` — cụm Uống thuốc đúng cách. Giải thích vì sao đơn ghi "cách nhau
    X giờ" và cách xếp giờ trong ngày cho khớp; không nêu khoảng cách cho thuốc cụ thể.
-5. `mất đơn thuốc phải làm sao` — cụm Đơn thuốc & giấy tờ. Hỏi lại nơi khám, lưu ảnh đơn thuốc;
+4. `mất đơn thuốc phải làm sao` — cụm Đơn thuốc & giấy tờ. Hỏi lại nơi khám, lưu ảnh đơn thuốc;
    thủ tục cụ thể chỉ khi kiểm chứng được.
-6. `cách nhớ uống thuốc huyết áp mỗi ngày` — cụm Bệnh mạn tính. Góc thói quen/nhắc nhở, không bàn
+5. `cách nhớ uống thuốc huyết áp mỗi ngày` — cụm Bệnh mạn tính. Góc thói quen/nhắc nhở, không bàn
    chọn thuốc hay giờ uống cụ thể (giờ uống do bác sĩ chỉ định).
-7. `người bệnh tiểu đường quên uống thuốc` — cụm Bệnh mạn tính. Thói quen, gắn với bữa ăn theo chỉ
+6. `người bệnh tiểu đường quên uống thuốc` — cụm Bệnh mạn tính. Thói quen, gắn với bữa ăn theo chỉ
    định; mọi xử trí khi quên liều → hỏi bác sĩ.
-8. `có nên dùng lại đơn thuốc cũ` — cụm Đơn thuốc & giấy tờ. Vì sao không nên tự mua lại theo đơn
+7. `có nên dùng lại đơn thuốc cũ` — cụm Đơn thuốc & giấy tờ. Vì sao không nên tự mua lại theo đơn
    cũ, khi nào cần tái khám. Không nêu thuốc cụ thể.
-9. `vứt bỏ thuốc hết hạn đúng cách` — cụm Uống thuốc đúng cách. Chỉ khuyến nghị chung + hỏi nhà
+8. `vứt bỏ thuốc hết hạn đúng cách` — cụm Uống thuốc đúng cách. Chỉ khuyến nghị chung + hỏi nhà
    thuốc; không bịa quy định.
-10. `chuẩn bị thuốc khi về quê ăn Tết` — cụm Theo mùa. **Đăng từ giữa tháng 12/2026** (Tết Đinh
+9. `chuẩn bị thuốc khi về quê ăn Tết` — cụm Theo mùa. **Đăng từ giữa tháng 12/2026** (Tết Đinh
     Mùi rơi vào đầu tháng 2/2027) — không lấy trước thời điểm đó.
 
 ### Lịch chủ đề theo mùa
