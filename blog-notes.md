@@ -614,7 +614,19 @@ workflow"). Đọc file này trước khi viết bài mới — mục đích ch�
 Nhật ký job bảo trì buổi tối — mỗi dòng: ngày, slug, đã sửa gì. Ưu tiên làm mới bài cũ nhất chưa
 có trong danh sách này.
 
-(chưa có)
+- 2026-09-28 — `uong-thuoc-mat-ngu-dung-gio-co-dinh` — **Ưu tiên 1: sửa vi phạm guardrail.** Bài gốc
+  (2026-09-16) có `segment` ghi "uống thuốc an thần" — thuốc an thần/hướng thần nằm trong danh sách
+  "Off-limits topics entirely" của CLAUDE.md. Đã: bỏ hẳn cụm "thuốc an thần" khỏi segment/nội dung,
+  đổi khung sang "thuốc hỗ trợ giấc ngủ theo chỉ định bác sĩ" chung chung, thêm ghi chú một số thuốc
+  nhóm này là thuốc kiểm soát đặc biệt nên phải hỏi bác sĩ/nhà thuốc về cách lĩnh thuốc thay vì tự
+  tìm mua thêm, thêm mục "Khi nào nên hỏi bác sĩ, dược sĩ ngay" riêng. Cũng gộp toàn bộ phần giới
+  thiệu tính năng app vào đúng 1 mục cuối bài (bài cũ nhắc tính năng app rải ở 3/4 mục, vượt tỉ lệ
+  ~1/4 khuyến nghị), thêm đoạn trả lời trực tiếp 40–60 từ ngay đầu bài, thêm `faqs` (4 câu), thêm 2
+  liên kết nội bộ (`cach-dat-loi-nhac-uong-thuoc-tren-dien-thoai`,
+  `dau-hieu-quen-lieu-uong-trung-lieu-thuoc`), đặt `updatedDate`. Không tìm được nguồn chính thức đọc
+  được toàn văn để trích dẫn cụ thể quy trình cấp phát thuốc kiểm soát đặc biệt trong phiên này (chỉ
+  có bản tóm tắt gián tiếp từ Thông tư 26/2025/TT-BYT qua kết quả tìm kiếm, chưa đọc được nguyên văn
+  PDF) nên không thêm `sources` cho chi tiết đó — chỉ giữ câu chung, không nêu số liệu cụ thể.
 
 ## Backlog góc độ chưa làm
 
@@ -639,6 +651,27 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
    thuốc; không bịa quy định.
 8. `chuẩn bị thuốc khi về quê ăn Tết` — cụm Theo mùa. **Đăng từ giữa tháng 12/2026** (Tết Đinh
     Mùi rơi vào đầu tháng 2/2027) — không lấy trước thời điểm đó.
+9. `có nên bảo quản thuốc trong tủ lạnh không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm
+   kiếm thật (nhiều nhà thuốc/trang sức khoẻ lớn đều có bài riêng về câu hỏi này). Góc độ: khác bài
+   backlog #1 (nguyên tắc chung nhiệt độ/độ ẩm/ánh sáng nơi để thuốc) ở chỗ đây là câu hỏi hẹp hơn —
+   vì sao đa số thuốc viên/thuốc bột KHÔNG nên để tủ lạnh (ẩm làm hỏng thuốc) trong khi một số ít
+   loại (insulin, một số thuốc tiêm/đặt) lại cần giữ lạnh — luôn chốt lại bằng việc đọc nhãn/hỏi
+   dược sĩ cho từng loại cụ thể, không tự suy ra theo cảm tính. Cần xác minh: nguồn chính thức
+   (Bộ Y tế/bệnh viện lớn) trước khi viết, không dùng nguồn nhà thuốc thương mại.
+10. `cảm cúm khi nào cần đi khám bác sĩ` — cụm Theo mùa (mùa cúm/giao mùa, tháng 10–11, có thể đăng
+    ngay vì đang vào mùa). Đã xác nhận nhu cầu tìm kiếm thật (Vinmec, Medlatec, các trung tâm y tế
+    đều có bài). Góc độ: liệt kê dấu hiệu cụ thể cần đi khám/cấp cứu (sốt cao kéo dài, khó thở, lơ
+    mơ, trẻ bỏ bú/thở nhanh...) và nhóm nguy cơ cao cần khám sớm — tuyệt đối không nêu tên thuốc trị
+    cúm hay hướng dẫn dùng thuốc hạ sốt/kháng virus cụ thể, chỉ nói khi nào cần gặp chuyên môn. Khác
+    bài `ca-nha-cung-om-mua-cum-uong-thuoc-sao-cho-khong-nham` (đó là phối hợp nhắc thuốc trong nhà
+    khi cả nhà cùng ốm, không phải dấu hiệu y khoa cần đi khám). Cần xác minh: nguồn chính thức
+    (Bộ Y tế/WHO/bệnh viện lớn như Vinmec) trước khi viết.
+11. `sốt xuất huyết dấu hiệu nào cần nhập viện ngay` — cụm Theo mùa (tháng 6–9, đã vào mùa, có thể
+    đăng sớm). Góc độ: chỉ nêu dấu hiệu cảnh báo cần nhập viện (xuất huyết, đau bụng dữ dội, nôn
+    nhiều, li bì, tay chân lạnh...), không nói thuốc hạ sốt nào nên/không nên dùng (đặc biệt lưu ý
+    guardrail: không được gợi ý bất kỳ thuốc giảm đau/hạ sốt cụ thể nào vì một số loại chống chỉ
+    định với sốt xuất huyết — chỉ nói "hỏi bác sĩ hoặc dược sĩ trước khi dùng bất kỳ thuốc hạ sốt
+    nào"). Cần xác minh: nguồn chính thức (Bộ Y tế/CDC/bệnh viện lớn) trước khi viết.
 
 ### Lịch chủ đề theo mùa
 
