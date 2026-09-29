@@ -609,6 +609,18 @@ workflow"). Đọc file này trước khi viết bài mới — mục đích ch�
   (baohiemxahoi.gov.vn) về lộ trình kê đơn thuốc điện tử. Không đặt `imageTag` — không có ảnh nào
   trong danh sách duyệt sẵn khớp thật với chủ đề chính sách/quy định này.
 
+## 2026-09-29
+
+- `cach-bao-quan-thuoc-tai-nha` — "Cách bảo quản thuốc tại nhà đúng cách: nhiệt độ, độ ẩm và ánh
+  sáng" — keyword: `cách bảo quản thuốc tại nhà` — cụm Uống thuốc đúng cách (backlog #1). Góc độ:
+  nguyên tắc chung cho phần lớn thuốc viên/thuốc bột (nhiệt độ 15–25°C, độ ẩm, tránh ánh nắng, giữ
+  nguyên bao bì gốc, để xa tầm tay trẻ em), luôn dẫn về việc đọc tờ hướng dẫn sử dụng/hỏi dược sĩ
+  cho từng loại cụ thể — không nêu tên thuốc hay khuyến cáo dùng/bỏ thuốc cụ thể. Liên kết nội bộ
+  tới `quan-ly-tu-thuoc-gia-dinh-khong-ke-don` và `dau-hieu-quen-lieu-uong-trung-lieu-thuoc`.
+  Nguồn: bài "Những điều cần biết về bảo quản thuốc tại nhà" của Vinmec (vinmec.com) — đã mở và
+  đối chiếu số liệu nhiệt độ/độ ẩm trong bài với nguồn này. Không đặt `imageTag` — không có ảnh
+  nào trong danh sách duyệt sẵn khớp thật với chủ đề bảo quản thuốc.
+
 ## Bài đã làm mới
 
 Nhật ký job bảo trì buổi tối — mỗi dòng: ngày, slug, đã sửa gì. Ưu tiên làm mới bài cũ nhất chưa
@@ -635,30 +647,28 @@ câu hỏi người dùng thật sự tìm, theo cụm chủ đề — không c�
 đầu. Lấy từ trên xuống; bỏ qua mục nào trùng ý định tìm kiếm với bài đã có (khi đó làm mới bài cũ).
 Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
 
-1. `cách bảo quản thuốc tại nhà khi trời nóng ẩm` — cụm Uống thuốc đúng cách. Nguyên tắc chung (nhiệt
-   độ, độ ẩm, ánh sáng, để xa tầm tay trẻ em), dẫn về hướng dẫn trên bao bì.
-2. `uống thuốc cách nhau bao lâu` — cụm Uống thuốc đúng cách. Giải thích vì sao đơn ghi "cách nhau
+1. `uống thuốc cách nhau bao lâu` — cụm Uống thuốc đúng cách. Giải thích vì sao đơn ghi "cách nhau
    X giờ" và cách xếp giờ trong ngày cho khớp; không nêu khoảng cách cho thuốc cụ thể.
-3. `mất đơn thuốc phải làm sao` — cụm Đơn thuốc & giấy tờ. Hỏi lại nơi khám, lưu ảnh đơn thuốc;
+2. `mất đơn thuốc phải làm sao` — cụm Đơn thuốc & giấy tờ. Hỏi lại nơi khám, lưu ảnh đơn thuốc;
    thủ tục cụ thể chỉ khi kiểm chứng được.
-4. `cách nhớ uống thuốc huyết áp mỗi ngày` — cụm Bệnh mạn tính. Góc thói quen/nhắc nhở, không bàn
+3. `cách nhớ uống thuốc huyết áp mỗi ngày` — cụm Bệnh mạn tính. Góc thói quen/nhắc nhở, không bàn
    chọn thuốc hay giờ uống cụ thể (giờ uống do bác sĩ chỉ định).
-5. `người bệnh tiểu đường quên uống thuốc` — cụm Bệnh mạn tính. Thói quen, gắn với bữa ăn theo chỉ
+4. `người bệnh tiểu đường quên uống thuốc` — cụm Bệnh mạn tính. Thói quen, gắn với bữa ăn theo chỉ
    định; mọi xử trí khi quên liều → hỏi bác sĩ.
-6. `có nên dùng lại đơn thuốc cũ` — cụm Đơn thuốc & giấy tờ. Vì sao không nên tự mua lại theo đơn
+5. `có nên dùng lại đơn thuốc cũ` — cụm Đơn thuốc & giấy tờ. Vì sao không nên tự mua lại theo đơn
    cũ, khi nào cần tái khám. Không nêu thuốc cụ thể.
-7. `vứt bỏ thuốc hết hạn đúng cách` — cụm Uống thuốc đúng cách. Chỉ khuyến nghị chung + hỏi nhà
+6. `vứt bỏ thuốc hết hạn đúng cách` — cụm Uống thuốc đúng cách. Chỉ khuyến nghị chung + hỏi nhà
    thuốc; không bịa quy định.
-8. `chuẩn bị thuốc khi về quê ăn Tết` — cụm Theo mùa. **Đăng từ giữa tháng 12/2026** (Tết Đinh
+7. `chuẩn bị thuốc khi về quê ăn Tết` — cụm Theo mùa. **Đăng từ giữa tháng 12/2026** (Tết Đinh
     Mùi rơi vào đầu tháng 2/2027) — không lấy trước thời điểm đó.
-9. `có nên bảo quản thuốc trong tủ lạnh không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm
+8. `có nên bảo quản thuốc trong tủ lạnh không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm
    kiếm thật (nhiều nhà thuốc/trang sức khoẻ lớn đều có bài riêng về câu hỏi này). Góc độ: khác bài
-   backlog #1 (nguyên tắc chung nhiệt độ/độ ẩm/ánh sáng nơi để thuốc) ở chỗ đây là câu hỏi hẹp hơn —
-   vì sao đa số thuốc viên/thuốc bột KHÔNG nên để tủ lạnh (ẩm làm hỏng thuốc) trong khi một số ít
-   loại (insulin, một số thuốc tiêm/đặt) lại cần giữ lạnh — luôn chốt lại bằng việc đọc nhãn/hỏi
-   dược sĩ cho từng loại cụ thể, không tự suy ra theo cảm tính. Cần xác minh: nguồn chính thức
-   (Bộ Y tế/bệnh viện lớn) trước khi viết, không dùng nguồn nhà thuốc thương mại.
-10. `cảm cúm khi nào cần đi khám bác sĩ` — cụm Theo mùa (mùa cúm/giao mùa, tháng 10–11, có thể đăng
+   `cach-bao-quan-thuoc-tai-nha` (nguyên tắc chung nhiệt độ/độ ẩm/ánh sáng nơi để thuốc) ở chỗ đây
+   là câu hỏi hẹp hơn — vì sao đa số thuốc viên/thuốc bột KHÔNG nên để tủ lạnh (ẩm làm hỏng thuốc)
+   trong khi một số ít loại (insulin, một số thuốc tiêm/đặt) lại cần giữ lạnh — luôn chốt lại bằng
+   việc đọc nhãn/hỏi dược sĩ cho từng loại cụ thể, không tự suy ra theo cảm tính. Cần xác minh:
+   nguồn chính thức (Bộ Y tế/bệnh viện lớn) trước khi viết, không dùng nguồn nhà thuốc thương mại.
+9. `cảm cúm khi nào cần đi khám bác sĩ` — cụm Theo mùa (mùa cúm/giao mùa, tháng 10–11, có thể đăng
     ngay vì đang vào mùa). Đã xác nhận nhu cầu tìm kiếm thật (Vinmec, Medlatec, các trung tâm y tế
     đều có bài). Góc độ: liệt kê dấu hiệu cụ thể cần đi khám/cấp cứu (sốt cao kéo dài, khó thở, lơ
     mơ, trẻ bỏ bú/thở nhanh...) và nhóm nguy cơ cao cần khám sớm — tuyệt đối không nêu tên thuốc trị
@@ -666,7 +676,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     bài `ca-nha-cung-om-mua-cum-uong-thuoc-sao-cho-khong-nham` (đó là phối hợp nhắc thuốc trong nhà
     khi cả nhà cùng ốm, không phải dấu hiệu y khoa cần đi khám). Cần xác minh: nguồn chính thức
     (Bộ Y tế/WHO/bệnh viện lớn như Vinmec) trước khi viết.
-11. `sốt xuất huyết dấu hiệu nào cần nhập viện ngay` — cụm Theo mùa (tháng 6–9, đã vào mùa, có thể
+10. `sốt xuất huyết dấu hiệu nào cần nhập viện ngay` — cụm Theo mùa (tháng 6–9, đã vào mùa, có thể
     đăng sớm). Góc độ: chỉ nêu dấu hiệu cảnh báo cần nhập viện (xuất huyết, đau bụng dữ dội, nôn
     nhiều, li bì, tay chân lạnh...), không nói thuốc hạ sốt nào nên/không nên dùng (đặc biệt lưu ý
     guardrail: không được gợi ý bất kỳ thuốc giảm đau/hạ sốt cụ thể nào vì một số loại chống chỉ
