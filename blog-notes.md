@@ -626,6 +626,19 @@ workflow"). Đọc file này trước khi viết bài mới — mục đích ch�
 Nhật ký job bảo trì buổi tối — mỗi dòng: ngày, slug, đã sửa gì. Ưu tiên làm mới bài cũ nhất chưa
 có trong danh sách này.
 
+- 2026-09-29 — `cach-quan-ly-thuoc-cho-nguoi-gia-song-mot-minh` — Bài cũ nhất chưa được làm mới
+  (một trong 3 bài thử nghiệm đầu tiên, 2026-09-04), không có vi phạm guardrail nào. Đã: thêm đoạn
+  trả lời trực tiếp 40–60 từ ngay đầu bài; thêm mục "Giữ một danh sách thuốc đang dùng...cùng đơn
+  thuốc gốc" vào phần nguyên tắc cơ bản (đối chiếu với nguồn Vinmec); mở rộng mục "Khi nào nên hỏi
+  bác sĩ, dược sĩ" thành danh sách 4 tình huống cụ thể (tác dụng phụ lạ, quên/nhầm liều lặp lại,
+  muốn thêm vitamin/thực phẩm chức năng...) thay vì một đoạn chung chung; thêm `faqs` (4 câu); thêm
+  `sources` (bài "Các nguyên tắc sử dụng thuốc cho người cao tuổi" của Vinmec, đã fetch và đối chiếu
+  trong phiên này — chỉ trích phần giữ danh sách thuốc/không tự đổi liều, không lấy phần liều lượng
+  cụ thể của nguồn); thêm 2 liên kết nội bộ tới `hop-chia-thuoc-theo-ngay-va-app-nhac-thuoc` và
+  `dau-hieu-quen-lieu-uong-trung-lieu-thuoc`; đặt `updatedDate`. Không đổi title/publishDate/
+  keyword/segment. Phần giới thiệu app giữ nguyên trong đúng 1 mục như bài gốc (đã đạt tỉ lệ
+  ~1/4 khuyến nghị).
+
 - 2026-09-28 — `uong-thuoc-mat-ngu-dung-gio-co-dinh` — **Ưu tiên 1: sửa vi phạm guardrail.** Bài gốc
   (2026-09-16) có `segment` ghi "uống thuốc an thần" — thuốc an thần/hướng thần nằm trong danh sách
   "Off-limits topics entirely" của CLAUDE.md. Đã: bỏ hẳn cụm "thuốc an thần" khỏi segment/nội dung,
@@ -682,6 +695,21 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     guardrail: không được gợi ý bất kỳ thuốc giảm đau/hạ sốt cụ thể nào vì một số loại chống chỉ
     định với sốt xuất huyết — chỉ nói "hỏi bác sĩ hoặc dược sĩ trước khi dùng bất kỳ thuốc hạ sốt
     nào"). Cần xác minh: nguồn chính thức (Bộ Y tế/CDC/bệnh viện lớn) trước khi viết.
+11. `cách nhớ uống thuốc tuyến giáp mỗi ngày` — cụm Bệnh mạn tính (tuyến giáp, chưa có bài nào khai
+    thác). Đã xác nhận nhu cầu tìm kiếm thật (Bệnh viện Nội tiết Trung ương, Bệnh viện Nguyễn Tri
+    Phương, nhà thuốc lớn đều có bài về quên liều/uống đúng giờ thuốc tuyến giáp). Góc độ: thói quen
+    giữ đúng MỘT giờ cố định mỗi ngày để dễ nhớ, không nêu khoảng cách với bữa ăn cụ thể (để bác sĩ/
+    dược sĩ dặn riêng) và không đưa hướng dẫn xử trí khi quên liều — chỉ nói chung "hỏi lại bác sĩ/
+    dược sĩ đang điều trị". Khác các bài mạn tính khác (huyết áp, tiểu đường) vì đây là thuốc thường
+    chỉ uống 1 lần/ngày nhưng nhạy với thời điểm trong ngày. Cần xác minh thêm nguồn chính thức
+    (bệnh viện) trước khi viết, không dùng nguồn nhà thuốc thương mại cho phần y khoa.
+12. `đơn thuốc có thời hạn bao lâu` — cụm Đơn thuốc & giấy tờ. Đã xác nhận nhu cầu tìm kiếm thật và
+    có thay đổi chính sách gần đây (từ 1/7/2025 Bộ Y tế bỏ quy định đơn thuốc chỉ có giá trị mua
+    trong 5 ngày, chuyển sang mốc lĩnh thuốc tối đa 5 ngày kể từ ngày kê đơn — theo Thông tư quy
+    định về đơn thuốc và kê đơn, đăng trên chinhphu.vn). Góc độ: giải thích đúng sự thay đổi này để
+    người đọc không áp dụng nhầm quy định cũ, khuyến khích hỏi lại nơi kê đơn về thời điểm nên mua/
+    lĩnh thuốc. Cần đọc nguyên văn Thông tư trên chinhphu.vn (hoặc cổng thuvienphapluat.vn) trong
+    phiên viết bài để trích dẫn chính xác điều khoản, không chỉ dựa vào tóm tắt của báo chí.
 
 ### Lịch chủ đề theo mùa
 
