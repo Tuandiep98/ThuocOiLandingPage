@@ -621,6 +621,23 @@ workflow"). Đọc file này trước khi viết bài mới — mục đích ch�
   đối chiếu số liệu nhiệt độ/độ ẩm trong bài với nguồn này. Không đặt `imageTag` — không có ảnh
   nào trong danh sách duyệt sẵn khớp thật với chủ đề bảo quản thuốc.
 
+## 2026-09-30
+
+- `uong-thuoc-cach-nhau-bao-lau` — "Uống thuốc cách nhau bao lâu? Hiểu đúng con số bác sĩ ghi trên
+  đơn" — keyword: `uống thuốc cách nhau bao lâu` — cụm Uống thuốc đúng cách (backlog #1). Góc độ:
+  giải thích vì sao khoảng cách giữa các liều không có con số chung cho mọi thuốc mà do bác sĩ/dược
+  sĩ tính riêng và ghi trên đơn (ví dụ "cách 6 giờ", "cách 8 giờ"), cơ chế chung vì sao cần giữ đúng
+  khoảng cách đó (nồng độ thuốc trong máu), cách xếp giờ trong ngày cho khớp, và các lỗi hay gặp
+  (dồn hết vào giờ thức bỏ trống ban đêm, đổi giờ liên tục, uống bù sát liều kế tiếp) — không nêu
+  khoảng cách cụ thể cho bất kỳ loại thuốc nào, luôn dẫn về hỏi bác sĩ/dược sĩ. Khác bài
+  `cac-kieu-lich-uong-thuoc-mau-thuong-gap` (phân loại các KIỂU nhịp uống: cố định/cách đều/theo
+  bữa ăn/đủ liệu trình) ở chỗ bài này tập trung vào ý nghĩa và cách áp dụng con số giờ cụ thể bác sĩ
+  ghi trên đơn. Liên kết nội bộ tới `cac-kieu-lich-uong-thuoc-mau-thuong-gap` và
+  `dau-hieu-quen-lieu-uong-trung-lieu-thuoc`. Dùng `imageTag: thiet-lap-gio-uong` (khớp phần chỉnh
+  giờ từng buổi theo đúng khoảng cách). Nguồn: bài "Phải tuân thủ khoảng cách giữa các lần dùng
+  thuốc" trên Báo Sức khỏe & Đời sống (suckhoedoisong.vn, cơ quan ngôn luận của Bộ Y tế) — đã fetch
+  và đối chiếu cơ chế nồng độ thuốc trong bài với nguồn này.
+
 ## Bài đã làm mới
 
 Nhật ký job bảo trì buổi tối — mỗi dòng: ngày, slug, đã sửa gì. Ưu tiên làm mới bài cũ nhất chưa
@@ -660,28 +677,26 @@ câu hỏi người dùng thật sự tìm, theo cụm chủ đề — không c�
 đầu. Lấy từ trên xuống; bỏ qua mục nào trùng ý định tìm kiếm với bài đã có (khi đó làm mới bài cũ).
 Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
 
-1. `uống thuốc cách nhau bao lâu` — cụm Uống thuốc đúng cách. Giải thích vì sao đơn ghi "cách nhau
-   X giờ" và cách xếp giờ trong ngày cho khớp; không nêu khoảng cách cho thuốc cụ thể.
-2. `mất đơn thuốc phải làm sao` — cụm Đơn thuốc & giấy tờ. Hỏi lại nơi khám, lưu ảnh đơn thuốc;
+1. `mất đơn thuốc phải làm sao` — cụm Đơn thuốc & giấy tờ. Hỏi lại nơi khám, lưu ảnh đơn thuốc;
    thủ tục cụ thể chỉ khi kiểm chứng được.
-3. `cách nhớ uống thuốc huyết áp mỗi ngày` — cụm Bệnh mạn tính. Góc thói quen/nhắc nhở, không bàn
+2. `cách nhớ uống thuốc huyết áp mỗi ngày` — cụm Bệnh mạn tính. Góc thói quen/nhắc nhở, không bàn
    chọn thuốc hay giờ uống cụ thể (giờ uống do bác sĩ chỉ định).
-4. `người bệnh tiểu đường quên uống thuốc` — cụm Bệnh mạn tính. Thói quen, gắn với bữa ăn theo chỉ
+3. `người bệnh tiểu đường quên uống thuốc` — cụm Bệnh mạn tính. Thói quen, gắn với bữa ăn theo chỉ
    định; mọi xử trí khi quên liều → hỏi bác sĩ.
-5. `có nên dùng lại đơn thuốc cũ` — cụm Đơn thuốc & giấy tờ. Vì sao không nên tự mua lại theo đơn
+4. `có nên dùng lại đơn thuốc cũ` — cụm Đơn thuốc & giấy tờ. Vì sao không nên tự mua lại theo đơn
    cũ, khi nào cần tái khám. Không nêu thuốc cụ thể.
-6. `vứt bỏ thuốc hết hạn đúng cách` — cụm Uống thuốc đúng cách. Chỉ khuyến nghị chung + hỏi nhà
+5. `vứt bỏ thuốc hết hạn đúng cách` — cụm Uống thuốc đúng cách. Chỉ khuyến nghị chung + hỏi nhà
    thuốc; không bịa quy định.
-7. `chuẩn bị thuốc khi về quê ăn Tết` — cụm Theo mùa. **Đăng từ giữa tháng 12/2026** (Tết Đinh
+6. `chuẩn bị thuốc khi về quê ăn Tết` — cụm Theo mùa. **Đăng từ giữa tháng 12/2026** (Tết Đinh
     Mùi rơi vào đầu tháng 2/2027) — không lấy trước thời điểm đó.
-8. `có nên bảo quản thuốc trong tủ lạnh không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm
+7. `có nên bảo quản thuốc trong tủ lạnh không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm
    kiếm thật (nhiều nhà thuốc/trang sức khoẻ lớn đều có bài riêng về câu hỏi này). Góc độ: khác bài
    `cach-bao-quan-thuoc-tai-nha` (nguyên tắc chung nhiệt độ/độ ẩm/ánh sáng nơi để thuốc) ở chỗ đây
    là câu hỏi hẹp hơn — vì sao đa số thuốc viên/thuốc bột KHÔNG nên để tủ lạnh (ẩm làm hỏng thuốc)
    trong khi một số ít loại (insulin, một số thuốc tiêm/đặt) lại cần giữ lạnh — luôn chốt lại bằng
    việc đọc nhãn/hỏi dược sĩ cho từng loại cụ thể, không tự suy ra theo cảm tính. Cần xác minh:
    nguồn chính thức (Bộ Y tế/bệnh viện lớn) trước khi viết, không dùng nguồn nhà thuốc thương mại.
-9. `cảm cúm khi nào cần đi khám bác sĩ` — cụm Theo mùa (mùa cúm/giao mùa, tháng 10–11, có thể đăng
+8. `cảm cúm khi nào cần đi khám bác sĩ` — cụm Theo mùa (mùa cúm/giao mùa, tháng 10–11, có thể đăng
     ngay vì đang vào mùa). Đã xác nhận nhu cầu tìm kiếm thật (Vinmec, Medlatec, các trung tâm y tế
     đều có bài). Góc độ: liệt kê dấu hiệu cụ thể cần đi khám/cấp cứu (sốt cao kéo dài, khó thở, lơ
     mơ, trẻ bỏ bú/thở nhanh...) và nhóm nguy cơ cao cần khám sớm — tuyệt đối không nêu tên thuốc trị
@@ -689,13 +704,13 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     bài `ca-nha-cung-om-mua-cum-uong-thuoc-sao-cho-khong-nham` (đó là phối hợp nhắc thuốc trong nhà
     khi cả nhà cùng ốm, không phải dấu hiệu y khoa cần đi khám). Cần xác minh: nguồn chính thức
     (Bộ Y tế/WHO/bệnh viện lớn như Vinmec) trước khi viết.
-10. `sốt xuất huyết dấu hiệu nào cần nhập viện ngay` — cụm Theo mùa (tháng 6–9, đã vào mùa, có thể
+9. `sốt xuất huyết dấu hiệu nào cần nhập viện ngay` — cụm Theo mùa (tháng 6–9, đã vào mùa, có thể
     đăng sớm). Góc độ: chỉ nêu dấu hiệu cảnh báo cần nhập viện (xuất huyết, đau bụng dữ dội, nôn
     nhiều, li bì, tay chân lạnh...), không nói thuốc hạ sốt nào nên/không nên dùng (đặc biệt lưu ý
     guardrail: không được gợi ý bất kỳ thuốc giảm đau/hạ sốt cụ thể nào vì một số loại chống chỉ
     định với sốt xuất huyết — chỉ nói "hỏi bác sĩ hoặc dược sĩ trước khi dùng bất kỳ thuốc hạ sốt
     nào"). Cần xác minh: nguồn chính thức (Bộ Y tế/CDC/bệnh viện lớn) trước khi viết.
-11. `cách nhớ uống thuốc tuyến giáp mỗi ngày` — cụm Bệnh mạn tính (tuyến giáp, chưa có bài nào khai
+10. `cách nhớ uống thuốc tuyến giáp mỗi ngày` — cụm Bệnh mạn tính (tuyến giáp, chưa có bài nào khai
     thác). Đã xác nhận nhu cầu tìm kiếm thật (Bệnh viện Nội tiết Trung ương, Bệnh viện Nguyễn Tri
     Phương, nhà thuốc lớn đều có bài về quên liều/uống đúng giờ thuốc tuyến giáp). Góc độ: thói quen
     giữ đúng MỘT giờ cố định mỗi ngày để dễ nhớ, không nêu khoảng cách với bữa ăn cụ thể (để bác sĩ/
@@ -703,7 +718,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     dược sĩ đang điều trị". Khác các bài mạn tính khác (huyết áp, tiểu đường) vì đây là thuốc thường
     chỉ uống 1 lần/ngày nhưng nhạy với thời điểm trong ngày. Cần xác minh thêm nguồn chính thức
     (bệnh viện) trước khi viết, không dùng nguồn nhà thuốc thương mại cho phần y khoa.
-12. `đơn thuốc có thời hạn bao lâu` — cụm Đơn thuốc & giấy tờ. Đã xác nhận nhu cầu tìm kiếm thật và
+11. `đơn thuốc có thời hạn bao lâu` — cụm Đơn thuốc & giấy tờ. Đã xác nhận nhu cầu tìm kiếm thật và
     có thay đổi chính sách gần đây (từ 1/7/2025 Bộ Y tế bỏ quy định đơn thuốc chỉ có giá trị mua
     trong 5 ngày, chuyển sang mốc lĩnh thuốc tối đa 5 ngày kể từ ngày kê đơn — theo Thông tư quy
     định về đơn thuốc và kê đơn, đăng trên chinhphu.vn). Góc độ: giải thích đúng sự thay đổi này để
