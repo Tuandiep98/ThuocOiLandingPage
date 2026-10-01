@@ -638,6 +638,21 @@ workflow"). Đọc file này trước khi viết bài mới — mục đích ch�
   thuốc" trên Báo Sức khỏe & Đời sống (suckhoedoisong.vn, cơ quan ngôn luận của Bộ Y tế) — đã fetch
   và đối chiếu cơ chế nồng độ thuốc trong bài với nguồn này.
 
+## 2026-10-01
+
+- `cum-mua-khi-nao-can-di-kham-bac-si` — "Cảm cúm khi nào cần đi khám bác sĩ ngay?" — keyword:
+  `cảm cúm khi nào cần đi khám bác sĩ` — cụm Theo mùa (backlog #8, mùa cúm/giao mùa tháng 10-11).
+  Góc độ: liệt kê dấu hiệu cảnh báo cụ thể cần đi khám ngay ở người lớn và trẻ nhỏ (khó thở, lú
+  lẫn, sốt cao không hạ, triệu chứng đỡ rồi nặng lại...), và nhóm nguy cơ cao (trẻ em, người lớn
+  tuổi, bệnh mạn tính, mang thai, suy giảm miễn dịch) nên đi khám sớm hơn — không nêu tên thuốc
+  trị cúm hay hướng dẫn dùng thuốc hạ sốt/kháng virus cụ thể nào, chỉ nói khi nào cần gặp chuyên
+  môn. Khác bài `ca-nha-cung-om-mua-cum-uong-thuoc-sao-cho-khong-nham` (đó là phối hợp nhắc thuốc
+  trong nhà khi cả nhà cùng ốm, không phải dấu hiệu y khoa cần đi khám) — có liên kết nội bộ qua
+  lại giữa hai bài. Nguồn: hai bài "Dấu hiệu cảnh báo nguy hiểm của bệnh cúm" và "Khuyến cáo phòng
+  bệnh cúm mùa của Bộ Y tế" trên Vinmec (vinmec.com), đã fetch và đối chiếu danh sách dấu hiệu cảnh
+  báo cùng nhóm nguy cơ cao trong phiên này. Không đặt `imageTag` — không có ảnh nào trong danh
+  sách duyệt sẵn khớp thật với chủ đề dấu hiệu y khoa cần đi khám.
+
 ## Bài đã làm mới
 
 Nhật ký job bảo trì buổi tối — mỗi dòng: ngày, slug, đã sửa gì. Ưu tiên làm mới bài cũ nhất chưa
@@ -708,21 +723,13 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
    trong khi một số ít loại (insulin, một số thuốc tiêm/đặt) lại cần giữ lạnh — luôn chốt lại bằng
    việc đọc nhãn/hỏi dược sĩ cho từng loại cụ thể, không tự suy ra theo cảm tính. Cần xác minh:
    nguồn chính thức (Bộ Y tế/bệnh viện lớn) trước khi viết, không dùng nguồn nhà thuốc thương mại.
-8. `cảm cúm khi nào cần đi khám bác sĩ` — cụm Theo mùa (mùa cúm/giao mùa, tháng 10–11, có thể đăng
-    ngay vì đang vào mùa). Đã xác nhận nhu cầu tìm kiếm thật (Vinmec, Medlatec, các trung tâm y tế
-    đều có bài). Góc độ: liệt kê dấu hiệu cụ thể cần đi khám/cấp cứu (sốt cao kéo dài, khó thở, lơ
-    mơ, trẻ bỏ bú/thở nhanh...) và nhóm nguy cơ cao cần khám sớm — tuyệt đối không nêu tên thuốc trị
-    cúm hay hướng dẫn dùng thuốc hạ sốt/kháng virus cụ thể, chỉ nói khi nào cần gặp chuyên môn. Khác
-    bài `ca-nha-cung-om-mua-cum-uong-thuoc-sao-cho-khong-nham` (đó là phối hợp nhắc thuốc trong nhà
-    khi cả nhà cùng ốm, không phải dấu hiệu y khoa cần đi khám). Cần xác minh: nguồn chính thức
-    (Bộ Y tế/WHO/bệnh viện lớn như Vinmec) trước khi viết.
-9. `sốt xuất huyết dấu hiệu nào cần nhập viện ngay` — cụm Theo mùa (tháng 6–9, đã vào mùa, có thể
+8. `sốt xuất huyết dấu hiệu nào cần nhập viện ngay` — cụm Theo mùa (tháng 6–9, đã vào mùa, có thể
     đăng sớm). Góc độ: chỉ nêu dấu hiệu cảnh báo cần nhập viện (xuất huyết, đau bụng dữ dội, nôn
     nhiều, li bì, tay chân lạnh...), không nói thuốc hạ sốt nào nên/không nên dùng (đặc biệt lưu ý
     guardrail: không được gợi ý bất kỳ thuốc giảm đau/hạ sốt cụ thể nào vì một số loại chống chỉ
     định với sốt xuất huyết — chỉ nói "hỏi bác sĩ hoặc dược sĩ trước khi dùng bất kỳ thuốc hạ sốt
     nào"). Cần xác minh: nguồn chính thức (Bộ Y tế/CDC/bệnh viện lớn) trước khi viết.
-10. `cách nhớ uống thuốc tuyến giáp mỗi ngày` — cụm Bệnh mạn tính (tuyến giáp, chưa có bài nào khai
+9. `cách nhớ uống thuốc tuyến giáp mỗi ngày` — cụm Bệnh mạn tính (tuyến giáp, chưa có bài nào khai
     thác). Đã xác nhận nhu cầu tìm kiếm thật (Bệnh viện Nội tiết Trung ương, Bệnh viện Nguyễn Tri
     Phương, nhà thuốc lớn đều có bài về quên liều/uống đúng giờ thuốc tuyến giáp). Góc độ: thói quen
     giữ đúng MỘT giờ cố định mỗi ngày để dễ nhớ, không nêu khoảng cách với bữa ăn cụ thể (để bác sĩ/
@@ -730,7 +737,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     dược sĩ đang điều trị". Khác các bài mạn tính khác (huyết áp, tiểu đường) vì đây là thuốc thường
     chỉ uống 1 lần/ngày nhưng nhạy với thời điểm trong ngày. Cần xác minh thêm nguồn chính thức
     (bệnh viện) trước khi viết, không dùng nguồn nhà thuốc thương mại cho phần y khoa.
-11. `đơn thuốc có thời hạn bao lâu` — cụm Đơn thuốc & giấy tờ. Đã xác nhận nhu cầu tìm kiếm thật và
+10. `đơn thuốc có thời hạn bao lâu` — cụm Đơn thuốc & giấy tờ. Đã xác nhận nhu cầu tìm kiếm thật và
     có thay đổi chính sách gần đây (từ 1/7/2025 Bộ Y tế bỏ quy định đơn thuốc chỉ có giá trị mua
     trong 5 ngày, chuyển sang mốc lĩnh thuốc tối đa 5 ngày kể từ ngày kê đơn — theo Thông tư quy
     định về đơn thuốc và kê đơn, đăng trên chinhphu.vn). Góc độ: giải thích đúng sự thay đổi này để
