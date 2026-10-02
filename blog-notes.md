@@ -727,6 +727,19 @@ có trong danh sách này.
   Không đổi title/publishDate/keyword/segment. Phần giới thiệu app giữ nguyên trong đúng 1/5 mục
   (~20%, trong khuyến nghị ~1/4).
 
+- 2026-10-02 — `quan-ly-thuoc-man-tinh-cho-nguoi-tre` — Bài cũ nhất chưa được làm mới (publishDate
+  2026-09-05), không có vi phạm guardrail nào. Đã: thêm đoạn trả lời trực tiếp 40–60 từ ngay đầu bài
+  (vì sao người trẻ hay quên thuốc hơn — lịch sinh hoạt thay đổi + bệnh diễn tiến âm thầm); bổ sung
+  dẫn chứng cụ thể vào mục "Vì sao người trẻ dễ bỏ quên thuốc" từ nguồn Vinmec (tăng huyết áp diễn
+  tiến âm thầm, dễ nhầm tưởng đã khỏi rồi tự ý ngừng thuốc); thêm mục riêng "Khi nào nên hỏi bác sĩ,
+  dược sĩ" (trước đó chỉ có một câu ở cuối bài); thêm `faqs` (4 câu); thêm `sources` (bài "Điều trị
+  tăng huyết áp: Quan trọng nhất là kiên trì, tuân thủ" của Vinmec, đã fetch và đối chiếu trong phiên
+  này); thêm 2 liên kết nội bộ tới `moi-phat-hien-benh-man-tinh-xay-thoi-quen-uong-thuoc` và
+  `dau-hieu-quen-lieu-uong-trung-lieu-thuoc`; đặt `updatedDate`. Không đổi title/publishDate/keyword/
+  segment. Phần giới thiệu app giữ nguyên trong đúng 1 mục cuối bài (đã đạt tỉ lệ ~1/4 khuyến nghị
+  từ bài gốc, không cần cắt thêm). Không đặt `imageTag` — không có ảnh nào trong danh sách duyệt sẵn
+  khớp thật trọng tâm "lịch sinh hoạt bận rộn của người trẻ".
+
 ## Backlog góc độ chưa làm
 
 Từ 2026-09-28 chuyển sang chiến lược mới (xem `CLAUDE.md`, mục "Topic strategy"): mỗi bài nhắm một
@@ -772,6 +785,23 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     người đọc không áp dụng nhầm quy định cũ, khuyến khích hỏi lại nơi kê đơn về thời điểm nên mua/
     lĩnh thuốc. Cần đọc nguyên văn Thông tư trên chinhphu.vn (hoặc cổng thuvienphapluat.vn) trong
     phiên viết bài để trích dẫn chính xác điều khoản, không chỉ dựa vào tóm tắt của báo chí.
+10. `cách nhớ uống thuốc mỡ máu mỗi ngày` — cụm Bệnh mạn tính (mỡ máu, chưa có bài nào khai thác).
+    Đã xác nhận nhu cầu tìm kiếm thật (Vinmec có nhiều bài riêng về thời điểm uống thuốc mỡ máu).
+    Góc độ: thói quen giữ đúng MỘT giờ cố định mỗi ngày để dễ nhớ và dễ theo dõi tiến trình, **không**
+    nêu statin nên uống sáng hay tối (khác statin tác dụng ngắn/dài có khuyến nghị khác nhau theo
+    nguồn y khoa — đây là chỉ định cần bác sĩ/dược sĩ xác nhận riêng, không phải nguyên tắc chung) —
+    chỉ nói chung "hỏi bác sĩ/dược sĩ về thời điểm phù hợp với loại thuốc cụ thể, rồi giữ đúng giờ đó
+    mỗi ngày". Cần xác minh thêm nguồn chính thức (bệnh viện) trước khi viết, không dùng nguồn nhà
+    thuốc thương mại cho phần y khoa, và tuyệt đối không tự đưa ra khuyến nghị sáng/tối cho bất kỳ
+    loại thuốc mỡ máu nào.
+11. `đơn thuốc bảo hiểm y tế có dùng được ở bệnh viện khác không` — cụm Đơn thuốc & giấy tờ. Đã xác
+    nhận nhu cầu tìm kiếm thật (nhiều báo/trang tư vấn bảo hiểm có bài về khám trái tuyến/chuyển
+    tuyến). Góc độ: khác `uong-thuoc-bao-hiem-y-te-canh-ngay-linh-thuoc-moi` (đó là canh ngày lãnh
+    thuốc đúng hẹn tái khám) ở chỗ đây là câu hỏi về việc đơn thuốc/thẻ BHYT có dùng được khi đổi nơi
+    khám hay không — mức hưởng khác nhau giữa khám đúng tuyến/cùng tuyến và khám trái tuyến, cần giấy
+    chuyển tuyến trong một số trường hợp. Chỉ nêu nguyên tắc chính sách đã kiểm chứng trong phiên viết
+    bài (đọc trực tiếp quy định hiện hành, không chỉ dựa tóm tắt báo chí); không tư vấn mức hưởng cụ
+    thể cho từng trường hợp cá nhân — luôn dẫn về hỏi cơ sở khám chữa bệnh hoặc cơ quan BHXH.
 
 ### Lịch chủ đề theo mùa
 
