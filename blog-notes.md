@@ -670,6 +670,19 @@ workflow"). Đọc file này trước khi viết bài mới — mục đích ch�
   `imageTag` — không có ảnh nào trong danh sách duyệt sẵn khớp thật với chủ đề mất đơn giấy/thủ tục
   xin cấp lại.
 
+## 2026-10-03
+
+- `cach-nho-uong-thuoc-huyet-ap-moi-ngay` — "Cách nhớ uống thuốc huyết áp đúng giờ mỗi ngày" —
+  keyword: `cách nhớ uống thuốc huyết áp mỗi ngày` — cụm Bệnh mạn tính (backlog #1). Góc độ: vì sao
+  thuốc huyết áp dễ quên hơn thuốc khác (bệnh không gây triệu chứng rõ rệt để tự nhắc), cách gắn
+  giờ uống với một thói quen có sẵn mỗi ngày và giữ đúng một khung giờ cố định — không bàn chọn
+  thuốc hay khung giờ sáng/tối cụ thể cho bất kỳ loại thuốc huyết áp nào (chi tiết đó để bác sĩ/
+  dược sĩ quyết định). Liên kết nội bộ tới `moi-phat-hien-benh-man-tinh-xay-thoi-quen-uong-thuoc`
+  và `quen-uong-thuoc-1-lan-co-sao-khong`. Dùng `imageTag: thiet-lap-gio-uong` (khớp phần thiết lập
+  giờ nhắc theo buổi). Nguồn: bài "Hướng dẫn uống thuốc huyết áp đúng cách" của Vinmec
+  (vinmec.com), đã fetch trong phiên này — chỉ lấy phần thói quen/cách nhớ liều, không lấy khuyến
+  nghị khung giờ sáng/tối cụ thể của nguồn này vì đó là chi tiết cần bác sĩ xác nhận riêng.
+
 ## Bài đã làm mới
 
 Nhật ký job bảo trì buổi tối — mỗi dòng: ngày, slug, đã sửa gì. Ưu tiên làm mới bài cũ nhất chưa
@@ -747,30 +760,28 @@ câu hỏi người dùng thật sự tìm, theo cụm chủ đề — không c�
 đầu. Lấy từ trên xuống; bỏ qua mục nào trùng ý định tìm kiếm với bài đã có (khi đó làm mới bài cũ).
 Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
 
-1. `cách nhớ uống thuốc huyết áp mỗi ngày` — cụm Bệnh mạn tính. Góc thói quen/nhắc nhở, không bàn
-   chọn thuốc hay giờ uống cụ thể (giờ uống do bác sĩ chỉ định).
-2. `người bệnh tiểu đường quên uống thuốc` — cụm Bệnh mạn tính. Thói quen, gắn với bữa ăn theo chỉ
+1. `người bệnh tiểu đường quên uống thuốc` — cụm Bệnh mạn tính. Thói quen, gắn với bữa ăn theo chỉ
    định; mọi xử trí khi quên liều → hỏi bác sĩ.
-3. `có nên dùng lại đơn thuốc cũ` — cụm Đơn thuốc & giấy tờ. Vì sao không nên tự mua lại theo đơn
+2. `có nên dùng lại đơn thuốc cũ` — cụm Đơn thuốc & giấy tờ. Vì sao không nên tự mua lại theo đơn
    cũ, khi nào cần tái khám. Không nêu thuốc cụ thể.
-4. `vứt bỏ thuốc hết hạn đúng cách` — cụm Uống thuốc đúng cách. Chỉ khuyến nghị chung + hỏi nhà
+3. `vứt bỏ thuốc hết hạn đúng cách` — cụm Uống thuốc đúng cách. Chỉ khuyến nghị chung + hỏi nhà
    thuốc; không bịa quy định.
-5. `chuẩn bị thuốc khi về quê ăn Tết` — cụm Theo mùa. **Đăng từ giữa tháng 12/2026** (Tết Đinh
+4. `chuẩn bị thuốc khi về quê ăn Tết` — cụm Theo mùa. **Đăng từ giữa tháng 12/2026** (Tết Đinh
     Mùi rơi vào đầu tháng 2/2027) — không lấy trước thời điểm đó.
-6. `có nên bảo quản thuốc trong tủ lạnh không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm
+5. `có nên bảo quản thuốc trong tủ lạnh không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm
    kiếm thật (nhiều nhà thuốc/trang sức khoẻ lớn đều có bài riêng về câu hỏi này). Góc độ: khác bài
    `cach-bao-quan-thuoc-tai-nha` (nguyên tắc chung nhiệt độ/độ ẩm/ánh sáng nơi để thuốc) ở chỗ đây
    là câu hỏi hẹp hơn — vì sao đa số thuốc viên/thuốc bột KHÔNG nên để tủ lạnh (ẩm làm hỏng thuốc)
    trong khi một số ít loại (insulin, một số thuốc tiêm/đặt) lại cần giữ lạnh — luôn chốt lại bằng
    việc đọc nhãn/hỏi dược sĩ cho từng loại cụ thể, không tự suy ra theo cảm tính. Cần xác minh:
    nguồn chính thức (Bộ Y tế/bệnh viện lớn) trước khi viết, không dùng nguồn nhà thuốc thương mại.
-7. `sốt xuất huyết dấu hiệu nào cần nhập viện ngay` — cụm Theo mùa (tháng 6–9, đã vào mùa, có thể
+6. `sốt xuất huyết dấu hiệu nào cần nhập viện ngay` — cụm Theo mùa (tháng 6–9, đã vào mùa, có thể
     đăng sớm). Góc độ: chỉ nêu dấu hiệu cảnh báo cần nhập viện (xuất huyết, đau bụng dữ dội, nôn
     nhiều, li bì, tay chân lạnh...), không nói thuốc hạ sốt nào nên/không nên dùng (đặc biệt lưu ý
     guardrail: không được gợi ý bất kỳ thuốc giảm đau/hạ sốt cụ thể nào vì một số loại chống chỉ
     định với sốt xuất huyết — chỉ nói "hỏi bác sĩ hoặc dược sĩ trước khi dùng bất kỳ thuốc hạ sốt
     nào"). Cần xác minh: nguồn chính thức (Bộ Y tế/CDC/bệnh viện lớn) trước khi viết.
-8. `cách nhớ uống thuốc tuyến giáp mỗi ngày` — cụm Bệnh mạn tính (tuyến giáp, chưa có bài nào khai
+7. `cách nhớ uống thuốc tuyến giáp mỗi ngày` — cụm Bệnh mạn tính (tuyến giáp, chưa có bài nào khai
     thác). Đã xác nhận nhu cầu tìm kiếm thật (Bệnh viện Nội tiết Trung ương, Bệnh viện Nguyễn Tri
     Phương, nhà thuốc lớn đều có bài về quên liều/uống đúng giờ thuốc tuyến giáp). Góc độ: thói quen
     giữ đúng MỘT giờ cố định mỗi ngày để dễ nhớ, không nêu khoảng cách với bữa ăn cụ thể (để bác sĩ/
@@ -778,14 +789,14 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     dược sĩ đang điều trị". Khác các bài mạn tính khác (huyết áp, tiểu đường) vì đây là thuốc thường
     chỉ uống 1 lần/ngày nhưng nhạy với thời điểm trong ngày. Cần xác minh thêm nguồn chính thức
     (bệnh viện) trước khi viết, không dùng nguồn nhà thuốc thương mại cho phần y khoa.
-9. `đơn thuốc có thời hạn bao lâu` — cụm Đơn thuốc & giấy tờ. Đã xác nhận nhu cầu tìm kiếm thật và
+8. `đơn thuốc có thời hạn bao lâu` — cụm Đơn thuốc & giấy tờ. Đã xác nhận nhu cầu tìm kiếm thật và
     có thay đổi chính sách gần đây (từ 1/7/2025 Bộ Y tế bỏ quy định đơn thuốc chỉ có giá trị mua
     trong 5 ngày, chuyển sang mốc lĩnh thuốc tối đa 5 ngày kể từ ngày kê đơn — theo Thông tư quy
     định về đơn thuốc và kê đơn, đăng trên chinhphu.vn). Góc độ: giải thích đúng sự thay đổi này để
     người đọc không áp dụng nhầm quy định cũ, khuyến khích hỏi lại nơi kê đơn về thời điểm nên mua/
     lĩnh thuốc. Cần đọc nguyên văn Thông tư trên chinhphu.vn (hoặc cổng thuvienphapluat.vn) trong
     phiên viết bài để trích dẫn chính xác điều khoản, không chỉ dựa vào tóm tắt của báo chí.
-10. `cách nhớ uống thuốc mỡ máu mỗi ngày` — cụm Bệnh mạn tính (mỡ máu, chưa có bài nào khai thác).
+9. `cách nhớ uống thuốc mỡ máu mỗi ngày` — cụm Bệnh mạn tính (mỡ máu, chưa có bài nào khai thác).
     Đã xác nhận nhu cầu tìm kiếm thật (Vinmec có nhiều bài riêng về thời điểm uống thuốc mỡ máu).
     Góc độ: thói quen giữ đúng MỘT giờ cố định mỗi ngày để dễ nhớ và dễ theo dõi tiến trình, **không**
     nêu statin nên uống sáng hay tối (khác statin tác dụng ngắn/dài có khuyến nghị khác nhau theo
@@ -794,7 +805,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     mỗi ngày". Cần xác minh thêm nguồn chính thức (bệnh viện) trước khi viết, không dùng nguồn nhà
     thuốc thương mại cho phần y khoa, và tuyệt đối không tự đưa ra khuyến nghị sáng/tối cho bất kỳ
     loại thuốc mỡ máu nào.
-11. `đơn thuốc bảo hiểm y tế có dùng được ở bệnh viện khác không` — cụm Đơn thuốc & giấy tờ. Đã xác
+10. `đơn thuốc bảo hiểm y tế có dùng được ở bệnh viện khác không` — cụm Đơn thuốc & giấy tờ. Đã xác
     nhận nhu cầu tìm kiếm thật (nhiều báo/trang tư vấn bảo hiểm có bài về khám trái tuyến/chuyển
     tuyến). Góc độ: khác `uong-thuoc-bao-hiem-y-te-canh-ngay-linh-thuoc-moi` (đó là canh ngày lãnh
     thuốc đúng hẹn tái khám) ở chỗ đây là câu hỏi về việc đơn thuốc/thẻ BHYT có dùng được khi đổi nơi
