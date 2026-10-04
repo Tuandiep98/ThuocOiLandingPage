@@ -782,6 +782,20 @@ có trong danh sách này.
   toàn bài vì đây chính là chủ đề bài (so sánh hai luồng thêm thuốc của app), không phải feature pitch
   thêm vào ngoài câu hỏi được hỏi.
 
+- 2026-10-04 — `nguoi-cham-soc-chuyen-nghiep-quan-ly-thuoc-nguoi-gia` — Bài cũ nhất chưa được làm
+  mới (publishDate 2026-09-07, sau khi mọi bài từ 09-04 đến 09-06 đã xong), không có vi phạm
+  guardrail nào. Đã: thay đoạn mở đầu bằng câu trả lời trực tiếp 40–60 từ; gộp 3 mục rải rác pitch
+  tính năng app (theo dõi tiến trình, nhóm Gia đình, quét lại đơn mới) thành đúng 1 mục "Ghi nhận
+  và báo cáo lại bằng số liệu thay vì cảm tính"; thêm mục riêng "Khi nào nên báo ngay cho gia đình
+  hoặc bác sĩ, dược sĩ" với 5 dấu hiệu cụ thể (đối chiếu nguồn Vinmec về phản ứng thuốc ở người cao
+  tuổi: chóng mặt/dễ ngã, lú lẫn, hạ thân nhiệt); thêm `faqs` (4 câu); thêm `sources` (bài "Một số
+  điều chú ý trong quá trình điều trị và chăm sóc cho bệnh nhân cao tuổi" của Vinmec, đã fetch và
+  đối chiếu trong phiên này — chỉ lấy phần dấu hiệu phản ứng thuốc cần theo dõi, không lấy thông
+  tin về tương tác thuốc cụ thể); thêm 2 liên kết nội bộ tới `nhac-bo-me-uong-thuoc-tu-xa` và
+  `anh-chi-em-thay-phien-cham-cha-me-ban-giao-lich-uong-thuoc`; đặt `updatedDate`. Không đổi
+  title/publishDate/keyword/segment. Bài không có `ctaTitle`/`ctaDescription` nên không chỉnh (bài
+  xuất bản trước 2026-09-17).
+
 ## Backlog góc độ chưa làm
 
 Từ 2026-09-28 chuyển sang chiến lược mới (xem `CLAUDE.md`, mục "Topic strategy"): mỗi bài nhắm một
@@ -840,14 +854,14 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     chuyển tuyến trong một số trường hợp. Chỉ nêu nguyên tắc chính sách đã kiểm chứng trong phiên viết
     bài (đọc trực tiếp quy định hiện hành, không chỉ dựa tóm tắt báo chí); không tư vấn mức hưởng cụ
     thể cho từng trường hợp cá nhân — luôn dẫn về hỏi cơ sở khám chữa bệnh hoặc cơ quan BHXH.
-11. `uống thuốc chung với sữa có sao không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm kiếm
+10. `uống thuốc chung với sữa có sao không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm kiếm
     thật (Vinmec, Long Châu, Pharmacity, VnExpress đều có bài riêng về câu hỏi này). Góc độ: nguyên
     tắc chung vì sao một số thuốc giảm tác dụng khi uống cùng sữa/canxi (cơ chế gắn kết chung, không
     nêu tên thuốc cụ thể nào), khuyến nghị chung cách nhau 1–2 giờ nhưng luôn chốt lại "hỏi dược sĩ
     cho từng loại thuốc cụ thể" vì không phải thuốc nào cũng bị ảnh hưởng. Cần xác minh: bài
     "Sữa có làm mất tác dụng của thuốc không?" trên Vinmec (vinmec.com) trước khi viết, chỉ lấy phần
     cơ chế chung, không suy diễn thêm cho thuốc cụ thể nào.
-12. `có nên nghiền thuốc viên để dễ uống không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm
+11. `có nên nghiền thuốc viên để dễ uống không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm
     kiếm thật (Vinmec có bài "Những thuốc không được bẻ, nghiền nhỏ khi uống", cùng Long Châu, VOH,
     VnExpress, znews). Góc độ: vì sao một số viên thuốc (bao tan ruột, giải phóng chậm) không được
     bẻ/nghiền vì sẽ mất tác dụng hoặc tăng rủi ro tác dụng phụ — nguyên tắc chung, không liệt kê tên
@@ -855,6 +869,21 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     thuốc nào, đặc biệt cho người già/trẻ khó nuốt thuốc viên (không đưa liều cụ thể cho trẻ em).
     Cần xác minh: bài "Những thuốc không được bẻ, nghiền nhỏ khi uống" trên Vinmec (vinmec.com)
     trước khi viết.
+12. `thuốc hết hạn sử dụng còn uống được không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm
+    kiếm thật (Vinmec, Long Châu, Pharmacity, VnExpress đều có bài riêng, nhiều phiên bản đã lên
+    top tìm kiếm). Góc độ: khác mục #2 (`vứt bỏ thuốc hết hạn đúng cách` — cách xử lý/thải bỏ) ở
+    chỗ đây trả lời trực tiếp câu hỏi "còn dùng được không" — nguyên tắc chung là không nên dùng
+    thuốc đã hết hạn dù nhìn chưa hư hỏng (hoạt chất có thể đã giảm hoặc phân hủy), không liệt kê
+    loại thuốc cụ thể nào là ngoại lệ an toàn. Cần xác minh thêm nguồn chính thức (Bộ Y tế/bệnh
+    viện lớn) trước khi viết, không dùng nguồn nhà thuốc thương mại làm nguồn chính.
+13. `uống thuốc với nước cam, nước ép bưởi có sao không` — cụm Uống thuốc đúng cách. Đã xác nhận
+    nhu cầu tìm kiếm thật (Vinmec, Pharmacity, các báo lớn đều có bài riêng). Góc độ: nguyên tắc
+    chung vì sao một số thuốc có thể tương tác với nước cam/nước bưởi (axit trong cam, hợp chất
+    trong bưởi ảnh hưởng hấp thu thuốc) — chỉ nói ở mức nhóm bệnh mạn tính chung (ví dụ một số
+    thuốc huyết áp, mỡ máu) nếu nguồn xác nhận, **không** nêu tên hoạt chất/thương hiệu cụ thể nào
+    kèm liều, luôn chốt lại "hỏi dược sĩ cho từng loại thuốc cụ thể, uống thuốc với nước lọc là an
+    toàn nhất khi không chắc". Cần xác minh thêm nguồn chính thức (bệnh viện lớn) trước khi viết,
+    đối chiếu kỹ để không vô tình liệt kê thành danh sách khuyến cáo dùng/tránh thuốc cụ thể.
 
 ### Lịch chủ đề theo mùa
 
