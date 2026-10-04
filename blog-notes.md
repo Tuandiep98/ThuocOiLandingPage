@@ -753,6 +753,18 @@ có trong danh sách này.
   từ bài gốc, không cần cắt thêm). Không đặt `imageTag` — không có ảnh nào trong danh sách duyệt sẵn
   khớp thật trọng tâm "lịch sinh hoạt bận rộn của người trẻ".
 
+- 2026-10-03 — `nhap-tay-hay-quet-ai-chon-cach-them-thuoc` — Bài cũ nhất chưa được làm mới (publishDate
+  2026-09-06, sau khi 09-04/09-05 đã xong), không có vi phạm guardrail nào. Đã: thay đoạn mở đầu bằng
+  câu trả lời trực tiếp 40–60 từ nêu ngay khi nào nên quét AI, khi nào nên nhập tay; thêm `faqs` (4
+  câu); đặt `imageTag: them-don-nhieu-cach` (khớp đúng usedWhen — bài so sánh cách thêm đơn thuốc);
+  thêm 2 liên kết nội bộ tới `meo-chup-anh-don-thuoc-ro-net-de-ai-doc-dung` và
+  `uong-vitamin-thuc-pham-chuc-nang-cung-thuoc-ke-don`; thêm mục riêng "Khi nào nên hỏi bác sĩ, dược
+  sĩ" (trước đó chỉ có một câu chung ở cuối bài); đặt `updatedDate`. Không đổi title/publishDate/
+  keyword/segment. Không thêm `sources` — chủ đề là so sánh hai cách nhập liệu của app, không có
+  tuyên bố y khoa cần nguồn chính thức để kiểm chứng. Phần giới thiệu tính năng app giữ nguyên trong
+  toàn bài vì đây chính là chủ đề bài (so sánh hai luồng thêm thuốc của app), không phải feature pitch
+  thêm vào ngoài câu hỏi được hỏi.
+
 ## Backlog góc độ chưa làm
 
 Từ 2026-09-28 chuyển sang chiến lược mới (xem `CLAUDE.md`, mục "Topic strategy"): mỗi bài nhắm một
@@ -813,6 +825,21 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     chuyển tuyến trong một số trường hợp. Chỉ nêu nguyên tắc chính sách đã kiểm chứng trong phiên viết
     bài (đọc trực tiếp quy định hiện hành, không chỉ dựa tóm tắt báo chí); không tư vấn mức hưởng cụ
     thể cho từng trường hợp cá nhân — luôn dẫn về hỏi cơ sở khám chữa bệnh hoặc cơ quan BHXH.
+11. `uống thuốc chung với sữa có sao không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm kiếm
+    thật (Vinmec, Long Châu, Pharmacity, VnExpress đều có bài riêng về câu hỏi này). Góc độ: nguyên
+    tắc chung vì sao một số thuốc giảm tác dụng khi uống cùng sữa/canxi (cơ chế gắn kết chung, không
+    nêu tên thuốc cụ thể nào), khuyến nghị chung cách nhau 1–2 giờ nhưng luôn chốt lại "hỏi dược sĩ
+    cho từng loại thuốc cụ thể" vì không phải thuốc nào cũng bị ảnh hưởng. Cần xác minh: bài
+    "Sữa có làm mất tác dụng của thuốc không?" trên Vinmec (vinmec.com) trước khi viết, chỉ lấy phần
+    cơ chế chung, không suy diễn thêm cho thuốc cụ thể nào.
+12. `có nên nghiền thuốc viên để dễ uống không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm
+    kiếm thật (Vinmec có bài "Những thuốc không được bẻ, nghiền nhỏ khi uống", cùng Long Châu, VOH,
+    VnExpress, znews). Góc độ: vì sao một số viên thuốc (bao tan ruột, giải phóng chậm) không được
+    bẻ/nghiền vì sẽ mất tác dụng hoặc tăng rủi ro tác dụng phụ — nguyên tắc chung, không liệt kê tên
+    thuốc cụ thể nào thuộc nhóm này, luôn khuyến nghị hỏi dược sĩ trước khi bẻ/nghiền bất kỳ viên
+    thuốc nào, đặc biệt cho người già/trẻ khó nuốt thuốc viên (không đưa liều cụ thể cho trẻ em).
+    Cần xác minh: bài "Những thuốc không được bẻ, nghiền nhỏ khi uống" trên Vinmec (vinmec.com)
+    trước khi viết.
 
 ### Lịch chủ đề theo mùa
 
