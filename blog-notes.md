@@ -713,6 +713,24 @@ workflow"). Đọc file này trước khi viết bài mới — mục đích ch�
   fetch và đối chiếu trong phiên này — chỉ lấy phần lý do chung (bệnh có thể đã thay đổi, cần đánh
   giá lại), không lấy chi tiết ca bệnh cụ thể trong bài.
 
+## 2026-10-06
+
+- `vut-bo-thuoc-het-han-dung-cach` — "Vứt bỏ thuốc hết hạn đúng cách: không chỉ là bỏ vào thùng
+  rác" — keyword: `cách vứt bỏ thuốc hết hạn đúng cách` — cụm Uống thuốc đúng cách (backlog #1).
+  Góc độ: trả lời trực tiếp vì sao không nên tuỳ tiện vứt thuốc hết hạn (trẻ em/vật nuôi nhặt lại,
+  người khác dùng nhầm, ảnh hưởng môi trường nước nếu đổ xuống bồn cầu/cống), thứ tự ưu tiên xử lý
+  tại nhà (mang đến hiệu thuốc/cơ sở y tế gần nhà trước, chỉ bọc kỹ bỏ rác sinh hoạt nếu không có
+  điểm thu gom), lưu ý riêng cho thuốc tiêm/thuốc nhỏ/thuốc kiểm soát đặc biệt, và cách tránh tích
+  tụ thuốc hết hạn từ đầu bằng việc theo dõi tồn thuốc. Không nêu quy định pháp lý cụ thể nào không
+  kiểm chứng được trong phiên này (không tìm thấy nguồn chính thức Việt Nam về quy trình thu hồi
+  thuốc hết hạn ở cấp hộ gia đình — chỉ dùng nguyên tắc an toàn chung, không bịa quy định). Liên kết
+  nội bộ tới `cach-bao-quan-thuoc-tai-nha` và `quan-ly-tu-thuoc-gia-dinh-khong-ke-don`. Nguồn: bài
+  "Vì sao thuốc phải có hạn sử dụng?" của Vinmec (vinmec.com), đã fetch trong phiên này — chỉ lấy
+  phần khuyến nghị mang thuốc dư lại cho dược sĩ xử lý và rủi ro giảm hiệu quả/biến đổi thành phần
+  khi dùng thuốc hết hạn. Không đặt `imageTag` — không có ảnh nào trong danh sách duyệt sẵn khớp
+  thật với chủ đề xử lý/vứt bỏ thuốc hết hạn (tag `quan-ly-ton-thuoc` là về theo dõi số lượng còn
+  lại, không phải về xử lý khi hết hạn).
+
 ## Bài đã làm mới
 
 Nhật ký job bảo trì buổi tối — mỗi dòng: ngày, slug, đã sửa gì. Ưu tiên làm mới bài cũ nhất chưa
@@ -814,24 +832,22 @@ câu hỏi người dùng thật sự tìm, theo cụm chủ đề — không c�
 đầu. Lấy từ trên xuống; bỏ qua mục nào trùng ý định tìm kiếm với bài đã có (khi đó làm mới bài cũ).
 Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
 
-1. `vứt bỏ thuốc hết hạn đúng cách` — cụm Uống thuốc đúng cách. Chỉ khuyến nghị chung + hỏi nhà
-   thuốc; không bịa quy định.
-2. `chuẩn bị thuốc khi về quê ăn Tết` — cụm Theo mùa. **Đăng từ giữa tháng 12/2026** (Tết Đinh
+1. `chuẩn bị thuốc khi về quê ăn Tết` — cụm Theo mùa. **Đăng từ giữa tháng 12/2026** (Tết Đinh
     Mùi rơi vào đầu tháng 2/2027) — không lấy trước thời điểm đó.
-3. `có nên bảo quản thuốc trong tủ lạnh không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm
+2. `có nên bảo quản thuốc trong tủ lạnh không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm
    kiếm thật (nhiều nhà thuốc/trang sức khoẻ lớn đều có bài riêng về câu hỏi này). Góc độ: khác bài
    `cach-bao-quan-thuoc-tai-nha` (nguyên tắc chung nhiệt độ/độ ẩm/ánh sáng nơi để thuốc) ở chỗ đây
    là câu hỏi hẹp hơn — vì sao đa số thuốc viên/thuốc bột KHÔNG nên để tủ lạnh (ẩm làm hỏng thuốc)
    trong khi một số ít loại (insulin, một số thuốc tiêm/đặt) lại cần giữ lạnh — luôn chốt lại bằng
    việc đọc nhãn/hỏi dược sĩ cho từng loại cụ thể, không tự suy ra theo cảm tính. Cần xác minh:
    nguồn chính thức (Bộ Y tế/bệnh viện lớn) trước khi viết, không dùng nguồn nhà thuốc thương mại.
-4. `sốt xuất huyết dấu hiệu nào cần nhập viện ngay` — cụm Theo mùa (tháng 6–9, đã vào mùa, có thể
+3. `sốt xuất huyết dấu hiệu nào cần nhập viện ngay` — cụm Theo mùa (tháng 6–9, đã vào mùa, có thể
     đăng sớm). Góc độ: chỉ nêu dấu hiệu cảnh báo cần nhập viện (xuất huyết, đau bụng dữ dội, nôn
     nhiều, li bì, tay chân lạnh...), không nói thuốc hạ sốt nào nên/không nên dùng (đặc biệt lưu ý
     guardrail: không được gợi ý bất kỳ thuốc giảm đau/hạ sốt cụ thể nào vì một số loại chống chỉ
     định với sốt xuất huyết — chỉ nói "hỏi bác sĩ hoặc dược sĩ trước khi dùng bất kỳ thuốc hạ sốt
     nào"). Cần xác minh: nguồn chính thức (Bộ Y tế/CDC/bệnh viện lớn) trước khi viết.
-5. `cách nhớ uống thuốc tuyến giáp mỗi ngày` — cụm Bệnh mạn tính (tuyến giáp, chưa có bài nào khai
+4. `cách nhớ uống thuốc tuyến giáp mỗi ngày` — cụm Bệnh mạn tính (tuyến giáp, chưa có bài nào khai
     thác). Đã xác nhận nhu cầu tìm kiếm thật (Bệnh viện Nội tiết Trung ương, Bệnh viện Nguyễn Tri
     Phương, nhà thuốc lớn đều có bài về quên liều/uống đúng giờ thuốc tuyến giáp). Góc độ: thói quen
     giữ đúng MỘT giờ cố định mỗi ngày để dễ nhớ, không nêu khoảng cách với bữa ăn cụ thể (để bác sĩ/
@@ -839,14 +855,14 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     dược sĩ đang điều trị". Khác các bài mạn tính khác (huyết áp, tiểu đường) vì đây là thuốc thường
     chỉ uống 1 lần/ngày nhưng nhạy với thời điểm trong ngày. Cần xác minh thêm nguồn chính thức
     (bệnh viện) trước khi viết, không dùng nguồn nhà thuốc thương mại cho phần y khoa.
-6. `đơn thuốc có thời hạn bao lâu` — cụm Đơn thuốc & giấy tờ. Đã xác nhận nhu cầu tìm kiếm thật và
+5. `đơn thuốc có thời hạn bao lâu` — cụm Đơn thuốc & giấy tờ. Đã xác nhận nhu cầu tìm kiếm thật và
     có thay đổi chính sách gần đây (từ 1/7/2025 Bộ Y tế bỏ quy định đơn thuốc chỉ có giá trị mua
     trong 5 ngày, chuyển sang mốc lĩnh thuốc tối đa 5 ngày kể từ ngày kê đơn — theo Thông tư quy
     định về đơn thuốc và kê đơn, đăng trên chinhphu.vn). Góc độ: giải thích đúng sự thay đổi này để
     người đọc không áp dụng nhầm quy định cũ, khuyến khích hỏi lại nơi kê đơn về thời điểm nên mua/
     lĩnh thuốc. Cần đọc nguyên văn Thông tư trên chinhphu.vn (hoặc cổng thuvienphapluat.vn) trong
     phiên viết bài để trích dẫn chính xác điều khoản, không chỉ dựa vào tóm tắt của báo chí.
-7. `cách nhớ uống thuốc mỡ máu mỗi ngày` — cụm Bệnh mạn tính (mỡ máu, chưa có bài nào khai thác).
+6. `cách nhớ uống thuốc mỡ máu mỗi ngày` — cụm Bệnh mạn tính (mỡ máu, chưa có bài nào khai thác).
     Đã xác nhận nhu cầu tìm kiếm thật (Vinmec có nhiều bài riêng về thời điểm uống thuốc mỡ máu).
     Góc độ: thói quen giữ đúng MỘT giờ cố định mỗi ngày để dễ nhớ và dễ theo dõi tiến trình, **không**
     nêu statin nên uống sáng hay tối (khác statin tác dụng ngắn/dài có khuyến nghị khác nhau theo
@@ -855,7 +871,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     mỗi ngày". Cần xác minh thêm nguồn chính thức (bệnh viện) trước khi viết, không dùng nguồn nhà
     thuốc thương mại cho phần y khoa, và tuyệt đối không tự đưa ra khuyến nghị sáng/tối cho bất kỳ
     loại thuốc mỡ máu nào.
-8. `đơn thuốc bảo hiểm y tế có dùng được ở bệnh viện khác không` — cụm Đơn thuốc & giấy tờ. Đã xác
+7. `đơn thuốc bảo hiểm y tế có dùng được ở bệnh viện khác không` — cụm Đơn thuốc & giấy tờ. Đã xác
     nhận nhu cầu tìm kiếm thật (nhiều báo/trang tư vấn bảo hiểm có bài về khám trái tuyến/chuyển
     tuyến). Góc độ: khác `uong-thuoc-bao-hiem-y-te-canh-ngay-linh-thuoc-moi` (đó là canh ngày lãnh
     thuốc đúng hẹn tái khám) ở chỗ đây là câu hỏi về việc đơn thuốc/thẻ BHYT có dùng được khi đổi nơi
@@ -863,14 +879,14 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     chuyển tuyến trong một số trường hợp. Chỉ nêu nguyên tắc chính sách đã kiểm chứng trong phiên viết
     bài (đọc trực tiếp quy định hiện hành, không chỉ dựa tóm tắt báo chí); không tư vấn mức hưởng cụ
     thể cho từng trường hợp cá nhân — luôn dẫn về hỏi cơ sở khám chữa bệnh hoặc cơ quan BHXH.
-9. `uống thuốc chung với sữa có sao không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm kiếm
+8. `uống thuốc chung với sữa có sao không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm kiếm
     thật (Vinmec, Long Châu, Pharmacity, VnExpress đều có bài riêng về câu hỏi này). Góc độ: nguyên
     tắc chung vì sao một số thuốc giảm tác dụng khi uống cùng sữa/canxi (cơ chế gắn kết chung, không
     nêu tên thuốc cụ thể nào), khuyến nghị chung cách nhau 1–2 giờ nhưng luôn chốt lại "hỏi dược sĩ
     cho từng loại thuốc cụ thể" vì không phải thuốc nào cũng bị ảnh hưởng. Cần xác minh: bài
     "Sữa có làm mất tác dụng của thuốc không?" trên Vinmec (vinmec.com) trước khi viết, chỉ lấy phần
     cơ chế chung, không suy diễn thêm cho thuốc cụ thể nào.
-10. `có nên nghiền thuốc viên để dễ uống không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm
+9. `có nên nghiền thuốc viên để dễ uống không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm
     kiếm thật (Vinmec có bài "Những thuốc không được bẻ, nghiền nhỏ khi uống", cùng Long Châu, VOH,
     VnExpress, znews). Góc độ: vì sao một số viên thuốc (bao tan ruột, giải phóng chậm) không được
     bẻ/nghiền vì sẽ mất tác dụng hoặc tăng rủi ro tác dụng phụ — nguyên tắc chung, không liệt kê tên
