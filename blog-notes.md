@@ -825,6 +825,21 @@ có trong danh sách này.
   toàn bài vì đây chính là chủ đề bài (so sánh hai luồng thêm thuốc của app), không phải feature pitch
   thêm vào ngoài câu hỏi được hỏi.
 
+- 2026-10-06 — `dau-hieu-quen-lieu-uong-trung-lieu-thuoc` — Bài cũ nhất chưa được làm mới và không bị
+  nhánh `claude/blog-*` nào khác đang giữ (publishDate 2026-09-08; `nguoi-cham-soc-chuyen-nghiep-
+  quan-ly-thuoc-nguoi-gia`, publishDate 2026-09-07, đang chờ merge trên nhánh
+  `claude/blog-maintenance-2026-10-04` nên vẫn bỏ qua), không có vi phạm guardrail nào (đã rà soát
+  toàn bộ bài viết trong phiên này, không phát hiện tên thuốc kèm liều, hướng dẫn đổi liều, hay
+  claim tính năng app ngoài `site.ts`). Đã: thay đoạn mở đầu bằng câu trả lời trực tiếp ~55 từ; bổ
+  sung câu hỏi tự kiểm tra quên liều từ nguồn Vinmec vào mục dấu hiệu nhận biết; tách mục cuối thành
+  "Khi nào nên hỏi bác sĩ, dược sĩ ngay" với các tình huống cụ thể (trước đó chỉ là một đoạn xử trí
+  chung); thêm `faqs` (4 câu); thêm `sources` (bài "Làm thế nào để tăng tuân thủ điều trị thuốc?"
+  của Vinmec, đã fetch và đối chiếu trong phiên này); thêm 2 liên kết nội bộ tới
+  `hop-chia-thuoc-theo-ngay-va-app-nhac-thuoc` và `quen-uong-thuoc-1-lan-co-sao-khong`; đặt
+  `updatedDate`. Không đổi title/publishDate/keyword/segment. Phần giới thiệu tính năng app giữ
+  nguyên trong đúng 1/4 mục (~25%, đúng khuyến nghị). Bổ sung 2 mục backlog mới (#10, #11) để danh
+  sách còn 11 mục.
+
 ## Backlog góc độ chưa làm
 
 Từ 2026-09-28 chuyển sang chiến lược mới (xem `CLAUDE.md`, mục "Topic strategy"): mỗi bài nhắm một
@@ -894,6 +909,25 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     thuốc nào, đặc biệt cho người già/trẻ khó nuốt thuốc viên (không đưa liều cụ thể cho trẻ em).
     Cần xác minh: bài "Những thuốc không được bẻ, nghiền nhỏ khi uống" trên Vinmec (vinmec.com)
     trước khi viết.
+10. `uống thuốc giảm đau lúc bụng đói có hại dạ dày không` — cụm Uống thuốc đúng cách. Đã xác nhận
+    nhu cầu tìm kiếm thật (Vinmec có hai bài riêng "Tại sao một số loại thuốc phải uống khi đói?" và
+    "Chọn thuốc giảm đau không hại dạ dày", cùng Pharmacity, Long Châu). Góc độ: nguyên tắc chung vì
+    sao một số thuốc (đặc biệt nhóm giảm đau chống viêm) dễ gây khó chịu/kích ứng dạ dày khi uống lúc
+    đói trong khi một số thuốc khác lại cần uống đói mới hấp thu tốt — không nêu tên thuốc cụ thể nào
+    nên/không nên uống lúc đói, luôn chốt lại bằng việc đọc tờ hướng dẫn sử dụng hoặc hỏi dược sĩ cho
+    từng loại cụ thể. Khác bài `uong-thuoc-truoc-an-trong-an-sau-an-dung-cach` (đó là khớp đúng mốc
+    bữa ăn theo chỉ định trên một đơn có nhiều loại thuốc) ở chỗ đây là nguyên tắc chung vì sao bụng
+    đói ảnh hưởng đến dạ dày/hấp thu, không gắn với một đơn thuốc cụ thể. Cần xác minh: hai bài Vinmec
+    nêu trên trước khi viết — chỉ lấy phần nguyên tắc chung (kích ứng dạ dày, hấp thu), không suy diễn
+    thêm cho thuốc cụ thể nào.
+11. `chuẩn bị túi thuốc cơ bản khi nhập học, ở xa nhà lần đầu` — cụm Theo mùa (nhập học, tháng 8–9).
+    Góc độ: khác bài `sinh-vien-o-tro-tu-uong-thuoc-khi-om-lan-dau` (đó là đã ốm, tự xử trí lần đầu
+    không ai nhắc) ở chỗ đây là chuẩn bị TRƯỚC khi đi — những món cơ bản nên mang theo (thuốc hạ sốt/
+    giảm đau không kê đơn thông thường dùng ngắn hạn, băng gạc, nhiệt kế, bản sao đơn thuốc nếu đang
+    điều trị bệnh mạn tính), cách cất giữ gọn trong không gian ký túc xá/phòng trọ, và lưu ý ghi lại
+    thông tin cơ sở y tế gần trường — không liệt kê tên thuốc kê đơn cụ thể, không khuyến nghị tự mua
+    kháng sinh dự phòng. Cần xác minh nguồn chính thức Việt Nam trước khi viết; nếu không tìm được
+    nguồn phù hợp, chỉ dùng nguyên tắc an toàn chung, không bịa danh mục cụ thể.
 
 ### Lịch chủ đề theo mùa
 
