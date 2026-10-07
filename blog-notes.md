@@ -856,6 +856,24 @@ có trong danh sách này.
   nguyên trong đúng 1/4 mục (~25%, đúng khuyến nghị). Bổ sung 2 mục backlog mới (#10, #11) để danh
   sách còn 11 mục.
 
+- 2026-10-07 — `chuan-bi-truoc-tai-kham-doc-dung-don-thuoc-moi` — Bài cũ nhất chưa được làm mới và
+  không bị nhánh `claude/blog-*` nào khác đang giữ (publishDate 2026-09-09; cả 3 bài thử nghiệm đầu
+  tiên 2026-09-04 và hai bài 2026-09-05/09-06 đã làm mới trước đó, bài 2026-09-07
+  `nguoi-cham-soc-chuyen-nghiep-quan-ly-thuoc-nguoi-gia` vẫn đang chờ merge trên nhánh
+  `claude/blog-maintenance-2026-10-04` nên bỏ qua; hai bài 2026-09-08 đã làm mới ngày 10-05/10-06),
+  không có vi phạm guardrail nào (đã rà soát toàn bộ bài, không có tên thuốc kèm liều, không hướng
+  dẫn đổi liều, không claim tính năng app ngoài `site.ts`). Đã: thay đoạn mở đầu bằng câu trả lời
+  trực tiếp 60 từ; gộp 3 mục rải rác giới thiệu tính năng app (chụp ảnh, đối chiếu AI, lịch tái khám)
+  thành đúng 1 mục cuối bài "Thuốc ơi giúp đối chiếu đơn mới và theo dõi lịch tái khám thế nào" (bài
+  gốc có app ở 3/6 mục, vượt tỉ lệ ~1/4 khuyến nghị — nay còn 1/6); thêm mục riêng "Khi nào nên hỏi
+  bác sĩ, dược sĩ ngay" với 4 tình huống cụ thể (trước đó chỉ lồng trong một câu ở mục nhận đơn và
+  đoạn cuối); thêm `faqs` (4 câu); thêm `sources` (bài "6 lời khuyên để tránh sai lầm khi dùng thuốc"
+  của Vinmec, đã fetch và đối chiếu trong phiên này — lấy phần hỏi tên thuốc, kiểm tra thuốc trước khi
+  rời quầy phát thuốc, hỏi về cách dùng/tác dụng phụ); thêm 2 liên kết nội bộ tới
+  `doc-hieu-don-thuoc-bac-si-ghi-tat` và `meo-chup-anh-don-thuoc-ro-net-de-ai-doc-dung`; đặt
+  `updatedDate`. Không đổi title/publishDate/keyword/segment/description. Bổ sung 2 mục backlog mới
+  (#11, #12) để danh sách còn 12 mục.
+
 ## Backlog góc độ chưa làm
 
 Từ 2026-09-28 chuyển sang chiến lược mới (xem `CLAUDE.md`, mục "Topic strategy"): mỗi bài nhắm một
@@ -937,6 +955,23 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     thông tin cơ sở y tế gần trường — không liệt kê tên thuốc kê đơn cụ thể, không khuyến nghị tự mua
     kháng sinh dự phòng. Cần xác minh nguồn chính thức Việt Nam trước khi viết; nếu không tìm được
     nguồn phù hợp, chỉ dùng nguyên tắc an toàn chung, không bịa danh mục cụ thể.
+11. `uống thuốc có cần kiêng rượu, bia không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm
+    kiếm thật (Vinmec có nhiều bài riêng về rượu bia + thuốc/kháng sinh, Pharmacity, Long Châu, PLO
+    cũng viết về chủ đề này). Góc độ: nguyên tắc chung vì sao rượu/bia có thể làm thay đổi tác dụng
+    hoặc tăng tác dụng phụ của nhiều loại thuốc (không riêng kháng sinh) — không nêu tên thuốc hay
+    nhóm thuốc cụ thể nào là "an toàn" khi uống cùng rượu bia, luôn chốt lại bằng việc báo cho bác sĩ/
+    dược sĩ biết nếu có uống rượu bia trong thời gian dùng thuốc. Cần xác minh: bài "Tác hại nếu uống
+    thuốc sau khi uống rượu" của Vinmec (vinmec.com) trước khi viết, chỉ lấy phần nguyên tắc chung,
+    không suy diễn thêm cho thuốc cụ thể nào.
+12. `bảo quản thuốc khi đi du lịch mùa nắng nóng, để trong ô tô có an toàn không` — cụm Theo mùa (du
+    lịch hè, nắng nóng, tháng 5–6). Góc độ: khác `cach-bao-quan-thuoc-tai-nha` (nguyên tắc chung nơi
+    để thuốc trong nhà) và `giu-dung-gio-uong-thuoc-khi-di-cong-tac-du-lich` (giữ đúng giờ uống khi di
+    chuyển) ở chỗ đây là câu hỏi hẹp về nhiệt độ cao bất thường khi để thuốc trong xe ô tô đóng kín
+    giữa trời nắng — nêu nguyên tắc chung (khoang xe có thể nóng hơn nhiều so với nhiệt độ ngoài trời,
+    một số thuốc giảm tác dụng hoặc hỏng ở nhiệt độ cao), không liệt kê thuốc cụ thể nào chịu/không
+    chịu được nhiệt, luôn khuyên đọc nhãn/hỏi dược sĩ và mang thuốc theo người thay vì để trong xe. Cần
+    xác minh nguồn chính thức trước khi viết (tìm kiếm sơ bộ mới ra báo điện tử trong nước — voh.com.vn,
+    znews.vn — cần tìm thêm nguồn y tế chính thống hơn như Vinmec/bệnh viện lớn trong phiên viết bài).
 
 ### Lịch chủ đề theo mùa
 
