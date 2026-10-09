@@ -934,6 +934,24 @@ có trong danh sách này.
   app giữ nguyên trong đúng 1 mục cuối bài (~1/7, trong khuyến nghị ~1/4). Backlog vẫn còn 11 mục
   (chưa mục nào bị dùng từ job tối nay) nên không cần bổ sung thêm.
 
+- 2026-10-09 — `cach-nhac-con-uong-thuoc-dung-gio` — Bài cũ nhất chưa được làm mới và không bị nhánh
+  `claude/blog-*` nào khác đang giữ (publishDate 2026-09-10; bài 2026-09-07
+  `nguoi-cham-soc-chuyen-nghiep-quan-ly-thuoc-nguoi-gia` vẫn đang chờ merge trên nhánh
+  `claude/blog-maintenance-2026-10-04` nên vẫn bỏ qua), không có vi phạm guardrail nào (đã rà soát
+  toàn bộ bài, không có tên thuốc kèm liều, không hướng dẫn đổi/ngừng liều cụ thể, không claim tính
+  năng app ngoài `site.ts`). Đã: thay đoạn mở đầu bằng câu trả lời trực tiếp ~55 từ; thêm mục riêng
+  "Khi nào nên hỏi bác sĩ, dược sĩ ngay" với 5 tình huống cụ thể (trước đó chỉ lồng trong một câu ở
+  mục "Những đợt thuốc ngắn ngày"); bổ sung dẫn chứng cụ thể vào mục đó từ nguồn Vinmec (ngừng kháng
+  sinh sớm/không đủ liều gây đề kháng, bệnh dễ tái phát nặng hơn); gộp mục "Khi có nhiều người cùng
+  chăm con" vào cuối mục tính năng app (bài gốc tách riêng mục này ra khỏi phần giới thiệu app dù
+  nội dung chủ yếu là tính năng nhóm Gia đình, nay còn đúng 1 mục giới thiệu app ở cuối bài); thêm
+  `faqs` (4 câu); thêm `sources` (bài "Nên dừng thuốc kháng sinh khi nào?" của Vinmec, đã fetch và
+  đối chiếu trực tiếp trong phiên này); thêm 2 liên kết nội bộ tới `con-uong-thuoc-giua-gio-hoc-o-truong`
+  và `cum-mua-khi-nao-can-di-kham-bac-si`; đặt `imageTag: gia-dinh` (khớp đúng usedWhen — bài về
+  nhiều người thay phiên chăm con qua nhóm Gia đình); đặt `updatedDate`. Không đổi title/publishDate/
+  keyword/segment. Phần giới thiệu tính năng app giữ trong đúng 1/4 mục (~25%, đúng khuyến nghị). Bổ
+  sung 2 mục backlog mới (#11, #12) để danh sách còn 12 mục.
+
 ## Backlog góc độ chưa làm
 
 Từ 2026-09-28 chuyển sang chiến lược mới (xem `CLAUDE.md`, mục "Topic strategy"): mỗi bài nhắm một
@@ -1017,6 +1035,27 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     chịu được nhiệt, luôn khuyên đọc nhãn/hỏi dược sĩ và mang thuốc theo người thay vì để trong xe. Cần
     xác minh nguồn chính thức trước khi viết (tìm kiếm sơ bộ mới ra báo điện tử trong nước — voh.com.vn,
     znews.vn — cần tìm thêm nguồn y tế chính thống hơn như Vinmec/bệnh viện lớn trong phiên viết bài).
+
+11. `tăng huyết áp có phải uống thuốc suốt đời không` — cụm Bệnh mạn tính. Đã xác nhận nhu cầu tìm
+    kiếm thật (Vinmec, Tâm Anh, Nhà thuốc Long Châu đều có bài riêng về câu hỏi này). Góc độ: khác
+    `cach-nho-uong-thuoc-huyet-ap-moi-ngay` (đó là mẹo nhớ uống đều đặn hằng ngày) và
+    `moi-phat-hien-benh-man-tinh-xay-thoi-quen-uong-thuoc` (đó là xây thói quen cho người mới chẩn
+    đoán) ở chỗ đây là câu hỏi tâm lý "huyết áp đã ổn rồi, có cần uống mãi không" — giải thích chung
+    vì sao bệnh mạn tính như tăng huyết áp cần kiểm soát lâu dài bằng thuốc, nguy cơ nếu tự ý ngừng
+    đột ngột khi thấy khỏe, và luôn chốt lại rằng chỉ bác sĩ mới quyết định được khi nào giảm/ngừng
+    thuốc — không tự đưa ra khi nào nên ngừng hay đổi liều. Cần xác minh: bài "Thuốc huyết áp phải
+    uống suốt đời?" của Vinmec (vinmec.com) trước khi viết, chỉ lấy phần nguyên tắc chung (vì sao cần
+    dùng lâu dài, rủi ro khi tự ngừng), không nêu tên thuốc huyết áp cụ thể nào.
+12. `giấy chuyển tuyến khám bệnh có thời hạn bao lâu` — cụm Đơn thuốc & giấy tờ y tế. Đã xác nhận nhu
+    cầu tìm kiếm thật (nhiều trang luật và báo bảo hiểm xã hội có bài riêng). Góc độ: khác
+    `uong-thuoc-bao-hiem-y-te-canh-ngay-linh-thuoc-moi` (canh ngày lãnh thuốc mới) và backlog #4
+    (dùng đơn/thẻ BHYT ở bệnh viện khác) ở chỗ đây là câu hỏi hẹp về thời hạn hiệu lực của riêng giấy
+    chuyển tuyến. **Cảnh báo khi viết:** kết quả tìm kiếm sơ bộ không thống nhất (một số nguồn còn ghi
+    quy định cũ "10 ngày" đã bị bãi bỏ từ 2018) — bắt buộc phải đọc trực tiếp văn bản hiện hành (Thông
+    tư 01/2025/TT-BYT và các văn bản thay thế liên quan) trong phiên viết bài để lấy đúng mốc hiện tại
+    (hiện có vẻ là "đến hết 31/12 năm đó, hoặc hết đợt điều trị nếu đang điều trị dở dang"), không
+    dùng lại số liệu cũ từ các bài báo thứ cấp chưa cập nhật. Nếu không đọc được văn bản gốc trong
+    phiên viết, chỉ nêu nguyên tắc chung và khuyên hỏi lại cơ sở khám/BHXH, không nêu số ngày cụ thể.
 
 ### Lịch chủ đề theo mùa
 
