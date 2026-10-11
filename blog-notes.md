@@ -812,6 +812,29 @@ workflow"). Đọc file này trước khi viết bài mới — mục đích ch�
   `nguoi-cham-soc-chuyen-nghiep-quan-ly-thuoc-nguoi-gia`, không liên quan chủ đề này). Đã bỏ mục #3
   khỏi backlog (các mục còn lại dịch số lên).
 
+## 2026-10-11
+
+- `sot-xuat-huyet-dau-hieu-canh-bao-can-nhap-vien-ngay` — "Sốt xuất huyết: dấu hiệu cảnh báo nào
+  cần đi khám hoặc nhập viện ngay?" — keyword: `sốt xuất huyết dấu hiệu nào cần nhập viện ngay` —
+  cụm Theo mùa (backlog #2, sốt xuất huyết tháng 6-9 theo lịch chủ đề nhưng tin tức dịch tễ 2026
+  cho thấy số ca vẫn đang tăng vào mùa mưa kéo dài, nên vẫn còn đúng thời điểm giữa tháng 10). Góc
+  độ: chỉ nêu dấu hiệu cảnh báo cần đi khám/nhập viện ngay (nôn nhiều, đau bụng dữ dội, chảy máu
+  bất thường, tay chân lạnh/li bì) và điểm dễ chủ quan nhất — giai đoạn nguy hiểm thường trùng lúc
+  đã hạ sốt, không phải lúc sốt cao nhất — không nêu tên thuốc hạ sốt/giảm đau cụ thể nào, chỉ nói
+  chung "một số loại có thể làm tăng nguy cơ chảy máu" và luôn chốt lại hỏi bác sĩ/dược sĩ trước
+  khi dùng bất kỳ thuốc nào, đúng theo lưu ý guardrail của mục backlog này. Liên kết nội bộ tới
+  `cum-mua-khi-nao-can-di-kham-bac-si` (cùng dạng bài "khi nào cần đi khám" theo mùa, khác bệnh).
+  Không đặt `imageTag` — không có ảnh nào trong danh sách duyệt sẵn khớp thật với chủ đề dấu hiệu
+  cảnh báo y khoa của sốt xuất huyết. Nguồn: hai bài "Sốt xuất huyết nặng có thể đe dọa tính mạng
+  trong vòng vài giờ, cần nhập viện kịp thời" và "Sốt xuất huyết: Giai đoạn nào nguy hiểm nhất?"
+  của Vinmec (vinmec.com), đã fetch và đối chiếu trực tiếp trong phiên này — chỉ lấy phần dấu hiệu
+  cảnh báo và mốc thời gian giai đoạn nguy hiểm, không lấy phần hướng dẫn truyền dịch/xử trí y khoa
+  cụ thể. Guard check: đã fetch `origin` và xác nhận không có nhánh `origin/claude/blog-2026-10-11`;
+  nhánh chưa merge duy nhất là `claude/blog-maintenance-2026-10-04` (bài làm mới
+  `nguoi-cham-soc-chuyen-nghiep-quan-ly-thuoc-nguoi-gia`, không liên quan chủ đề này). Backlog #1
+  (Tết) chưa tới thời điểm đăng (giữa tháng 12/2026) nên bỏ qua, chọn mục #2 (sốt xuất huyết) kế
+  tiếp. Đã bỏ mục sốt xuất huyết khỏi backlog (các mục còn lại dịch số lên).
+
 ## Bài đã làm mới
 
 Nhật ký job bảo trì buổi tối — mỗi dòng: ngày, slug, đã sửa gì. Ưu tiên làm mới bài cũ nhất chưa
@@ -1007,13 +1030,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
 
 1. `chuẩn bị thuốc khi về quê ăn Tết` — cụm Theo mùa. **Đăng từ giữa tháng 12/2026** (Tết Đinh
     Mùi rơi vào đầu tháng 2/2027) — không lấy trước thời điểm đó.
-2. `sốt xuất huyết dấu hiệu nào cần nhập viện ngay` — cụm Theo mùa (tháng 6–9, đã vào mùa, có thể
-    đăng sớm). Góc độ: chỉ nêu dấu hiệu cảnh báo cần nhập viện (xuất huyết, đau bụng dữ dội, nôn
-    nhiều, li bì, tay chân lạnh...), không nói thuốc hạ sốt nào nên/không nên dùng (đặc biệt lưu ý
-    guardrail: không được gợi ý bất kỳ thuốc giảm đau/hạ sốt cụ thể nào vì một số loại chống chỉ
-    định với sốt xuất huyết — chỉ nói "hỏi bác sĩ hoặc dược sĩ trước khi dùng bất kỳ thuốc hạ sốt
-    nào"). Cần xác minh: nguồn chính thức (Bộ Y tế/CDC/bệnh viện lớn) trước khi viết.
-3. `đơn thuốc bảo hiểm y tế có dùng được ở bệnh viện khác không` — cụm Đơn thuốc & giấy tờ. Đã xác
+2. `đơn thuốc bảo hiểm y tế có dùng được ở bệnh viện khác không` — cụm Đơn thuốc & giấy tờ. Đã xác
     nhận nhu cầu tìm kiếm thật (nhiều báo/trang tư vấn bảo hiểm có bài về khám trái tuyến/chuyển
     tuyến). Góc độ: khác `uong-thuoc-bao-hiem-y-te-canh-ngay-linh-thuoc-moi` (đó là canh ngày lãnh
     thuốc đúng hẹn tái khám) ở chỗ đây là câu hỏi về việc đơn thuốc/thẻ BHYT có dùng được khi đổi nơi
@@ -1021,14 +1038,14 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     chuyển tuyến trong một số trường hợp. Chỉ nêu nguyên tắc chính sách đã kiểm chứng trong phiên viết
     bài (đọc trực tiếp quy định hiện hành, không chỉ dựa tóm tắt báo chí); không tư vấn mức hưởng cụ
     thể cho từng trường hợp cá nhân — luôn dẫn về hỏi cơ sở khám chữa bệnh hoặc cơ quan BHXH.
-4. `uống thuốc chung với sữa có sao không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm kiếm
+3. `uống thuốc chung với sữa có sao không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm kiếm
     thật (Vinmec, Long Châu, Pharmacity, VnExpress đều có bài riêng về câu hỏi này). Góc độ: nguyên
     tắc chung vì sao một số thuốc giảm tác dụng khi uống cùng sữa/canxi (cơ chế gắn kết chung, không
     nêu tên thuốc cụ thể nào), khuyến nghị chung cách nhau 1–2 giờ nhưng luôn chốt lại "hỏi dược sĩ
     cho từng loại thuốc cụ thể" vì không phải thuốc nào cũng bị ảnh hưởng. Cần xác minh: bài
     "Sữa có làm mất tác dụng của thuốc không?" trên Vinmec (vinmec.com) trước khi viết, chỉ lấy phần
     cơ chế chung, không suy diễn thêm cho thuốc cụ thể nào.
-5. `có nên nghiền thuốc viên để dễ uống không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm
+4. `có nên nghiền thuốc viên để dễ uống không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm
     kiếm thật (Vinmec có bài "Những thuốc không được bẻ, nghiền nhỏ khi uống", cùng Long Châu, VOH,
     VnExpress, znews). Góc độ: vì sao một số viên thuốc (bao tan ruột, giải phóng chậm) không được
     bẻ/nghiền vì sẽ mất tác dụng hoặc tăng rủi ro tác dụng phụ — nguyên tắc chung, không liệt kê tên
@@ -1036,7 +1053,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     thuốc nào, đặc biệt cho người già/trẻ khó nuốt thuốc viên (không đưa liều cụ thể cho trẻ em).
     Cần xác minh: bài "Những thuốc không được bẻ, nghiền nhỏ khi uống" trên Vinmec (vinmec.com)
     trước khi viết.
-6. `uống thuốc giảm đau lúc bụng đói có hại dạ dày không` — cụm Uống thuốc đúng cách. Đã xác nhận
+5. `uống thuốc giảm đau lúc bụng đói có hại dạ dày không` — cụm Uống thuốc đúng cách. Đã xác nhận
     nhu cầu tìm kiếm thật (Vinmec có hai bài riêng "Tại sao một số loại thuốc phải uống khi đói?" và
     "Chọn thuốc giảm đau không hại dạ dày", cùng Pharmacity, Long Châu). Góc độ: nguyên tắc chung vì
     sao một số thuốc (đặc biệt nhóm giảm đau chống viêm) dễ gây khó chịu/kích ứng dạ dày khi uống lúc
@@ -1047,7 +1064,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     đói ảnh hưởng đến dạ dày/hấp thu, không gắn với một đơn thuốc cụ thể. Cần xác minh: hai bài Vinmec
     nêu trên trước khi viết — chỉ lấy phần nguyên tắc chung (kích ứng dạ dày, hấp thu), không suy diễn
     thêm cho thuốc cụ thể nào.
-7. `chuẩn bị túi thuốc cơ bản khi nhập học, ở xa nhà lần đầu` — cụm Theo mùa (nhập học, tháng 8–9).
+6. `chuẩn bị túi thuốc cơ bản khi nhập học, ở xa nhà lần đầu` — cụm Theo mùa (nhập học, tháng 8–9).
     Góc độ: khác bài `sinh-vien-o-tro-tu-uong-thuoc-khi-om-lan-dau` (đó là đã ốm, tự xử trí lần đầu
     không ai nhắc) ở chỗ đây là chuẩn bị TRƯỚC khi đi — những món cơ bản nên mang theo (thuốc hạ sốt/
     giảm đau không kê đơn thông thường dùng ngắn hạn, băng gạc, nhiệt kế, bản sao đơn thuốc nếu đang
@@ -1055,7 +1072,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     thông tin cơ sở y tế gần trường — không liệt kê tên thuốc kê đơn cụ thể, không khuyến nghị tự mua
     kháng sinh dự phòng. Cần xác minh nguồn chính thức Việt Nam trước khi viết; nếu không tìm được
     nguồn phù hợp, chỉ dùng nguyên tắc an toàn chung, không bịa danh mục cụ thể.
-8. `uống thuốc có cần kiêng rượu, bia không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm
+7. `uống thuốc có cần kiêng rượu, bia không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm
     kiếm thật (Vinmec có nhiều bài riêng về rượu bia + thuốc/kháng sinh, Pharmacity, Long Châu, PLO
     cũng viết về chủ đề này). Góc độ: nguyên tắc chung vì sao rượu/bia có thể làm thay đổi tác dụng
     hoặc tăng tác dụng phụ của nhiều loại thuốc (không riêng kháng sinh) — không nêu tên thuốc hay
@@ -1063,7 +1080,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     dược sĩ biết nếu có uống rượu bia trong thời gian dùng thuốc. Cần xác minh: bài "Tác hại nếu uống
     thuốc sau khi uống rượu" của Vinmec (vinmec.com) trước khi viết, chỉ lấy phần nguyên tắc chung,
     không suy diễn thêm cho thuốc cụ thể nào.
-9. `bảo quản thuốc khi đi du lịch mùa nắng nóng, để trong ô tô có an toàn không` — cụm Theo mùa (du
+8. `bảo quản thuốc khi đi du lịch mùa nắng nóng, để trong ô tô có an toàn không` — cụm Theo mùa (du
     lịch hè, nắng nóng, tháng 5–6). Góc độ: khác `cach-bao-quan-thuoc-tai-nha` (nguyên tắc chung nơi
     để thuốc trong nhà) và `giu-dung-gio-uong-thuoc-khi-di-cong-tac-du-lich` (giữ đúng giờ uống khi di
     chuyển) ở chỗ đây là câu hỏi hẹp về nhiệt độ cao bất thường khi để thuốc trong xe ô tô đóng kín
@@ -1073,7 +1090,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     xác minh nguồn chính thức trước khi viết (tìm kiếm sơ bộ mới ra báo điện tử trong nước — voh.com.vn,
     znews.vn — cần tìm thêm nguồn y tế chính thống hơn như Vinmec/bệnh viện lớn trong phiên viết bài).
 
-10. `tăng huyết áp có phải uống thuốc suốt đời không` — cụm Bệnh mạn tính. Đã xác nhận nhu cầu tìm
+9. `tăng huyết áp có phải uống thuốc suốt đời không` — cụm Bệnh mạn tính. Đã xác nhận nhu cầu tìm
     kiếm thật (Vinmec, Tâm Anh, Nhà thuốc Long Châu đều có bài riêng về câu hỏi này). Góc độ: khác
     `cach-nho-uong-thuoc-huyet-ap-moi-ngay` (đó là mẹo nhớ uống đều đặn hằng ngày) và
     `moi-phat-hien-benh-man-tinh-xay-thoi-quen-uong-thuoc` (đó là xây thói quen cho người mới chẩn
@@ -1083,9 +1100,9 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     thuốc — không tự đưa ra khi nào nên ngừng hay đổi liều. Cần xác minh: bài "Thuốc huyết áp phải
     uống suốt đời?" của Vinmec (vinmec.com) trước khi viết, chỉ lấy phần nguyên tắc chung (vì sao cần
     dùng lâu dài, rủi ro khi tự ngừng), không nêu tên thuốc huyết áp cụ thể nào.
-11. `giấy chuyển tuyến khám bệnh có thời hạn bao lâu` — cụm Đơn thuốc & giấy tờ y tế. Đã xác nhận nhu
+10. `giấy chuyển tuyến khám bệnh có thời hạn bao lâu` — cụm Đơn thuốc & giấy tờ y tế. Đã xác nhận nhu
     cầu tìm kiếm thật (nhiều trang luật và báo bảo hiểm xã hội có bài riêng). Góc độ: khác
-    `uong-thuoc-bao-hiem-y-te-canh-ngay-linh-thuoc-moi` (canh ngày lãnh thuốc mới) và backlog #3
+    `uong-thuoc-bao-hiem-y-te-canh-ngay-linh-thuoc-moi` (canh ngày lãnh thuốc mới) và backlog #2
     (dùng đơn/thẻ BHYT ở bệnh viện khác) ở chỗ đây là câu hỏi hẹp về thời hạn hiệu lực của riêng giấy
     chuyển tuyến. **Cảnh báo khi viết:** kết quả tìm kiếm sơ bộ không thống nhất (một số nguồn còn ghi
     quy định cũ "10 ngày" đã bị bãi bỏ từ 2018) — bắt buộc phải đọc trực tiếp văn bản hiện hành (Thông
