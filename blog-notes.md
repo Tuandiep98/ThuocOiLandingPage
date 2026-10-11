@@ -1021,6 +1021,26 @@ có trong danh sách này.
   hai PR cùng merge sẽ có xung đột nhỏ ở phần backlog của `blog-notes.md`, người merge cần giữ lại
   việc bỏ mục #3 "mỡ máu" (đã dùng) và đánh số lại cho đúng.
 
+- 2026-10-11 — `quan-ly-nhieu-loai-thuoc-cung-luc-sau-xuat-vien` — Bài cũ nhất chưa được làm mới và
+  không bị nhánh `claude/blog-*` nào khác đang giữ (publishDate 2026-09-11; bài 2026-09-07
+  `nguoi-cham-soc-chuyen-nghiep-quan-ly-thuoc-nguoi-gia` vẫn đang chờ merge trên nhánh
+  `claude/blog-maintenance-2026-10-04` nên vẫn bỏ qua), không có vi phạm guardrail nào (đã rà soát
+  toàn bộ 58 bài trong `src/content/blog/` tìm tên thuốc cụ thể kèm liều, hướng dẫn tự đổi liều,
+  chủ đề off-limits, số liệu bịa đặt, claim bác sĩ/dược sĩ biên tập — không phát hiện vi phạm nào).
+  Đã: thay đoạn mở đầu bằng câu trả lời trực tiếp ~55 từ; thêm mục riêng "Khi nào nên hỏi bác sĩ,
+  dược sĩ ngay" với 4 tình huống cụ thể (thuốc nào thêm/giữ/ngừng, mua thuốc nếu nhà thuốc đóng cửa,
+  thuốc giảm đau an toàn tự dùng thêm, báo vitamin/thực phẩm bổ sung đang dùng song song) — trước đó
+  chỉ có một câu chung lồng trong mục giới thiệu app; thêm `faqs` (4 câu); thêm `sources` (tài liệu
+  "Các Bước Tiếp Theo: Chuẩn bị xuất viện" của Alberta Health Services, bản dịch tiếng Việt chính
+  thức, đã fetch và đọc toàn văn trong phiên này — lấy đúng phần "Sử dụng thuốc an toàn" và "Thuốc
+  của tôi", không suy diễn thêm); thêm 2 liên kết nội bộ tới
+  `quan-ly-thuoc-khi-kham-nhieu-chuyen-khoa-cung-luc` và `nha-nhieu-nguoi-cung-uong-thuoc-khong-nham-lan`;
+  đặt `updatedDate`. Không đổi title/publishDate/keyword/segment. Phần giới thiệu tính năng app giữ
+  nguyên trong đúng 1 mục cuối bài (~1/5, trong khuyến nghị ~1/4). Không đặt `imageTag` — không có
+  ảnh nào trong danh sách duyệt sẵn khớp thật với chủ đề nhiều loại thuốc xen kẽ sau xuất viện. Bổ
+  sung backlog thêm 2 mục (#11 đơn thuốc điện tử, #12 thuốc hết hạn sử dụng vài ngày), nâng tổng số
+  lên 12 mục, cả hai đã xác nhận nhu cầu tìm kiếm thật qua WebSearch trong phiên này.
+
 ## Backlog góc độ chưa làm
 
 Từ 2026-09-28 chuyển sang chiến lược mới (xem `CLAUDE.md`, mục "Topic strategy"): mỗi bài nhắm một
@@ -1110,6 +1130,26 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     (hiện có vẻ là "đến hết 31/12 năm đó, hoặc hết đợt điều trị nếu đang điều trị dở dang"), không
     dùng lại số liệu cũ từ các bài báo thứ cấp chưa cập nhật. Nếu không đọc được văn bản gốc trong
     phiên viết, chỉ nêu nguyên tắc chung và khuyên hỏi lại cơ sở khám/BHXH, không nêu số ngày cụ thể.
+11. `đơn thuốc điện tử là gì, có giá trị như đơn giấy không` — cụm Đơn thuốc & giấy tờ y tế. Đã xác
+    nhận nhu cầu tìm kiếm thật (nhiều trang luật và báo pháp lý có bài riêng về Thông tư 27/2021/TT-BYT
+    quy định kê đơn thuốc điện tử). Góc độ: khác `doc-hieu-don-thuoc-bac-si-ghi-tat` (đọc hiểu chữ viết
+    tắt trên đơn giấy) và `don-thuoc-co-thoi-han-bao-lau` (thời hạn hiệu lực của đơn) ở chỗ đây là câu
+    hỏi về hình thức đơn thuốc điện tử — đơn hợp chuẩn có giá trị pháp lý như đơn giấy, bác sĩ gửi trực
+    tiếp cho dược sĩ hoặc bệnh nhân in ra mang theo, lộ trình áp dụng theo hạng bệnh viện. Chỉ nêu
+    nguyên tắc/quy định đã đọc trực tiếp văn bản hiện hành trong phiên viết (Thông tư 27/2021/TT-BYT và
+    văn bản sửa đổi còn hiệu lực, kiểm tra lại vì có thể đã có thông tư/nghị định mới hơn thay thế — ví
+    dụ Nghị định 102/2025/NĐ-CP xuất hiện trong kết quả tìm kiếm sơ bộ nhưng chưa được đọc nguyên văn),
+    không suy diễn thêm; nếu không đọc được văn bản gốc, chỉ nêu khái niệm chung và khuyên hỏi lại cơ
+    sở khám chữa bệnh.
+12. `thuốc hết hạn sử dụng vài ngày có dùng được không` — cụm Uống thuốc đúng cách (bảo quản thuốc).
+    Đã xác nhận nhu cầu tìm kiếm thật (Vinmec, VnExpress, Long Châu, Pharmacity, HelloBacsi đều có bài
+    riêng về câu hỏi này). Góc độ: khác `co-nen-bao-quan-thuoc-trong-tu-lanh-khong` (nơi/cách bảo quản
+    thuốc khi còn hạn) ở chỗ đây là câu hỏi về việc có nên dùng thuốc SAU khi đã qua hạn sử dụng in trên
+    bao bì — nguyên tắc chung (không dùng thuốc hết hạn, đặc biệt kháng sinh vì nguy cơ kháng thuốc;
+    dấu hiệu nhận biết thuốc hỏng như đổi màu, tách lớp, mềm nhũn), không nêu tên thuốc cụ thể nào vẫn
+    "dùng được" sau hạn, không tư vấn xử trí cụ thể khi lỡ uống thuốc hết hạn — chỉ khuyến cáo hỏi ngay
+    bác sĩ/dược sĩ nếu đã lỡ dùng. Cần xác minh: bài "Vì sao thuốc phải có hạn sử dụng?" của Vinmec
+    (vinmec.com) trước khi viết, chỉ lấy phần nguyên tắc chung.
 
 ### Lịch chủ đề theo mùa
 
