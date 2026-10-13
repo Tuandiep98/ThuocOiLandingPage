@@ -835,6 +835,30 @@ workflow"). Đọc file này trước khi viết bài mới — mục đích ch�
   (Tết) chưa tới thời điểm đăng (giữa tháng 12/2026) nên bỏ qua, chọn mục #2 (sốt xuất huyết) kế
   tiếp. Đã bỏ mục sốt xuất huyết khỏi backlog (các mục còn lại dịch số lên).
 
+## 2026-10-13
+
+- `co-nen-nghien-thuoc-vien-de-de-uong-khong` — "Có nên nghiền thuốc viên để dễ uống không?" —
+  keyword: `có nên nghiền thuốc viên để dễ uống không` — cụm Uống thuốc đúng cách (backlog #4,
+  sau khi #3 "uống thuốc chung với sữa" đã bị nhánh `claude/blog-2026-10-12` lấy — xem guard
+  check dưới). Góc độ: nguyên tắc chung vì sao một số dạng viên (bao tan ở ruột, giải phóng kéo
+  dài, ngậm/đặt dưới lưỡi, viên sủi) không được nghiền/bẻ — không nêu tên hoạt chất hay thuốc cụ
+  thể nào, chỉ nói theo dạng bào chế; nêu hậu quả nếu nghiền sai (mất tác dụng, kích ứng dạ dày,
+  giống quá liều); và luôn chốt lại hỏi dược sĩ trước khi nghiền/bẻ bất kỳ viên nào, kể cả khi
+  khó nuốt (người già, trẻ nhỏ) — không tự khuyên đổi dạng bào chế hay liều, chỉ gợi ý hỏi bác sĩ/
+  dược sĩ xem có lựa chọn khác phù hợp hơn không. Liên kết nội bộ tới
+  `uong-thuoc-truoc-an-trong-an-sau-an-dung-cach` (cùng cụm uống thuốc đúng cách) và
+  `doc-hieu-don-thuoc-bac-si-ghi-tat` (đọc hiểu thông tin ghi trên đơn/vỏ hộp). Không đặt
+  `imageTag` — không có ảnh nào trong danh sách duyệt sẵn khớp thật với chủ đề dạng bào chế viên
+  thuốc. Nguồn: bài "Những thuốc không được bẻ, nghiền nhỏ khi uống" của Vinmec (vinmec.com), đã
+  fetch và đối chiếu trực tiếp trong phiên này — chỉ lấy phần nguyên tắc chung theo dạng bào chế
+  (bao tan ruột, giải phóng kéo dài, ngậm dưới lưỡi, viên sủi) và hậu quả nếu dùng sai, không lấy
+  danh sách tên thuốc cụ thể nào từ nguồn. Guard check: đã fetch `origin` và xác nhận không có
+  nhánh `origin/claude/blog-2026-10-13`; đã rà các nhánh `claude/blog-*`/`claude/blog-maintenance-*`
+  chưa merge — nhánh `claude/blog-2026-10-12` đã lấy backlog #3 (`uong-thuoc-chung-voi-sua-co-sao-
+  khong`) nên bỏ qua mục đó, chọn mục #4 (nghiền thuốc viên) kế tiếp; các nhánh bảo trì chưa merge
+  (`claude/blog-maintenance-2026-09-28` đến `-2026-10-12`) chỉ sửa bài cũ, không trùng chủ đề này.
+  Đã bỏ mục nghiền thuốc viên khỏi backlog (các mục còn lại dịch số lên).
+
 ## Bài đã làm mới
 
 Nhật ký job bảo trì buổi tối — mỗi dòng: ngày, slug, đã sửa gì. Ưu tiên làm mới bài cũ nhất chưa
@@ -1045,15 +1069,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     cho từng loại thuốc cụ thể" vì không phải thuốc nào cũng bị ảnh hưởng. Cần xác minh: bài
     "Sữa có làm mất tác dụng của thuốc không?" trên Vinmec (vinmec.com) trước khi viết, chỉ lấy phần
     cơ chế chung, không suy diễn thêm cho thuốc cụ thể nào.
-4. `có nên nghiền thuốc viên để dễ uống không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm
-    kiếm thật (Vinmec có bài "Những thuốc không được bẻ, nghiền nhỏ khi uống", cùng Long Châu, VOH,
-    VnExpress, znews). Góc độ: vì sao một số viên thuốc (bao tan ruột, giải phóng chậm) không được
-    bẻ/nghiền vì sẽ mất tác dụng hoặc tăng rủi ro tác dụng phụ — nguyên tắc chung, không liệt kê tên
-    thuốc cụ thể nào thuộc nhóm này, luôn khuyến nghị hỏi dược sĩ trước khi bẻ/nghiền bất kỳ viên
-    thuốc nào, đặc biệt cho người già/trẻ khó nuốt thuốc viên (không đưa liều cụ thể cho trẻ em).
-    Cần xác minh: bài "Những thuốc không được bẻ, nghiền nhỏ khi uống" trên Vinmec (vinmec.com)
-    trước khi viết.
-5. `uống thuốc giảm đau lúc bụng đói có hại dạ dày không` — cụm Uống thuốc đúng cách. Đã xác nhận
+4. `uống thuốc giảm đau lúc bụng đói có hại dạ dày không` — cụm Uống thuốc đúng cách. Đã xác nhận
     nhu cầu tìm kiếm thật (Vinmec có hai bài riêng "Tại sao một số loại thuốc phải uống khi đói?" và
     "Chọn thuốc giảm đau không hại dạ dày", cùng Pharmacity, Long Châu). Góc độ: nguyên tắc chung vì
     sao một số thuốc (đặc biệt nhóm giảm đau chống viêm) dễ gây khó chịu/kích ứng dạ dày khi uống lúc
@@ -1064,7 +1080,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     đói ảnh hưởng đến dạ dày/hấp thu, không gắn với một đơn thuốc cụ thể. Cần xác minh: hai bài Vinmec
     nêu trên trước khi viết — chỉ lấy phần nguyên tắc chung (kích ứng dạ dày, hấp thu), không suy diễn
     thêm cho thuốc cụ thể nào.
-6. `chuẩn bị túi thuốc cơ bản khi nhập học, ở xa nhà lần đầu` — cụm Theo mùa (nhập học, tháng 8–9).
+5. `chuẩn bị túi thuốc cơ bản khi nhập học, ở xa nhà lần đầu` — cụm Theo mùa (nhập học, tháng 8–9).
     Góc độ: khác bài `sinh-vien-o-tro-tu-uong-thuoc-khi-om-lan-dau` (đó là đã ốm, tự xử trí lần đầu
     không ai nhắc) ở chỗ đây là chuẩn bị TRƯỚC khi đi — những món cơ bản nên mang theo (thuốc hạ sốt/
     giảm đau không kê đơn thông thường dùng ngắn hạn, băng gạc, nhiệt kế, bản sao đơn thuốc nếu đang
@@ -1072,7 +1088,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     thông tin cơ sở y tế gần trường — không liệt kê tên thuốc kê đơn cụ thể, không khuyến nghị tự mua
     kháng sinh dự phòng. Cần xác minh nguồn chính thức Việt Nam trước khi viết; nếu không tìm được
     nguồn phù hợp, chỉ dùng nguyên tắc an toàn chung, không bịa danh mục cụ thể.
-7. `uống thuốc có cần kiêng rượu, bia không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm
+6. `uống thuốc có cần kiêng rượu, bia không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm
     kiếm thật (Vinmec có nhiều bài riêng về rượu bia + thuốc/kháng sinh, Pharmacity, Long Châu, PLO
     cũng viết về chủ đề này). Góc độ: nguyên tắc chung vì sao rượu/bia có thể làm thay đổi tác dụng
     hoặc tăng tác dụng phụ của nhiều loại thuốc (không riêng kháng sinh) — không nêu tên thuốc hay
@@ -1080,7 +1096,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     dược sĩ biết nếu có uống rượu bia trong thời gian dùng thuốc. Cần xác minh: bài "Tác hại nếu uống
     thuốc sau khi uống rượu" của Vinmec (vinmec.com) trước khi viết, chỉ lấy phần nguyên tắc chung,
     không suy diễn thêm cho thuốc cụ thể nào.
-8. `bảo quản thuốc khi đi du lịch mùa nắng nóng, để trong ô tô có an toàn không` — cụm Theo mùa (du
+7. `bảo quản thuốc khi đi du lịch mùa nắng nóng, để trong ô tô có an toàn không` — cụm Theo mùa (du
     lịch hè, nắng nóng, tháng 5–6). Góc độ: khác `cach-bao-quan-thuoc-tai-nha` (nguyên tắc chung nơi
     để thuốc trong nhà) và `giu-dung-gio-uong-thuoc-khi-di-cong-tac-du-lich` (giữ đúng giờ uống khi di
     chuyển) ở chỗ đây là câu hỏi hẹp về nhiệt độ cao bất thường khi để thuốc trong xe ô tô đóng kín
@@ -1090,7 +1106,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     xác minh nguồn chính thức trước khi viết (tìm kiếm sơ bộ mới ra báo điện tử trong nước — voh.com.vn,
     znews.vn — cần tìm thêm nguồn y tế chính thống hơn như Vinmec/bệnh viện lớn trong phiên viết bài).
 
-9. `tăng huyết áp có phải uống thuốc suốt đời không` — cụm Bệnh mạn tính. Đã xác nhận nhu cầu tìm
+8. `tăng huyết áp có phải uống thuốc suốt đời không` — cụm Bệnh mạn tính. Đã xác nhận nhu cầu tìm
     kiếm thật (Vinmec, Tâm Anh, Nhà thuốc Long Châu đều có bài riêng về câu hỏi này). Góc độ: khác
     `cach-nho-uong-thuoc-huyet-ap-moi-ngay` (đó là mẹo nhớ uống đều đặn hằng ngày) và
     `moi-phat-hien-benh-man-tinh-xay-thoi-quen-uong-thuoc` (đó là xây thói quen cho người mới chẩn
@@ -1100,7 +1116,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     thuốc — không tự đưa ra khi nào nên ngừng hay đổi liều. Cần xác minh: bài "Thuốc huyết áp phải
     uống suốt đời?" của Vinmec (vinmec.com) trước khi viết, chỉ lấy phần nguyên tắc chung (vì sao cần
     dùng lâu dài, rủi ro khi tự ngừng), không nêu tên thuốc huyết áp cụ thể nào.
-10. `giấy chuyển tuyến khám bệnh có thời hạn bao lâu` — cụm Đơn thuốc & giấy tờ y tế. Đã xác nhận nhu
+9. `giấy chuyển tuyến khám bệnh có thời hạn bao lâu` — cụm Đơn thuốc & giấy tờ y tế. Đã xác nhận nhu
     cầu tìm kiếm thật (nhiều trang luật và báo bảo hiểm xã hội có bài riêng). Góc độ: khác
     `uong-thuoc-bao-hiem-y-te-canh-ngay-linh-thuoc-moi` (canh ngày lãnh thuốc mới) và backlog #2
     (dùng đơn/thẻ BHYT ở bệnh viện khác) ở chỗ đây là câu hỏi hẹp về thời hạn hiệu lực của riêng giấy
