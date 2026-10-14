@@ -835,6 +835,36 @@ workflow"). Đọc file này trước khi viết bài mới — mục đích ch�
   (Tết) chưa tới thời điểm đăng (giữa tháng 12/2026) nên bỏ qua, chọn mục #2 (sốt xuất huyết) kế
   tiếp. Đã bỏ mục sốt xuất huyết khỏi backlog (các mục còn lại dịch số lên).
 
+## 2026-10-14
+
+- `uong-thuoc-giam-dau-luc-doi-co-hai-da-day-khong` — "Uống thuốc giảm đau lúc bụng đói có hại dạ
+  dày không?" — keyword: `uống thuốc giảm đau lúc bụng đói có hại dạ dày không` — cụm Uống thuốc
+  đúng cách (backlog #5, sau khi bỏ qua #1 Tết — chưa tới mùa — và thử lại #2 BHYT trái tuyến).
+  Góc độ: nguyên tắc chung vì sao một số thuốc giảm đau, kháng viêm dễ gây khó chịu/kích ứng dạ
+  dày hơn khi uống lúc bụng đói (ức chế chất bảo vệ niêm mạc dạ dày), trong khi một số thuốc khác
+  lại cần uống đói mới hấp thu đúng cách (bào chế để tan ở ruột non) — không nêu tên thuốc/hoạt
+  chất cụ thể nào thuộc nhóm nào, chỉ nói chung "một số thuốc giảm đau, kháng viêm", luôn chốt lại
+  đọc tờ hướng dẫn sử dụng hoặc hỏi dược sĩ cho đúng loại đang dùng. Liên kết nội bộ tới
+  `uong-thuoc-truoc-an-trong-an-sau-an-dung-cach` và `uong-thuoc-cach-nhau-bao-lau`. Không đặt
+  `imageTag` — không có ảnh nào trong danh sách duyệt sẵn khớp thật với chủ đề uống thuốc giảm đau
+  lúc đói/no. Nguồn: hai bài "Tại sao một số loại thuốc phải uống khi đói?" và "Chọn thuốc giảm
+  đau không hại dạ dày" của Vinmec (vinmec.com), cả hai đã fetch và đối chiếu trực tiếp trong phiên
+  này — chỉ lấy phần cơ chế chung (mốc giờ uống lúc đói, cơ chế viên nang tan ở ruột, cơ chế ức chế
+  chất bảo vệ niêm mạc dạ dày) và lời khuyên chung (uống cùng/sau bữa ăn, uống đủ nước, không tự
+  kéo dài thời gian dùng), không lấy danh sách tên hoạt chất cụ thể (NSAID, paracetamol...) mà
+  nguồn có nêu. Guard check: đã fetch `origin`, xác nhận không có nhánh
+  `origin/claude/blog-2026-10-14`. Hai nhánh bài mới chưa merge là `claude/blog-2026-10-12`
+  (`uong-thuoc-chung-voi-sua-co-sao-khong`, dùng backlog #3 cũ) và `claude/blog-2026-10-13`
+  (`co-nen-nghien-thuoc-vien-de-de-uong-khong`, dùng backlog #4 cũ) — cả hai khác hẳn chủ đề bài
+  này, nên bỏ qua. Các nhánh bảo trì chưa merge (`claude/blog-maintenance-2026-09-28` đến
+  `-2026-10-13`) chỉ sửa bài cũ, không trùng chủ đề. Đã thử xác minh lại backlog #2 (BHYT trái
+  tuyến) bằng WebSearch — quy định mức hưởng khám ngoại trú trái tuyến từ 1/7/2026 (Luật BHYT sửa
+  đổi, Nghị định 188/2025/NĐ-CP) vẫn chỉ có nguồn báo chí thứ cấp, không đọc được trực tiếp văn bản
+  gốc trong phiên này nên vẫn chưa đủ chắc chắn để viết — giữ lại mục #2 trong backlog cho một
+  phiên sau có thời gian đọc văn bản gốc. Chọn mục #5 (giảm đau lúc đói) kế tiếp và bỏ khỏi backlog
+  (các mục #3/#4 cũ vẫn giữ nguyên vì đang chờ merge trên hai nhánh trên; các mục còn lại dịch số
+  lên).
+
 ## Bài đã làm mới
 
 Nhật ký job bảo trì buổi tối — mỗi dòng: ngày, slug, đã sửa gì. Ưu tiên làm mới bài cũ nhất chưa
@@ -1053,18 +1083,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     thuốc nào, đặc biệt cho người già/trẻ khó nuốt thuốc viên (không đưa liều cụ thể cho trẻ em).
     Cần xác minh: bài "Những thuốc không được bẻ, nghiền nhỏ khi uống" trên Vinmec (vinmec.com)
     trước khi viết.
-5. `uống thuốc giảm đau lúc bụng đói có hại dạ dày không` — cụm Uống thuốc đúng cách. Đã xác nhận
-    nhu cầu tìm kiếm thật (Vinmec có hai bài riêng "Tại sao một số loại thuốc phải uống khi đói?" và
-    "Chọn thuốc giảm đau không hại dạ dày", cùng Pharmacity, Long Châu). Góc độ: nguyên tắc chung vì
-    sao một số thuốc (đặc biệt nhóm giảm đau chống viêm) dễ gây khó chịu/kích ứng dạ dày khi uống lúc
-    đói trong khi một số thuốc khác lại cần uống đói mới hấp thu tốt — không nêu tên thuốc cụ thể nào
-    nên/không nên uống lúc đói, luôn chốt lại bằng việc đọc tờ hướng dẫn sử dụng hoặc hỏi dược sĩ cho
-    từng loại cụ thể. Khác bài `uong-thuoc-truoc-an-trong-an-sau-an-dung-cach` (đó là khớp đúng mốc
-    bữa ăn theo chỉ định trên một đơn có nhiều loại thuốc) ở chỗ đây là nguyên tắc chung vì sao bụng
-    đói ảnh hưởng đến dạ dày/hấp thu, không gắn với một đơn thuốc cụ thể. Cần xác minh: hai bài Vinmec
-    nêu trên trước khi viết — chỉ lấy phần nguyên tắc chung (kích ứng dạ dày, hấp thu), không suy diễn
-    thêm cho thuốc cụ thể nào.
-6. `chuẩn bị túi thuốc cơ bản khi nhập học, ở xa nhà lần đầu` — cụm Theo mùa (nhập học, tháng 8–9).
+5. `chuẩn bị túi thuốc cơ bản khi nhập học, ở xa nhà lần đầu` — cụm Theo mùa (nhập học, tháng 8–9).
     Góc độ: khác bài `sinh-vien-o-tro-tu-uong-thuoc-khi-om-lan-dau` (đó là đã ốm, tự xử trí lần đầu
     không ai nhắc) ở chỗ đây là chuẩn bị TRƯỚC khi đi — những món cơ bản nên mang theo (thuốc hạ sốt/
     giảm đau không kê đơn thông thường dùng ngắn hạn, băng gạc, nhiệt kế, bản sao đơn thuốc nếu đang
@@ -1072,7 +1091,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     thông tin cơ sở y tế gần trường — không liệt kê tên thuốc kê đơn cụ thể, không khuyến nghị tự mua
     kháng sinh dự phòng. Cần xác minh nguồn chính thức Việt Nam trước khi viết; nếu không tìm được
     nguồn phù hợp, chỉ dùng nguyên tắc an toàn chung, không bịa danh mục cụ thể.
-7. `uống thuốc có cần kiêng rượu, bia không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm
+6. `uống thuốc có cần kiêng rượu, bia không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm
     kiếm thật (Vinmec có nhiều bài riêng về rượu bia + thuốc/kháng sinh, Pharmacity, Long Châu, PLO
     cũng viết về chủ đề này). Góc độ: nguyên tắc chung vì sao rượu/bia có thể làm thay đổi tác dụng
     hoặc tăng tác dụng phụ của nhiều loại thuốc (không riêng kháng sinh) — không nêu tên thuốc hay
@@ -1080,7 +1099,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     dược sĩ biết nếu có uống rượu bia trong thời gian dùng thuốc. Cần xác minh: bài "Tác hại nếu uống
     thuốc sau khi uống rượu" của Vinmec (vinmec.com) trước khi viết, chỉ lấy phần nguyên tắc chung,
     không suy diễn thêm cho thuốc cụ thể nào.
-8. `bảo quản thuốc khi đi du lịch mùa nắng nóng, để trong ô tô có an toàn không` — cụm Theo mùa (du
+7. `bảo quản thuốc khi đi du lịch mùa nắng nóng, để trong ô tô có an toàn không` — cụm Theo mùa (du
     lịch hè, nắng nóng, tháng 5–6). Góc độ: khác `cach-bao-quan-thuoc-tai-nha` (nguyên tắc chung nơi
     để thuốc trong nhà) và `giu-dung-gio-uong-thuoc-khi-di-cong-tac-du-lich` (giữ đúng giờ uống khi di
     chuyển) ở chỗ đây là câu hỏi hẹp về nhiệt độ cao bất thường khi để thuốc trong xe ô tô đóng kín
@@ -1090,7 +1109,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     xác minh nguồn chính thức trước khi viết (tìm kiếm sơ bộ mới ra báo điện tử trong nước — voh.com.vn,
     znews.vn — cần tìm thêm nguồn y tế chính thống hơn như Vinmec/bệnh viện lớn trong phiên viết bài).
 
-9. `tăng huyết áp có phải uống thuốc suốt đời không` — cụm Bệnh mạn tính. Đã xác nhận nhu cầu tìm
+8. `tăng huyết áp có phải uống thuốc suốt đời không` — cụm Bệnh mạn tính. Đã xác nhận nhu cầu tìm
     kiếm thật (Vinmec, Tâm Anh, Nhà thuốc Long Châu đều có bài riêng về câu hỏi này). Góc độ: khác
     `cach-nho-uong-thuoc-huyet-ap-moi-ngay` (đó là mẹo nhớ uống đều đặn hằng ngày) và
     `moi-phat-hien-benh-man-tinh-xay-thoi-quen-uong-thuoc` (đó là xây thói quen cho người mới chẩn
@@ -1100,7 +1119,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     thuốc — không tự đưa ra khi nào nên ngừng hay đổi liều. Cần xác minh: bài "Thuốc huyết áp phải
     uống suốt đời?" của Vinmec (vinmec.com) trước khi viết, chỉ lấy phần nguyên tắc chung (vì sao cần
     dùng lâu dài, rủi ro khi tự ngừng), không nêu tên thuốc huyết áp cụ thể nào.
-10. `giấy chuyển tuyến khám bệnh có thời hạn bao lâu` — cụm Đơn thuốc & giấy tờ y tế. Đã xác nhận nhu
+9. `giấy chuyển tuyến khám bệnh có thời hạn bao lâu` — cụm Đơn thuốc & giấy tờ y tế. Đã xác nhận nhu
     cầu tìm kiếm thật (nhiều trang luật và báo bảo hiểm xã hội có bài riêng). Góc độ: khác
     `uong-thuoc-bao-hiem-y-te-canh-ngay-linh-thuoc-moi` (canh ngày lãnh thuốc mới) và backlog #2
     (dùng đơn/thẻ BHYT ở bệnh viện khác) ở chỗ đây là câu hỏi hẹp về thời hạn hiệu lực của riêng giấy
