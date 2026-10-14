@@ -1065,12 +1065,43 @@ có trong danh sách này.
   sung backlog thêm 2 mục (#11 đơn thuốc điện tử, #12 thuốc hết hạn sử dụng vài ngày), nâng tổng số
   lên 12 mục, cả hai đã xác nhận nhu cầu tìm kiếm thật qua WebSearch trong phiên này.
 
+- 2026-10-14 — `quan-ly-thuoc-khi-kham-nhieu-chuyen-khoa-cung-luc` — Bài cũ nhất chưa được làm mới và
+  không bị nhánh `claude/blog-*` nào khác đang giữ (publishDate 2026-09-12; `nguoi-cham-soc-chuyen-
+  nghiep-quan-ly-thuoc-nguoi-gia` 09-07 vẫn chờ merge trên `claude/blog-maintenance-2026-10-04`,
+  `meo-chup-anh-don-thuoc-ro-net-de-ai-doc-dung` 09-11 trên `claude/blog-maintenance-2026-10-12`, và
+  `uong-thuoc-dung-gio-khi-lam-ca-dem-xoay-ca` 09-12 trên `claude/blog-maintenance-2026-10-13` nên cả
+  ba vẫn bị bỏ qua), không có vi phạm guardrail nào (đã rà soát toàn bộ bài, không tên thuốc kèm liều,
+  không hướng dẫn tự đổi/ngừng thuốc, app chỉ nêu đúng tính năng tách riêng từng loại thuốc/lịch
+  tuần/nhóm Gia đình có trong `site.ts`, không tự nhận kiểm tra tương tác thuốc). Đã: thay đoạn mở đầu
+  bằng câu trả lời trực tiếp ~60 từ; thêm mục riêng "Khi nào nên hỏi bác sĩ, dược sĩ ngay" với 4 tình
+  huống cụ thể (trước đó không có mục này, chỉ có một câu chung ở cuối bài); gộp 2 đoạn giới thiệu tính
+  năng app liền nhau thành đúng 1 mục cuối bài, cắt bớt câu lặp ý; thêm `faqs` (4 câu); thêm `sources`
+  (bài "Những tương tác thuốc nguy hiểm thường gặp" của Vinmec, đã fetch trong phiên này — lấy đúng
+  phần khuyến cáo khai báo đầy đủ thuốc/thực phẩm chức năng/dược liệu đang dùng cho bác sĩ, dược sĩ,
+  không suy diễn thêm); thêm 2 liên kết nội bộ tới `quan-ly-nhieu-loai-thuoc-cung-luc-sau-xuat-vien` và
+  `doi-bac-si-doi-noi-kham-can-mang-theo-gi`; đặt `updatedDate`. Không đổi title/publishDate/keyword/
+  segment. Phần giới thiệu tính năng app giữ trong đúng 1/4 mục (~25%, đúng khuyến nghị). Không đặt
+  `imageTag` — không có ảnh nào trong danh sách duyệt sẵn khớp thật chủ đề nhiều đơn từ nhiều chuyên
+  khoa. Dọn backlog: bỏ 4 mục đã trùng (nghiền thuốc viên + giảm đau bụng đói — đang chờ merge trên
+  nhánh `claude/blog-2026-10-13`/`claude/blog-2026-10-14`; đơn thuốc điện tử + thuốc hết hạn — đã có
+  bài `don-thuoc-dien-tu-la-gi` và `vut-bo-thuoc-het-han-dung-cach`), đánh số lại, bổ sung 3 mục mới
+  (#8 siro/thuốc nước sau khi mở nắp, #9 danh mục thuốc BHYT chi trả, #10 uống nhầm thuốc của người
+  khác), tổng còn 10 mục, cả ba mục mới đã xác nhận nhu cầu tìm kiếm thật qua WebSearch trong phiên
+  này.
+
 ## Backlog góc độ chưa làm
 
 Từ 2026-09-28 chuyển sang chiến lược mới (xem `CLAUDE.md`, mục "Topic strategy"): mỗi bài nhắm một
 câu hỏi người dùng thật sự tìm, theo cụm chủ đề — không cắt tiếp theo nhóm đối tượng hẹp như 43 bài
 đầu. Lấy từ trên xuống; bỏ qua mục nào trùng ý định tìm kiếm với bài đã có (khi đó làm mới bài cũ).
 Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
+
+Mục #3 (`có nên nghiền thuốc viên để dễ uống không`) và #4 (`uống thuốc giảm đau lúc bụng đói có hại
+dạ dày không`) cũ đã được bài sáng dùng, đang chờ merge trên nhánh `claude/blog-2026-10-13` và
+`claude/blog-2026-10-14` — bỏ khỏi danh sách để tránh trùng. Mục #11 cũ (đơn thuốc điện tử) đã có bài
+`don-thuoc-dien-tu-la-gi` và mục #12 cũ (thuốc hết hạn) đã được trả lời trong bài
+`vut-bo-thuoc-het-han-dung-cach` — cả hai bỏ khỏi danh sách vì đã trùng ý định tìm kiếm. Đánh số lại
+từ 1 và bổ sung 3 mục mới (#8–#10) để đủ tối thiểu 10 mục.
 
 1. `chuẩn bị thuốc khi về quê ăn Tết` — cụm Theo mùa. **Đăng từ giữa tháng 12/2026** (Tết Đinh
     Mùi rơi vào đầu tháng 2/2027) — không lấy trước thời điểm đó.
@@ -1082,26 +1113,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     chuyển tuyến trong một số trường hợp. Chỉ nêu nguyên tắc chính sách đã kiểm chứng trong phiên viết
     bài (đọc trực tiếp quy định hiện hành, không chỉ dựa tóm tắt báo chí); không tư vấn mức hưởng cụ
     thể cho từng trường hợp cá nhân — luôn dẫn về hỏi cơ sở khám chữa bệnh hoặc cơ quan BHXH.
-3. `có nên nghiền thuốc viên để dễ uống không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm
-    kiếm thật (Vinmec có bài "Những thuốc không được bẻ, nghiền nhỏ khi uống", cùng Long Châu, VOH,
-    VnExpress, znews). Góc độ: vì sao một số viên thuốc (bao tan ruột, giải phóng chậm) không được
-    bẻ/nghiền vì sẽ mất tác dụng hoặc tăng rủi ro tác dụng phụ — nguyên tắc chung, không liệt kê tên
-    thuốc cụ thể nào thuộc nhóm này, luôn khuyến nghị hỏi dược sĩ trước khi bẻ/nghiền bất kỳ viên
-    thuốc nào, đặc biệt cho người già/trẻ khó nuốt thuốc viên (không đưa liều cụ thể cho trẻ em).
-    Cần xác minh: bài "Những thuốc không được bẻ, nghiền nhỏ khi uống" trên Vinmec (vinmec.com)
-    trước khi viết.
-4. `uống thuốc giảm đau lúc bụng đói có hại dạ dày không` — cụm Uống thuốc đúng cách. Đã xác nhận
-    nhu cầu tìm kiếm thật (Vinmec có hai bài riêng "Tại sao một số loại thuốc phải uống khi đói?" và
-    "Chọn thuốc giảm đau không hại dạ dày", cùng Pharmacity, Long Châu). Góc độ: nguyên tắc chung vì
-    sao một số thuốc (đặc biệt nhóm giảm đau chống viêm) dễ gây khó chịu/kích ứng dạ dày khi uống lúc
-    đói trong khi một số thuốc khác lại cần uống đói mới hấp thu tốt — không nêu tên thuốc cụ thể nào
-    nên/không nên uống lúc đói, luôn chốt lại bằng việc đọc tờ hướng dẫn sử dụng hoặc hỏi dược sĩ cho
-    từng loại cụ thể. Khác bài `uong-thuoc-truoc-an-trong-an-sau-an-dung-cach` (đó là khớp đúng mốc
-    bữa ăn theo chỉ định trên một đơn có nhiều loại thuốc) ở chỗ đây là nguyên tắc chung vì sao bụng
-    đói ảnh hưởng đến dạ dày/hấp thu, không gắn với một đơn thuốc cụ thể. Cần xác minh: hai bài Vinmec
-    nêu trên trước khi viết — chỉ lấy phần nguyên tắc chung (kích ứng dạ dày, hấp thu), không suy diễn
-    thêm cho thuốc cụ thể nào.
-5. `chuẩn bị túi thuốc cơ bản khi nhập học, ở xa nhà lần đầu` — cụm Theo mùa (nhập học, tháng 8–9).
+3. `chuẩn bị túi thuốc cơ bản khi nhập học, ở xa nhà lần đầu` — cụm Theo mùa (nhập học, tháng 8–9).
     Góc độ: khác bài `sinh-vien-o-tro-tu-uong-thuoc-khi-om-lan-dau` (đó là đã ốm, tự xử trí lần đầu
     không ai nhắc) ở chỗ đây là chuẩn bị TRƯỚC khi đi — những món cơ bản nên mang theo (thuốc hạ sốt/
     giảm đau không kê đơn thông thường dùng ngắn hạn, băng gạc, nhiệt kế, bản sao đơn thuốc nếu đang
@@ -1109,7 +1121,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     thông tin cơ sở y tế gần trường — không liệt kê tên thuốc kê đơn cụ thể, không khuyến nghị tự mua
     kháng sinh dự phòng. Cần xác minh nguồn chính thức Việt Nam trước khi viết; nếu không tìm được
     nguồn phù hợp, chỉ dùng nguyên tắc an toàn chung, không bịa danh mục cụ thể.
-6. `uống thuốc có cần kiêng rượu, bia không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm
+4. `uống thuốc có cần kiêng rượu, bia không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm
     kiếm thật (Vinmec có nhiều bài riêng về rượu bia + thuốc/kháng sinh, Pharmacity, Long Châu, PLO
     cũng viết về chủ đề này). Góc độ: nguyên tắc chung vì sao rượu/bia có thể làm thay đổi tác dụng
     hoặc tăng tác dụng phụ của nhiều loại thuốc (không riêng kháng sinh) — không nêu tên thuốc hay
@@ -1117,7 +1129,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     dược sĩ biết nếu có uống rượu bia trong thời gian dùng thuốc. Cần xác minh: bài "Tác hại nếu uống
     thuốc sau khi uống rượu" của Vinmec (vinmec.com) trước khi viết, chỉ lấy phần nguyên tắc chung,
     không suy diễn thêm cho thuốc cụ thể nào.
-7. `bảo quản thuốc khi đi du lịch mùa nắng nóng, để trong ô tô có an toàn không` — cụm Theo mùa (du
+5. `bảo quản thuốc khi đi du lịch mùa nắng nóng, để trong ô tô có an toàn không` — cụm Theo mùa (du
     lịch hè, nắng nóng, tháng 5–6). Góc độ: khác `cach-bao-quan-thuoc-tai-nha` (nguyên tắc chung nơi
     để thuốc trong nhà) và `giu-dung-gio-uong-thuoc-khi-di-cong-tac-du-lich` (giữ đúng giờ uống khi di
     chuyển) ở chỗ đây là câu hỏi hẹp về nhiệt độ cao bất thường khi để thuốc trong xe ô tô đóng kín
@@ -1126,8 +1138,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     chịu được nhiệt, luôn khuyên đọc nhãn/hỏi dược sĩ và mang thuốc theo người thay vì để trong xe. Cần
     xác minh nguồn chính thức trước khi viết (tìm kiếm sơ bộ mới ra báo điện tử trong nước — voh.com.vn,
     znews.vn — cần tìm thêm nguồn y tế chính thống hơn như Vinmec/bệnh viện lớn trong phiên viết bài).
-
-8. `tăng huyết áp có phải uống thuốc suốt đời không` — cụm Bệnh mạn tính. Đã xác nhận nhu cầu tìm
+6. `tăng huyết áp có phải uống thuốc suốt đời không` — cụm Bệnh mạn tính. Đã xác nhận nhu cầu tìm
     kiếm thật (Vinmec, Tâm Anh, Nhà thuốc Long Châu đều có bài riêng về câu hỏi này). Góc độ: khác
     `cach-nho-uong-thuoc-huyet-ap-moi-ngay` (đó là mẹo nhớ uống đều đặn hằng ngày) và
     `moi-phat-hien-benh-man-tinh-xay-thoi-quen-uong-thuoc` (đó là xây thói quen cho người mới chẩn
@@ -1137,7 +1148,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     thuốc — không tự đưa ra khi nào nên ngừng hay đổi liều. Cần xác minh: bài "Thuốc huyết áp phải
     uống suốt đời?" của Vinmec (vinmec.com) trước khi viết, chỉ lấy phần nguyên tắc chung (vì sao cần
     dùng lâu dài, rủi ro khi tự ngừng), không nêu tên thuốc huyết áp cụ thể nào.
-9. `giấy chuyển tuyến khám bệnh có thời hạn bao lâu` — cụm Đơn thuốc & giấy tờ y tế. Đã xác nhận nhu
+7. `giấy chuyển tuyến khám bệnh có thời hạn bao lâu` — cụm Đơn thuốc & giấy tờ y tế. Đã xác nhận nhu
     cầu tìm kiếm thật (nhiều trang luật và báo bảo hiểm xã hội có bài riêng). Góc độ: khác
     `uong-thuoc-bao-hiem-y-te-canh-ngay-linh-thuoc-moi` (canh ngày lãnh thuốc mới) và backlog #2
     (dùng đơn/thẻ BHYT ở bệnh viện khác) ở chỗ đây là câu hỏi hẹp về thời hạn hiệu lực của riêng giấy
@@ -1147,26 +1158,40 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     (hiện có vẻ là "đến hết 31/12 năm đó, hoặc hết đợt điều trị nếu đang điều trị dở dang"), không
     dùng lại số liệu cũ từ các bài báo thứ cấp chưa cập nhật. Nếu không đọc được văn bản gốc trong
     phiên viết, chỉ nêu nguyên tắc chung và khuyên hỏi lại cơ sở khám/BHXH, không nêu số ngày cụ thể.
-11. `đơn thuốc điện tử là gì, có giá trị như đơn giấy không` — cụm Đơn thuốc & giấy tờ y tế. Đã xác
-    nhận nhu cầu tìm kiếm thật (nhiều trang luật và báo pháp lý có bài riêng về Thông tư 27/2021/TT-BYT
-    quy định kê đơn thuốc điện tử). Góc độ: khác `doc-hieu-don-thuoc-bac-si-ghi-tat` (đọc hiểu chữ viết
-    tắt trên đơn giấy) và `don-thuoc-co-thoi-han-bao-lau` (thời hạn hiệu lực của đơn) ở chỗ đây là câu
-    hỏi về hình thức đơn thuốc điện tử — đơn hợp chuẩn có giá trị pháp lý như đơn giấy, bác sĩ gửi trực
-    tiếp cho dược sĩ hoặc bệnh nhân in ra mang theo, lộ trình áp dụng theo hạng bệnh viện. Chỉ nêu
-    nguyên tắc/quy định đã đọc trực tiếp văn bản hiện hành trong phiên viết (Thông tư 27/2021/TT-BYT và
-    văn bản sửa đổi còn hiệu lực, kiểm tra lại vì có thể đã có thông tư/nghị định mới hơn thay thế — ví
-    dụ Nghị định 102/2025/NĐ-CP xuất hiện trong kết quả tìm kiếm sơ bộ nhưng chưa được đọc nguyên văn),
-    không suy diễn thêm; nếu không đọc được văn bản gốc, chỉ nêu khái niệm chung và khuyên hỏi lại cơ
-    sở khám chữa bệnh.
-12. `thuốc hết hạn sử dụng vài ngày có dùng được không` — cụm Uống thuốc đúng cách (bảo quản thuốc).
-    Đã xác nhận nhu cầu tìm kiếm thật (Vinmec, VnExpress, Long Châu, Pharmacity, HelloBacsi đều có bài
-    riêng về câu hỏi này). Góc độ: khác `co-nen-bao-quan-thuoc-trong-tu-lanh-khong` (nơi/cách bảo quản
-    thuốc khi còn hạn) ở chỗ đây là câu hỏi về việc có nên dùng thuốc SAU khi đã qua hạn sử dụng in trên
-    bao bì — nguyên tắc chung (không dùng thuốc hết hạn, đặc biệt kháng sinh vì nguy cơ kháng thuốc;
-    dấu hiệu nhận biết thuốc hỏng như đổi màu, tách lớp, mềm nhũn), không nêu tên thuốc cụ thể nào vẫn
-    "dùng được" sau hạn, không tư vấn xử trí cụ thể khi lỡ uống thuốc hết hạn — chỉ khuyến cáo hỏi ngay
-    bác sĩ/dược sĩ nếu đã lỡ dùng. Cần xác minh: bài "Vì sao thuốc phải có hạn sử dụng?" của Vinmec
-    (vinmec.com) trước khi viết, chỉ lấy phần nguyên tắc chung.
+8. `thuốc siro, thuốc nước sau khi mở nắp dùng được bao lâu` — cụm Uống thuốc đúng cách (bảo quản
+    thuốc). Đã xác nhận nhu cầu tìm kiếm thật (Nhà thuốc Long Châu có 2 bài riêng, Pharmacity cũng có
+    bài hướng dẫn). Góc độ: khác `co-nen-bao-quan-thuoc-trong-tu-lanh-khong` (nơi/cách bảo quản chung)
+    và `vut-bo-thuoc-het-han-dung-cach` (thuốc đã hết hạn in trên bao bì) ở chỗ đây là câu hỏi hẹp về
+    hạn dùng SAU KHI MỞ NẮP của dạng thuốc nước/siro — ngắn hơn hạn sử dụng in trên hộp vì dễ nhiễm
+    khuẩn/biến chất sau khi tiếp xúc không khí. Nguyên tắc chung: luôn ưu tiên xem hướng dẫn trên nhãn/
+    tờ hướng dẫn sử dụng của từng sản phẩm trước, đậy kín nắp và bảo quản đúng nhiệt độ ghi trên bao bì,
+    bỏ ngay nếu thuốc đổi màu/mùi/vẩn đục, hỏi dược sĩ nếu nhãn không ghi rõ — không đưa ra một con số
+    ngày chung cho mọi loại siro vì mỗi hoạt chất khác nhau (tìm kiếm sơ bộ không ra được mốc thống
+    nhất, kể cả trên nguồn tiếng Việt). Cần xác minh thêm trong phiên viết bài trước khi quyết định có
+    nêu con số tham khảo nào hay chỉ nêu nguyên tắc.
+9. `danh mục thuốc bảo hiểm y tế chi trả là gì, làm sao biết thuốc mình đang dùng có được BHYT thanh
+    toán` — cụm Đơn thuốc & giấy tờ y tế. Đã xác nhận nhu cầu tìm kiếm thật (nhiều văn bản luật và
+    trang tư vấn bảo hiểm có bài riêng). Góc độ: khác `uong-thuoc-bao-hiem-y-te-canh-ngay-linh-thuoc-moi`
+    (canh ngày lãnh thuốc đúng hẹn) và backlog #2 (dùng đơn ở viện khác) ở chỗ đây là câu hỏi về việc
+    một loại thuốc cụ thể có nằm trong danh mục BHYT chi trả hay không và mức chi trả — nêu nguyên tắc
+    chung (danh mục do Bộ Y tế ban hành theo thông tư, phân theo hạng bệnh viện và điều kiện chỉ định,
+    tỉ lệ chi trả khác nhau tuỳ thuốc), không tự tra cứu/khẳng định một thuốc cụ thể nào có hay không
+    được chi trả — luôn dẫn người đọc hỏi lại cơ sở khám chữa bệnh hoặc cơ quan BHXH cho trường hợp của
+    mình. **Bắt buộc đọc trực tiếp văn bản hiện hành (Thông tư 37/2024/TT-BYT và các văn bản sửa đổi
+    còn hiệu lực tại thời điểm viết, kiểm tra xem có thông tư mới hơn thay thế không) trong phiên viết
+    bài** trước khi nêu bất kỳ chi tiết quy định nào; nếu không đọc được văn bản gốc, chỉ nêu khái niệm
+    chung, không suy diễn thêm.
+10. `uống nhầm thuốc của người khác trong nhà phải làm sao` — cụm Uống thuốc đúng cách. Đã xác nhận
+    nhu cầu tìm kiếm thật (nhiều báo đưa tin ca uống nhầm thuốc tiểu đường/thuốc kiểm soát đặc biệt của
+    người thân dẫn đến cấp cứu). Góc độ: khác `nha-nhieu-nguoi-cung-uong-thuoc-khong-nham-lan` (đó là
+    cách sắp xếp để KHÔNG lẫn thuốc giữa các thành viên) ở chỗ đây là bước xử trí NGAY khi sự việc đã
+    xảy ra — gọi cấp cứu 115 hoặc đến cơ sở y tế gần nhất, mang theo vỏ hộp/vỉ thuốc đã uống nhầm, theo
+    dõi dấu hiệu bất thường (lơ mơ, chóng mặt, khó thở, co giật), đặc biệt cảnh giác với trẻ nhỏ và
+    người già — không hướng dẫn cách "giải độc" tại nhà, không tự gây nôn, không nêu tên thuốc hay cách
+    xử trí theo loại thuốc cụ thể nào. Khai thác việc mỗi thành viên trong nhóm Gia đình có lịch/đơn
+    thuốc tách riêng theo tài khoản (giảm rủi ro cầm nhầm) nhưng chỉ như một mục nhỏ, trọng tâm bài vẫn
+    là các bước an toàn khi sự việc đã xảy ra. Cần xác minh số điện thoại cấp cứu và nguyên tắc sơ cứu
+    chung qua nguồn y tế chính thống (Vinmec/Bộ Y tế) trong phiên viết bài trước khi nêu cụ thể.
 
 ### Lịch chủ đề theo mùa
 
