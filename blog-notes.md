@@ -1065,6 +1065,30 @@ có trong danh sách này.
   sung backlog thêm 2 mục (#11 đơn thuốc điện tử, #12 thuốc hết hạn sử dụng vài ngày), nâng tổng số
   lên 12 mục, cả hai đã xác nhận nhu cầu tìm kiếm thật qua WebSearch trong phiên này.
 
+- 2026-10-15 — `nha-nhieu-nguoi-cung-uong-thuoc-khong-nham-lan` — Bài cũ nhất chưa được làm mới và
+  không bị nhánh `claude/blog-*` nào khác đang giữ (publishDate 2026-09-13; bài 2026-09-07
+  `nguoi-cham-soc-chuyen-nghiep-quan-ly-thuoc-nguoi-gia`, 2026-09-11
+  `meo-chup-anh-don-thuoc-ro-net-de-ai-doc-dung`, và hai bài 2026-09-12 đang chờ merge trên các
+  nhánh `claude/blog-maintenance-2026-10-04/10-12/10-13` và `claude/blog-maintenance-2026-10-14`
+  nên bỏ qua), không có vi phạm guardrail nào (đã rà soát toàn bộ bài, không có tên thuốc kèm liều,
+  không hướng dẫn xử trí khi uống nhầm thuốc, không claim tính năng app ngoài `site.ts`). Đã: thay
+  đoạn mở đầu bằng câu trả lời trực tiếp ~55 từ; thêm mục riêng "Cách tách riêng thuốc của từng
+  người — không cần ứng dụng" với nguyên tắc tủ thuốc nhiều ngăn có dán nhãn, giữ bao bì gốc, không
+  dồn nhiều loại thuốc của nhiều người vào chung một chai không nhãn (từ nguồn Vinmec và bài "10 lời
+  khuyên dùng thuốc an toàn", cả hai đã fetch và đọc toàn văn trong phiên này); gộp hai mục giới
+  thiệu tính năng app (đơn thuốc tách riêng theo tài khoản + mời nhóm Gia đình bằng QR) thành đúng 1
+  mục cuối bài (bài gốc có app ở 2/4 mục, nay còn 1/5); thêm `faqs` (4 câu); thêm `sources` (Vinmec
+  "Những điều cần biết về bảo quản thuốc tại nhà" và Tuổi Trẻ "10 lời khuyên dùng thuốc an toàn",
+  nguồn Viện Sốt rét - Ký Sinh trùng - Côn trùng Quy Nhơn); thêm 2 liên kết nội bộ tới
+  `quan-ly-nhieu-loai-thuoc-cung-luc-sau-xuat-vien` (bài đó đã link ngược lại bài này từ trước) và
+  `ca-nha-cung-om-mua-cum-uong-thuoc-sao-cho-khong-nham`; đặt `imageTag: gia-dinh` (khớp đúng
+  usedWhen — bài về quản lý thuốc cho nhiều người qua nhóm Gia đình); đặt `updatedDate`. Không đổi
+  title/publishDate/keyword/segment. Dọn backlog: bỏ mục cũ "đơn thuốc điện tử là gì" vì đã trùng
+  với bài đã xuất bản `don-thuoc-dien-tu-la-gi` (2026-09-28) — không ai gỡ mục backlog sau khi bài
+  đó lên; đánh số lại và bổ sung 2 mục mới (thuốc nhỏ mắt sau khi mở nắp, trà/cà phê ảnh hưởng tác
+  dụng thuốc), cả hai đã xác nhận nhu cầu tìm kiếm thật qua WebSearch trong phiên này, nâng tổng số
+  backlog lên 12 mục.
+
 ## Backlog góc độ chưa làm
 
 Từ 2026-09-28 chuyển sang chiến lược mới (xem `CLAUDE.md`, mục "Topic strategy"): mỗi bài nhắm một
@@ -1147,18 +1171,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     (hiện có vẻ là "đến hết 31/12 năm đó, hoặc hết đợt điều trị nếu đang điều trị dở dang"), không
     dùng lại số liệu cũ từ các bài báo thứ cấp chưa cập nhật. Nếu không đọc được văn bản gốc trong
     phiên viết, chỉ nêu nguyên tắc chung và khuyên hỏi lại cơ sở khám/BHXH, không nêu số ngày cụ thể.
-11. `đơn thuốc điện tử là gì, có giá trị như đơn giấy không` — cụm Đơn thuốc & giấy tờ y tế. Đã xác
-    nhận nhu cầu tìm kiếm thật (nhiều trang luật và báo pháp lý có bài riêng về Thông tư 27/2021/TT-BYT
-    quy định kê đơn thuốc điện tử). Góc độ: khác `doc-hieu-don-thuoc-bac-si-ghi-tat` (đọc hiểu chữ viết
-    tắt trên đơn giấy) và `don-thuoc-co-thoi-han-bao-lau` (thời hạn hiệu lực của đơn) ở chỗ đây là câu
-    hỏi về hình thức đơn thuốc điện tử — đơn hợp chuẩn có giá trị pháp lý như đơn giấy, bác sĩ gửi trực
-    tiếp cho dược sĩ hoặc bệnh nhân in ra mang theo, lộ trình áp dụng theo hạng bệnh viện. Chỉ nêu
-    nguyên tắc/quy định đã đọc trực tiếp văn bản hiện hành trong phiên viết (Thông tư 27/2021/TT-BYT và
-    văn bản sửa đổi còn hiệu lực, kiểm tra lại vì có thể đã có thông tư/nghị định mới hơn thay thế — ví
-    dụ Nghị định 102/2025/NĐ-CP xuất hiện trong kết quả tìm kiếm sơ bộ nhưng chưa được đọc nguyên văn),
-    không suy diễn thêm; nếu không đọc được văn bản gốc, chỉ nêu khái niệm chung và khuyên hỏi lại cơ
-    sở khám chữa bệnh.
-12. `thuốc hết hạn sử dụng vài ngày có dùng được không` — cụm Uống thuốc đúng cách (bảo quản thuốc).
+10. `thuốc hết hạn sử dụng vài ngày có dùng được không` — cụm Uống thuốc đúng cách (bảo quản thuốc).
     Đã xác nhận nhu cầu tìm kiếm thật (Vinmec, VnExpress, Long Châu, Pharmacity, HelloBacsi đều có bài
     riêng về câu hỏi này). Góc độ: khác `co-nen-bao-quan-thuoc-trong-tu-lanh-khong` (nơi/cách bảo quản
     thuốc khi còn hạn) ở chỗ đây là câu hỏi về việc có nên dùng thuốc SAU khi đã qua hạn sử dụng in trên
@@ -1167,6 +1180,27 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     "dùng được" sau hạn, không tư vấn xử trí cụ thể khi lỡ uống thuốc hết hạn — chỉ khuyến cáo hỏi ngay
     bác sĩ/dược sĩ nếu đã lỡ dùng. Cần xác minh: bài "Vì sao thuốc phải có hạn sử dụng?" của Vinmec
     (vinmec.com) trước khi viết, chỉ lấy phần nguyên tắc chung.
+11. `thuốc nhỏ mắt sau khi mở nắp dùng được bao lâu` — cụm Uống thuốc đúng cách (bảo quản thuốc). Đã
+    xác nhận nhu cầu tìm kiếm thật qua WebSearch trong phiên này (Vinmec có ít nhất hai bài riêng —
+    "Hướng dẫn cách dùng thuốc nhỏ mắt" và "Những sai lầm khi sử dụng thuốc nhỏ mắt" — cùng Nhà thuốc
+    Long Châu). Góc độ: khác `thuoc-nho-mat-mui-tai-boi-ngoai-da-de-quen-hon-thuoc-uong` (đó là vì sao
+    dễ quên nhỏ thuốc, không phải hạn dùng sau khi mở nắp) ở chỗ đây là câu hỏi hẹp về thời gian dùng
+    được sau khi đã mở nắp lọ — nêu nguyên tắc chung (thường ngắn hơn hạn sử dụng in trên hộp, nên ghi
+    ngày mở nắp lên lọ để tự theo dõi), không chốt một con số ngày cụ thể vì các nguồn tìm được không
+    thống nhất (dao động 15 ngày đến vài tháng tuỳ loại) — luôn dẫn về đọc kỹ hướng dẫn in trên hộp/lọ
+    hoặc hỏi dược sĩ cho từng loại. **Cảnh báo khi viết:** phải đọc trực tiếp bài Vinmec trong phiên
+    viết để lấy đúng số liệu Vinmec nêu, không tự chọn một mốc giữa các nguồn khác nhau.
+12. `uống thuốc cùng trà, cà phê có ảnh hưởng đến tác dụng thuốc không` — cụm Uống thuốc đúng cách. Đã
+    xác nhận nhu cầu tìm kiếm thật qua WebSearch trong phiên này (Nhà thuốc Long Châu, PLO đều có bài
+    riêng về chủ đề nước uống làm giảm tác dụng thuốc). Góc độ: khác
+    `uong-thuoc-chung-voi-sua-co-sao-khong` (sữa) ở chỗ đây là trà/cà phê — nêu nguyên tắc chung (tanin
+    trong trà và caffeine trong cà phê có thể làm giảm hấp thu hoặc thay đổi chuyển hoá của một số loại
+    thuốc), khuyên uống thuốc với nước lọc và cách xa thời điểm uống trà/cà phê nếu không chắc chắn.
+    **Cảnh báo khi viết:** nguồn có nhắc đến tên hoạt chất cụ thể (ví dụ levothyroxine, nhóm SSRI) —
+    TUYỆT ĐỐI không đưa tên hoạt chất/thuốc cụ thể nào vào bài (vi phạm guardrail "never name a specific
+    drug/active ingredient together with dose or use"), chỉ giữ nguyên tắc chung theo nhóm rộng ("một
+    số thuốc tuyến giáp", "một số thuốc ảnh hưởng thần kinh") và luôn chốt lại bằng hỏi dược sĩ cho
+    từng loại thuốc đang dùng.
 
 ### Lịch chủ đề theo mùa
 
