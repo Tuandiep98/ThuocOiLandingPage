@@ -859,6 +859,37 @@ workflow"). Đọc file này trước khi viết bài mới — mục đích ch�
   giữ lại mục #2 trong backlog cho một phiên sau có thời gian đọc kỹ văn bản gốc. Đã chọn mục #3
   (sữa) kế tiếp và bỏ khỏi backlog (các mục còn lại dịch số lên).
 
+## 2026-10-15
+
+- `uong-thuoc-co-can-kieng-ruou-bia-khong` — "Uống thuốc có cần kiêng rượu, bia không?" — keyword:
+  `uống thuốc có cần kiêng rượu bia không` — cụm Uống thuốc đúng cách (backlog #6, sau khi bỏ qua
+  #3 "nghiền thuốc viên" và #4 "giảm đau lúc đói" — đã bị hai nhánh `claude/blog-2026-10-13` và
+  `claude/blog-2026-10-14` lấy trước, chưa merge; và bỏ qua #5 "túi thuốc nhập học" vì chưa tới mùa
+  — xem guard check dưới). Góc độ: nguyên tắc chung vì sao rượu/bia có thể làm tăng tác dụng phụ
+  hoặc giảm hiệu quả của nhiều loại thuốc (tác động hệ thần kinh trung ương/mạch máu, ảnh hưởng
+  đường huyết, cộng dồn gánh nặng chuyển hoá ở gan); dấu hiệu nên lưu ý khi kết hợp; các nhóm thuốc
+  chung (không nêu tên hoạt chất cụ thể) thường được dược sĩ nhắc kỹ hơn — kháng sinh, thuốc an
+  thần/giảm đau mạnh, thuốc tiểu đường, thuốc tác động thần kinh. Explicit: Thuốc ơi không kiểm
+  tra/cảnh báo tương tác thuốc–rượu (không có trong `site.ts`) — chỉ nêu việc lưu ảnh đơn gốc và
+  theo dõi tiến trình liều giúp có danh sách đầy đủ khi hỏi dược sĩ. Không hướng dẫn thời gian kiêng
+  cụ thể cho loại thuốc nào — luôn dẫn về hỏi bác sĩ/dược sĩ. Liên kết nội bộ tới
+  `uong-thuoc-sau-phau-thuat-khong-bo-do-khang-sinh` và `nguoi-benh-tieu-duong-quen-uong-thuoc`.
+  Không đặt `imageTag` — ảnh `goi-y-an-toan-tu-ai` có vẻ khớp chữ nhưng usedWhen của nó gắn với
+  "tương tác" nên không dùng, tránh ngụ ý app kiểm tra tương tác thuốc–rượu; không có ảnh nào khác
+  trong danh sách duyệt sẵn khớp thật với chủ đề này. Nguồn: bài "Tác hại nếu uống thuốc sau khi
+  uống rượu" của Vinmec (vinmec.com), đã fetch và đối chiếu trực tiếp trong phiên này — chỉ lấy
+  phần cơ chế chung (thần kinh trung ương, mạch máu, đường huyết, chuyển hoá ở gan) và dấu hiệu
+  tương tác (buồn nôn, chóng mặt, buồn ngủ, thay đổi huyết áp), không lấy danh sách tên
+  thuốc/hoạt chất cụ thể mà nguồn có nêu. Guard check: đã fetch `origin`, xác nhận không có nhánh
+  `origin/claude/blog-2026-10-15`. Rà các nhánh `claude/blog-*` chưa merge: `claude/blog-2026-10-13`
+  (`co-nen-nghien-thuoc-vien-de-de-uong-khong`, dùng backlog #3 cũ) và `claude/blog-2026-10-14`
+  (`uong-thuoc-giam-dau-luc-doi-co-hai-da-day-khong`, dùng backlog #4 cũ) — khác hẳn chủ đề bài
+  này nên bỏ qua. Các nhánh bảo trì chưa merge (`claude/blog-maintenance-2026-10-12/-13/-14`) chỉ
+  sửa bài cũ, không trùng chủ đề. Backlog #1 (Tết) chưa tới mùa, #2 (BHYT trái tuyến) vẫn chưa kiểm
+  chứng được văn bản gốc, #5 (túi thuốc nhập học) chưa tới mùa (tháng 8–9) — đều bỏ qua. Đã bỏ mục
+  rượu bia khỏi backlog (các mục còn lại dịch số lên); các mục #3/#4 cũ vẫn giữ nguyên vì đang chờ
+  merge trên hai nhánh `claude/blog-2026-10-13`/`claude/blog-2026-10-14`.
+
 ## Bài đã làm mới
 
 Nhật ký job bảo trì buổi tối — mỗi dòng: ngày, slug, đã sửa gì. Ưu tiên làm mới bài cũ nhất chưa
@@ -1109,15 +1140,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     thông tin cơ sở y tế gần trường — không liệt kê tên thuốc kê đơn cụ thể, không khuyến nghị tự mua
     kháng sinh dự phòng. Cần xác minh nguồn chính thức Việt Nam trước khi viết; nếu không tìm được
     nguồn phù hợp, chỉ dùng nguyên tắc an toàn chung, không bịa danh mục cụ thể.
-6. `uống thuốc có cần kiêng rượu, bia không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm
-    kiếm thật (Vinmec có nhiều bài riêng về rượu bia + thuốc/kháng sinh, Pharmacity, Long Châu, PLO
-    cũng viết về chủ đề này). Góc độ: nguyên tắc chung vì sao rượu/bia có thể làm thay đổi tác dụng
-    hoặc tăng tác dụng phụ của nhiều loại thuốc (không riêng kháng sinh) — không nêu tên thuốc hay
-    nhóm thuốc cụ thể nào là "an toàn" khi uống cùng rượu bia, luôn chốt lại bằng việc báo cho bác sĩ/
-    dược sĩ biết nếu có uống rượu bia trong thời gian dùng thuốc. Cần xác minh: bài "Tác hại nếu uống
-    thuốc sau khi uống rượu" của Vinmec (vinmec.com) trước khi viết, chỉ lấy phần nguyên tắc chung,
-    không suy diễn thêm cho thuốc cụ thể nào.
-7. `bảo quản thuốc khi đi du lịch mùa nắng nóng, để trong ô tô có an toàn không` — cụm Theo mùa (du
+6. `bảo quản thuốc khi đi du lịch mùa nắng nóng, để trong ô tô có an toàn không` — cụm Theo mùa (du
     lịch hè, nắng nóng, tháng 5–6). Góc độ: khác `cach-bao-quan-thuoc-tai-nha` (nguyên tắc chung nơi
     để thuốc trong nhà) và `giu-dung-gio-uong-thuoc-khi-di-cong-tac-du-lich` (giữ đúng giờ uống khi di
     chuyển) ở chỗ đây là câu hỏi hẹp về nhiệt độ cao bất thường khi để thuốc trong xe ô tô đóng kín
@@ -1127,7 +1150,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     xác minh nguồn chính thức trước khi viết (tìm kiếm sơ bộ mới ra báo điện tử trong nước — voh.com.vn,
     znews.vn — cần tìm thêm nguồn y tế chính thống hơn như Vinmec/bệnh viện lớn trong phiên viết bài).
 
-8. `tăng huyết áp có phải uống thuốc suốt đời không` — cụm Bệnh mạn tính. Đã xác nhận nhu cầu tìm
+7. `tăng huyết áp có phải uống thuốc suốt đời không` — cụm Bệnh mạn tính. Đã xác nhận nhu cầu tìm
     kiếm thật (Vinmec, Tâm Anh, Nhà thuốc Long Châu đều có bài riêng về câu hỏi này). Góc độ: khác
     `cach-nho-uong-thuoc-huyet-ap-moi-ngay` (đó là mẹo nhớ uống đều đặn hằng ngày) và
     `moi-phat-hien-benh-man-tinh-xay-thoi-quen-uong-thuoc` (đó là xây thói quen cho người mới chẩn
@@ -1137,7 +1160,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     thuốc — không tự đưa ra khi nào nên ngừng hay đổi liều. Cần xác minh: bài "Thuốc huyết áp phải
     uống suốt đời?" của Vinmec (vinmec.com) trước khi viết, chỉ lấy phần nguyên tắc chung (vì sao cần
     dùng lâu dài, rủi ro khi tự ngừng), không nêu tên thuốc huyết áp cụ thể nào.
-9. `giấy chuyển tuyến khám bệnh có thời hạn bao lâu` — cụm Đơn thuốc & giấy tờ y tế. Đã xác nhận nhu
+8. `giấy chuyển tuyến khám bệnh có thời hạn bao lâu` — cụm Đơn thuốc & giấy tờ y tế. Đã xác nhận nhu
     cầu tìm kiếm thật (nhiều trang luật và báo bảo hiểm xã hội có bài riêng). Góc độ: khác
     `uong-thuoc-bao-hiem-y-te-canh-ngay-linh-thuoc-moi` (canh ngày lãnh thuốc mới) và backlog #2
     (dùng đơn/thẻ BHYT ở bệnh viện khác) ở chỗ đây là câu hỏi hẹp về thời hạn hiệu lực của riêng giấy
@@ -1147,7 +1170,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     (hiện có vẻ là "đến hết 31/12 năm đó, hoặc hết đợt điều trị nếu đang điều trị dở dang"), không
     dùng lại số liệu cũ từ các bài báo thứ cấp chưa cập nhật. Nếu không đọc được văn bản gốc trong
     phiên viết, chỉ nêu nguyên tắc chung và khuyên hỏi lại cơ sở khám/BHXH, không nêu số ngày cụ thể.
-11. `đơn thuốc điện tử là gì, có giá trị như đơn giấy không` — cụm Đơn thuốc & giấy tờ y tế. Đã xác
+9. `đơn thuốc điện tử là gì, có giá trị như đơn giấy không` — cụm Đơn thuốc & giấy tờ y tế. Đã xác
     nhận nhu cầu tìm kiếm thật (nhiều trang luật và báo pháp lý có bài riêng về Thông tư 27/2021/TT-BYT
     quy định kê đơn thuốc điện tử). Góc độ: khác `doc-hieu-don-thuoc-bac-si-ghi-tat` (đọc hiểu chữ viết
     tắt trên đơn giấy) và `don-thuoc-co-thoi-han-bao-lau` (thời hạn hiệu lực của đơn) ở chỗ đây là câu
@@ -1158,7 +1181,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     dụ Nghị định 102/2025/NĐ-CP xuất hiện trong kết quả tìm kiếm sơ bộ nhưng chưa được đọc nguyên văn),
     không suy diễn thêm; nếu không đọc được văn bản gốc, chỉ nêu khái niệm chung và khuyên hỏi lại cơ
     sở khám chữa bệnh.
-12. `thuốc hết hạn sử dụng vài ngày có dùng được không` — cụm Uống thuốc đúng cách (bảo quản thuốc).
+10. `thuốc hết hạn sử dụng vài ngày có dùng được không` — cụm Uống thuốc đúng cách (bảo quản thuốc).
     Đã xác nhận nhu cầu tìm kiếm thật (Vinmec, VnExpress, Long Châu, Pharmacity, HelloBacsi đều có bài
     riêng về câu hỏi này). Góc độ: khác `co-nen-bao-quan-thuoc-trong-tu-lanh-khong` (nơi/cách bảo quản
     thuốc khi còn hạn) ở chỗ đây là câu hỏi về việc có nên dùng thuốc SAU khi đã qua hạn sử dụng in trên
