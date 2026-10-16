@@ -859,6 +859,31 @@ workflow"). Đọc file này trước khi viết bài mới — mục đích ch�
   giữ lại mục #2 trong backlog cho một phiên sau có thời gian đọc kỹ văn bản gốc. Đã chọn mục #3
   (sữa) kế tiếp và bỏ khỏi backlog (các mục còn lại dịch số lên).
 
+## 2026-10-16
+
+- `tang-huyet-ap-co-phai-uong-thuoc-suot-doi-khong` — "Tăng huyết áp có phải uống thuốc suốt đời
+  không?" — keyword: `tăng huyết áp có phải uống thuốc suốt đời không` — cụm Bệnh mạn tính (backlog
+  #8, số cũ trước khi dịch lên do các nhánh `claude/blog-2026-10-13/10-14/10-15` chưa merge đã lấy
+  các mục #3, #4, #6). Góc độ: câu hỏi tâm lý "huyết áp đã ổn rồi, có cần uống mãi không" — vì sao
+  đa số trường hợp tăng huyết áp cần dùng thuốc lâu dài để phòng biến chứng (không phải chữa khỏi),
+  vì sao tự ý ngừng khi thấy khỏe lại nguy hiểm, có ngoại lệ khi xác định được nguyên nhân chữa được
+  nhưng vẫn do bác sĩ quyết định, và vai trò của theo dõi/tái khám đều đặn. Không nêu tên thuốc
+  huyết áp cụ thể, không tự đưa ra khi nào nên giảm/ngừng liều. Khác bài
+  `cach-nho-uong-thuoc-huyet-ap-moi-ngay` (mẹo nhớ uống đều đặn hằng ngày) và
+  `moi-phat-hien-benh-man-tinh-xay-thoi-quen-uong-thuoc` (xây thói quen cho người mới chẩn đoán) —
+  liên kết nội bộ tới cả hai bài này. Không đặt `imageTag` — không có ảnh nào trong danh sách duyệt
+  sẵn khớp thật với chủ đề này (ảnh `thiet-lap-gio-uong` đã dùng cho bài nhớ giờ uống thuốc huyết
+  áp). Nguồn: bài "Thuốc huyết áp phải uống suốt đời?" của Vinmec (vinmec.com), đã fetch và đối
+  chiếu trực tiếp trong phiên này. Guard check: đã fetch `origin`; không có nhánh
+  `origin/claude/blog-2026-10-16`. Các nhánh `claude/blog-2026-10-13`, `claude/blog-2026-10-14`,
+  `claude/blog-2026-10-15` chưa merge đã lấy backlog #3 (nghiền thuốc viên), #4 (giảm đau lúc đói),
+  #6 (rượu bia) — bỏ qua các mục này khi chọn chủ đề. Backlog #1 (Tết) chưa tới thời điểm đăng,
+  backlog #5 và #7 (theo mùa: nhập học tháng 8–9, du lịch hè tháng 5–6) đã hết mùa nên bỏ qua. Thử
+  backlog #2 (đơn thuốc BHYT dùng ở bệnh viện khác) trước nhưng vẫn không kiểm chứng đủ chắc chắn
+  trong phiên này (quy định trái tuyến đang thay đổi theo mốc 1/7/2026, nguồn thứ cấp không thống
+  nhất) — giữ lại mục #2 trong backlog. Đã chọn mục #8 (tăng huyết áp suốt đời) và bỏ khỏi backlog
+  (các mục còn lại dịch số lên).
+
 ## Bài đã làm mới
 
 Nhật ký job bảo trì buổi tối — mỗi dòng: ngày, slug, đã sửa gì. Ưu tiên làm mới bài cũ nhất chưa
@@ -1151,17 +1176,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     xác minh nguồn chính thức trước khi viết (tìm kiếm sơ bộ mới ra báo điện tử trong nước — voh.com.vn,
     znews.vn — cần tìm thêm nguồn y tế chính thống hơn như Vinmec/bệnh viện lớn trong phiên viết bài).
 
-8. `tăng huyết áp có phải uống thuốc suốt đời không` — cụm Bệnh mạn tính. Đã xác nhận nhu cầu tìm
-    kiếm thật (Vinmec, Tâm Anh, Nhà thuốc Long Châu đều có bài riêng về câu hỏi này). Góc độ: khác
-    `cach-nho-uong-thuoc-huyet-ap-moi-ngay` (đó là mẹo nhớ uống đều đặn hằng ngày) và
-    `moi-phat-hien-benh-man-tinh-xay-thoi-quen-uong-thuoc` (đó là xây thói quen cho người mới chẩn
-    đoán) ở chỗ đây là câu hỏi tâm lý "huyết áp đã ổn rồi, có cần uống mãi không" — giải thích chung
-    vì sao bệnh mạn tính như tăng huyết áp cần kiểm soát lâu dài bằng thuốc, nguy cơ nếu tự ý ngừng
-    đột ngột khi thấy khỏe, và luôn chốt lại rằng chỉ bác sĩ mới quyết định được khi nào giảm/ngừng
-    thuốc — không tự đưa ra khi nào nên ngừng hay đổi liều. Cần xác minh: bài "Thuốc huyết áp phải
-    uống suốt đời?" của Vinmec (vinmec.com) trước khi viết, chỉ lấy phần nguyên tắc chung (vì sao cần
-    dùng lâu dài, rủi ro khi tự ngừng), không nêu tên thuốc huyết áp cụ thể nào.
-9. `giấy chuyển tuyến khám bệnh có thời hạn bao lâu` — cụm Đơn thuốc & giấy tờ y tế. Đã xác nhận nhu
+8. `giấy chuyển tuyến khám bệnh có thời hạn bao lâu` — cụm Đơn thuốc & giấy tờ y tế. Đã xác nhận nhu
     cầu tìm kiếm thật (nhiều trang luật và báo bảo hiểm xã hội có bài riêng). Góc độ: khác
     `uong-thuoc-bao-hiem-y-te-canh-ngay-linh-thuoc-moi` (canh ngày lãnh thuốc mới) và backlog #2
     (dùng đơn/thẻ BHYT ở bệnh viện khác) ở chỗ đây là câu hỏi hẹp về thời hạn hiệu lực của riêng giấy
@@ -1171,7 +1186,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     (hiện có vẻ là "đến hết 31/12 năm đó, hoặc hết đợt điều trị nếu đang điều trị dở dang"), không
     dùng lại số liệu cũ từ các bài báo thứ cấp chưa cập nhật. Nếu không đọc được văn bản gốc trong
     phiên viết, chỉ nêu nguyên tắc chung và khuyên hỏi lại cơ sở khám/BHXH, không nêu số ngày cụ thể.
-10. `thuốc hết hạn sử dụng vài ngày có dùng được không` — cụm Uống thuốc đúng cách (bảo quản thuốc).
+9. `thuốc hết hạn sử dụng vài ngày có dùng được không` — cụm Uống thuốc đúng cách (bảo quản thuốc).
     Đã xác nhận nhu cầu tìm kiếm thật (Vinmec, VnExpress, Long Châu, Pharmacity, HelloBacsi đều có bài
     riêng về câu hỏi này). Góc độ: khác `co-nen-bao-quan-thuoc-trong-tu-lanh-khong` (nơi/cách bảo quản
     thuốc khi còn hạn) ở chỗ đây là câu hỏi về việc có nên dùng thuốc SAU khi đã qua hạn sử dụng in trên
@@ -1180,7 +1195,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     "dùng được" sau hạn, không tư vấn xử trí cụ thể khi lỡ uống thuốc hết hạn — chỉ khuyến cáo hỏi ngay
     bác sĩ/dược sĩ nếu đã lỡ dùng. Cần xác minh: bài "Vì sao thuốc phải có hạn sử dụng?" của Vinmec
     (vinmec.com) trước khi viết, chỉ lấy phần nguyên tắc chung.
-11. `thuốc nhỏ mắt sau khi mở nắp dùng được bao lâu` — cụm Uống thuốc đúng cách (bảo quản thuốc). Đã
+10. `thuốc nhỏ mắt sau khi mở nắp dùng được bao lâu` — cụm Uống thuốc đúng cách (bảo quản thuốc). Đã
     xác nhận nhu cầu tìm kiếm thật qua WebSearch trong phiên này (Vinmec có ít nhất hai bài riêng —
     "Hướng dẫn cách dùng thuốc nhỏ mắt" và "Những sai lầm khi sử dụng thuốc nhỏ mắt" — cùng Nhà thuốc
     Long Châu). Góc độ: khác `thuoc-nho-mat-mui-tai-boi-ngoai-da-de-quen-hon-thuoc-uong` (đó là vì sao
@@ -1190,7 +1205,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     thống nhất (dao động 15 ngày đến vài tháng tuỳ loại) — luôn dẫn về đọc kỹ hướng dẫn in trên hộp/lọ
     hoặc hỏi dược sĩ cho từng loại. **Cảnh báo khi viết:** phải đọc trực tiếp bài Vinmec trong phiên
     viết để lấy đúng số liệu Vinmec nêu, không tự chọn một mốc giữa các nguồn khác nhau.
-12. `uống thuốc cùng trà, cà phê có ảnh hưởng đến tác dụng thuốc không` — cụm Uống thuốc đúng cách. Đã
+11. `uống thuốc cùng trà, cà phê có ảnh hưởng đến tác dụng thuốc không` — cụm Uống thuốc đúng cách. Đã
     xác nhận nhu cầu tìm kiếm thật qua WebSearch trong phiên này (Nhà thuốc Long Châu, PLO đều có bài
     riêng về chủ đề nước uống làm giảm tác dụng thuốc). Góc độ: khác
     `uong-thuoc-chung-voi-sua-co-sao-khong` (sữa) ở chỗ đây là trà/cà phê — nêu nguyên tắc chung (tanin
