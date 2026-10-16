@@ -9,7 +9,7 @@ const blog = defineCollection({
     title: z.string(),
     description: z.string(),
     publishDate: z.coerce.date(),
-    // Truy vấn tìm kiếm mục tiêu của bài — dùng để đối chiếu trong blog-notes.md, không hiển thị
+    // Truy vấn tìm kiếm mục tiêu của bài — dùng để đối chiếu trong blog-notes/, không hiển thị
     // trên trang (không dùng meta keywords, không phải yếu tố xếp hạng).
     keyword: z.string(),
     // Phân khúc/góc nhìn của bài — hiển thị làm eyebrow trên trang bài viết, đồng thời là căn cứ

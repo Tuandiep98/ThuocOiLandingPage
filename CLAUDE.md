@@ -70,7 +70,7 @@ bác sĩ/dược sĩ otherwise.
 segments; that produced near-zero-volume keywords and templated near-duplicate posts (a Google
 scaled-content / helpful-content risk, worse on a young domain in a YMYL niche). Don't add more
 posts of that shape. New posts should target a real question people search, within these clusters
-(backlog in `blog-notes.md`):
+(backlog: one file per item in `blog-notes/backlog/`):
 
 1. Uống thuốc đúng cách — general principles (quên liều, trước/sau ăn, khoảng cách giữa các liều,
    bảo quản thuốc), always deferring specifics to the leaflet + bác sĩ/dược sĩ.
@@ -81,10 +81,10 @@ posts of that shape. New posts should target a real question people search, with
 4. Chăm sóc người thân (người già, trẻ nhỏ) — already heavily covered; prefer refreshing existing
    posts over new ones here.
 5. Seasonal — mùa cúm/sốt xuất huyết ("khi nào cần đi khám", never which drug), mang thuốc về quê
-   ăn Tết (publish from mid-December), nhập học, du lịch hè. Check `blog-notes.md`'s seasonal list.
+   ăn Tết (publish from mid-December), nhập học, du lịch hè. Check `blog-notes/seasonal.md`.
 
-Before writing, check `blog-notes.md` so the query isn't already covered (by keyword *intent*, not
-just wording) — if an existing post covers the same intent, refresh that post instead.
+Before writing, check `blog-notes/posts/` and `src/content/blog/` so the query isn't already
+covered (by keyword *intent*, not just wording) — if an existing post covers the same intent, refresh that post instead.
 
 **Post format (new posts):**
 
@@ -117,7 +117,7 @@ would need to break any of these to be useful should not be written.**
 **Per-post requirements (all must hold before a post counts as done):**
 
 - Frontmatter: `title`, `description` (~120–160 chars, unique per post), `publishDate`,
-  `keyword` (primary target query, used for `blog-notes.md` tracking — not rendered, not a meta
+  `keyword` (primary target query, used for `blog-notes/` tracking — not rendered, not a meta
   keywords tag), `segment` (rendered as the eyebrow label on the post), `faqs`, and `sources` when
   verified sources exist. Set `updatedDate` only when an existing post's content is refreshed.
 - Exactly one `<h1>` (post title, from frontmatter — not repeated in the Markdown body), `<h2>`
@@ -140,29 +140,41 @@ would need to break any of these to be useful should not be written.**
 - `npx astro check` and `npm run build` both clean before considering the post done. The build
   needs `SUPABASE_URL`/`SUPABASE_ANON_KEY` (see Legal pages below).
 
-**`blog-notes.md`** (repo root) is the source of truth for what's covered: one entry per post under
-a `## YYYY-MM-DD` header (slug, title, keyword, segment, angle), a `## Bài đã làm mới` log for
-refreshes, and the backlog/seasonal lists. Read it first, never start from a blank slate.
+**`blog-notes/`** (repo root) is the source of truth for what's covered — read
+`blog-notes/README.md` first, never start from a blank slate. It is **one file per entry** so that
+parallel routine PRs never touch the same file (the old single `blog-notes.md` made every open PR
+conflict with every other one):
+
+- `posts/YYYY-MM-DD-<slug>.md` — one new file per new post (slug, title, keyword, segment, angle).
+- `refreshes/YYYY-MM-DD-<slug>.md` — one new file per refresh.
+- `backlog/<keyword-slug>.md` — one file per backlog item. Using an item = `git rm` its file in the
+  same commit as the post; adding items = new files. Never renumber, never edit existing log files,
+  and routines never edit an existing backlog file in place (delete + create instead) — editing
+  in place while another branch deletes it is a modify/delete conflict.
+- `seasonal.md` — seasonal calendar; edited only in interactive sessions.
 
 **Automated routines (Claude Code cloud routines, two per day, both open PRs — never push to
 `main`):**
 
-- **Morning (~09:00 giờ VN) — new post.** Skip if `blog-notes.md` already has an entry dated today.
-  Otherwise pick the top backlog item (or research a new question in the clusters above), write one
-  post meeting everything above, update `blog-notes.md`, run check + build, commit on a branch
+- **Morning (~09:00 giờ VN) — new post.** Skip if `blog-notes/posts/<today>-*.md` already exists.
+  Otherwise pick a backlog item from `blog-notes/backlog/` — in season, not already being used by an
+  unmerged `claude/blog-*` branch (or research a new question in the clusters above), write one
+  post meeting everything above, add `blog-notes/posts/<today>-<slug>.md` and `git rm` the used
+  backlog file, run check + build, commit on a branch
   `claude/blog-YYYY-MM-DD`, push that branch and open a PR to `main`.
 - **Evening (~20:00 giờ VN) — maintenance, no new post.** Refresh one existing post (prefer the
   oldest not yet refreshed: add answer-first intro, `faqs`, verified `sources`, internal links,
   guardrail fixes, trim repetitive feature pitch; set `updatedDate`), and top up the backlog to at
-  least 10 items with real search questions in the clusters. Log it under `## Bài đã làm mới`.
+  least 10 files in `blog-notes/backlog/` (new files only) with real search questions in the
+  clusters. Log it as a new `blog-notes/refreshes/<today>-<slug>.md`.
   Branch `claude/blog-maintenance-YYYY-MM-DD`, PR to `main`.
 - The user reviews and merges PRs; merging to `main` is what deploys (Cloudflare, see Deployment).
 
 **Trigger: user asks to create a blog post interactively** (e.g. "tạo blog", "viết bài blog hôm
-nay") — same rules: check today's entry in `blog-notes.md` (one new post per day unless the user
+nay") — same rules: check for today's file in `blog-notes/posts/` (one new post per day unless the user
 explicitly overrides), write the post, run check + build (delete `dist/` afterwards), then **stop
 and summarize — do not commit or push** until the user confirms; after confirmation, update
-`blog-notes.md`, commit and push to `main`.
+`blog-notes/` (new `posts/` file, `git rm` the used backlog file), commit and push to `main`.
 
 ## Legal pages (privacy, terms, account deletion, support)
 
