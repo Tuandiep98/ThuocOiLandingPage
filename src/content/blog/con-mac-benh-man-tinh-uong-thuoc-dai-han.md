@@ -19,7 +19,7 @@ sources:
     url: "https://www.vinmec.com/vie/bai-viet/lam-nao-de-tang-tuan-thu-dieu-tri-thuoc-vi"
 ---
 
-Để thuốc dài hạn của con không đứt quãng, cha mẹ nên cập nhật lịch nhắc theo đúng đơn mới sau mỗi lần tái khám, theo dõi xem con có bỏ liều thường xuyên hơn trước hay không, và chia sẻ việc nhắc nhở với người đang trực tiếp chăm con trong từng giai đoạn — thay vì chỉ dựa vào trí nhớ của một người.
+Để thuốc dài hạn của con không đứt quãng, cha mẹ nên cập nhật lịch nhắc theo đúng đơn mới sau mỗi lần tái khám, theo dõi xem con có bỏ liều thường xuyên hơn trước không, và chia sẻ việc nhắc nhở với người đang trực tiếp chăm con — thay vì chỉ dựa vào trí nhớ của một người.
 
 ## Vì sao thuốc dài hạn của con dễ đứt quãng hơn cha mẹ nghĩ
 
