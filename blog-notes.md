@@ -1176,6 +1176,31 @@ có trong danh sách này.
   có 11 mục — dự phòng cho việc mục #3 "uống thuốc chung với sữa" nhiều khả năng sẽ được nhánh
   `claude/blog-2026-10-12` (bài sáng hôm nay) dùng và xoá khỏi danh sách khi merge, nên vẫn còn ít
   nhất 10 mục sau đó.
+- 2026-10-13 — `uong-thuoc-dung-gio-khi-lam-ca-dem-xoay-ca` — Bài cũ nhất chưa được làm mới và không
+  bị nhánh `claude/blog-*` nào khác đang giữ (publishDate 2026-09-12; các bài 2026-09-11
+  `quan-ly-nhieu-loai-thuoc-cung-luc-sau-xuat-vien` và `meo-chup-anh-don-thuoc-ro-net-de-ai-doc-dung`
+  đang chờ merge trên nhánh `claude/blog-maintenance-2026-10-11`/`-10-12`; hai bài mới
+  `uong-thuoc-chung-voi-sua-co-sao-khong`/`co-nen-nghien-thuoc-vien-de-de-uong-khong` trên nhánh
+  `claude/blog-2026-10-12`/`-10-13` cũng chưa merge, không liên quan chủ đề này), không có vi phạm
+  guardrail nào (đã rà soát toàn bộ bài, không có tên thuốc kèm liều, không hướng dẫn tự đổi giờ
+  uống cụ thể, không claim tính năng app ngoài `site.ts`). Đã: thay đoạn mở đầu bằng câu trả lời
+  trực tiếp ~56 từ; tách mục "Hỏi bác sĩ hoặc dược sĩ..." thành mục riêng "Khi nào nên hỏi bác sĩ,
+  dược sĩ" với 4 tình huống cụ thể (trước đó chỉ là một đoạn văn chung); bổ sung dẫn chứng từ nguồn
+  Vinmec vào mục "Vì sao..." (lịch ca đêm đi ngược đồng hồ sinh học, cùng nguyên nhân khiến giờ
+  giấc sinh hoạt khó ổn định) và thêm khuyến cáo đi khám nếu có dấu hiệu rối loạn giấc ngủ kéo dài;
+  gộp đoạn kết luận lặp ý vào đúng 1 mục giới thiệu tính năng app cuối bài (bài gốc có đoạn kết lặp
+  lại disclaimer ở cuối, nay bỏ để tránh trùng ý mục "Khi nào nên hỏi bác sĩ"); thêm `faqs` (4 câu);
+  thêm `sources` (bài "Rối loạn giấc ngủ vì làm việc theo ca" của Vinmec, đã fetch và đối chiếu
+  trong phiên này — chỉ lấy phần nguyên nhân/triệu chứng chung và khuyến cáo đi khám khi có dấu
+  hiệu nghi ngờ, không suy diễn thêm cho thuốc cụ thể nào); thêm 2 liên kết nội bộ tới
+  `giu-dung-gio-uong-thuoc-khi-di-cong-tac-du-lich` và `dau-hieu-quen-lieu-uong-trung-lieu-thuoc`;
+  đặt `imageTag: thiet-lap-gio-uong` (khớp phần thiết lập giờ nhắc theo buổi theo nhịp sinh hoạt tự
+  chọn, cùng cách dùng như các bài huyết áp/tuyến giáp/mỡ máu); đặt `updatedDate`. Không đổi
+  title/publishDate/keyword/segment/description. Phần giới thiệu tính năng app giữ trong đúng 1 mục
+  cuối bài (~1/4, đúng khuyến nghị). Backlog: bỏ mục #3 "sữa" và #4 "nghiền thuốc viên" cũ (đã được
+  2 bài mới sáng 10-12/10-13 dùng, đang chờ merge trên nhánh `claude/blog-2026-10-12`/`-10-13`),
+  đánh số lại các mục còn lại và bổ sung 2 mục mới (#9 bưởi/tương tác thuốc, #10 mất thẻ BHYT) để
+  danh sách còn đúng 10 mục.
 
 ## Backlog góc độ chưa làm
 
@@ -1211,6 +1236,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     Cần xác minh: bài "Những thuốc không được bẻ, nghiền nhỏ khi uống" trên Vinmec (vinmec.com)
     trước khi viết.
 4. `uống thuốc giảm đau lúc bụng đói có hại dạ dày không` — cụm Uống thuốc đúng cách. Đã xác nhận
+3. `uống thuốc giảm đau lúc bụng đói có hại dạ dày không` — cụm Uống thuốc đúng cách. Đã xác nhận
     nhu cầu tìm kiếm thật (Vinmec có hai bài riêng "Tại sao một số loại thuốc phải uống khi đói?" và
     "Chọn thuốc giảm đau không hại dạ dày", cùng Pharmacity, Long Châu). Góc độ: nguyên tắc chung vì
     sao một số thuốc (đặc biệt nhóm giảm đau chống viêm) dễ gây khó chịu/kích ứng dạ dày khi uống lúc
@@ -1222,6 +1248,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     nêu trên trước khi viết — chỉ lấy phần nguyên tắc chung (kích ứng dạ dày, hấp thu), không suy diễn
     thêm cho thuốc cụ thể nào.
 5. `chuẩn bị túi thuốc cơ bản khi nhập học, ở xa nhà lần đầu` — cụm Theo mùa (nhập học, tháng 8–9).
+4. `chuẩn bị túi thuốc cơ bản khi nhập học, ở xa nhà lần đầu` — cụm Theo mùa (nhập học, tháng 8–9).
     Góc độ: khác bài `sinh-vien-o-tro-tu-uong-thuoc-khi-om-lan-dau` (đó là đã ốm, tự xử trí lần đầu
     không ai nhắc) ở chỗ đây là chuẩn bị TRƯỚC khi đi — những món cơ bản nên mang theo (thuốc hạ sốt/
     giảm đau không kê đơn thông thường dùng ngắn hạn, băng gạc, nhiệt kế, bản sao đơn thuốc nếu đang
@@ -1230,6 +1257,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     kháng sinh dự phòng. Cần xác minh nguồn chính thức Việt Nam trước khi viết; nếu không tìm được
     nguồn phù hợp, chỉ dùng nguyên tắc an toàn chung, không bịa danh mục cụ thể.
 6. `uống thuốc có cần kiêng rượu, bia không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm
+5. `uống thuốc có cần kiêng rượu, bia không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu tìm
     kiếm thật (Vinmec có nhiều bài riêng về rượu bia + thuốc/kháng sinh, Pharmacity, Long Châu, PLO
     cũng viết về chủ đề này). Góc độ: nguyên tắc chung vì sao rượu/bia có thể làm thay đổi tác dụng
     hoặc tăng tác dụng phụ của nhiều loại thuốc (không riêng kháng sinh) — không nêu tên thuốc hay
@@ -1238,6 +1266,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     thuốc sau khi uống rượu" của Vinmec (vinmec.com) trước khi viết, chỉ lấy phần nguyên tắc chung,
     không suy diễn thêm cho thuốc cụ thể nào.
 7. `bảo quản thuốc khi đi du lịch mùa nắng nóng, để trong ô tô có an toàn không` — cụm Theo mùa (du
+6. `bảo quản thuốc khi đi du lịch mùa nắng nóng, để trong ô tô có an toàn không` — cụm Theo mùa (du
     lịch hè, nắng nóng, tháng 5–6). Góc độ: khác `cach-bao-quan-thuoc-tai-nha` (nguyên tắc chung nơi
     để thuốc trong nhà) và `giu-dung-gio-uong-thuoc-khi-di-cong-tac-du-lich` (giữ đúng giờ uống khi di
     chuyển) ở chỗ đây là câu hỏi hẹp về nhiệt độ cao bất thường khi để thuốc trong xe ô tô đóng kín
@@ -1249,6 +1278,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
 
 8. `giấy chuyển tuyến khám bệnh có thời hạn bao lâu` — cụm Đơn thuốc & giấy tờ y tế. Đã xác nhận nhu
 8. `tăng huyết áp có phải uống thuốc suốt đời không` — cụm Bệnh mạn tính. Đã xác nhận nhu cầu tìm
+7. `tăng huyết áp có phải uống thuốc suốt đời không` — cụm Bệnh mạn tính. Đã xác nhận nhu cầu tìm
     kiếm thật (Vinmec, Tâm Anh, Nhà thuốc Long Châu đều có bài riêng về câu hỏi này). Góc độ: khác
     `cach-nho-uong-thuoc-huyet-ap-moi-ngay` (đó là mẹo nhớ uống đều đặn hằng ngày) và
     `moi-phat-hien-benh-man-tinh-xay-thoi-quen-uong-thuoc` (đó là xây thói quen cho người mới chẩn
@@ -1259,6 +1289,7 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     uống suốt đời?" của Vinmec (vinmec.com) trước khi viết, chỉ lấy phần nguyên tắc chung (vì sao cần
     dùng lâu dài, rủi ro khi tự ngừng), không nêu tên thuốc huyết áp cụ thể nào.
 9. `giấy chuyển tuyến khám bệnh có thời hạn bao lâu` — cụm Đơn thuốc & giấy tờ y tế. Đã xác nhận nhu
+8. `giấy chuyển tuyến khám bệnh có thời hạn bao lâu` — cụm Đơn thuốc & giấy tờ y tế. Đã xác nhận nhu
     cầu tìm kiếm thật (nhiều trang luật và báo bảo hiểm xã hội có bài riêng). Góc độ: khác
     `uong-thuoc-bao-hiem-y-te-canh-ngay-linh-thuoc-moi` (canh ngày lãnh thuốc mới) và backlog #2
     (dùng đơn/thẻ BHYT ở bệnh viện khác) ở chỗ đây là câu hỏi hẹp về thời hạn hiệu lực của riêng giấy
@@ -1324,6 +1355,29 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     lại. Cần xác minh: bài "Thuốc mỡ máu có phải uống suốt đời không?" của Vinmec (vinmec.com) trước
     khi viết, chỉ lấy phần nguyên tắc chung (đánh giá lại theo xét nghiệm, không tự ý ngừng), không
     nêu tên thuốc mỡ máu cụ thể nào.
+9. `uống thuốc cùng nước ép bưởi có an toàn không` — cụm Uống thuốc đúng cách. Đã xác nhận nhu cầu
+    tìm kiếm thật (Vinmec có ít nhất 3 bài riêng — "Cảnh báo: Bưởi có thể tương tác với các loại thuốc
+    thông thường", "Ăn bưởi và uống thuốc: Một số lưu ý cần thận trọng", "Nước ép bưởi và một số loại
+    thuốc không trộn lẫn" — cùng Tuổi Trẻ, Long Châu). Góc độ: nguyên tắc chung về cơ chế bưởi ảnh
+    hưởng đến enzyme chuyển hoá thuốc ở gan/ruột, khiến nồng độ một số thuốc trong máu tăng cao bất
+    thường hoặc giảm hấp thu tuỳ loại — không nêu tên hoạt chất cụ thể nào "an toàn"/"nguy hiểm" khi
+    dùng cùng bưởi (nguồn có nhắc simvastatin, một số thuốc chẹn kênh canxi làm ví dụ minh hoạ, nhưng
+    bài không được liệt kê thành danh sách khuyến nghị theo thuốc), luôn chốt lại hỏi bác sĩ/dược sĩ
+    về nguy cơ tương tác với đơn thuốc cụ thể đang dùng trước khi ăn bưởi/uống nước ép bưởi. Cần xác
+    minh: các bài Vinmec nêu trên trước khi viết — chỉ lấy phần cơ chế chung và khuyến nghị hỏi dược
+    sĩ, không suy diễn thêm cho thuốc cụ thể nào; số liệu "tương tác với hơn 85 loại thuốc" từ nguồn
+    thương mại (Long Châu) chưa xác minh được ở nguồn chính thống — không dùng con số đó nếu không đối
+    chiếu lại được trong phiên viết.
+10. `mất thẻ bảo hiểm y tế có lĩnh thuốc được không` — cụm Đơn thuốc & giấy tờ y tế. Đã xác nhận nhu
+    cầu tìm kiếm thật (nhiều trang luật và tư vấn bảo hiểm có bài riêng). Góc độ: khác backlog #2 (đơn
+    thuốc/thẻ BHYT dùng được ở bệnh viện khác hay không) và #8 (thời hạn giấy chuyển tuyến) ở chỗ đây
+    là tình huống mất thẻ giấy — từ 1/7/2025, Luật BHYT sửa đổi cho phép dùng thẻ BHYT điện tử trên
+    VssID/VNeID/CCCD gắn chip thay thế, nên nhiều trường hợp mất thẻ giấy không cần cấp lại mới vẫn đi
+    khám/lĩnh thuốc được bình thường. **Cảnh báo khi viết:** các nguồn tìm sơ bộ chưa thống nhất về
+    trường hợp không có bất kỳ phương án điện tử nào (ví dụ không có smartphone/CCCD gắn chip) — bắt
+    buộc đọc trực tiếp văn bản hướng dẫn hiện hành của BHXH Việt Nam hoặc Luật BHYT sửa đổi 2024 trong
+    phiên viết bài để xác nhận quy trình cấp lại/thanh toán trực tiếp cho trường hợp này, không dùng
+    lại nguyên văn số liệu từ các bài báo thứ cấp chưa ghi rõ ngày cập nhật.
 
 ### Lịch chủ đề theo mùa
 
