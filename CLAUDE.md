@@ -153,22 +153,34 @@ conflict with every other one):
   in place while another branch deletes it is a modify/delete conflict.
 - `seasonal.md` — seasonal calendar; edited only in interactive sessions.
 
-**Automated routines (Claude Code cloud routines, two per day, both open PRs — never push to
-`main`):**
+**Automated routines (Claude Code cloud routines, two per day — each opens a PR, self-reviews it,
+and auto-merges it into `main` if the review passes):**
 
 - **Morning (~09:00 giờ VN) — new post.** Skip if `blog-notes/posts/<today>-*.md` already exists.
   Otherwise pick a backlog item from `blog-notes/backlog/` — in season, not already being used by an
   unmerged `claude/blog-*` branch (or research a new question in the clusters above), write one
   post meeting everything above, add `blog-notes/posts/<today>-<slug>.md` and `git rm` the used
   backlog file, run check + build, commit on a branch
-  `claude/blog-YYYY-MM-DD`, push that branch and open a PR to `main`.
+  `claude/blog-YYYY-MM-DD`, push that branch and open a PR to `main`, then self-review and
+  auto-merge (below).
 - **Evening (~20:00 giờ VN) — maintenance, no new post.** Refresh one existing post (prefer the
   oldest not yet refreshed: add answer-first intro, `faqs`, verified `sources`, internal links,
   guardrail fixes, trim repetitive feature pitch; set `updatedDate`), and top up the backlog to at
   least 10 files in `blog-notes/backlog/` (new files only) with real search questions in the
   clusters. Log it as a new `blog-notes/refreshes/<today>-<slug>.md`.
-  Branch `claude/blog-maintenance-YYYY-MM-DD`, PR to `main`.
-- The user reviews and merges PRs; merging to `main` is what deploys (Cloudflare, see Deployment).
+  Branch `claude/blog-maintenance-YYYY-MM-DD`, PR to `main`, then self-review and auto-merge.
+- **Self-review gate (both routines):** re-read the full diff as a strict reviewer and post a
+  `Tự review` PR comment checking scope (only the allowed files), every guardrail above, grounding in
+  `site.ts`, sources actually fetched, format, and `blog-notes/README.md` rules. Fixable issues are
+  fixed and re-verified; anything not confidently fixable or medically uncertain → **don't merge**,
+  prefix the PR title with `[CẦN DUYỆT] ` and leave it open for the user.
+- **Auto-merge:** only when the self-review is all ✅, the branch is up to date with `main`
+  (merge `origin/main` in, re-run check + build if it moved — never force-push), the PR is
+  mergeable and checks are green. Merge with a regular merge commit, then delete the branch, and
+  delete any other `claude/blog-*` branch that is already fully merged. Merging to `main` deploys to
+  thuocoi.com (Cloudflare, see Deployment) — intended. No follow-up check-in reminders.
+- The user only acts on PRs titled `[CẦN DUYỆT] `. The routine prompts live in claude.ai/code/routines
+  (`trig_01CHenTQATRngxeyRtVHhDXS` morning, `trig_01TrkujY2ay4zhrrUQrMEoE8` evening).
 
 **Trigger: user asks to create a blog post interactively** (e.g. "tạo blog", "viết bài blog hôm
 nay") — same rules: check for today's file in `blog-notes/posts/` (one new post per day unless the user
