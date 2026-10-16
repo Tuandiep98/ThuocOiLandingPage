@@ -883,6 +883,29 @@ workflow"). Đọc file này trước khi viết bài mới — mục đích ch�
   trong phiên này (quy định trái tuyến đang thay đổi theo mốc 1/7/2026, nguồn thứ cấp không thống
   nhất) — giữ lại mục #2 trong backlog. Đã chọn mục #8 (tăng huyết áp suốt đời) và bỏ khỏi backlog
   (các mục còn lại dịch số lên).
+## 2026-10-13
+
+- `co-nen-nghien-thuoc-vien-de-de-uong-khong` — "Có nên nghiền thuốc viên để dễ uống không?" —
+  keyword: `có nên nghiền thuốc viên để dễ uống không` — cụm Uống thuốc đúng cách (backlog #4,
+  sau khi #3 "uống thuốc chung với sữa" đã bị nhánh `claude/blog-2026-10-12` lấy — xem guard
+  check dưới). Góc độ: nguyên tắc chung vì sao một số dạng viên (bao tan ở ruột, giải phóng kéo
+  dài, ngậm/đặt dưới lưỡi, viên sủi) không được nghiền/bẻ — không nêu tên hoạt chất hay thuốc cụ
+  thể nào, chỉ nói theo dạng bào chế; nêu hậu quả nếu nghiền sai (mất tác dụng, kích ứng dạ dày,
+  giống quá liều); và luôn chốt lại hỏi dược sĩ trước khi nghiền/bẻ bất kỳ viên nào, kể cả khi
+  khó nuốt (người già, trẻ nhỏ) — không tự khuyên đổi dạng bào chế hay liều, chỉ gợi ý hỏi bác sĩ/
+  dược sĩ xem có lựa chọn khác phù hợp hơn không. Liên kết nội bộ tới
+  `uong-thuoc-truoc-an-trong-an-sau-an-dung-cach` (cùng cụm uống thuốc đúng cách) và
+  `doc-hieu-don-thuoc-bac-si-ghi-tat` (đọc hiểu thông tin ghi trên đơn/vỏ hộp). Không đặt
+  `imageTag` — không có ảnh nào trong danh sách duyệt sẵn khớp thật với chủ đề dạng bào chế viên
+  thuốc. Nguồn: bài "Những thuốc không được bẻ, nghiền nhỏ khi uống" của Vinmec (vinmec.com), đã
+  fetch và đối chiếu trực tiếp trong phiên này — chỉ lấy phần nguyên tắc chung theo dạng bào chế
+  (bao tan ruột, giải phóng kéo dài, ngậm dưới lưỡi, viên sủi) và hậu quả nếu dùng sai, không lấy
+  danh sách tên thuốc cụ thể nào từ nguồn. Guard check: đã fetch `origin` và xác nhận không có
+  nhánh `origin/claude/blog-2026-10-13`; đã rà các nhánh `claude/blog-*`/`claude/blog-maintenance-*`
+  chưa merge — nhánh `claude/blog-2026-10-12` đã lấy backlog #3 (`uong-thuoc-chung-voi-sua-co-sao-
+  khong`) nên bỏ qua mục đó, chọn mục #4 (nghiền thuốc viên) kế tiếp; các nhánh bảo trì chưa merge
+  (`claude/blog-maintenance-2026-09-28` đến `-2026-10-12`) chỉ sửa bài cũ, không trùng chủ đề này.
+  Đã bỏ mục nghiền thuốc viên khỏi backlog (các mục còn lại dịch số lên).
 
 ## Bài đã làm mới
 
@@ -1225,6 +1248,17 @@ Job tối bổ sung để danh sách luôn còn ít nhất 10 mục.
     znews.vn — cần tìm thêm nguồn y tế chính thống hơn như Vinmec/bệnh viện lớn trong phiên viết bài).
 
 8. `giấy chuyển tuyến khám bệnh có thời hạn bao lâu` — cụm Đơn thuốc & giấy tờ y tế. Đã xác nhận nhu
+8. `tăng huyết áp có phải uống thuốc suốt đời không` — cụm Bệnh mạn tính. Đã xác nhận nhu cầu tìm
+    kiếm thật (Vinmec, Tâm Anh, Nhà thuốc Long Châu đều có bài riêng về câu hỏi này). Góc độ: khác
+    `cach-nho-uong-thuoc-huyet-ap-moi-ngay` (đó là mẹo nhớ uống đều đặn hằng ngày) và
+    `moi-phat-hien-benh-man-tinh-xay-thoi-quen-uong-thuoc` (đó là xây thói quen cho người mới chẩn
+    đoán) ở chỗ đây là câu hỏi tâm lý "huyết áp đã ổn rồi, có cần uống mãi không" — giải thích chung
+    vì sao bệnh mạn tính như tăng huyết áp cần kiểm soát lâu dài bằng thuốc, nguy cơ nếu tự ý ngừng
+    đột ngột khi thấy khỏe, và luôn chốt lại rằng chỉ bác sĩ mới quyết định được khi nào giảm/ngừng
+    thuốc — không tự đưa ra khi nào nên ngừng hay đổi liều. Cần xác minh: bài "Thuốc huyết áp phải
+    uống suốt đời?" của Vinmec (vinmec.com) trước khi viết, chỉ lấy phần nguyên tắc chung (vì sao cần
+    dùng lâu dài, rủi ro khi tự ngừng), không nêu tên thuốc huyết áp cụ thể nào.
+9. `giấy chuyển tuyến khám bệnh có thời hạn bao lâu` — cụm Đơn thuốc & giấy tờ y tế. Đã xác nhận nhu
     cầu tìm kiếm thật (nhiều trang luật và báo bảo hiểm xã hội có bài riêng). Góc độ: khác
     `uong-thuoc-bao-hiem-y-te-canh-ngay-linh-thuoc-moi` (canh ngày lãnh thuốc mới) và backlog #2
     (dùng đơn/thẻ BHYT ở bệnh viện khác) ở chỗ đây là câu hỏi hẹp về thời hạn hiệu lực của riêng giấy
