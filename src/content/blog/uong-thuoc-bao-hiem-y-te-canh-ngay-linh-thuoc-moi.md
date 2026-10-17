@@ -19,7 +19,7 @@ sources:
     url: "https://tamanhhospital.vn/tin-tuc/252-benh-man-tinh-duoc-ke-don-90-ngay/"
 ---
 
-Thuốc bảo hiểm y tế thường chỉ cấp đủ cho một đợt; từ 1/7/2025, một số bệnh mạn tính ổn định có thể được kê tối đa 90 ngày thay vì 30 ngày như trước, số ngày cụ thể do bác sĩ quyết định. Cách canh đúng: tính ngược từ ngày lãnh thuốc để đặt lịch tái khám sớm vài ngày trước khi thuốc hết hẳn.
+Thuốc bảo hiểm y tế thường chỉ cấp đủ một đợt; từ 1/7/2025, một số bệnh mạn tính ổn định có thể được kê tối đa 90 ngày thay vì 30 ngày, số ngày cụ thể do bác sĩ quyết định. Cách canh đúng: tính ngược từ ngày lãnh thuốc để đặt lịch tái khám sớm trước khi thuốc hết.
 
 ## Vì sao đợt thuốc bảo hiểm dễ bị đứt quãng giữa chừng
 
