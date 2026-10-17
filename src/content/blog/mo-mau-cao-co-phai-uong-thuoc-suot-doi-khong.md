@@ -11,8 +11,8 @@ faqs:
     answer: "Không nên tự ý ngừng. Chỉ số ổn định trong lúc đang dùng thuốc thường là kết quả của việc uống thuốc đều, không phải dấu hiệu bệnh đã hết. Việc giảm liều hay ngừng thuốc cần do bác sĩ quyết định sau khi xem lại kết quả xét nghiệm, không tự thực hiện tại nhà."
   - question: "Sau bao lâu dùng thuốc thì nên xét nghiệm lại mỡ máu?"
     answer: "Theo Vinmec, sau khoảng 2–3 tháng dùng thuốc nên xét nghiệm máu lại để biết chỉ số đã cải thiện chưa. Mốc cụ thể cho từng người có thể khác, tuỳ bác sĩ điều trị chỉ định."
-  - question: "Nếu ngừng thuốc mà mỡ máu tăng trở lại thì sao?"
-    answer: "Một số nguồn y tế ghi nhận mỡ máu có thể tăng trở lại nhanh nếu ngừng thuốc đột ngột mà không có theo dõi. Đây là lý do việc ngừng hay giảm thuốc cần có chỉ định và theo dõi của bác sĩ, không tự dừng rồi tự đánh giá kết quả."
+  - question: "Nếu đã thử ngừng thuốc nhưng xét nghiệm sau đó cho thấy mỡ máu vẫn cao thì sao?"
+    answer: "Theo Vinmec, nếu đã ngừng thuốc mà chỉ số mỡ máu khi xét nghiệm lại vẫn ở mức cao, người bệnh nên tiếp tục dùng thuốc theo chỉ định của bác sĩ, không tự đánh giá dựa trên cảm giác bên ngoài."
   - question: "Ngoài thuốc, chế độ ăn uống và vận động có thay thế được thuốc không?"
     answer: "Ăn uống lành mạnh và vận động đều đặn giúp kiểm soát mỡ máu và có thể được bác sĩ cân nhắc khi điều chỉnh thuốc, nhưng không tự động thay thế thuốc đang được kê. Đây vẫn là quyết định y khoa dựa trên theo dõi thực tế của từng người."
 sources:
@@ -34,7 +34,7 @@ Theo Vinmec, sau khoảng 2–3 tháng dùng thuốc, người bệnh nên xét 
 
 ## Vì sao tự ý ngừng thuốc khi thấy ổn lại rủi ro
 
-Một số nguồn y tế ghi nhận mỡ máu có thể tăng trở lại khá nhanh nếu ngừng thuốc đột ngột mà không có theo dõi, kể cả khi chỉ số trước đó đã về mức bình thường. Chỉ số ổn định trong lúc đang uống thuốc phản ánh hiệu quả của việc uống đều, không phải dấu hiệu nguyên nhân gây mỡ máu cao đã biến mất. Mọi thay đổi về liều hay việc ngừng thuốc cần chờ chỉ định của bác sĩ sau khi xem lại kết quả xét nghiệm, không tự quyết định tại nhà dù cảm thấy hoàn toàn khỏe.
+Chỉ số ổn định trong lúc đang uống thuốc phản ánh hiệu quả của việc uống đều, không phải dấu hiệu nguyên nhân gây mỡ máu cao đã biến mất. Theo Vinmec, nếu đã ngừng thuốc mà xét nghiệm lại cho thấy chỉ số vẫn ở mức cao, người bệnh nên tiếp tục dùng thuốc trở lại theo chỉ định, không tự đánh giá bằng cảm giác "thấy khỏe". Mọi thay đổi về liều hay việc ngừng thuốc cần chờ chỉ định của bác sĩ sau khi xem lại kết quả xét nghiệm, không tự quyết định tại nhà.
 
 ## Lối sống vẫn cần duy trì song song, không chỉ trông vào thuốc
 
