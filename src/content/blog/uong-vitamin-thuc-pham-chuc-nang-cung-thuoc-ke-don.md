@@ -16,7 +16,7 @@ faqs:
     answer: "Không. Thuốc ơi chỉ giúp gộp chung lịch nhắc và theo dõi đã uống đủ chưa, không kiểm tra hay cảnh báo tương tác giữa các loại. Việc kết hợp vitamin, thực phẩm chức năng với thuốc kê đơn vẫn luôn cần hỏi bác sĩ hoặc dược sĩ trước."
 ---
 
-Cách đơn giản nhất là đưa toàn bộ vitamin, thực phẩm chức năng và thuốc kê đơn vào cùng một lịch nhắc theo buổi sáng, trưa, tối, thay vì nhớ mỗi loại theo một cách riêng. Khi cần uống cách xa nhau vì lý do hấp thu hoặc tương tác, hãy hỏi bác sĩ hoặc dược sĩ cách sắp giờ cụ thể, đừng tự suy đoán.
+Cách đơn giản nhất là đưa toàn bộ vitamin, thực phẩm chức năng và thuốc kê đơn vào cùng một lịch nhắc theo buổi sáng, trưa, tối, thay vì nhớ mỗi loại riêng. Khi cần uống cách xa nhau vì lý do hấp thu hoặc tương tác, hãy hỏi bác sĩ hoặc dược sĩ, đừng tự suy đoán.
 
 ## Vì sao vitamin, thực phẩm chức năng dễ bị quên hoặc trùng giờ
 
