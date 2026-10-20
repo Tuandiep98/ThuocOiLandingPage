@@ -5,7 +5,7 @@ publishDate: 2026-10-20
 keyword: "thuốc nhỏ mắt sau khi mở nắp dùng được bao lâu"
 segment: "Người đang dùng thuốc nhỏ mắt nhiều ngày liên tục, băn khoăn lọ thuốc đã mở còn dùng được không"
 ctaTitle: "Theo dõi riêng từng lọ thuốc nhỏ mắt đang dùng"
-ctaDescription: "Nhập tay thuốc nhỏ mắt vào Thuốc ơi với giờ nhắc riêng, không giới hạn và không tính vào lượt quét AI hằng tháng — tiện ghi chú kèm ngày mở nắp để tự theo dõi hạn dùng."
+ctaDescription: "Nhập tay thuốc nhỏ mắt vào Thuốc ơi với giờ nhắc riêng, không giới hạn và không tính vào lượt quét AI hằng tháng — và theo dõi đã nhỏ đủ số lần trong ngày hay chưa."
 faqs:
   - question: "Thuốc nhỏ mắt chưa mở nắp thì dùng theo hạn nào?"
     answer: "Dùng theo hạn sử dụng in trên hộp hoặc lọ, như mọi loại thuốc khác. Mốc ngắn hơn (thường khoảng 15 ngày) chỉ áp dụng từ lúc mở nắp lần đầu, không phải trước đó."
@@ -52,4 +52,4 @@ Nên hỏi lại bác sĩ hoặc dược sĩ nếu đơn thuốc không ghi rõ 
 
 ## Theo dõi lọ thuốc đang dùng ngay trong lịch nhắc
 
-Với các đợt cần nhỏ mắt nhiều lần mỗi ngày trong nhiều ngày liên tục, việc nhớ cả giờ nhỏ thuốc và ngày đã mở nắp lọ dễ bị rối nếu chỉ nhớ bằng trí nhớ. [Thuốc nhỏ mắt, nhỏ mũi hay thuốc bôi ngoài da thường bị quên hơn thuốc uống](/blog/thuoc-nho-mat-mui-tai-boi-ngoai-da-de-quen-hon-thuoc-uong/) đúng vì không có cột mốc bữa ăn để bám vào. Thuốc ơi cho phép nhập tay riêng từng loại thuốc nhỏ mắt với giờ nhắc theo đúng nhịp sinh hoạt cá nhân, không giới hạn số lần và không tính vào lượt quét đơn bằng AI hằng tháng — tiện ghi chú thêm ngày mở nắp ngay trong mục thuốc đó để tự theo dõi, thay vì phải nhớ riêng trên một tờ giấy khác. Khi lọ thuốc đã dùng hết hoặc quá hạn sau khi mở nắp, có thể xem thêm [cách vứt bỏ thuốc hết hạn đúng cách](/blog/vut-bo-thuoc-het-han-dung-cach/) để xử lý an toàn.
+Với các đợt cần nhỏ mắt nhiều lần mỗi ngày trong nhiều ngày liên tục, việc nhớ cả giờ nhỏ thuốc và còn thiếu lần nào trong ngày dễ bị rối nếu chỉ nhớ bằng trí nhớ. [Thuốc nhỏ mắt, nhỏ mũi hay thuốc bôi ngoài da thường bị quên hơn thuốc uống](/blog/thuoc-nho-mat-mui-tai-boi-ngoai-da-de-quen-hon-thuoc-uong/) đúng vì không có cột mốc bữa ăn để bám vào. Thuốc ơi cho phép nhập tay riêng từng loại thuốc nhỏ mắt với giờ nhắc theo đúng nhịp sinh hoạt cá nhân, không giới hạn số lần và không tính vào lượt quét đơn bằng AI hằng tháng, đồng thời tính số lượng cả liệu trình và theo dõi số lần đã nhỏ thực tế so với tổng số — còn việc ghi ngày mở nắp thì vẫn nên ghi trực tiếp lên lọ thuốc như đã nêu ở trên. Khi lọ thuốc đã dùng hết hoặc quá hạn sau khi mở nắp, có thể xem thêm [cách vứt bỏ thuốc hết hạn đúng cách](/blog/vut-bo-thuoc-het-han-dung-cach/) để xử lý an toàn.
