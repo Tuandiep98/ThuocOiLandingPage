@@ -19,7 +19,7 @@ sources:
     url: "https://www.vinmec.com/vie/bai-viet/lam-gi-neu-quen-uong-thuoc-tranh-thai-hang-ngay-vi"
 ---
 
-Thuốc tránh thai hàng ngày cần uống vào một giờ cố định mỗi ngày — lệch giờ quá nhiều, đặc biệt muộn nhiều giờ, có thể làm giảm hiệu quả tránh thai, khác với phần lớn thuốc khác thường không ảnh hưởng nhiều nếu uống trễ nửa tiếng, một tiếng. Cách xử trí cụ thể khi quên liều cần hỏi bác sĩ, dược sĩ.
+Thuốc tránh thai hàng ngày cần uống vào một giờ cố định mỗi ngày — lệch giờ quá nhiều, đặc biệt muộn nhiều giờ, có thể giảm hiệu quả tránh thai, khác với phần lớn thuốc khác thường không ảnh hưởng nhiều nếu uống trễ nửa tiếng, một tiếng. Quên liều nên xử lý sao cần hỏi bác sĩ, dược sĩ.
 
 ## Vì sao giờ uống lại quan trọng hơn với thuốc tránh thai
 
