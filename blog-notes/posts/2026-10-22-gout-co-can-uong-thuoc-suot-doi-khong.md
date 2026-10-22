@@ -19,4 +19,6 @@ và đối chiếu trực tiếp trong phiên này (không tên thuốc cụ th�
 đã fetch `origin`; không có nhánh `origin/claude/blog-2026-10-22`; các nhánh `claude/blog-*` và
 `claude/blog-maintenance-*` còn sót trên remote (2026-10-16 → 2026-10-21) đều đã merge vào `main`
 (kiểm tra bằng `git merge-base --is-ancestor`), chỉ là branch cũ chưa bị xoá — không có nhánh nào
-đang giữ chủ đề khác cần tránh.
+đang giữ chủ đề khác cần tránh. Tự review (commit thứ hai) đã cắt hai câu chưa kiểm chứng trực tiếp
+trong phiên (thời gian cơn gout cấp tự giảm, khớp hay gặp nhất, ví dụ cụ thể loại thực phẩm giàu
+purin) để chỉ giữ lại nội dung đối chiếu được với ba nguồn Vinmec đã fetch.

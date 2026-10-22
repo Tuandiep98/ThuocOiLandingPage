@@ -28,7 +28,7 @@ Không có câu trả lời chung cho mọi người. Gout hiện chưa có các
 
 ## Vì sao hết đau không có nghĩa là đã khỏi gout
 
-Cơn gout cấp thường gây sưng, nóng, đỏ, đau dữ dội ở một khớp (hay gặp nhất là ngón chân cái) rồi tự giảm sau vài ngày đến một tuần dù có dùng thuốc hay không. Theo Vinmec, hiện chưa có phương pháp nào chữa dứt điểm hoàn toàn bệnh gout — cơn đau giảm chỉ có nghĩa là tình trạng viêm cấp tại khớp đã tạm lắng, không phải nguyên nhân gây bệnh (acid uric trong máu tăng cao) đã biến mất. Nếu không tiếp tục theo dõi và điều trị, cơn đau có thể tái phát ở cùng khớp hoặc lan sang khớp khác.
+Một cơn gout cấp thường tự giảm sau một thời gian dù có dùng thuốc hay không, nhưng theo Vinmec, hiện chưa có phương pháp nào chữa dứt điểm hoàn toàn bệnh gout. Cơn đau giảm chỉ có nghĩa là tình trạng viêm cấp tại khớp đã tạm lắng, không phải nguyên nhân gây bệnh (nồng độ acid uric trong máu tăng cao) đã biến mất. Nếu không được chẩn đoán và điều trị kịp thời, bệnh vẫn có thể tiến triển nghiêm trọng hơn theo thời gian.
 
 ## Thuốc cắt cơn và thuốc dùng lâu dài phục vụ hai mục đích khác nhau
 
@@ -40,7 +40,7 @@ Theo Vinmec, người bệnh không được tự ý ngừng thuốc gout ngay c
 
 ## Lối sống đi kèm, không thay thế thuốc đang được kê
 
-Ngoài thuốc, kiểm soát cân nặng, hạn chế thực phẩm giàu purin (như nội tạng động vật, hải sản, thịt đỏ) và hạn chế rượu bia là những biện pháp Vinmec khuyên duy trì song song trong quá trình điều trị gout. Đây là yếu tố hỗ trợ kiểm soát bệnh tốt hơn, nhưng không tự thay thế thuốc đang được bác sĩ chỉ định nếu bác sĩ chưa đồng ý giảm hoặc ngừng thuốc.
+Ngoài thuốc, kiểm soát cân nặng, hạn chế thực phẩm giàu purin và hạn chế rượu bia là những biện pháp Vinmec khuyên duy trì song song trong quá trình điều trị gout. Đây là yếu tố hỗ trợ kiểm soát bệnh tốt hơn, nhưng không tự thay thế thuốc đang được bác sĩ chỉ định nếu bác sĩ chưa đồng ý giảm hoặc ngừng thuốc.
 
 ## Theo dõi đều để buổi tái khám có số liệu cụ thể hơn
 
