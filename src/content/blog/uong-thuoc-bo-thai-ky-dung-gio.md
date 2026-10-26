@@ -38,7 +38,7 @@ Bài viết này không đưa ra liều lượng hay cách phối hợp cụ th�
 
 ## Mẹo giữ lịch uống hằng ngày
 
-- **Gắn với một việc không bao giờ bỏ:** đánh răng buổi tối, rót cốc nước đầu tiên khi ngủ dậy — những mốc ít bị ốm nghén làm xáo trộn hơn bữa ăn.
+- **Gắn với một việc không bao giờ bỏ** và khớp với cách uống bác sĩ dặn (trước hay sau ăn, buổi nào): ví dụ ngay sau bữa tối, hoặc lúc đánh răng buổi tối nếu loại đó không cần uống cùng bữa ăn.
 - **Để thuốc ở chỗ dễ thấy nhưng ngoài tầm tay trẻ nhỏ**, tránh nơi nóng ẩm như cạnh bếp hay nhà tắm.
 - **Đánh dấu ngay sau khi uống** (lịch giấy, hộp chia ngày hoặc ứng dụng), để không phải băn khoăn "hôm nay uống chưa" rồi lỡ uống trùng.
 - **Mang theo danh sách hoặc vỏ hộp khi đi khám**, để bác sĩ thấy chính xác mình đang uống gì.
