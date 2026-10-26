@@ -5,7 +5,7 @@ publishDate: 2026-10-19
 keyword: "uống nhầm thuốc của người khác trong nhà phải làm sao"
 segment: "Xử trí ngay khi phát hiện uống nhầm thuốc trong nhà, đặc biệt với trẻ nhỏ và người già"
 ctaTitle: "Mỗi người trong nhà một lịch thuốc riêng, không lo nhầm lẫn"
-ctaDescription: "Nhóm Gia đình trong Thuốc ơi tách đơn thuốc và lời nhắc theo từng tài khoản, nên tên thuốc và giờ uống của mỗi người luôn hiện rõ trên từng thông báo."
+ctaDescription: "Nhóm Gia đình trong Thuốc ơi tách đơn thuốc và lời nhắc theo từng tài khoản, nên lịch uống thuốc của mỗi người không bị gộp lẫn vào nhau."
 faqs:
   - question: "Uống nhầm một viên thuốc không rõ là thuốc gì thì có cần đi viện ngay không?"
     answer: "Nên gọi ngay số cấp cứu 115 hoặc đến cơ sở y tế gần nhất, không chờ xem triệu chứng có xuất hiện hay không. Nếu còn vỏ hộp, vỉ thuốc hoặc biết tên thuốc đã uống nhầm, mang theo hoặc báo lại để nhân viên y tế xác định đúng loại thuốc và hướng xử trí."
@@ -52,6 +52,6 @@ Gọi cấp cứu 115 hoặc đến cơ sở y tế gần nhất ngay khi: ngư�
 
 ## Giảm rủi ro uống nhầm thuốc khi nhà có nhiều người cùng dùng thuốc
 
-Sau khi xử trí xong tình huống trước mắt, điều đáng làm tiếp theo là giảm rủi ro lặp lại. Nguyên tắc cơ bản là để riêng hộp hoặc vỉ thuốc của từng người, ghi rõ tên trên bao bì, không dồn thuốc của nhiều người vào chung một chai hay hộp không nhãn — cách sắp xếp này đã được nói kỹ hơn trong bài [nhà nhiều người cùng uống thuốc không nhầm lẫn](/blog/nha-nhieu-nguoi-cung-uong-thuoc-khong-nham-lan/). Nếu nhà dùng app nhắc thuốc, nhóm Gia đình trong Thuốc ơi lưu đơn thuốc và lời nhắc của mỗi người tách riêng theo tài khoản, không gộp chung vào một danh sách; khi thông báo hiện lên, tên thuốc và giờ uống hiển thị rõ ngay trên màn hình, giúp dễ phân biệt lời nhắc này là của ai hơn so với việc ghi chung trên giấy hay đặt lời nhắc gộp trên một điện thoại dùng chung.
+Sau khi xử trí xong tình huống trước mắt, điều đáng làm tiếp theo là giảm rủi ro lặp lại. Nguyên tắc cơ bản là để riêng hộp hoặc vỉ thuốc của từng người, ghi rõ tên trên bao bì, không dồn thuốc của nhiều người vào chung một chai hay hộp không nhãn — cách sắp xếp này đã được nói kỹ hơn trong bài [nhà nhiều người cùng uống thuốc không nhầm lẫn](/blog/nha-nhieu-nguoi-cung-uong-thuoc-khong-nham-lan/). Nếu nhà dùng app nhắc thuốc, nhóm Gia đình trong Thuốc ơi lưu đơn thuốc và lời nhắc của mỗi người tách riêng theo tài khoản, không gộp chung vào một danh sách; khi mở ứng dụng, lịch của từng người hiện tách bạch, giúp dễ phân biệt lời nhắc nào là của ai hơn so với việc ghi chung trên giấy hay đặt lời nhắc gộp trên một điện thoại dùng chung.
 
 Việc này chỉ giúp giảm nguy cơ cầm nhầm hộp thuốc, không thay thế cho việc xử trí khi sự việc đã xảy ra — nếu nghi ngờ đã uống nhầm, luôn ưu tiên các bước ở trên trước khi nghĩ đến chuyện sắp xếp lại tủ thuốc.

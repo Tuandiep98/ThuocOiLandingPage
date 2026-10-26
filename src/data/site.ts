@@ -263,7 +263,7 @@ export const features: Feature[] = [
   },
   {
     title: "Báo thức không phụ thuộc chuông im lặng",
-    body: "Trên iOS 26 trở lên, lời nhắc có thể tạo báo thức riêng — vẫn kêu và hiển thị rõ tên thuốc, giờ uống ngay cả khi iPhone đang im lặng hoặc ở chế độ Tập trung.",
+    body: "Trên iOS 26 trở lên, lời nhắc có thể tạo báo thức riêng — vẫn kêu và hiện rõ việc cần làm (như \"Uống 3 viên thuốc và nhỏ tai\") ngay cả khi iPhone đang im lặng hoặc ở chế độ Tập trung.",
     image: "screenshot_iphone_08.png",
     imageAlt:
       "Màn hình báo thức Thuốc ơi trên iPhone, hiển thị 16:35 và nội dung uống 3 viên thuốc và nhỏ tai",

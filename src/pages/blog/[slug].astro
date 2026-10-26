@@ -4,7 +4,10 @@ import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import { site, storeLinks } from '../../data/site';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import MobileDownloadBar from '../../components/MobileDownloadBar.astro';
+import { site, storeLinks, featureHref } from '../../data/site';
+import { featureForPost } from '../../lib/blog-feature';
 import { findBlogImage } from '../../data/blog-images';
 import { withBase } from '../../lib/base';
 
@@ -30,6 +33,9 @@ const {
   faqs,
   sources,
 } = post.data;
+
+// Trang tính năng liên quan — link nội bộ từ bài về /tinh-nang/<slug>/ (xem src/lib/blog-feature.ts).
+const relatedFeature = featureForPost(post.data);
 
 const formatDate = (date: Date) =>
   date.toLocaleDateString('vi-VN', {
@@ -136,9 +142,13 @@ const jsonLd = [
   <main id="noi-dung-chinh">
     <article class="section">
       <div class="wrap post-wrap">
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-          <a href={withBase('')}>Trang chủ</a> / <a href={withBase('blog/')}>Bài viết</a> / <span aria-current="page">{title}</span>
-        </nav>
+        <Breadcrumbs
+          crumbs={[
+            { name: 'Trang chủ', path: '' },
+            { name: 'Bài viết', path: 'blog/' },
+            { name: title, path: `blog/${post.id}/` },
+          ]}
+        />
         <p class="eyebrow">{segment}</p>
         <h1>{title}</h1>
         <p class="post-date">
@@ -211,6 +221,13 @@ const jsonLd = [
             </div>
           )
         }
+        <aside class="feature-card" aria-labelledby="feature-card-heading">
+          <p class="feature-eyebrow">Tính năng liên quan · {relatedFeature.eyebrow}</p>
+          <h2 id="feature-card-heading">
+            <a href={withBase(featureHref(relatedFeature.slug))}>{relatedFeature.h1}</a>
+          </h2>
+          <p>{relatedFeature.description}</p>
+        </aside>
         <div class="post-cta">
           <h2>{ctaTitle ?? DEFAULT_CTA_TITLE}</h2>
           <p>{ctaDescription ?? DEFAULT_CTA_DESCRIPTION}</p>
@@ -227,6 +244,7 @@ const jsonLd = [
     </article>
   </main>
   <Footer />
+  <MobileDownloadBar />
 </BaseLayout>
 
 <style>
@@ -234,17 +252,36 @@ const jsonLd = [
     max-width: 42rem;
   }
 
-  .breadcrumb {
+  .feature-card {
+    margin-top: var(--space-5);
+    padding: var(--space-3);
+    border-radius: var(--radius-md);
+    background: var(--leaf-tint);
+    border: 1px solid var(--line-strong);
+  }
+
+  .feature-eyebrow {
+    color: var(--leaf-deep);
+    font-weight: 700;
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .feature-card h2 {
+    margin-top: 0.35rem;
+    font-size: 1.375rem;
+  }
+
+  .feature-card h2 a {
+    text-decoration: none;
+    border-bottom: 2px solid var(--leaf);
+  }
+
+  .feature-card p:not(.feature-eyebrow) {
+    margin-top: 0.5rem;
+    color: var(--ink-soft);
     font-size: var(--fs-small);
-    color: var(--ink-soft);
-  }
-
-  .breadcrumb a {
-    color: var(--ink-soft);
-  }
-
-  .breadcrumb a:hover {
-    color: var(--pine);
   }
 
   .eyebrow {

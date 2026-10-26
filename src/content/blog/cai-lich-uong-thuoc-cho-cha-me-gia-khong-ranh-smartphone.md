@@ -28,7 +28,7 @@ Thay vì để giờ mặc định của ứng dụng, con cháu nên chỉnh l�
 
 ### Bật báo thức riêng nếu cha mẹ hay để chuông nhỏ hoặc quên chỉnh âm lượng
 
-Nhiều người lớn tuổi thường để điện thoại ở chế độ rung hoặc âm lượng thấp mà không để ý. Trên iOS 26 trở lên, con cháu có thể bật thêm báo thức riêng cho lời nhắc uống thuốc — vẫn kêu và hiển thị rõ tên thuốc, giờ uống ngay cả khi điện thoại đang im lặng hoặc ở chế độ Tập trung.
+Nhiều người lớn tuổi thường để điện thoại ở chế độ rung hoặc âm lượng thấp mà không để ý. Trên iOS 26 trở lên, con cháu có thể bật thêm báo thức riêng cho lời nhắc uống thuốc — vẫn kêu và hiện rõ việc cần làm (như “Uống 2 viên thuốc”) ngay cả khi điện thoại đang im lặng hoặc ở chế độ Tập trung.
 
 ### Theo dõi qua nhóm Gia đình sau khi đã thiết lập xong
 

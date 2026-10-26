@@ -4,6 +4,7 @@ description: "Thuốc hết hạn không nên đổ xuống bồn cầu, cho ng�
 publishDate: 2026-10-06
 keyword: "cách vứt bỏ thuốc hết hạn đúng cách"
 segment: "Người có thuốc hết hạn trong tủ thuốc gia đình, muốn xử lý an toàn thay vì vứt tuỳ ý"
+feature: "theo-doi-lieu-trinh"
 ctaTitle: "Theo dõi tồn thuốc để tránh tích tụ thuốc hết hạn"
 ctaDescription: "Nhập tay từng loại thuốc dự phòng tại nhà vào Thuốc ơi — không cần quét AI, không giới hạn số lần — để biết còn bao nhiêu và chủ động xử lý trước khi thuốc hết hạn mà vẫn còn tồn nhiều."
 faqs:

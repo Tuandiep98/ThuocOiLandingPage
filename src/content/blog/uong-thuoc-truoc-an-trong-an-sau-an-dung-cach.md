@@ -4,6 +4,7 @@ description: "Một đơn thuốc có thể vừa có thuốc uống trước ă
 publishDate: 2026-09-20
 keyword: "uống thuốc trước ăn hay sau ăn đúng cách"
 segment: "Người có đơn thuốc gồm nhiều loại thuốc với yêu cầu thời điểm uống khác nhau so với bữa ăn (trước ăn, trong bữa, sau ăn, xa bữa ăn)"
+feature: "nhac-uong-thuoc"
 ctaTitle: "Mỗi loại thuốc một mốc bữa ăn riêng, không lo lẫn lộn"
 ctaDescription: "Thuốc ơi tách lời nhắc cho từng loại thuốc trong đơn theo đúng buổi bạn chọn, và theo dõi đã uống bao nhiêu trên tổng liều — dù mỗi loại quy định thời điểm uống so với bữa ăn khác nhau."
 ---

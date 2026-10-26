@@ -4,6 +4,7 @@ description: "Không phải viên thuốc nào cũng nghiền hay bẻ được.
 publishDate: 2026-10-13
 keyword: "có nên nghiền thuốc viên để dễ uống không"
 segment: "Người khó nuốt viên thuốc hoặc người chăm sóc người già, trẻ nhỏ muốn nghiền/bẻ thuốc cho dễ uống"
+feature: "nhac-uong-thuoc"
 ctaTitle: "Đối chiếu đúng cách dùng từng loại thuốc trước khi hỏi dược sĩ"
 ctaDescription: "Thuốc ơi đọc đơn thuốc và hiển thị lại đúng tên thuốc, cách dùng ghi trên đơn ở màn hình xác nhận trước khi lưu lịch — giúp bạn hỏi dược sĩ đúng từng loại khi chưa chắc có nghiền/bẻ được không."
 faqs:

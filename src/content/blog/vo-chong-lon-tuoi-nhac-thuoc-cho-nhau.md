@@ -27,7 +27,7 @@ Bằng cách mời nhau vào nhóm Gia đình qua mã QR, hai vợ chồng có t
 
 ### Bật báo thức riêng khi một trong hai hay để điện thoại im lặng
 
-Không ít người lớn tuổi có thói quen để điện thoại im lặng hoặc âm lượng nhỏ, đặc biệt vào buổi trưa hoặc tối. Trên iOS 26 trở lên, mỗi người có thể tự bật thêm báo thức riêng cho lời nhắc uống thuốc của mình — vẫn kêu và hiển thị rõ tên thuốc, giờ uống ngay cả khi điện thoại đang im lặng hoặc ở chế độ Tập trung, giảm bớt việc phải chờ người kia nhắc miệng.
+Không ít người lớn tuổi có thói quen để điện thoại im lặng hoặc âm lượng nhỏ, đặc biệt vào buổi trưa hoặc tối. Trên iOS 26 trở lên, mỗi người có thể tự bật thêm báo thức riêng cho lời nhắc uống thuốc của mình — vẫn kêu và hiện rõ việc cần làm (như “Uống 2 viên thuốc”) ngay cả khi điện thoại đang im lặng hoặc ở chế độ Tập trung, giảm bớt việc phải chờ người kia nhắc miệng.
 
 ## Mời thêm con cháu khi cần, không bắt buộc
 

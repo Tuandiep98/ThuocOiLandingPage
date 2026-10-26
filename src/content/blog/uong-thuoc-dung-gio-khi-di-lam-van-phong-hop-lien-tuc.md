@@ -23,7 +23,7 @@ Nếu khung giờ thuốc được kê thường xuyên rơi đúng vào giờ h
 
 ### Báo thức riêng vẫn kêu ngay cả khi điện thoại đang im lặng hoặc Tập trung
 
-Trên iOS 26 trở lên, lời nhắc của Thuốc ơi có thể bật thêm báo thức riêng — vẫn kêu và hiển thị rõ tên thuốc, giờ uống ngay cả khi điện thoại đang im lặng hoặc ở chế độ Tập trung trong cuộc họp, thay vì chỉ là một thông báo lặng lẽ dễ bị bỏ qua giữa hàng loạt tin nhắn công việc.
+Trên iOS 26 trở lên, lời nhắc của Thuốc ơi có thể bật thêm báo thức riêng — vẫn kêu và hiện rõ việc cần làm (như “Uống 2 viên thuốc”) ngay cả khi điện thoại đang im lặng hoặc ở chế độ Tập trung trong cuộc họp, thay vì chỉ là một thông báo lặng lẽ dễ bị bỏ qua giữa hàng loạt tin nhắn công việc.
 
 ### Đặt giờ nhắc đúng theo buổi làm việc của bạn
 

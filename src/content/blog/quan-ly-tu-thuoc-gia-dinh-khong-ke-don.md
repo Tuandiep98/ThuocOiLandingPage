@@ -5,6 +5,7 @@ publishDate: 2026-09-18
 updatedDate: 2026-10-24
 keyword: "quản lý tủ thuốc gia đình tại nhà"
 segment: "Gia đình có tủ thuốc dự phòng tại nhà (hạ sốt, giảm đau, dị ứng, oresol) không kèm đơn bác sĩ, muốn biết còn gì và khi nào cần mua thêm"
+feature: "theo-doi-lieu-trinh"
 ctaTitle: "Tủ thuốc tại nhà cũng đáng được theo dõi như một đơn thuốc"
 ctaDescription: "Nhập tay từng loại thuốc dự phòng trong nhà vào Thuốc ơi — không cần quét AI, không giới hạn số lần — để cả nhà cùng biết còn gì và khi nào cần mua thêm."
 imageTag: "quan-ly-ton-thuoc"

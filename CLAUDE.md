@@ -106,6 +106,9 @@ covered (by keyword *intent*, not just wording) — if an existing post covers t
 - A `## Khi nào nên hỏi bác sĩ, dược sĩ` section (or equivalent) with concrete "see a professional"
   triggers, phrased generally.
 - App mention ≈ at most a quarter of the post, in one section — not every section a feature pitch.
+  That section links to the matching feature page (`/tinh-nang/<slug>/`, same slug as the post's
+  `feature` frontmatter) with a natural anchor text — it's how blog authority flows to the feature
+  pages, so describe the feature the way that page does, never more.
 - Frontmatter `faqs` with 3–4 real follow-up questions (plain-text answers, same guardrails).
 - Frontmatter `sources`: only official pages (Bộ Y tế / Cục Quản lý Dược / WHO / major hospitals)
   that were actually fetched and confirmed to support the claim in this session. If nothing could
@@ -132,6 +135,11 @@ would need to break any of these to be useful should not be written.**
   `keyword` (primary target query, used for `blog-notes/` tracking — not rendered, not a meta
   keywords tag), `segment` (rendered as the eyebrow label on the post), `faqs`, and `sources` when
   verified sources exist. Set `updatedDate` only when an existing post's content is refreshed.
+- Frontmatter `feature` (new posts; add it when refreshing an old post): the one feature page the
+  post's reader most needs — `quet-don-thuoc-ai`, `nhac-uong-thuoc`, `gia-dinh` or
+  `theo-doi-lieu-trinh`. It drives the "Tính năng liên quan" card at the end of the post and the
+  topic grouping on `/blog/`; posts without it fall back to keyword rules in
+  `src/lib/blog-feature.ts`.
 - Exactly one `<h1>` (post title, from frontmatter — not repeated in the Markdown body), `<h2>`
   for major sections within the post, `<h3>` only if a section genuinely needs sub-points — same
   no-skipped-levels discipline as the landing page. (The FAQ block renders its own `<h2>`/`<h3>`.)
@@ -176,8 +184,9 @@ and auto-merges it into `main` if the review passes):**
   `claude/blog-YYYY-MM-DD`, push that branch and open a PR to `main`, then self-review and
   auto-merge (below).
 - **Evening (~20:00 giờ VN) — maintenance, no new post.** Refresh one existing post (prefer the
-  oldest not yet refreshed: add answer-first intro, `faqs`, verified `sources`, internal links,
-  guardrail fixes, trim repetitive feature pitch; set `updatedDate`), and top up the backlog to at
+  oldest not yet refreshed: add answer-first intro, `faqs`, verified `sources`, internal links
+  (including the feature-page link and `feature` frontmatter), guardrail fixes, trim repetitive
+  feature pitch; set `updatedDate`), and top up the backlog to at
   least 10 files in `blog-notes/backlog/` (new files only) with real search questions in the
   clusters. Log it as a new `blog-notes/refreshes/<today>-<slug>.md`.
   Branch `claude/blog-maintenance-YYYY-MM-DD`, PR to `main`, then self-review and auto-merge.

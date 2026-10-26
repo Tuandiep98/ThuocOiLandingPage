@@ -23,6 +23,12 @@ const blog = defineCollection({
     // duyệt sẵn đó (không tự tạo crop mới), và chỉ khi `usedWhen` khớp thật với nội dung bài.
     // Đa số bài không cần ảnh — để trống là bình thường (xem CLAUDE.md).
     imageTag: z.string().optional(),
+    // Trang tính năng liên quan (slug trong featurePages của src/data/site.ts, vd. "nhac-uong-thuoc")
+    // — hiển thị thành khối "Tính năng liên quan" cuối bài. Không khai thì [slug].astro tự đoán
+    // theo keyword/segment (src/lib/blog-feature.ts).
+    feature: z
+      .enum(["quet-don-thuoc-ai", "nhac-uong-thuoc", "gia-dinh", "theo-doi-lieu-trinh"])
+      .optional(),
     // Ngày cập nhật nội dung gần nhất (job bảo trì buổi tối set khi làm mới bài cũ) — xuất thành
     // dateModified trong JSON-LD và dòng "Cập nhật ngày" trên trang. Không set nếu chưa sửa gì.
     updatedDate: z.coerce.date().optional(),

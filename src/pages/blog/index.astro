@@ -1,45 +1,90 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import { site } from '../../data/site';
+import PageIntro from '../../components/PageIntro.astro';
+import DownloadCta from '../../components/DownloadCta.astro';
+import MobileDownloadBar from '../../components/MobileDownloadBar.astro';
+import { site, featurePages, featureHref, featureSlugs } from '../../data/site';
 import { withBase } from '../../lib/base';
+import { featureForPost } from '../../lib/blog-feature';
+import { breadcrumbJsonLd, webPageJsonLd, type Crumb } from '../../lib/seo';
 
 const posts = (await getCollection('blog')).sort(
   (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
 );
 
-const title = `Bài viết — ${site.name}`;
+const title = `Blog dùng thuốc đúng cách — ${site.name}`;
 const description =
-  'Hướng dẫn quản lý thuốc, chăm sóc người thân và đọc hiểu đơn thuốc, từ đội ngũ Thuốc ơi.';
+  'Giải đáp những câu hỏi thường gặp khi dùng thuốc: quên liều, đọc đơn thuốc, uống thuốc đúng giờ, chăm sóc người thân và chuẩn bị đi tái khám.';
+const crumbs: Crumb[] = [
+  { name: 'Trang chủ', path: '' },
+  { name: 'Bài viết', path: 'blog/' },
+];
+
+// Nhóm bài theo trang tính năng liên quan (cùng luật với khối "Tính năng liên quan" trong bài) —
+// mỗi nhóm là một chủ đề đọc được, kèm link sang trang tính năng tương ứng.
+const topicNames: Record<string, string> = {
+  [featureSlugs.reminders]: 'Uống thuốc đúng giờ, đúng cách',
+  [featureSlugs.scan]: 'Đơn thuốc và giấy tờ',
+  [featureSlugs.family]: 'Chăm sóc người thân',
+  [featureSlugs.tracking]: 'Liệu trình, tái khám và tủ thuốc',
+};
+const topicOrder = [featureSlugs.reminders, featureSlugs.family, featureSlugs.scan, featureSlugs.tracking];
+
+const byTopic = new Map<string, CollectionEntry<'blog'>[]>();
+for (const post of posts) {
+  const slug = featureForPost(post.data).slug;
+  byTopic.set(slug, [...(byTopic.get(slug) ?? []), post]);
+}
+const topics = topicOrder
+  .map((slug) => ({
+    slug,
+    name: topicNames[slug],
+    feature: featurePages.find((page) => page.slug === slug)!,
+    posts: byTopic.get(slug) ?? [],
+  }))
+  .filter((topic) => topic.posts.length > 0);
+
+const latest = posts.slice(0, 6);
+
+const formatDate = (date: Date) =>
+  date.toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric', timeZone: 'UTC' });
+
+const jsonLd = [
+  webPageJsonLd({ name: title, description, path: 'blog/', type: 'CollectionPage' }),
+  breadcrumbJsonLd(crumbs),
+];
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} jsonLd={jsonLd} ogImage="og/blog.jpg">
   <Header />
   <main id="noi-dung-chinh">
-    <section class="section">
+    <PageIntro
+      crumbs={crumbs}
+      eyebrow="Blog"
+      title="Hỏi đáp về dùng thuốc đúng cách"
+      lead={`${posts.length} bài viết trả lời những câu hỏi thường gặp trước và trong khi dùng thuốc — luôn khuyên bạn hỏi lại bác sĩ, dược sĩ khi chưa chắc chắn.`}
+    />
+
+    <nav class="wrap topics-nav" aria-label="Chủ đề">
+      <a href="#moi-nhat">Mới nhất</a>
+      {topics.map((topic) => <a href={`#${topic.slug}`}>{topic.name} <span>{topic.posts.length}</span></a>)}
+    </nav>
+
+    <section class="section topic" id="moi-nhat" aria-labelledby="latest-heading">
       <div class="wrap">
-        <div class="section-head">
-          <h1>Bài viết</h1>
-          <p>{description}</p>
-        </div>
-        <ul class="post-list">
+        <h2 id="latest-heading">Bài viết mới nhất</h2>
+        <ul class="cards">
           {
-            posts.map((post) => (
+            latest.map((post) => (
               <li>
                 <a href={withBase(`blog/${post.id}/`)}>
-                  <p class="eyebrow">{post.data.segment}</p>
-                  <h2>{post.data.title}</h2>
+                  <span class="card-eyebrow">{topicNames[featureForPost(post.data).slug]}</span>
+                  <h3>{post.data.title}</h3>
                   <p>{post.data.description}</p>
-                  <span class="meta">
-                    {post.data.publishDate.toLocaleDateString('vi-VN', {
-                      day: '2-digit',
-                      month: '2-digit',
-                      year: 'numeric',
-                      timeZone: 'UTC',
-                    })}
-                  </span>
+                  <span class="meta">{formatDate(post.data.updatedDate ?? post.data.publishDate)}</span>
                 </a>
               </li>
             ))
@@ -47,24 +92,119 @@ const description =
         </ul>
       </div>
     </section>
+
+    {
+      topics.map((topic) => (
+        <section class="section topic" id={topic.slug} aria-labelledby={`${topic.slug}-heading`}>
+          <div class="wrap">
+            <div class="topic-head">
+              <h2 id={`${topic.slug}-heading`}>{topic.name}</h2>
+              <a class="feature-link" href={withBase(featureHref(topic.slug))}>
+                Tính năng liên quan: {topic.feature.navLabel}
+              </a>
+            </div>
+            <ul class="list">
+              {topic.posts.map((post) => (
+                <li>
+                  <a href={withBase(`blog/${post.id}/`)}>
+                    <h3>{post.data.title}</h3>
+                    <span class="meta">{formatDate(post.data.updatedDate ?? post.data.publishDate)}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      ))
+    }
+
+    <DownloadCta />
   </main>
   <Footer />
+  <MobileDownloadBar />
 </BaseLayout>
 
 <style>
-  .post-list {
-    list-style: none;
-    margin: var(--space-4) 0 0;
-    padding: 0;
-    display: grid;
-    gap: var(--space-3);
+  .topics-nav {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding-block: var(--space-2);
+    scrollbar-width: thin;
   }
 
-  .post-list li a {
-    display: block;
+  .topics-nav a {
+    flex-shrink: 0;
+    min-height: 2.75rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0 1rem;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--line-strong);
+    background: var(--paper-raised);
+    color: var(--pine);
+    font-weight: 600;
+    font-size: var(--fs-small);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .topics-nav a:hover {
+    border-color: var(--pine);
+  }
+
+  .topics-nav span {
+    color: var(--leaf-deep);
+    font-weight: 700;
+  }
+
+  .topic {
+    padding-block: var(--space-5);
+    scroll-margin-top: 4.5rem;
+  }
+
+  .topic + .topic {
+    border-top: 1px solid var(--line);
+  }
+
+  .topic h2 {
+    font-size: var(--fs-h3);
+  }
+
+  .topic-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-1) var(--space-3);
+  }
+
+  .feature-link {
+    font-weight: 700;
+    font-size: var(--fs-small);
+    color: var(--pine);
+    text-decoration: none;
+    border-bottom: 2px solid var(--leaf);
+    padding-block: 0.2rem;
+  }
+
+  .cards {
+    list-style: none;
+    margin: var(--space-3) 0 0;
+    padding: 0;
+    display: grid;
+    gap: var(--space-2);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr));
+  }
+
+  .cards a {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     padding: var(--space-3);
     border: 1px solid var(--line);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-md);
     background: var(--paper-raised);
     text-decoration: none;
     transition:
@@ -72,33 +212,69 @@ const description =
       transform 0.15s ease;
   }
 
-  .post-list li a:hover {
+  .cards a:hover {
     border-color: var(--leaf);
     transform: translateY(-2px);
   }
 
-  .eyebrow {
+  .card-eyebrow {
     color: var(--leaf-deep);
     font-weight: 700;
-    font-size: var(--fs-small);
+    font-size: 0.8125rem;
     text-transform: uppercase;
     letter-spacing: 0.04em;
   }
 
-  .post-list h2 {
+  .cards h3 {
     margin-top: 0.35rem;
-    font-size: var(--fs-h3);
+    font-size: 1.25rem;
   }
 
-  .post-list p:not(.eyebrow) {
-    margin-top: var(--space-1);
+  .cards p {
+    margin-top: 0.5rem;
     color: var(--ink-soft);
+    font-size: var(--fs-small);
+    flex: 1;
   }
 
-  .post-list .meta {
+  .meta {
     display: block;
     margin-top: var(--space-2);
-    font-size: var(--fs-small);
+    font-size: 0.8125rem;
     color: var(--ink-soft);
+  }
+
+  .list {
+    list-style: none;
+    margin: var(--space-3) 0 0;
+    padding: 0;
+    display: grid;
+    gap: 0 var(--space-4);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 24rem), 1fr));
+  }
+
+  .list li {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .list a {
+    display: block;
+    padding-block: 0.9rem;
+    text-decoration: none;
+  }
+
+  .list h3 {
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  .list a:hover h3 {
+    color: var(--leaf-deep);
+  }
+
+  .list .meta {
+    margin-top: 0.2rem;
   }
 </style>

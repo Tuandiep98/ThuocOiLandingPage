@@ -4,6 +4,7 @@ description: "Canxi trong sữa có thể làm giảm hấp thu một số loạ
 publishDate: 2026-10-12
 keyword: "uống thuốc chung với sữa có sao không"
 segment: "Người có thói quen uống thuốc kèm sữa hoặc cho con pha thuốc vào sữa, muốn biết có ảnh hưởng gì không"
+feature: "nhac-uong-thuoc"
 ctaTitle: "Mỗi loại thuốc một giờ nhắc riêng, không lo trùng giờ uống sữa"
 ctaDescription: "Thuốc ơi đọc đơn thuốc bằng AI và cho nhập tay không giới hạn — tách riêng lời nhắc cho loại thuốc cần cách xa giờ uống sữa, theo đúng khung giờ từng buổi bạn tự chỉnh."
 faqs:

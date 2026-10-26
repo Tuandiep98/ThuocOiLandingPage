@@ -4,6 +4,7 @@ description: "Sinh viên ở trọ, ký túc xá lần đầu xa nhà tự uốn
 publishDate: 2026-09-15
 keyword: "sinh viên uống thuốc đúng giờ khi ở trọ"
 segment: "Sinh viên, người trẻ mới sống xa nhà lần đầu (ký túc xá/ở trọ), tự uống thuốc khi ốm mà không có cha mẹ nhắc"
+feature: "nhac-uong-thuoc"
 updatedDate: 2026-10-19
 faqs:
   - question: "Quên một liều thuốc khi đang tự ở một mình có nguy hiểm không?"

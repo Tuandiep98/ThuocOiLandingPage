@@ -7,7 +7,7 @@ keyword: "quản lý thuốc cho người già thuê người chăm sóc"
 segment: "Người chăm sóc chuyên nghiệp / điều dưỡng tại nhà"
 faqs:
   - question: "Người chăm sóc không phải người thân có tham gia nhóm Gia đình trên app được không?"
-    answer: "Được. Nhóm Gia đình mời thành viên bằng mã QR dùng một lần và tự hết hạn, không giới hạn phải là quan hệ huyết thống, nên người chăm sóc thuê ngoài vẫn tham gia được nếu gia đình người bệnh mời. Lưu ý tính năng này cần gói Pro (tối đa 2 thành viên) hoặc gói Gia đình (tối đa 5 thành viên)."
+    answer: "Được. Nhóm Gia đình mời thành viên bằng mã QR dùng một lần và tự hết hạn, không giới hạn phải là quan hệ huyết thống, nên người chăm sóc thuê ngoài vẫn tham gia được nếu gia đình người bệnh mời. Số thành viên tuỳ gói: Miễn phí tối đa 2, Pro tối đa 3, Gia đình tối đa 10 thành viên (tính cả chủ nhóm)."
   - question: "Người chăm sóc có nên tự quyết định đổi giờ uống thuốc khi thấy bất tiện với sinh hoạt của người bệnh không?"
     answer: "Không nên tự đổi. Giờ uống trên đơn thường gắn với bữa ăn hoặc khoảng cách giữa các liều mà bác sĩ/dược sĩ đã tính toán riêng. Nếu giờ đó thực sự không phù hợp với sinh hoạt hằng ngày, nên hỏi lại bác sĩ hoặc dược sĩ để được điều chỉnh đúng cách, không tự dịch giờ theo cảm tính."
   - question: "Làm sao để người chăm sóc chứng minh đã cho uống đủ thuốc khi gia đình hoặc bác sĩ hỏi lại?"
@@ -31,7 +31,7 @@ Người cao tuổi thường có nhiều bệnh nền cùng lúc và uống nhi
 
 Thuốc ơi tự tính số lượng thuốc trong cả liệu trình và theo dõi số liều thực tế đã uống — ví dụ đã uống 59/98 liều, đạt tỉ lệ 60%. Với người chăm sóc chuyên nghiệp, con số này quan trọng hơn một dấu tích đơn giản: nó cho phép báo lại với gia đình hoặc ghi chú cho lần tái khám bằng số liệu thật.
 
-Nhóm Gia đình trong ứng dụng mời thành viên bằng mã QR dùng một lần và tự hết hạn — không giới hạn phải là quan hệ huyết thống, nên người chăm sóc thuê ngoài vẫn tham gia được nếu gia đình người bệnh mời (cần gói Pro tối đa 2 thành viên, hoặc gói Gia đình tối đa 5 thành viên). Đơn thuốc và lời nhắc của từng người vẫn tách riêng dù chung nhóm, nên người chăm sóc theo dõi được tiến trình của người mình chăm mà không lẫn với dữ liệu người khác trong nhóm. Sau mỗi lần tái khám hoặc đổi thuốc, quét lại đơn mới bằng AI là cách nhanh để cập nhật lịch nhắc thay vì gõ tay lại từ đầu, và ngày tái khám/xét nghiệm ghi trên đơn cũng tự xuất hiện trong lịch tuần.
+Nhóm Gia đình trong ứng dụng mời thành viên bằng mã QR dùng một lần và tự hết hạn — không giới hạn phải là quan hệ huyết thống, nên người chăm sóc thuê ngoài vẫn tham gia được nếu gia đình người bệnh mời (nhóm tối đa 2 thành viên với gói Miễn phí, 3 với gói Pro, 10 với gói Gia đình). Đơn thuốc và lời nhắc của từng người vẫn tách riêng dù chung nhóm, nên người chăm sóc theo dõi được tiến trình của người mình chăm mà không lẫn với dữ liệu người khác trong nhóm. Sau mỗi lần tái khám hoặc đổi thuốc, quét lại đơn mới bằng AI là cách nhanh để cập nhật lịch nhắc thay vì gõ tay lại từ đầu, và ngày tái khám/xét nghiệm ghi trên đơn cũng tự xuất hiện trong lịch tuần.
 
 ## Khi nào nên báo ngay cho gia đình hoặc bác sĩ, dược sĩ
 

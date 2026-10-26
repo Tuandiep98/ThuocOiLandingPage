@@ -13,6 +13,7 @@ const pages = [
   { file: 'bang-gia', eyebrow: 'Bảng giá', title: 'Nhắc thuốc miễn phí, trả phí chỉ khi cần quét AI nhiều hơn', screen: 'home' },
   { file: 'gioi-thieu', eyebrow: 'Giới thiệu', title: 'Thuốc ơi giúp bạn uống thuốc đúng như đơn đã kê', screen: 'home' },
   { file: 'cau-hoi-thuong-gap', eyebrow: 'Hỏi đáp', title: 'Câu hỏi thường gặp về Thuốc ơi', screen: 'home' },
+  { file: 'blog', eyebrow: 'Blog', title: 'Hỏi đáp về dùng thuốc đúng cách', screen: 'home' },
   ...featurePages.map((page) => ({
     file: page.slug,
     eyebrow: page.eyebrow,

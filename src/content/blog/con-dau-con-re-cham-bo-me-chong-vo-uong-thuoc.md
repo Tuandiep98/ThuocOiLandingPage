@@ -31,6 +31,6 @@ Cả nhà — bố mẹ, chồng hoặc vợ, và con dâu hoặc con rể — c
 
 ### Bật báo thức riêng khi bố mẹ hay để điện thoại im lặng
 
-Trên iOS 26 trở lên, mỗi lời nhắc có thể bật thêm báo thức riêng — vẫn kêu và hiển thị rõ tên thuốc, giờ uống ngay cả khi điện thoại của bố mẹ đang im lặng hoặc ở chế độ Tập trung, giảm bớt tình huống phải gọi điện nhắc lại giữa giờ.
+Trên iOS 26 trở lên, mỗi lời nhắc có thể bật thêm báo thức riêng — vẫn kêu và hiện rõ việc cần làm (như “Uống 2 viên thuốc”) ngay cả khi điện thoại của bố mẹ đang im lặng hoặc ở chế độ Tập trung, giảm bớt tình huống phải gọi điện nhắc lại giữa giờ.
 
 Nếu có bất kỳ điều gì chưa chắc chắn về tên thuốc, liều dùng hay cách xử trí khi bố mẹ lỡ quên một liều, con dâu, con rể nên hỏi lại bác sĩ hoặc dược sĩ trực tiếp, hoặc trao đổi thêm với chồng/vợ mình, thay vì tự suy đoán dựa trên trí nhớ chưa chắc chắn.

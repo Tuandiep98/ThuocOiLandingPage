@@ -11,7 +11,7 @@ faqs:
   - question: "Bố mẹ không rành smartphone thì có dùng được nhóm Gia đình không?"
     answer: "Có, nhưng thường cần con cái cài đặt và nhập lịch uống thuốc hộ lúc đầu, sau đó bố mẹ chỉ cần nghe thông báo/báo thức mà không phải thao tác lại nhiều. Bài viết riêng về việc cài lịch nhắc hộ cha mẹ có hướng dẫn chi tiết hơn cho tình huống này."
   - question: "Mời bố mẹ vào nhóm Gia đình có tốn phí không?"
-    answer: "Việc mời và tham gia nhóm Gia đình đi theo gói đang dùng: gói Pro hỗ trợ nhóm tối đa 2 thành viên, gói Gia đình mở rộng tối đa 5 thành viên dùng chung lượt quét đơn AI hằng tháng. Gói Miễn phí vẫn dùng được nhập thuốc thủ công và nhắc thuốc không giới hạn cho một người."
+    answer: "Việc mời và tham gia nhóm Gia đình đi theo gói đang dùng: gói Miễn phí cho nhóm tối đa 2 thành viên (đủ cho một người con và bố hoặc mẹ), Pro tối đa 3, gói Gia đình tối đa 10 thành viên dùng chung 150 lượt quét đơn AI hằng tháng. Nhập thuốc thủ công và nhắc thuốc luôn miễn phí không giới hạn."
   - question: "Ngoài nhắc giờ uống, còn cách nào giúp bố mẹ uống thuốc đúng hơn?"
     answer: "Theo Vinmec, việc trao đổi trực tiếp với bác sĩ hoặc dược sĩ để gộp nhiều đơn thành một lịch uống đơn giản, dễ nhớ cũng quan trọng không kém việc nhắc giờ — con cái có thể hỏi thay bố mẹ nếu đơn thuốc có phần khó hiểu."
 sources:
@@ -39,7 +39,7 @@ Ranh giới giữa "quan tâm" và "kiểm soát" rất mong manh với người
 
 ## Tính năng nhóm Gia đình hỗ trợ đúng nhu cầu này
 
-**Thuốc ơi** có tính năng nhóm Gia đình cho đúng tình huống này: con cái mời bố mẹ (hoặc ngược lại) vào nhóm bằng mã QR dùng một lần và tự hết hạn sau khi dùng — không cần chia sẻ tài khoản hay mật khẩu. Sau khi vào nhóm, các thành viên có thể theo dõi tiến trình uống thuốc chung của nhau, trong khi đơn thuốc và lời nhắc chi tiết của mỗi người vẫn tách riêng, không ai xem được toàn bộ thông tin sức khỏe cụ thể của người khác — vẫn đủ để yên tâm mà không xâm phạm sự riêng tư của bố mẹ. Gói Pro hỗ trợ nhóm gia đình tối đa 2 thành viên, gói Gia đình mở rộng tối đa 5 thành viên dùng chung lượt quét đơn thuốc bằng AI hằng tháng.
+**Thuốc ơi** có tính năng nhóm Gia đình cho đúng tình huống này: con cái mời bố mẹ (hoặc ngược lại) vào nhóm bằng mã QR dùng một lần và tự hết hạn sau khi dùng — không cần chia sẻ tài khoản hay mật khẩu. Sau khi vào nhóm, các thành viên có thể theo dõi tiến trình uống thuốc chung của nhau, trong khi đơn thuốc và lời nhắc chi tiết của mỗi người vẫn tách riêng, không ai xem được toàn bộ thông tin sức khỏe cụ thể của người khác — vẫn đủ để yên tâm mà không xâm phạm sự riêng tư của bố mẹ. Gói Miễn phí cho nhóm tối đa 2 thành viên, Pro tối đa 3, gói Gia đình tối đa 10 thành viên dùng chung lượt quét đơn thuốc bằng AI hằng tháng. Muốn được báo khi bố mẹ có thể đã lỡ một liều, hãy bật [Cảnh báo người chăm sóc trong nhóm Gia đình](/tinh-nang/gia-dinh/).
 
 ## Khi nào nên hỏi bác sĩ, dược sĩ
 
