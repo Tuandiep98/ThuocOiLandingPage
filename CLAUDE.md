@@ -180,7 +180,7 @@ and auto-merges it into `main` if the review passes):**
   delete any other `claude/blog-*` branch that is already fully merged. Merging to `main` deploys to
   thuocoi.com (Cloudflare, see Deployment) — intended. No follow-up check-in reminders.
 - The user only acts on PRs titled `[CẦN DUYỆT] `. The routine prompts live in claude.ai/code/routines
-  (`trig_01CHenTQATRngxeyRtVHhDXS` morning, `trig_01TrkujY2ay4zhrrUQrMEoE8` evening).
+  (`trig_01HXWfpKm1a6o61aCUbf6UG4` morning, `trig_01XP3dbqwAhtTDXJKoyckSHx` evening).
 
 **Trigger: user asks to create a blog post interactively** (e.g. "tạo blog", "viết bài blog hôm
 nay") — same rules: check for today's file in `blog-notes/posts/` (one new post per day unless the user
