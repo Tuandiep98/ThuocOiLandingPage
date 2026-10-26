@@ -1,0 +1,71 @@
+---
+import { Image } from 'astro:assets';
+import AppVideo from './AppVideo.astro';
+import NotificationStack from './NotificationStack.astro';
+import { featureClips, notificationSamples, type SectionMedia } from '../data/site';
+
+// Render một SectionMedia của trang tính năng: ảnh chụp màn hình thật, khối thông báo minh hoạ
+// hoặc clip video.
+interface Props {
+  media: SectionMedia;
+  eager?: boolean;
+}
+
+const { media, eager = false } = Astro.props;
+
+const images = import.meta.glob<{ default: ImageMetadata }>('../assets/brand/*.png', {
+  eager: true,
+});
+
+function imageFor(name: string) {
+  const entry = images[`../assets/brand/${name}`];
+  if (!entry) throw new Error(`Missing brand image: ${name}`);
+  return entry.default;
+}
+---
+
+{
+  media.kind === 'image' && (
+    <Image
+      src={imageFor(media.file)}
+      alt={media.alt}
+      widths={[240, 360, 480, 645]}
+      sizes="(min-width: 56rem) 22rem, 70vw"
+      loading={eager ? 'eager' : 'lazy'}
+      fetchpriority={eager ? 'high' : undefined}
+      class="shot"
+    />
+  )
+}
+{
+  media.kind === 'notifications' && (
+    <NotificationStack items={media.items.map((key) => notificationSamples[key])} clock={media.clock} />
+  )
+}
+{
+  media.kind === 'clip' && (
+    <AppVideo
+      mp4={featureClips[media.clip].mp4}
+      poster={featureClips[media.clip].poster}
+      label={media.alt}
+      eager={eager}
+      class="clip"
+    />
+  )
+}
+
+<style>
+  .shot {
+    width: 100%;
+    max-width: 20rem;
+    height: auto;
+    margin-inline: auto;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .clip {
+    max-width: 22rem;
+    margin-inline: auto;
+  }
+</style>

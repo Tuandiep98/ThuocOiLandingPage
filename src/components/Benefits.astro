@@ -1,0 +1,74 @@
+---
+import { benefits } from '../data/site';
+import { withBase } from '../lib/base';
+---
+
+<section class="section" id="loi-ich" aria-labelledby="benefits-heading">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="benefits-heading">Cài Thuốc ơi, bạn có ngay</h2>
+      <p>Tám việc ứng dụng làm thay bạn mỗi ngày — bấm vào từng mục để xem chi tiết.</p>
+    </div>
+
+    <ul class="grid">
+      {
+        benefits.map((benefit, index) => (
+          <li>
+            <a class="card" href={withBase(benefit.href)}>
+              <span class="num" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+              <h3>{benefit.title}</h3>
+              <p>{benefit.body}</p>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<style>
+  .grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--space-2);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+  }
+
+  .card {
+    display: block;
+    height: 100%;
+    padding: var(--space-3);
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition:
+      border-color 0.15s ease,
+      transform 0.15s ease;
+  }
+
+  .card:hover {
+    border-color: var(--leaf);
+    transform: translateY(-2px);
+  }
+
+  .num {
+    font-family: var(--font-display);
+    font-weight: 800;
+    color: var(--leaf-deep);
+    font-size: 1.125rem;
+  }
+
+  h3 {
+    margin-top: 0.25rem;
+    font-size: 1.25rem;
+  }
+
+  p {
+    margin-top: 0.4rem;
+    color: var(--ink-soft);
+    font-size: var(--fs-small);
+  }
+</style>

@@ -1,0 +1,86 @@
+---
+import { principles } from '../data/site';
+import { withBase } from '../lib/base';
+
+interface Props {
+  heading?: string;
+  intro?: string;
+  showMoreLink?: boolean;
+}
+
+const {
+  heading = 'Mục tiêu và cách Thuốc ơi được xây dựng',
+  intro = 'Mục tiêu duy nhất: giúp bạn và người thân uống thuốc đúng như đơn bác sĩ đã kê. Sáu nguyên tắc dưới đây quyết định ứng dụng làm gì — và không làm gì.',
+  showMoreLink = false,
+} = Astro.props;
+---
+
+<section class="section principles" id="nguyen-tac" aria-labelledby="principles-heading">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="principles-heading">{heading}</h2>
+      <p>{intro}</p>
+    </div>
+    <ul class="grid">
+      {
+        principles.map((item) => (
+          <li>
+            <h3>{item.title}</h3>
+            <p>{item.body}</p>
+          </li>
+        ))
+      }
+    </ul>
+    {
+      showMoreLink && (
+        <p class="more">
+          <a href={withBase('gioi-thieu/')}>Đọc thêm về Thuốc ơi</a>
+        </p>
+      )
+    }
+  </div>
+</section>
+
+<style>
+  .principles {
+    background: var(--paper-raised);
+    border-block: 1px solid var(--line);
+  }
+
+  .grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--space-4) var(--space-4);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+  }
+
+  li {
+    padding-top: var(--space-2);
+    border-top: 3px solid var(--leaf);
+  }
+
+  h3 {
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+  }
+
+  li p {
+    margin-top: 0.4rem;
+    color: var(--ink-soft);
+    font-size: var(--fs-small);
+  }
+
+  .more {
+    margin-top: var(--space-4);
+  }
+
+  .more a {
+    font-weight: 700;
+    color: var(--pine);
+    text-decoration: none;
+    border-bottom: 2px solid var(--leaf);
+    padding-block: 0.2rem;
+  }
+</style>

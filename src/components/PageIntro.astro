@@ -1,0 +1,60 @@
+---
+import Breadcrumbs from './Breadcrumbs.astro';
+import StoreButtons from './StoreButtons.astro';
+import type { Crumb } from '../lib/seo';
+
+// Phần đầu của các trang nội dung (tính năng, giới thiệu, bảng giá, hỏi đáp): breadcrumb + h1
+// duy nhất của trang + đoạn trả lời trực tiếp.
+interface Props {
+  crumbs: Crumb[];
+  eyebrow: string;
+  title: string;
+  lead: string;
+  showStoreButtons?: boolean;
+}
+
+const { crumbs, eyebrow, title, lead, showStoreButtons = false } = Astro.props;
+---
+
+<section class="page-intro">
+  <div class="wrap">
+    <Breadcrumbs crumbs={crumbs} />
+    <p class="eyebrow">{eyebrow}</p>
+    <h1>{title}</h1>
+    <p class="lead">{lead}</p>
+    {showStoreButtons && <StoreButtons />}
+  </div>
+</section>
+
+<style>
+  .page-intro {
+    padding-block: var(--space-4) var(--space-5);
+    background: linear-gradient(180deg, var(--leaf-tint) 0%, var(--paper) 100%);
+  }
+
+  .eyebrow {
+    margin-top: var(--space-3);
+    color: var(--leaf-deep);
+    font-weight: 700;
+    font-size: var(--fs-small);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  h1 {
+    margin-top: 0.5rem;
+    font-size: var(--fs-h1);
+    max-width: 48rem;
+  }
+
+  .lead {
+    margin-block: var(--space-3) var(--space-4);
+    font-size: var(--fs-lead);
+    color: var(--ink-soft);
+    max-width: 42rem;
+  }
+
+  .lead:last-child {
+    margin-bottom: 0;
+  }
+</style>

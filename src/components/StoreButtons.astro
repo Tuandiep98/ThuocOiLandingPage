@@ -1,0 +1,42 @@
+---
+import { storeLinks } from '../data/site';
+
+// Cặp nút tải app dùng chung — `tone="dark"` cho nền tối (CTA band, khối thông báo).
+interface Props {
+  tone?: 'light' | 'dark';
+  center?: boolean;
+}
+
+const { tone = 'light', center = false } = Astro.props;
+---
+
+<div class:list={['store-buttons', { center }]}>
+  <a class:list={['btn', tone === 'dark' ? 'btn-on-dark' : 'btn-primary']} href={storeLinks.appStore}>
+    Tải trên App Store
+  </a>
+  <a class:list={['btn btn-ghost', { 'on-dark': tone === 'dark' }]} href={storeLinks.googlePlay}>
+    Tải trên Google Play
+  </a>
+</div>
+
+<style>
+  .store-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .center {
+    justify-content: center;
+  }
+
+  .btn-ghost.on-dark {
+    border-color: rgba(255, 255, 255, 0.4);
+    color: white;
+  }
+
+  .btn-ghost.on-dark:hover {
+    border-color: white;
+    background: rgba(255, 255, 255, 0.08);
+  }
+</style>

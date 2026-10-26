@@ -1,0 +1,131 @@
+---
+import NotificationStack from './NotificationStack.astro';
+import { notificationSamples, notificationTypes, featureHref, featureSlugs } from '../data/site';
+import { withBase } from '../lib/base';
+
+// Hai màn hình khoá: điện thoại người dùng thuốc (nhắc + nhắc lần hai) và điện thoại người chăm sóc
+// (cảnh báo lỡ liều). Giờ hiển thị được đặt cho khớp nhau trong cùng một tình huống 20:00.
+const ownPhone = [
+  { ...notificationSamples.followUp, time: '20:45' },
+  { ...notificationSamples.reminder, time: '20:00' },
+];
+const caregiverPhone = [{ ...notificationSamples.caregiver, time: '21:00' }];
+---
+
+<section class="showcase" id="thong-bao" aria-labelledby="notifications-heading">
+  <div class="wrap grid">
+    <div class="copy">
+      <h2 id="notifications-heading">Thông báo đến đúng lúc — cho bạn và cho người thân</h2>
+      <p class="lead">
+        Mọi lời nhắc được lên lịch ngay trên điện thoại sau khi bạn xác nhận đơn, nên vẫn đến đúng giờ khi
+        không có mạng. Nội dung thông báo chung chung, không hiện tên thuốc trên màn hình khoá.
+      </p>
+      <ul class="types">
+        {
+          notificationTypes.map((type) => (
+            <li>
+              <h3>{type.title}</h3>
+              <p>{type.body}</p>
+            </li>
+          ))
+        }
+      </ul>
+      <p class="more">
+        <a href={withBase(featureHref(featureSlugs.reminders))}>Xem chi tiết nhắc uống thuốc</a>
+        <a href={withBase(featureHref(featureSlugs.family))}>Cảnh báo người chăm sóc</a>
+      </p>
+    </div>
+    <div class="visual">
+      <NotificationStack items={ownPhone} clock="20:45" label="Điện thoại của bạn" onDark />
+      <NotificationStack items={caregiverPhone} label="Điện thoại người chăm sóc" compact onDark />
+    </div>
+  </div>
+</section>
+
+<style>
+  .showcase {
+    padding-block: var(--space-6);
+    background: linear-gradient(165deg, var(--pine) 0%, #0a2820 100%);
+    color: white;
+  }
+
+  .grid {
+    display: grid;
+    gap: var(--space-5);
+    align-items: center;
+  }
+
+  h2 {
+    color: white;
+    font-size: var(--fs-h2);
+    max-width: 34rem;
+  }
+
+  .lead {
+    margin-top: var(--space-2);
+    font-size: var(--fs-lead);
+    color: #cfebd9;
+    max-width: 36rem;
+  }
+
+  .types {
+    list-style: none;
+    margin: var(--space-4) 0 0;
+    padding: 0;
+    display: grid;
+    gap: var(--space-3);
+  }
+
+  .types li {
+    padding-left: var(--space-3);
+    border-left: 3px solid var(--leaf);
+  }
+
+  h3 {
+    color: white;
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+  }
+
+  .types p {
+    margin-top: 0.3rem;
+    color: #cfebd9;
+    font-size: var(--fs-small);
+  }
+
+  .more {
+    margin-top: var(--space-4);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+
+  .more a {
+    color: var(--leaf);
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 2px solid rgba(53, 193, 87, 0.4);
+    padding-block: 0.3rem;
+  }
+
+  .more a:hover {
+    border-color: var(--leaf);
+  }
+
+  .visual {
+    display: grid;
+    gap: var(--space-4);
+  }
+
+  @media (min-width: 56rem) {
+    .grid {
+      grid-template-columns: 1.15fr 0.85fr;
+    }
+
+    .visual {
+      position: sticky;
+      top: 6rem;
+      align-self: start;
+    }
+  }
+</style>

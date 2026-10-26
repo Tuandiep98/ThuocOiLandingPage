@@ -1,0 +1,54 @@
+---
+import { withBase } from '../lib/base';
+import type { Crumb } from '../lib/seo';
+
+// Breadcrumb hiển thị — đi cùng breadcrumbJsonLd() với cùng mảng `crumbs` để không lệch nhau.
+interface Props {
+  crumbs: Crumb[];
+}
+
+const { crumbs } = Astro.props;
+---
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    {
+      crumbs.map((crumb, index) =>
+        index === crumbs.length - 1 ? (
+          <li aria-current="page">{crumb.name}</li>
+        ) : (
+          <li>
+            <a href={withBase(crumb.path)}>{crumb.name}</a>
+          </li>
+        ),
+      )
+    }
+  </ol>
+</nav>
+
+<style>
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    font-size: var(--fs-small);
+    color: var(--ink-soft);
+  }
+
+  li + li::before {
+    content: '/';
+    margin-right: 0.35rem;
+    color: var(--line-strong);
+  }
+
+  a {
+    color: var(--ink-soft);
+  }
+
+  a:hover {
+    color: var(--pine);
+  }
+</style>

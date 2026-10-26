@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import { features } from '../data/site';
+import { withBase } from '../lib/base';
 
 const images = import.meta.glob<{ default: ImageMetadata }>('../assets/brand/*.png', {
   eager: true,
@@ -36,6 +37,7 @@ function imageFor(name: string) {
             <div class="text">
               <h3>{feature.title}</h3>
               <p>{feature.body}</p>
+              <a class="more" href={withBase(feature.href)}>Tìm hiểu thêm</a>
             </div>
           </article>
         ))
@@ -78,6 +80,20 @@ function imageFor(name: string) {
     color: var(--ink-soft);
     font-size: var(--fs-lead);
     max-width: 30rem;
+  }
+
+  .more {
+    display: inline-block;
+    margin-top: var(--space-2);
+    font-weight: 700;
+    color: var(--pine);
+    text-decoration: none;
+    border-bottom: 2px solid var(--leaf);
+    padding-block: 0.2rem;
+  }
+
+  .more:hover {
+    color: var(--leaf-deep);
   }
 
   @media (min-width: 56rem) {

@@ -1,0 +1,131 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import PageIntro from '../../components/PageIntro.astro';
+import Features from '../../components/Features.astro';
+import NotificationsShowcase from '../../components/NotificationsShowcase.astro';
+import DownloadCta from '../../components/DownloadCta.astro';
+import MobileDownloadBar from '../../components/MobileDownloadBar.astro';
+import { site, featurePages, featureHref } from '../../data/site';
+import { withBase } from '../../lib/base';
+import { breadcrumbJsonLd, webPageJsonLd, type Crumb } from '../../lib/seo';
+
+const title = `Tính năng ứng dụng nhắc uống thuốc — ${site.name}`;
+const description =
+  'Toàn bộ tính năng của Thuốc ơi: quét đơn thuốc bằng AI, thông báo nhắc có nút Đã uống, báo thức khi máy im lặng, nhóm Gia đình, tồn thuốc và báo cáo dùng thuốc.';
+const crumbs: Crumb[] = [
+  { name: 'Trang chủ', path: '' },
+  { name: 'Tính năng', path: 'tinh-nang/' },
+];
+
+const jsonLd = [
+  webPageJsonLd({ name: 'Tính năng của Thuốc ơi', description, path: 'tinh-nang/', type: 'CollectionPage' }),
+  breadcrumbJsonLd(crumbs),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: featurePages.map((page, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: page.h1,
+      url: new URL(withBase(featureHref(page.slug)), site.url).toString(),
+    })),
+  },
+];
+---
+
+<BaseLayout title={title} description={description} jsonLd={jsonLd}>
+  <Header />
+  <main id="noi-dung-chinh">
+    <PageIntro
+      crumbs={crumbs}
+      eyebrow="Tính năng"
+      title="Mọi thứ Thuốc ơi làm để bạn không quên liều thuốc"
+      lead="Từ một tấm ảnh đơn thuốc đến lời nhắc đúng giờ trên điện thoại của bạn và người thân: quét đơn bằng AI, thông báo có nút thao tác, báo thức khi máy im lặng, nhóm Gia đình, theo dõi tồn thuốc và báo cáo dùng thuốc."
+      showStoreButtons
+    />
+
+    <section class="section" aria-labelledby="pages-heading">
+      <div class="wrap">
+        <h2 id="pages-heading" class="visually-hidden">Các nhóm tính năng</h2>
+        <ul class="cards">
+          {
+            featurePages.map((page) => (
+              <li>
+                <a href={withBase(featureHref(page.slug))}>
+                  <span class="card-eyebrow">{page.eyebrow}</span>
+                  <h3>{page.h1}</h3>
+                  <p>{page.description}</p>
+                  <span class="go">Xem chi tiết</span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+
+    <NotificationsShowcase />
+    <Features />
+    <DownloadCta />
+  </main>
+  <Footer />
+  <MobileDownloadBar />
+</BaseLayout>
+
+<style>
+  .cards {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--space-3);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+  }
+
+  .cards a {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: var(--space-4) var(--space-3);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    background: var(--paper-raised);
+    text-decoration: none;
+    transition:
+      border-color 0.15s ease,
+      transform 0.15s ease;
+  }
+
+  .cards a:hover {
+    border-color: var(--leaf);
+    transform: translateY(-2px);
+  }
+
+  .card-eyebrow {
+    color: var(--leaf-deep);
+    font-weight: 700;
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  h3 {
+    margin-top: 0.4rem;
+    font-size: 1.375rem;
+  }
+
+  .cards p {
+    margin-top: 0.6rem;
+    color: var(--ink-soft);
+    font-size: var(--fs-small);
+    flex: 1;
+  }
+
+  .go {
+    margin-top: var(--space-2);
+    font-weight: 700;
+    color: var(--pine);
+  }
+</style>

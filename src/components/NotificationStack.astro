@@ -1,0 +1,186 @@
+---
+import { Image } from 'astro:assets';
+import icon from '../assets/brand/icon_1024.png';
+import type { NotificationSample } from '../data/site';
+
+// Minh hoạ thông báo trên màn hình khoá, dựng bằng HTML/CSS thay vì ảnh để chữ đọc được bởi máy
+// tìm kiếm và sắc nét ở mọi kích thước. Nội dung (title/body/nút) phải lấy nguyên văn từ
+// `notificationSamples` (chuỗi thật trong app) — không viết chuỗi mới ở đây.
+interface Props {
+  items: NotificationSample[];
+  clock?: string;
+  compact?: boolean;
+  onDark?: boolean;
+  label?: string;
+}
+
+const { items, clock = '08:00', compact = false, onDark = false, label } = Astro.props;
+---
+
+<figure class:list={['lock', { compact, 'on-dark': onDark }]}>
+  {label && <p class="device">{label}</p>}
+  <div class="screen">
+    {!compact && <p class="clock" aria-hidden="true">{clock}</p>}
+    <ul class="stack">
+      {
+        items.map((item) => (
+          <li class="note">
+            <div class="row">
+              <Image src={icon} alt="" width={44} height={44} class="app-icon" />
+              <div class="text">
+                <p class="meta">
+                  <span>Thuốc ơi</span>
+                  {item.time && <span>{item.time}</span>}
+                </p>
+                <p class="title">{item.title}</p>
+                <p class="body">{item.body}</p>
+              </div>
+            </div>
+            {item.actions && (
+              <div class="actions">
+                {item.actions.map((action, index) => (
+                  <span class:list={['action', { primary: index === 0 }]}>{action}</span>
+                ))}
+              </div>
+            )}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <figcaption>Minh hoạ — nội dung thông báo đúng như trong ứng dụng.</figcaption>
+</figure>
+
+<style>
+  .lock {
+    margin: 0;
+    width: 100%;
+    max-width: 24rem;
+    margin-inline: auto;
+  }
+
+  .screen {
+    border-radius: var(--radius-lg);
+    padding: var(--space-3) var(--space-2) var(--space-3);
+    background:
+      radial-gradient(120% 70% at 80% 0%, #2a6b55 0%, transparent 60%),
+      linear-gradient(170deg, var(--pine-soft) 0%, var(--pine) 60%, #0a2820 100%);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .compact .screen {
+    padding-top: var(--space-2);
+  }
+
+  .clock {
+    text-align: center;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(3rem, 2.4rem + 3vw, 4rem);
+    line-height: 1;
+    color: white;
+    margin-bottom: var(--space-3);
+    letter-spacing: 0.02em;
+  }
+
+  .stack {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.6rem;
+  }
+
+  .note {
+    background: rgba(250, 250, 248, 0.94);
+    border-radius: 1.25rem;
+    padding: 0.8rem 0.9rem;
+    color: #111;
+    box-shadow: 0 10px 24px -12px rgba(0, 0, 0, 0.45);
+  }
+
+  .row {
+    display: flex;
+    gap: 0.7rem;
+    align-items: flex-start;
+  }
+
+  .app-icon {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 0.55rem;
+    flex-shrink: 0;
+  }
+
+  .text {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    line-height: 1.3;
+  }
+
+  .body {
+    font-size: 0.9rem;
+    line-height: 1.35;
+    color: #2b2b2b;
+  }
+
+  .actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-top: 0.7rem;
+  }
+
+  .action {
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 700;
+    padding: 0.55rem 0.4rem;
+    border-radius: 0.8rem;
+    background: rgba(0, 0, 0, 0.07);
+  }
+
+  .action.primary {
+    background: #0f7a5c;
+    color: white;
+  }
+
+  figcaption {
+    margin-top: 0.6rem;
+    text-align: center;
+    font-size: 0.8125rem;
+    color: var(--ink-soft);
+  }
+
+  .device {
+    margin-bottom: 0.5rem;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--leaf-deep);
+  }
+
+  .on-dark .device {
+    color: var(--leaf);
+  }
+
+  .on-dark figcaption {
+    color: #cfebd9;
+  }
+</style>
