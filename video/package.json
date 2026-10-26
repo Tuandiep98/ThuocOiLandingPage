@@ -6,10 +6,13 @@
     "studio": "remotion studio src/index.ts",
     "render": "remotion render src/index.ts Promo out/promo.mp4 --codec=h264 --crf=20",
     "export": "node scripts/export-web.mjs",
-    "build": "npm run render && npm run export"
+    "build": "npm run render && npm run export",
+    "og": "node scripts/render-og.mjs"
   },
   "dependencies": {
+    "@remotion/bundler": "4.0.538",
     "@remotion/cli": "4.0.538",
+    "@remotion/renderer": "4.0.538",
     "react": "19.3.1",
     "react-dom": "19.3.1",
     "remotion": "4.0.538"

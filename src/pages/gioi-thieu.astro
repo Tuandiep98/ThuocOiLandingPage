@@ -49,7 +49,7 @@ const buildFacts = [
 ];
 ---
 
-<BaseLayout title={title} description={description} jsonLd={[webPageJsonLd({ name: title, description, path: 'gioi-thieu/', type: 'AboutPage' }), breadcrumbJsonLd(crumbs)]}>
+<BaseLayout title={title} description={description} ogImage="og/gioi-thieu.jpg" jsonLd={[webPageJsonLd({ name: title, description, path: 'gioi-thieu/', type: 'AboutPage' }), breadcrumbJsonLd(crumbs)]}>
   <Header />
   <main id="noi-dung-chinh">
     <PageIntro

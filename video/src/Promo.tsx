@@ -13,7 +13,7 @@ import {
 // 13 giây, 30fps. Khung cuối trùng khung đầu để lặp liền mạch.
 export const DURATION = 390;
 
-const C = {
+export const C = {
   paper: '#f6f9f2',
   ink: '#12241c',
   pine: '#0e3b2e',
@@ -23,7 +23,7 @@ const C = {
   amber: '#ec9f3f',
 };
 
-const fontFaces = `
+export const fontFaces = `
 ${[500, 700]
   .flatMap((w) =>
     ['latin', 'vietnamese'].map(

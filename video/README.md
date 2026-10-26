@@ -13,7 +13,8 @@ loại khỏi `tsconfig.json` của Astro).
 cd video
 npm ci
 npm run studio   # xem/chỉnh trực tiếp trong trình duyệt
-npm run build    # render out/promo.mp4 rồi xuất MP4/WebM/poster vào ../public/media/ (cần ffmpeg)
+npm run build    # render out/promo.mp4 rồi xuất MP4 + poster vào ../public/media/ (cần ffmpeg)
+npm run og       # render ảnh Open Graph 1200x630 cho từng trang vào ../public/og/
 ```
 
 Bản xuất trong `public/media/` được commit; `out/` thì không.
