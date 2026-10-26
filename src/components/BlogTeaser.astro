@@ -9,13 +9,10 @@ const posts = (await getCollection('blog'))
 
 {
   posts.length > 0 && (
-    // h3 chứ không phải h2 thứ 5: trang chủ cố tình chỉ có 4 h2 (How it works/Features/Pricing/
-    // FAQ) cho SEO/AI-parsing (xem CLAUDE.md) — khối này là "further reading" phụ trợ, không phải
-    // một section nội dung chính ngang hàng 4 section kia.
     <section class="blog-teaser" aria-labelledby="blog-teaser-heading">
       <div class="wrap">
         <div class="teaser-head">
-          <h3 id="blog-teaser-heading">Bài viết mới</h3>
+          <h2 id="blog-teaser-heading">Bài viết mới</h2>
           <a class="see-all" href={withBase('blog/')}>
             Xem tất cả bài viết
           </a>
@@ -49,7 +46,7 @@ const posts = (await getCollection('blog'))
     gap: var(--space-2);
   }
 
-  .teaser-head h3 {
+  .teaser-head h2 {
     font-size: var(--fs-h3);
   }
 

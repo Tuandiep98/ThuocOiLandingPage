@@ -1,0 +1,305 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import StoreButtons from '../../components/StoreButtons.astro';
+import SectionMediaBlock from '../../components/SectionMediaBlock.astro';
+import FAQ from '../../components/FAQ.astro';
+import DownloadCta from '../../components/DownloadCta.astro';
+import MobileDownloadBar from '../../components/MobileDownloadBar.astro';
+import { featurePages, featureHref, featureClips, type FeaturePage } from '../../data/site';
+import { withBase } from '../../lib/base';
+import { breadcrumbJsonLd, faqJsonLd, videoJsonLd, webPageJsonLd, type Crumb } from '../../lib/seo';
+
+export function getStaticPaths() {
+  return featurePages.map((page) => ({ params: { slug: page.slug }, props: { page } }));
+}
+
+const { page } = Astro.props as { page: FeaturePage };
+const path = featureHref(page.slug);
+
+const crumbs: Crumb[] = [
+  { name: 'Trang chủ', path: '' },
+  { name: 'Tính năng', path: 'tinh-nang/' },
+  { name: page.navLabel, path },
+];
+
+// Bài blog liên quan — khai báo tay trong site.ts, bỏ qua slug không còn tồn tại.
+const posts = await getCollection('blog');
+const related = page.relatedPosts
+  .map((slug) => posts.find((post) => post.id === slug))
+  .filter((post): post is NonNullable<typeof post> => Boolean(post));
+
+const otherFeatures = featurePages.filter((other) => other.slug !== page.slug);
+
+const heroClip = page.hero.kind === 'clip' ? featureClips[page.hero.clip] : undefined;
+
+const jsonLd = [
+  webPageJsonLd({ name: page.h1, description: page.description, path }),
+  breadcrumbJsonLd(crumbs),
+  faqJsonLd(page.faqs),
+  ...(heroClip && page.hero.kind === 'clip'
+    ? [
+        videoJsonLd({
+          name: page.h1,
+          description: page.hero.alt,
+          mp4: heroClip.mp4,
+          poster: heroClip.poster,
+          duration: heroClip.duration,
+          uploadDate: '2026-10-26',
+        }),
+      ]
+    : []),
+];
+---
+
+<BaseLayout title={page.metaTitle} description={page.description} jsonLd={jsonLd} ogImage={`og/${page.slug}.jpg`}>
+  <Header />
+  <main id="noi-dung-chinh">
+    <section class="page-hero">
+      <div class="wrap hero-grid">
+        <div class="copy">
+          <Breadcrumbs crumbs={crumbs} />
+          <p class="eyebrow">{page.eyebrow}</p>
+          <h1>{page.h1}</h1>
+          <p class="lead">{page.intro}</p>
+          <StoreButtons />
+        </div>
+        <div class="art">
+          <SectionMediaBlock media={page.hero} eager />
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap sections">
+      {
+        page.sections.map((section, index) => (
+          <section class:list={['feature-section', { 'has-media': section.media, reverse: index % 2 === 1 }]}>
+            <div class="text">
+              <h2>{section.heading}</h2>
+              <p>{section.body}</p>
+              {section.points && (
+                <ul class="points">
+                  {section.points.map((point) => (
+                    <li>{point}</li>
+                  ))}
+                </ul>
+              )}
+              {section.link && (
+                <a class="more" href={withBase(section.link.href)}>
+                  {section.link.label}
+                </a>
+              )}
+            </div>
+            {section.media && (
+              <div class="media">
+                <SectionMediaBlock media={section.media} />
+              </div>
+            )}
+          </section>
+        ))
+      }
+    </div>
+
+    <FAQ items={page.faqs} />
+
+    {
+      related.length > 0 && (
+        <section class="section related" aria-labelledby="related-heading">
+          <div class="wrap">
+            <h2 id="related-heading">Đọc thêm trên blog</h2>
+            <ul class="cards">
+              {related.map((post) => (
+                <li>
+                  <a href={withBase(`blog/${post.id}/`)}>
+                    <span class="card-eyebrow">{post.data.segment}</span>
+                    <span class="card-title">{post.data.title}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )
+    }
+
+    <section class="section others" aria-labelledby="others-heading">
+      <div class="wrap">
+        <h2 id="others-heading">Các tính năng khác</h2>
+        <ul class="cards">
+          {
+            otherFeatures.map((other) => (
+              <li>
+                <a href={withBase(featureHref(other.slug))}>
+                  <span class="card-eyebrow">{other.eyebrow}</span>
+                  <span class="card-title">{other.h1}</span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+
+    <DownloadCta />
+  </main>
+  <Footer />
+  <MobileDownloadBar />
+</BaseLayout>
+
+<style>
+  .page-hero {
+    padding-block: var(--space-4) var(--space-5);
+    background: linear-gradient(180deg, var(--leaf-tint) 0%, var(--paper) 100%);
+  }
+
+  .hero-grid {
+    display: grid;
+    gap: var(--space-4);
+    align-items: center;
+  }
+
+  .eyebrow {
+    margin-top: var(--space-3);
+    color: var(--leaf-deep);
+    font-weight: 700;
+    font-size: var(--fs-small);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  h1 {
+    margin-top: 0.5rem;
+    font-size: var(--fs-h1);
+  }
+
+  .lead {
+    margin-block: var(--space-3) var(--space-4);
+    font-size: var(--fs-lead);
+    color: var(--ink-soft);
+    max-width: 38rem;
+  }
+
+  .art {
+    display: flex;
+    justify-content: center;
+  }
+
+  .sections {
+    display: grid;
+    gap: var(--space-5);
+    padding-block: var(--space-5);
+  }
+
+  .feature-section {
+    display: grid;
+    gap: var(--space-4);
+    align-items: center;
+  }
+
+  .feature-section h2 {
+    font-size: var(--fs-h3);
+  }
+
+  .text > p {
+    margin-top: var(--space-2);
+    color: var(--ink-soft);
+    max-width: 38rem;
+  }
+
+  .points {
+    margin: var(--space-2) 0 0;
+    padding-left: 1.2rem;
+    display: grid;
+    gap: 0.5rem;
+    color: var(--ink-soft);
+    max-width: 38rem;
+  }
+
+  .more {
+    display: inline-block;
+    margin-top: var(--space-2);
+    font-weight: 700;
+    color: var(--pine);
+    text-decoration: none;
+    border-bottom: 2px solid var(--leaf);
+    padding-block: 0.2rem;
+  }
+
+  .media {
+    display: flex;
+    justify-content: center;
+  }
+
+  .related,
+  .others {
+    border-top: 1px solid var(--line);
+  }
+
+  .related h2,
+  .others h2 {
+    font-size: var(--fs-h3);
+  }
+
+  .cards {
+    list-style: none;
+    margin: var(--space-3) 0 0;
+    padding: 0;
+    display: grid;
+    gap: var(--space-2);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr));
+  }
+
+  .cards a {
+    display: block;
+    height: 100%;
+    padding: var(--space-3);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    background: var(--paper-raised);
+    text-decoration: none;
+  }
+
+  .cards a:hover {
+    border-color: var(--leaf);
+  }
+
+  .card-eyebrow {
+    display: block;
+    color: var(--leaf-deep);
+    font-weight: 700;
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .card-title {
+    display: block;
+    margin-top: 0.35rem;
+    color: var(--pine);
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  @media (min-width: 56rem) {
+    .hero-grid {
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: var(--space-5);
+    }
+
+    .feature-section.has-media {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-5);
+    }
+
+    .feature-section.reverse .media {
+      order: -1;
+    }
+
+    .feature-section:not(.has-media) .text {
+      max-width: 42rem;
+    }
+  }
+</style>

@@ -1,0 +1,78 @@
+---
+import { withBase } from '../lib/base';
+
+// Video tự phát, tắt tiếng, lặp — không cần JS. Người dùng bật "giảm chuyển động" (hệ điều hành)
+// chỉ thấy ảnh poster tĩnh. Poster cũng là ảnh LCP khi video nằm ở hero.
+interface Props {
+  mp4: string;
+  poster: string;
+  label: string;
+  width?: number;
+  height?: number;
+  eager?: boolean;
+  class?: string;
+}
+
+// `...rest` mang thuộc tính scope CSS của component cha (vd. class="clip" được style ở nơi gọi).
+const { mp4, poster, label, width = 720, height = 900, eager = false, class: className, ...rest } = Astro.props;
+---
+
+<div class:list={['app-video', className]} {...rest}>
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    disablepictureinpicture
+    preload={eager ? 'auto' : 'metadata'}
+    poster={withBase(poster)}
+    width={width}
+    height={height}
+    aria-label={label}
+  >
+    <source src={withBase(mp4)} type="video/mp4" />
+  </video>
+  <img
+    class="still"
+    src={withBase(poster)}
+    alt={label}
+    width={width}
+    height={height}
+    loading={eager ? 'eager' : 'lazy'}
+    decoding="async"
+  />
+</div>
+
+<style>
+  .app-video {
+    position: relative;
+    width: 100%;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--pine);
+    aspect-ratio: 4 / 5;
+    box-shadow: var(--shadow-soft);
+  }
+
+  video,
+  .still {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .still {
+    display: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    video {
+      display: none;
+    }
+
+    .still {
+      display: block;
+    }
+  }
+</style>

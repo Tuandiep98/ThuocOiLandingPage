@@ -1,25 +1,48 @@
 ---
 import { Image } from 'astro:assets';
 import icon from '../assets/brand/icon_light.png';
-import { site, legalLinks } from '../data/site';
+import { site, legalLinks, featurePages, featureHref } from '../data/site';
 import { withBase } from '../lib/base';
 
 const year = new Date().getFullYear();
+
+const productLinks = featurePages.map((page) => ({ href: featureHref(page.slug), label: page.navLabel }));
+const aboutLinks = [
+  { href: 'gioi-thieu/', label: 'Giới thiệu' },
+  { href: 'bang-gia/', label: 'Bảng giá' },
+  { href: 'cau-hoi-thuong-gap/', label: 'Câu hỏi thường gặp' },
+  { href: 'blog/', label: 'Blog' },
+  { href: 'chinh-sach-bien-tap/', label: 'Chính sách biên tập' },
+];
+const legal = [
+  { href: legalLinks.privacy, label: 'Chính sách quyền riêng tư' },
+  { href: legalLinks.terms, label: 'Điều khoản sử dụng' },
+  { href: legalLinks.accountDeletion, label: 'Xoá tài khoản' },
+  { href: legalLinks.support, label: 'Hỗ trợ' },
+];
 ---
 
 <footer class="site-footer">
-  <div class="wrap footer-grid">
-    <div class="top-row">
-      <div class="brand">
-        <Image src={icon} alt="" width={64} height={64} class="icon" />
-        <span>{site.name}</span>
+  <div class="wrap">
+    <div class="cols">
+      <div class="brand-col">
+        <div class="brand">
+          <Image src={icon} alt="" width={64} height={64} class="icon" />
+          <span>{site.name}</span>
+        </div>
+        <p class="tagline">{site.tagline}.</p>
       </div>
-      <nav class="legal-links" aria-label="Pháp lý">
-        <a href={withBase(legalLinks.privacy)}>Chính sách quyền riêng tư</a>
-        <a href={withBase(legalLinks.terms)}>Điều khoản sử dụng</a>
-        <a href={withBase(legalLinks.accountDeletion)}>Xoá tài khoản</a>
-        <a href={withBase(legalLinks.support)}>Hỗ trợ</a>
-        <a href={withBase('chinh-sach-bien-tap/')}>Chính sách biên tập</a>
+      <nav aria-label="Tính năng">
+        <p class="col-title">Tính năng</p>
+        <ul>{productLinks.map((link) => <li><a href={withBase(link.href)}>{link.label}</a></li>)}</ul>
+      </nav>
+      <nav aria-label="Về Thuốc ơi">
+        <p class="col-title">Về Thuốc ơi</p>
+        <ul>{aboutLinks.map((link) => <li><a href={withBase(link.href)}>{link.label}</a></li>)}</ul>
+      </nav>
+      <nav aria-label="Pháp lý">
+        <p class="col-title">Pháp lý</p>
+        <ul>{legal.map((link) => <li><a href={withBase(link.href)}>{link.label}</a></li>)}</ul>
       </nav>
     </div>
     <p class="disclaimer">
@@ -32,22 +55,14 @@ const year = new Date().getFullYear();
 <style>
   .site-footer {
     border-top: 1px solid var(--line);
-    padding-block: var(--space-4);
+    padding-block: var(--space-5) var(--space-4);
     background: var(--paper-raised);
   }
 
-  .footer-grid {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-2);
-  }
-
-  .top-row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-2);
+  .cols {
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
   }
 
   .brand {
@@ -56,6 +71,7 @@ const year = new Date().getFullYear();
     gap: 0.5rem;
     font-family: var(--font-display);
     font-weight: 700;
+    font-size: 1.25rem;
     color: var(--pine);
   }
 
@@ -65,27 +81,55 @@ const year = new Date().getFullYear();
     border-radius: 7px;
   }
 
-  .legal-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-3);
+  .tagline {
+    margin-top: 0.5rem;
+    color: var(--ink-soft);
+    font-size: var(--fs-small);
+    max-width: 18rem;
   }
 
-  .legal-links a {
+  .col-title {
+    font-weight: 700;
+    color: var(--pine);
+    font-size: var(--fs-small);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0.6rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 0.15rem;
+  }
+
+  ul a {
+    display: inline-block;
+    padding-block: 0.3rem;
     color: var(--ink-soft);
     font-size: var(--fs-small);
     text-decoration: none;
-    border-bottom: 1px solid var(--line-strong);
   }
 
-  .legal-links a:hover {
+  ul a:hover {
     color: var(--pine);
-    border-color: var(--pine);
+    text-decoration: underline;
   }
 
   .disclaimer,
   .copyright {
     color: var(--ink-soft);
     font-size: var(--fs-small);
+  }
+
+  .disclaimer {
+    margin-top: var(--space-4);
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--line);
+  }
+
+  .copyright {
+    margin-top: 0.4rem;
   }
 </style>

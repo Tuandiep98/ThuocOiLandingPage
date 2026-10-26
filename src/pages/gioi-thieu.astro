@@ -1,0 +1,169 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PageIntro from '../components/PageIntro.astro';
+import Principles from '../components/Principles.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import DownloadCta from '../components/DownloadCta.astro';
+import MobileDownloadBar from '../components/MobileDownloadBar.astro';
+import { site, legalLinks } from '../data/site';
+import { withBase } from '../lib/base';
+import { breadcrumbJsonLd, webPageJsonLd, type Crumb } from '../lib/seo';
+
+const title = `Giới thiệu ${site.name}: mục tiêu và cách ứng dụng hoạt động`;
+const description =
+  'Thuốc ơi giúp người Việt uống thuốc đúng như đơn đã kê. Tìm hiểu mục tiêu, nguyên tắc, cách ứng dụng xử lý đơn thuốc bằng AI và bảo vệ dữ liệu sức khoẻ của bạn.';
+const crumbs: Crumb[] = [
+  { name: 'Trang chủ', path: '' },
+  { name: 'Giới thiệu', path: 'gioi-thieu/' },
+];
+
+// Mọi mục ở đây đối chiếu với README/code của app (Edge Functions, đăng nhập ẩn danh +
+// khôi phục thiết bị, quota phía máy chủ, RevenueCat) — không thêm cam kết mà app không làm.
+const buildFacts = [
+  {
+    title: 'Ứng dụng di động cho iOS và Android',
+    body: 'Một ứng dụng duy nhất cho cả iPhone và điện thoại Android, giao diện tiếng Việt (có tiếng Anh), chữ cỡ lớn hơn mặc định để người lớn tuổi dễ đọc hướng dẫn liều.',
+  },
+  {
+    title: 'Không cần đăng ký tài khoản',
+    body: 'Bạn mở ứng dụng là dùng được ngay, không cần email hay số điện thoại. Dữ liệu được gắn với thiết bị và có thể khôi phục khi cài lại ứng dụng.',
+  },
+  {
+    title: 'AI chạy ở máy chủ, khoá bí mật không nằm trong app',
+    body: 'Ảnh đơn thuốc được gửi tới máy chủ của Thuốc ơi để AI đọc và đề xuất lịch nhắc. Khoá truy cập dịch vụ AI chỉ nằm ở máy chủ, không bao giờ được đóng gói vào ứng dụng.',
+  },
+  {
+    title: 'Lời nhắc chạy trên điện thoại',
+    body: 'Sau khi bạn xác nhận, lịch nhắc được lên trên chính điện thoại — thông báo và báo thức không phụ thuộc mạng hay máy chủ. Riêng cảnh báo người chăm sóc được gửi từ máy chủ dưới dạng thông báo đẩy.',
+  },
+  {
+    title: 'Giới hạn và thanh toán minh bạch',
+    body: 'Số lượt quét AI được kiểm soát ở máy chủ, không dựa vào ứng dụng. Gói Pro và Gia đình thanh toán qua App Store hoặc Google Play; gói hết hạn vẫn giữ nguyên dữ liệu của bạn.',
+  },
+  {
+    title: 'Bạn kiểm soát dữ liệu',
+    body: 'Bạn có thể xoá toàn bộ đơn thuốc, lời nhắc và dữ liệu ngay trong ứng dụng, hoặc gửi yêu cầu xoá tài khoản.',
+  },
+];
+---
+
+<BaseLayout title={title} description={description} ogImage="og/gioi-thieu.jpg" jsonLd={[webPageJsonLd({ name: title, description, path: 'gioi-thieu/', type: 'AboutPage' }), breadcrumbJsonLd(crumbs)]}>
+  <Header />
+  <main id="noi-dung-chinh">
+    <PageIntro
+      crumbs={crumbs}
+      eyebrow="Giới thiệu"
+      title="Thuốc ơi giúp bạn uống thuốc đúng như đơn đã kê"
+      lead="Quên một liều, uống trùng liều, hay không biết cha mẹ ở xa đã uống thuốc chưa — đó là những việc nhỏ nhưng lặp lại mỗi ngày. Thuốc ơi biến đơn thuốc giấy thành lịch nhắc trên điện thoại, để bạn và người thân không phải nhớ thay."
+    />
+
+    <Principles heading="Sáu nguyên tắc của Thuốc ơi" intro="Những nguyên tắc này quyết định ứng dụng làm gì — và không làm gì." />
+
+    <section class="section" aria-labelledby="build-heading">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="build-heading">Ứng dụng được xây dựng như thế nào</h2>
+          <p>Cách Thuốc ơi xử lý đơn thuốc và dữ liệu của bạn, nói thẳng và cụ thể.</p>
+        </div>
+        <ul class="facts">
+          {
+            buildFacts.map((fact) => (
+              <li>
+                <h3>{fact.title}</h3>
+                <p>{fact.body}</p>
+              </li>
+            ))
+          }
+        </ul>
+        <p class="links">
+          Chi tiết pháp lý: <a href={withBase(legalLinks.privacy)}>Chính sách quyền riêng tư</a> ·{' '}
+          <a href={withBase(legalLinks.terms)}>Điều khoản sử dụng</a> ·{' '}
+          <a href={withBase(legalLinks.accountDeletion)}>Xoá tài khoản</a> ·{' '}
+          <a href={withBase(legalLinks.support)}>Hỗ trợ</a>
+        </p>
+      </div>
+    </section>
+
+    <HowItWorks />
+
+    <section class="section blog-note" aria-labelledby="blog-heading">
+      <div class="wrap narrow">
+        <h2 id="blog-heading">Về nội dung trên blog</h2>
+        <p>
+          Blog của Thuốc ơi trả lời những câu hỏi thường gặp quanh việc dùng thuốc đúng cách, theo một quy
+          trình biên tập công khai: soạn thảo có hỗ trợ của AI, được đội ngũ Thuốc ơi rà soát trước khi đăng.
+          Các bài viết chưa được bác sĩ hay dược sĩ thẩm định và không thay thế tư vấn y tế.
+        </p>
+        <a class="more" href={withBase('chinh-sach-bien-tap/')}>Đọc chính sách biên tập</a>
+      </div>
+    </section>
+
+    <DownloadCta />
+  </main>
+  <Footer />
+  <MobileDownloadBar />
+</BaseLayout>
+
+<style>
+  .facts {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--space-3);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+  }
+
+  .facts li {
+    padding: var(--space-3);
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+  }
+
+  h3 {
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+  }
+
+  .facts p {
+    margin-top: 0.4rem;
+    color: var(--ink-soft);
+    font-size: var(--fs-small);
+  }
+
+  .links {
+    margin-top: var(--space-4);
+    color: var(--ink-soft);
+    font-size: var(--fs-small);
+  }
+
+  .links a {
+    color: var(--pine);
+  }
+
+  .blog-note {
+    border-top: 1px solid var(--line);
+  }
+
+  .narrow {
+    max-width: 48rem;
+  }
+
+  .blog-note p {
+    margin-top: var(--space-2);
+    color: var(--ink-soft);
+  }
+
+  .more {
+    display: inline-block;
+    margin-top: var(--space-2);
+    font-weight: 700;
+    color: var(--pine);
+    text-decoration: none;
+    border-bottom: 2px solid var(--leaf);
+    padding-block: 0.2rem;
+  }
+</style>

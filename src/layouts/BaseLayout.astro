@@ -2,6 +2,14 @@
 import '../styles/global.css';
 import { site, storeLinks } from '../data/site';
 import { withBase } from '../lib/base';
+// Preload các file font dùng ngay màn hình đầu (chữ thân 400 + tiêu đề Baloo 700, cả subset latin
+// lẫn vietnamese vì chữ tiếng Việt dùng cả hai) — tránh layout xê dịch khi font thay font hệ thống.
+import bodyLatin from '@fontsource/be-vietnam-pro/files/be-vietnam-pro-latin-400-normal.woff2?url';
+import bodyVietnamese from '@fontsource/be-vietnam-pro/files/be-vietnam-pro-vietnamese-400-normal.woff2?url';
+import displayLatin from '@fontsource/baloo-2/files/baloo-2-latin-700-normal.woff2?url';
+import displayVietnamese from '@fontsource/baloo-2/files/baloo-2-vietnamese-700-normal.woff2?url';
+
+const preloadFonts = [bodyLatin, bodyVietnamese, displayLatin, displayVietnamese];
 
 interface Props {
   title: string;
@@ -9,6 +17,8 @@ interface Props {
   jsonLd?: Record<string, unknown>[];
   noindex?: boolean;
   lang?: string;
+  // Ảnh OG riêng của trang (path tương đối, 1200x630) — render bằng `npm run og` trong video/.
+  ogImage?: string;
 }
 
 const {
@@ -17,9 +27,11 @@ const {
   jsonLd = [],
   noindex = false,
   lang = "vi",
+  ogImage = "og-image.png",
 } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const ogImageURL = new URL(withBase('og-image.png'), Astro.site);
+const ogImageURL = new URL(withBase(ogImage), Astro.site);
+const ogImageAlt = ogImage === 'og-image.png' ? `${site.name} — ${site.tagline}` : title;
 ---
 
 <!doctype html>
@@ -30,6 +42,7 @@ const ogImageURL = new URL(withBase('og-image.png'), Astro.site);
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
+    {preloadFonts.map((href) => <link rel="preload" href={href} as="font" type="font/woff2" crossorigin />)}
 
     <link rel="icon" type="image/png" sizes="32x32" href={withBase('favicon-32.png')} />
     <link rel="icon" type="image/png" sizes="16x16" href={withBase('favicon-16.png')} />
@@ -47,14 +60,14 @@ const ogImageURL = new URL(withBase('og-image.png'), Astro.site);
     <meta property="og:image" content={ogImageURL} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content={`${site.name} — ${site.tagline}`} />
+    <meta property="og:image:alt" content={ogImageAlt} />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageURL} />
-    <meta name="twitter:image:alt" content={`${site.name} — ${site.tagline}`} />
+    <meta name="twitter:image:alt" content={ogImageAlt} />
 
     <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow'} />
     <meta name="format-detection" content="telephone=no" />

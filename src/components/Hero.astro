@@ -1,52 +1,63 @@
 ---
-import { Image } from 'astro:assets';
-import heroShot from '../assets/brand/screenshot_iphone_06.png';
-import { storeLinks } from '../data/site';
+import AppVideo from './AppVideo.astro';
+import StoreButtons from './StoreButtons.astro';
+import { previewVideo } from '../data/site';
 ---
 
 <section class="hero" id="top">
   <div class="wrap hero-grid">
     <div class="copy">
+      <p class="eyebrow">Ứng dụng nhắc uống thuốc · iOS & Android</p>
       <h1>Một tấm ảnh đơn thuốc, cả nhà biết khi nào uống thuốc</h1>
       <p class="lead">
-        Thuốc ơi đọc đơn thuốc bằng AI, tự xếp lịch nhắc theo từng buổi sáng, trưa, tối và
-        nhắc đúng giờ — kể cả khi điện thoại đang im lặng.
+        Thuốc ơi đọc đơn thuốc bằng AI, tự xếp lịch nhắc theo từng buổi sáng, trưa, tối và nhắc đúng
+        giờ — kể cả khi điện thoại đang im lặng. Người thân được báo nếu có liều bị lỡ.
       </p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href={storeLinks.appStore}>Tải trên App Store</a>
-        <a class="btn btn-ghost" href={storeLinks.googlePlay}>Tải trên Google Play</a>
-      </div>
-      <p class="fineprint">
-        Miễn phí nhập thuốc thủ công và nhắc thuốc không giới hạn. Không quảng cáo.
-      </p>
+      <StoreButtons />
+      <ul class="facts">
+        <li>Miễn phí nhắc thuốc không giới hạn</li>
+        <li>Nhắc không cần mạng</li>
+        <li>Không quảng cáo</li>
+      </ul>
     </div>
 
-    <div class="art" aria-hidden="false">
-      <div class="art-panel">
-        <Image
-          src={heroShot}
-          alt="Màn hình chính ứng dụng Thuốc ơi trên iPhone, hiển thị nhóm gia đình và các lời nhắc uống thuốc trong ngày hôm nay"
-          widths={[320, 480, 645]}
-          sizes="(min-width: 64rem) 28rem, 80vw"
-          loading="eager"
-          fetchpriority="high"
-          class="phone"
-        />
-      </div>
+    <div class="art">
+      <AppVideo
+        mp4={previewVideo.mp4}
+        poster={previewVideo.poster}
+        width={previewVideo.width}
+        height={previewVideo.height}
+        label="Video 13 giây: lịch nhắc theo buổi, thông báo Đến giờ uống thuốc với nút Đã uống, cảnh báo người thân khi lỡ liều và báo thức khi iPhone im lặng"
+        eager
+        class="hero-video"
+      />
     </div>
   </div>
 </section>
 
 <style>
   .hero {
-    padding-block: var(--space-5) var(--space-6);
+    padding-block: var(--space-4) var(--space-5);
     overflow: hidden;
   }
 
   .hero-grid {
     display: grid;
-    gap: var(--space-5);
+    gap: var(--space-4);
     align-items: center;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 0.8125rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--leaf-deep);
+    background: var(--leaf-tint);
+    padding: 0.35rem 0.8rem;
+    border-radius: var(--radius-pill);
+    margin-bottom: var(--space-2);
   }
 
   .copy h1 {
@@ -54,23 +65,35 @@ import { storeLinks } from '../data/site';
   }
 
   .lead {
-    margin-top: var(--space-3);
+    margin-block: var(--space-3) var(--space-4);
     font-size: var(--fs-lead);
     color: var(--ink-soft);
     max-width: 34rem;
   }
 
-  .cta-row {
+  .facts {
+    list-style: none;
+    margin: var(--space-3) 0 0;
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-top: var(--space-4);
-  }
-
-  .fineprint {
-    margin-top: var(--space-2);
+    gap: 0.5rem 1.25rem;
     font-size: var(--fs-small);
     color: var(--ink-soft);
+  }
+
+  .facts li {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+  }
+
+  .facts li::before {
+    content: '';
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: var(--leaf);
   }
 
   .art {
@@ -78,42 +101,25 @@ import { storeLinks } from '../data/site';
     justify-content: center;
   }
 
-  .art-panel {
-    position: relative;
-    width: 100%;
+  .hero-video {
     max-width: 26rem;
-    background: linear-gradient(165deg, var(--pine) 0%, #0a2820 100%);
-    border-radius: var(--radius-lg);
-    padding: var(--space-3);
-    display: flex;
-    justify-content: center;
-    isolation: isolate;
-    overflow: hidden;
   }
 
-  .art-panel::before {
-    content: '';
-    position: absolute;
-    width: 16rem;
-    height: 16rem;
-    background: var(--leaf);
-    opacity: 0.25;
-    border-radius: 50%;
-    top: -6rem;
-    right: -5rem;
-    z-index: -1;
-  }
-
-  .phone {
-    width: 100%;
-    max-width: 20rem;
-    height: auto;
-    border-radius: 1.25rem;
+  @media (min-width: 48rem) and (max-width: 63.99rem) {
+    /* tablet: video nhỏ lại để chữ và nút tải vẫn nằm trong màn hình đầu tiên */
+    .hero-video {
+      max-width: 22rem;
+    }
   }
 
   @media (min-width: 64rem) {
+    .hero {
+      padding-block: var(--space-5) var(--space-6);
+    }
+
     .hero-grid {
       grid-template-columns: 1.1fr 0.9fr;
+      gap: var(--space-5);
     }
 
     .art {

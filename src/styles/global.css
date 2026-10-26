@@ -14,7 +14,7 @@
   --pine: #0e3b2e;
   --pine-soft: #145041;
   --leaf: #35c157;
-  --leaf-deep: #1f9e42;
+  --leaf-deep: #137535; /* đậm đủ cho chữ nhỏ: tương phản ≥ 5:1 trên nền trắng và --leaf-tint (WCAG AA) */
   --leaf-tint: #e3f6e4;
   --amber: #ec9f3f;
   --amber-tint: #fbead2;

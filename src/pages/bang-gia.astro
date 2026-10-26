@@ -1,0 +1,161 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PageIntro from '../components/PageIntro.astro';
+import Pricing from '../components/Pricing.astro';
+import FAQ from '../components/FAQ.astro';
+import DownloadCta from '../components/DownloadCta.astro';
+import MobileDownloadBar from '../components/MobileDownloadBar.astro';
+import { site, plans, planComparison, type Faq } from '../data/site';
+import { breadcrumbJsonLd, faqJsonLd, webPageJsonLd, type Crumb } from '../lib/seo';
+
+const title = `Bảng giá ${site.name}: Miễn phí, Pro và Gia đình`;
+const description =
+  'Nhắc thuốc, báo thức và lịch sử miễn phí không giới hạn. So sánh lượt quét đơn AI và số thành viên Gia đình của gói Miễn phí, Pro và Gia đình.';
+const crumbs: Crumb[] = [
+  { name: 'Trang chủ', path: '' },
+  { name: 'Bảng giá', path: 'bang-gia/' },
+];
+
+// Câu hỏi riêng về gói — dựa trên README "Định hướng thương mại" và migration quota của app.
+const pricingFaqs: Faq[] = [
+  {
+    question: 'Giá gói Pro và Gia đình là bao nhiêu?',
+    answer:
+      'Giá hiển thị trong ứng dụng theo App Store hoặc Google Play của bạn, có lựa chọn theo tháng hoặc theo năm. Thanh toán và gia hạn do App Store/Google Play xử lý.',
+  },
+  {
+    question: 'Hết lượt quét đơn AI thì sao?',
+    answer:
+      'Bạn vẫn nhập thuốc thủ công, nhận nhắc thuốc và báo thức bình thường — các tính năng này không bao giờ bị khoá. Lượt quét được làm mới mỗi tháng.',
+  },
+  {
+    question: 'Gói hết hạn có mất dữ liệu không?',
+    answer:
+      'Không. Đơn thuốc, lời nhắc, lịch sử và dữ liệu nhóm Gia đình vẫn được giữ; chỉ không thể thêm thành viên vượt giới hạn của gói hiện tại.',
+  },
+  {
+    question: 'Trong nhóm Gia đình, lượt quét được tính thế nào?',
+    answer:
+      'Với gói Miễn phí và Pro, mỗi thành viên dùng lượt quét của riêng mình. Khi nhóm có gói Gia đình, cả nhóm dùng chung 150 lượt quét mỗi tháng.',
+  },
+];
+
+const offerCatalog = {
+  '@context': 'https://schema.org',
+  '@type': 'OfferCatalog',
+  name: `Các gói ${site.name}`,
+  itemListElement: plans.map((plan) => ({
+    '@type': 'Offer',
+    name: plan.name,
+    description: plan.benefits.join('; '),
+    ...(plan.id === 'free' ? { price: '0', priceCurrency: 'VND' } : {}),
+  })),
+};
+
+const jsonLd = [
+  webPageJsonLd({ name: title, description, path: 'bang-gia/' }),
+  breadcrumbJsonLd(crumbs),
+  offerCatalog,
+  faqJsonLd(pricingFaqs),
+];
+---
+
+<BaseLayout title={title} description={description} jsonLd={jsonLd} ogImage="og/bang-gia.jpg">
+  <Header />
+  <main id="noi-dung-chinh">
+    <PageIntro
+      crumbs={crumbs}
+      eyebrow="Bảng giá"
+      title="Nhắc thuốc miễn phí, trả phí chỉ khi cần quét AI nhiều hơn"
+      lead="Nhập thuốc thủ công, nhắc thuốc, báo thức và lịch sử của bạn miễn phí không giới hạn. Gói Pro và Gia đình chỉ mở thêm lượt quét đơn bằng AI và thành viên trong nhóm Gia đình."
+    />
+
+    <Pricing />
+
+    <section class="section compare" aria-labelledby="compare-heading">
+      <div class="wrap">
+        <h2 id="compare-heading">So sánh chi tiết</h2>
+        <div class="table-wrap" tabindex="0" role="region" aria-labelledby="compare-heading">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Tính năng</th>
+                {plans.map((plan) => <th scope="col">{plan.name}</th>)}
+              </tr>
+            </thead>
+            <tbody>
+              {
+                planComparison.map((row) => (
+                  <tr>
+                    <th scope="row">{row.label}</th>
+                    {row.values.map((value) => (
+                      <td>{value}</td>
+                    ))}
+                  </tr>
+                ))
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <FAQ items={pricingFaqs} heading="Câu hỏi về gói và thanh toán" />
+    <DownloadCta />
+  </main>
+  <Footer />
+  <MobileDownloadBar />
+</BaseLayout>
+
+<style>
+  .compare {
+    border-top: 1px solid var(--line);
+  }
+
+  .compare h2 {
+    font-size: var(--fs-h3);
+  }
+
+  .table-wrap {
+    margin-top: var(--space-3);
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    background: var(--paper-raised);
+  }
+
+  table {
+    width: 100%;
+    min-width: 36rem;
+    border-collapse: collapse;
+    font-size: var(--fs-small);
+  }
+
+  th,
+  td {
+    padding: 0.85rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+
+  thead th {
+    background: var(--leaf-tint);
+    color: var(--pine);
+    font-family: var(--font-display);
+    font-size: 1.0625rem;
+  }
+
+  tbody th {
+    font-weight: 600;
+    color: var(--pine);
+    width: 40%;
+  }
+
+  tbody tr:last-child th,
+  tbody tr:last-child td {
+    border-bottom: 0;
+  }
+</style>

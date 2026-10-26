@@ -24,3 +24,6 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# remotion render output (bản web xuất ra public/media/)
+video/out/

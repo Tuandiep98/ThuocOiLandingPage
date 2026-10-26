@@ -4,27 +4,53 @@ import icon from '../assets/brand/icon_light.png';
 import { site, storeLinks } from '../data/site';
 import { withBase } from '../lib/base';
 
-// Base + anchor (không phải anchor trần) vì Header còn được render trên các trang không phải
-// trang chủ (blog, 404) — anchor trần sẽ chỉ dính vào URL hiện tại thay vì quay về trang chủ.
+// Mọi link là trang thật (không phải anchor) — mỗi mục có URL riêng để index/chia sẻ được.
+// Menu điện thoại/tablet dùng <details> gốc của trình duyệt, không cần JS.
 const links = [
-  { href: withBase('#tinh-nang'), label: 'Tính năng' },
-  { href: withBase('#cach-hoat-dong'), label: 'Cách hoạt động' },
-  { href: withBase('#bang-gia'), label: 'Bảng giá' },
-  { href: withBase('#cau-hoi'), label: 'Câu hỏi thường gặp' },
-  { href: withBase('blog/'), label: 'Blog' },
+  { href: withBase('tinh-nang/'), label: 'Tính năng', match: 'tinh-nang' },
+  { href: withBase('bang-gia/'), label: 'Bảng giá', match: 'bang-gia' },
+  { href: withBase('gioi-thieu/'), label: 'Giới thiệu', match: 'gioi-thieu' },
+  { href: withBase('cau-hoi-thuong-gap/'), label: 'Hỏi đáp', match: 'cau-hoi-thuong-gap' },
+  { href: withBase('blog/'), label: 'Blog', match: 'blog' },
 ];
+
+const path = Astro.url.pathname;
+const isCurrent = (match: string) => path.includes(`/${match}/`);
 ---
 
 <header class="site-header">
   <div class="wrap bar">
-    <a class="brand" href={withBase('#top')}>
+    <a class="brand" href={withBase('')}>
       <Image src={icon} alt="" width={80} height={80} loading="eager" class="brand-icon" />
       <span>{site.name}</span>
     </a>
     <nav class="links" aria-label="Điều hướng chính">
-      {links.map((link) => <a href={link.href}>{link.label}</a>)}
+      {
+        links.map((link) => (
+          <a href={link.href} aria-current={isCurrent(link.match) ? 'page' : undefined}>
+            {link.label}
+          </a>
+        ))
+      }
     </nav>
-    <a class="btn btn-primary cta" href={storeLinks.appStore}>Tải ứng dụng</a>
+    <div class="actions">
+      <a class="btn btn-primary cta" href={storeLinks.appStore}>Tải ứng dụng</a>
+      <details class="menu">
+        <summary aria-label="Mở menu">
+          <span class="bars" aria-hidden="true"></span>
+        </summary>
+        <nav class="menu-panel" aria-label="Điều hướng chính (di động)">
+          {
+            links.map((link) => (
+              <a href={link.href} aria-current={isCurrent(link.match) ? 'page' : undefined}>
+                {link.label}
+              </a>
+            ))
+          }
+          <a href={storeLinks.googlePlay}>Tải trên Google Play</a>
+        </nav>
+      </details>
+    </div>
   </div>
 </header>
 
@@ -33,7 +59,7 @@ const links = [
     position: sticky;
     top: 0;
     z-index: 40;
-    background: rgba(246, 249, 242, 0.9);
+    background: rgba(246, 249, 242, 0.92);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--line);
   }
@@ -43,7 +69,7 @@ const links = [
     align-items: center;
     justify-content: space-between;
     gap: var(--space-3);
-    padding-block: 0.9rem;
+    padding-block: 0.75rem;
   }
 
   .brand {
@@ -77,9 +103,16 @@ const links = [
     border-bottom: 2px solid transparent;
   }
 
-  .links a:hover {
+  .links a:hover,
+  .links a[aria-current='page'] {
     color: var(--pine);
     border-color: var(--leaf);
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
 
   .cta {
@@ -88,9 +121,107 @@ const links = [
     flex-shrink: 0;
   }
 
+  .menu {
+    position: relative;
+  }
+
+  .menu summary {
+    list-style: none;
+    cursor: pointer;
+    width: 2.75rem;
+    height: 2.75rem;
+    display: grid;
+    place-items: center;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--line-strong);
+    background: var(--paper-raised);
+  }
+
+  .menu summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .bars,
+  .bars::before,
+  .bars::after {
+    display: block;
+    width: 1.1rem;
+    height: 2px;
+    background: var(--pine);
+    border-radius: 2px;
+    transition: transform 0.15s ease;
+  }
+
+  .bars {
+    position: relative;
+  }
+
+  .bars::before,
+  .bars::after {
+    content: '';
+    position: absolute;
+    left: 0;
+  }
+
+  .bars::before {
+    top: -6px;
+  }
+
+  .bars::after {
+    top: 6px;
+  }
+
+  .menu[open] .bars {
+    background: transparent;
+  }
+
+  .menu[open] .bars::before {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .menu[open] .bars::after {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  .menu-panel {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 0.6rem);
+    width: min(18rem, calc(100vw - 2rem));
+    display: grid;
+    padding: 0.5rem;
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .menu-panel a {
+    padding: 0.8rem 0.9rem;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--pine);
+  }
+
+  .menu-panel a:hover,
+  .menu-panel a[aria-current='page'] {
+    background: var(--leaf-tint);
+  }
+
+  @media (max-width: 23rem) {
+    .cta {
+      display: none;
+    }
+  }
+
   @media (min-width: 64rem) {
     .links {
       display: flex;
+    }
+
+    .menu {
+      display: none;
     }
   }
 </style>

@@ -3,15 +3,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import TrustStrip from '../components/TrustStrip.astro';
+import Benefits from '../components/Benefits.astro';
 import HowItWorks from '../components/HowItWorks.astro';
+import NotificationsShowcase from '../components/NotificationsShowcase.astro';
 import Features from '../components/Features.astro';
+import Principles from '../components/Principles.astro';
 import Pricing from '../components/Pricing.astro';
 import FAQ from '../components/FAQ.astro';
 import DownloadCta from '../components/DownloadCta.astro';
 import BlogTeaser from '../components/BlogTeaser.astro';
 import Footer from '../components/Footer.astro';
-import { site, storeLinks, faqs, howItWorks } from '../data/site';
+import MobileDownloadBar from '../components/MobileDownloadBar.astro';
+import { site, storeLinks, faqs, howItWorks, previewVideo } from '../data/site';
 import { withBase } from '../lib/base';
+import { videoJsonLd } from '../lib/seo';
 
 const title = `${site.name} — ${site.tagline}`;
 
@@ -25,8 +30,18 @@ const organization = {
   logo: logoURL,
 };
 
+const website = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: site.name,
+  url: site.url,
+  inLanguage: 'vi',
+};
+
 // Một entry riêng cho mỗi hệ điều hành: rich-result parser của Google chỉ nhận một giá trị
 // operatingSystem đơn (vd. "IOS", "ANDROID"), không nhận chuỗi gộp "iOS, Android".
+// Chưa có aggregateRating/review (app chưa có đánh giá thật) nên chưa đủ điều kiện rich result —
+// xem "Known placeholders" trong CLAUDE.md, không bịa số liệu.
 const mobileApplicationBase = {
   '@context': 'https://schema.org',
   '@type': 'MobileApplication',
@@ -50,8 +65,11 @@ const mobileApplicationBase = {
   },
 };
 
+const homeFaqs = faqs.slice(0, 4);
+
 const jsonLd = [
   organization,
+  website,
   {
     ...mobileApplicationBase,
     operatingSystem: 'IOS',
@@ -62,18 +80,7 @@ const jsonLd = [
     operatingSystem: 'ANDROID',
     downloadUrl: storeLinks.googlePlay,
   },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map((faq) => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.answer,
-      },
-    })),
-  },
+  videoJsonLd(previewVideo),
   {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
@@ -88,17 +95,21 @@ const jsonLd = [
 ];
 ---
 
-<BaseLayout title={title} jsonLd={jsonLd}>
+<BaseLayout title={title} jsonLd={jsonLd} ogImage="og/trang-chu.jpg">
   <Header />
   <main id="noi-dung-chinh">
     <Hero />
     <TrustStrip />
+    <Benefits />
     <HowItWorks />
+    <NotificationsShowcase />
     <Features />
-    <Pricing />
-    <FAQ />
+    <Principles showMoreLink />
+    <Pricing showMoreLink />
+    <FAQ items={homeFaqs} moreLink />
     <DownloadCta />
     <BlogTeaser />
   </main>
   <Footer />
+  <MobileDownloadBar />
 </BaseLayout>

@@ -1,15 +1,22 @@
 ---
-import { storeLinks } from '../data/site';
+import StoreButtons from './StoreButtons.astro';
+
+interface Props {
+  heading?: string;
+  body?: string;
+}
+
+const {
+  heading = 'Sẵn sàng bỏ nỗi lo quên liều thuốc?',
+  body = 'Chụp đơn thuốc đầu tiên hôm nay — phần nhắc thuốc cốt lõi luôn miễn phí.',
+} = Astro.props;
 ---
 
 <section class="cta-band" aria-labelledby="cta-heading">
   <div class="wrap inner">
-    <h2 id="cta-heading">Sẵn sàng bỏ nỗi lo quên liều thuốc?</h2>
-    <p>Chụp đơn thuốc đầu tiên hôm nay — phần nhắc thuốc cốt lõi luôn miễn phí.</p>
-    <div class="cta-row">
-      <a class="btn btn-on-dark" href={storeLinks.appStore}>Tải trên App Store</a>
-      <a class="btn btn-ghost on-dark" href={storeLinks.googlePlay}>Tải trên Google Play</a>
-    </div>
+    <h2 id="cta-heading">{heading}</h2>
+    <p>{body}</p>
+    <StoreButtons tone="dark" center />
   </div>
 </section>
 
@@ -27,29 +34,12 @@ import { storeLinks } from '../data/site';
 
   .inner h2 {
     color: white;
+    font-size: var(--fs-h2);
   }
 
   .inner p {
-    margin-top: var(--space-2);
+    margin-block: var(--space-2) var(--space-4);
     font-size: var(--fs-lead);
     color: #cfebd9;
-  }
-
-  .cta-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.75rem;
-    margin-top: var(--space-4);
-  }
-
-  .btn-ghost.on-dark {
-    border-color: rgba(255, 255, 255, 0.4);
-    color: white;
-  }
-
-  .btn-ghost.on-dark:hover {
-    border-color: white;
-    background: rgba(255, 255, 255, 0.08);
   }
 </style>

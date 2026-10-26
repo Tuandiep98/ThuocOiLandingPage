@@ -1,16 +1,25 @@
 ---
-import { faqs } from '../data/site';
+import { faqs as allFaqs, type Faq } from '../data/site';
+import { withBase } from '../lib/base';
+
+interface Props {
+  items?: Faq[];
+  heading?: string;
+  moreLink?: boolean;
+}
+
+const { items = allFaqs, heading = 'Câu hỏi thường gặp', moreLink = false } = Astro.props;
 ---
 
 <section class="section" id="cau-hoi" aria-labelledby="faq-heading">
   <div class="wrap narrow">
     <div class="section-head">
-      <h2 id="faq-heading">Câu hỏi thường gặp</h2>
+      <h2 id="faq-heading">{heading}</h2>
     </div>
 
     <div class="list">
       {
-        faqs.map((faq, index) => (
+        items.map((faq, index) => (
           <details class="item" open={index === 0}>
             <summary>
               <h3>{faq.question}</h3>
@@ -21,6 +30,13 @@ import { faqs } from '../data/site';
         ))
       }
     </div>
+    {
+      moreLink && (
+        <p class="more">
+          <a href={withBase('cau-hoi-thuong-gap/')}>Xem tất cả câu hỏi</a>
+        </p>
+      )
+    }
   </div>
 </section>
 
@@ -75,6 +91,18 @@ import { faqs } from '../data/site';
   .item[open] .chevron {
     transform: rotate(-135deg);
     margin-top: 0.3rem;
+  }
+
+  .more {
+    margin-top: var(--space-3);
+  }
+
+  .more a {
+    font-weight: 700;
+    color: var(--pine);
+    text-decoration: none;
+    border-bottom: 2px solid var(--leaf);
+    padding-block: 0.2rem;
   }
 
   .item p {

@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PageIntro from '../components/PageIntro.astro';
+import FAQ from '../components/FAQ.astro';
+import DownloadCta from '../components/DownloadCta.astro';
+import MobileDownloadBar from '../components/MobileDownloadBar.astro';
+import { site, faqs, featurePages, featureHref } from '../data/site';
+import { withBase } from '../lib/base';
+import { breadcrumbJsonLd, faqJsonLd, webPageJsonLd, type Crumb } from '../lib/seo';
+
+const title = `Câu hỏi thường gặp về ${site.name}`;
+const description =
+  'Giải đáp về Thuốc ơi: cách AI đọc đơn thuốc, nhắc khi máy im lặng, báo người thân khi lỡ liều, dữ liệu sức khoẻ, gói miễn phí và nhóm Gia đình.';
+const crumbs: Crumb[] = [
+  { name: 'Trang chủ', path: '' },
+  { name: 'Câu hỏi thường gặp', path: 'cau-hoi-thuong-gap/' },
+];
+
+const jsonLd = [
+  webPageJsonLd({ name: title, description, path: 'cau-hoi-thuong-gap/' }),
+  breadcrumbJsonLd(crumbs),
+  faqJsonLd(faqs),
+];
+---
+
+<BaseLayout title={title} description={description} jsonLd={jsonLd} ogImage="og/cau-hoi-thuong-gap.jpg">
+  <Header />
+  <main id="noi-dung-chinh">
+    <PageIntro
+      crumbs={crumbs}
+      eyebrow="Hỏi đáp"
+      title="Câu hỏi thường gặp về Thuốc ơi"
+      lead="Những điều người dùng hay hỏi trước khi cài ứng dụng. Câu hỏi riêng về từng tính năng nằm ở cuối mỗi trang tính năng."
+    />
+    <FAQ items={faqs} heading="Câu hỏi chung" />
+
+    <section class="section by-feature" aria-labelledby="by-feature-heading">
+      <div class="wrap narrow">
+        <h2 id="by-feature-heading">Hỏi đáp theo tính năng</h2>
+        <ul>
+          {
+            featurePages.map((page) => (
+              <li>
+                <a href={withBase(featureHref(page.slug))}>{page.navLabel}</a>
+                <span>{page.faqs.map((faq) => faq.question).join(' · ')}</span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+
+    <DownloadCta />
+  </main>
+  <Footer />
+  <MobileDownloadBar />
+</BaseLayout>
+
+<style>
+  .by-feature {
+    border-top: 1px solid var(--line);
+  }
+
+  .narrow {
+    max-width: 48rem;
+  }
+
+  h2 {
+    font-size: var(--fs-h3);
+  }
+
+  ul {
+    list-style: none;
+    margin: var(--space-3) 0 0;
+    padding: 0;
+    display: grid;
+    gap: var(--space-3);
+  }
+
+  li a {
+    font-weight: 700;
+    color: var(--pine);
+    font-size: 1.125rem;
+  }
+
+  li span {
+    display: block;
+    margin-top: 0.3rem;
+    color: var(--ink-soft);
+    font-size: var(--fs-small);
+  }
+</style>
