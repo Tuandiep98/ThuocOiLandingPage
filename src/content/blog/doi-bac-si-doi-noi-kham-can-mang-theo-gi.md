@@ -24,7 +24,7 @@ sources:
     url: "https://www.vinmec.com/vie/bai-viet/nhung-tuong-tac-thuoc-nguy-hiem-thuong-gap-vi"
 ---
 
-Khi đổi bác sĩ hoặc nơi khám, hãy mang theo các đơn thuốc còn đang dùng, giấy ra viện hoặc sổ khám nếu có, và một danh sách đầy đủ mọi thuốc đang dùng — kể cả thuốc mua không cần đơn, vitamin, thực phẩm chức năng. Cho bác sĩ mới xem ngay từ đầu buổi khám, rồi để bác sĩ quyết định thuốc nào tiếp tục.
+Khi đổi bác sĩ hoặc nơi khám, hãy mang theo các đơn thuốc còn đang dùng, giấy ra viện hoặc sổ khám nếu có, và một danh sách mọi thuốc đang dùng — kể cả thuốc không kê đơn, vitamin, thực phẩm chức năng. Cho bác sĩ mới xem ngay đầu buổi khám để bác sĩ quyết định thuốc nào tiếp tục.
 
 ## Vì sao dễ bỏ sót thông tin khi đổi nơi khám
 
