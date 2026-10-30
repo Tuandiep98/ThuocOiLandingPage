@@ -31,7 +31,7 @@ Lý do là nhiều người nghĩ thuốc đông y "lành", "tự nhiên" nên u
 
 ## Tương tác có thể xảy ra như thế nào
 
-Vinmec nêu ví dụ một số dược liệu quen thuộc, kể cả loại thường dùng làm gia vị, có thể làm giảm hiệu quả của thuốc chống đông máu khi dùng cùng; một số dược liệu khác khi dùng cùng thuốc tiểu đường có thể gây hạ đường huyết nguy hiểm. Đây đều là những nhóm thuốc thường phải dùng lâu dài, nên một tương tác nhỏ lặp lại mỗi ngày cũng đáng lo.
+Vinmec nêu ví dụ một số dược liệu quen thuộc, kể cả loại thường dùng làm gia vị, có thể làm giảm hiệu quả của thuốc chống đông máu khi dùng cùng; một số dược liệu khác khi dùng cùng thuốc tiểu đường có thể gây hạ đường huyết nguy hiểm. Đây đều là những nhóm thuốc nhiều người phải dùng hằng ngày trong thời gian dài.
 
 Ngoài tương tác, còn có rủi ro từ chính sản phẩm:
 
