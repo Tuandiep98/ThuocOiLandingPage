@@ -13,7 +13,7 @@ faqs:
   - question: "Dị ứng thuốc và tác dụng phụ của thuốc khác nhau thế nào?"
     answer: "Dị ứng thuốc là phản ứng của hệ miễn dịch với một thành phần trong thuốc. Tác dụng phụ là tác dụng không mong muốn không liên quan đến miễn dịch, thường đã được ghi trong tờ hướng dẫn sử dụng. Người bệnh khó tự phân biệt hai loại này, nên hãy mô tả triệu chứng cho bác sĩ, dược sĩ thay vì tự kết luận."
   - question: "Từng dị ứng một loại thuốc thì lần sau dùng lại có sao không?"
-    answer: "Theo bác sĩ Vinmec, đã từng dị ứng với thuốc nào thì không nên dùng lại thuốc đó, và phản ứng có thể nặng hơn ở những lần sau. Hãy ghi nhớ tên thuốc và luôn báo cho bác sĩ, dược sĩ mỗi khi đi khám hoặc mua thuốc."
+    answer: "Theo bác sĩ Vinmec, đã từng dị ứng với thuốc nào thì không nên dùng lại thuốc đó, và phản ứng có thể nặng hơn ở những lần sau. Hãy ghi nhớ tên thuốc, luôn báo cho bác sĩ, dược sĩ mỗi khi đi khám hoặc mua thuốc, và để bác sĩ quyết định nếu cần dùng thuốc cùng loại."
   - question: "Triệu chứng nhẹ, chỉ hơi ngứa thì có cần báo bác sĩ không?"
     answer: "Nên báo. Triệu chứng nhẹ vẫn cần được bác sĩ đã kê đơn hoặc dược sĩ đánh giá để quyết định có tiếp tục dùng thuốc hay không, và để ghi nhận tiền sử dị ứng cho những lần khám sau. Nếu triệu chứng lan nhanh hoặc xuất hiện khó thở, cần đi cấp cứu ngay."
 sources:
@@ -73,7 +73,7 @@ Những phản ứng nặng có thể diễn tiến rất nhanh và đe doạ t�
 Theo bác sĩ Vinmec, đã từng dị ứng với thuốc nào thì không nên dùng lại thuốc đó, và dị ứng có thể nặng hơn sau mỗi lần xảy ra. Vì vậy, sau khi đã được bác sĩ xác nhận:
 
 - Ghi tên thuốc gây dị ứng (đúng như in trên hộp) vào sổ khám bệnh, ghi chú điện thoại, hoặc một tấm thẻ trong ví.
-- **Luôn báo tiền sử dị ứng** cho bác sĩ, dược sĩ mỗi khi khám bệnh, đổi nơi khám hoặc mua thuốc. Bác sĩ Tâm Anh khuyên đề nghị ghi rõ trong hồ sơ bệnh án.
+- **Luôn báo tiền sử dị ứng** cho bác sĩ, dược sĩ mỗi khi khám bệnh, đổi nơi khám hoặc mua thuốc. Bác sĩ Tâm Anh khuyên báo cho bác sĩ để thông tin này được ghi rõ trong hồ sơ bệnh án.
 - Với người thân lớn tuổi hoặc trẻ nhỏ, người chăm sóc cũng nên biết thông tin này.
 
 Nếu bạn sắp khám ở cơ sở mới, xem thêm [đổi bác sĩ, đổi nơi khám cần mang theo gì](/blog/doi-bac-si-doi-noi-kham-can-mang-theo-gi/).
