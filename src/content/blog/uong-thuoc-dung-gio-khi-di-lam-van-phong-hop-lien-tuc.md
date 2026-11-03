@@ -23,7 +23,7 @@ sources:
     url: "https://www.vinmec.com/vie/bai-viet/nhung-dieu-can-biet-ve-bao-quan-thuoc-tai-nha-vi"
 ---
 
-Giữa lịch họp dày đặc, cách chắc nhất để không trôi mất lời nhắc là gắn giờ uống thuốc vào một mốc cố định bạn chắc chắn sẽ chạm tới (trước khi vào họp đầu ngày, lúc nghỉ trưa), bật báo thức riêng thay vì chỉ để thông báo thường, và hỏi bác sĩ hoặc dược sĩ nếu giờ kê thường xuyên trùng giờ họp.
+Giữa lịch họp dày đặc, cách chắc nhất để không trôi mất lời nhắc là gắn giờ uống thuốc vào một mốc cố định trong ngày, bật báo thức riêng thay vì chỉ để thông báo thường, và hỏi bác sĩ hoặc dược sĩ nếu giờ kê thường xuyên trùng giờ họp.
 
 ## Vì sao lịch họp dày đặc khiến lời nhắc uống thuốc dễ bị trôi mất
 
