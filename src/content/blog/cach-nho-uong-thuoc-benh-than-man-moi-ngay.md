@@ -37,7 +37,7 @@ Chức năng đào thải của thận đã suy giảm nên cơ thể xử lý t
 
 ## Mang theo danh sách thuốc đầy đủ khi tái khám
 
-Người bệnh thận mạn thường khám định kỳ hoặc chạy thận theo lịch cố định, đôi khi phải gặp bác sĩ khác ngoài người đang theo dõi chính. Mang theo danh sách đầy đủ tên thuốc, liều dùng hiện tại (hoặc đơn thuốc gần nhất) giúp bác sĩ nắm toàn cảnh, tránh kê trùng thuốc hoặc bỏ sót một tương tác cần lưu ý. Xem thêm bài [Khám nhiều chuyên khoa, nhiều đơn thuốc: làm sao không bị chồng chéo?](/blog/quan-ly-thuoc-khi-kham-nhieu-chuyen-khoa-cung-luc/) nếu bạn đang điều trị cùng lúc ở nhiều chuyên khoa.
+Người bệnh thận mạn thường khám định kỳ hoặc chạy thận theo lịch cố định, đôi khi phải gặp bác sĩ khác ngoài người đang theo dõi chính. Mang theo danh sách đầy đủ tên thuốc, liều dùng hiện tại (hoặc đơn thuốc gần nhất) giúp bác sĩ nắm toàn cảnh, tránh kê trùng thuốc hoặc bỏ sót một tương tác cần lưu ý.
 
 ## Thuốc ơi hỗ trợ gì khi phải uống nhiều loại thuốc cùng lúc
 
