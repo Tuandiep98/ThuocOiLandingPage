@@ -29,7 +29,7 @@ Vì cha mẹ khó tự sửa lại nếu có sai sót, việc thiết lập ban 
 
 ## Thiết lập lịch thuốc hộ cha mẹ với Thuốc ơi
 
-Trên điện thoại của cha mẹ, con cháu có thể: quét ảnh hoặc PDF đơn thuốc giấy rõ nét để AI dựng sẵn lịch theo buổi sáng, trưa, tối, hoặc nhập tay từng loại thuốc, liều dùng và giờ uống không giới hạn số lần nếu chỉ có lời dặn miệng hay đơn chữ khó đọc; chỉnh giờ nhắc theo đúng giờ ăn, giờ ngủ thật của cha mẹ thay vì giờ mặc định của app, để lời nhắc trùng với thói quen sẵn có; và trên iOS 26 trở lên, bật thêm báo thức riêng cho lời nhắc uống thuốc — vẫn kêu và hiện rõ việc cần làm ngay cả khi điện thoại đang im lặng hay ở chế độ Tập trung, hữu ích với người hay để chuông nhỏ mà không để ý. Sau khi thiết lập xong, con cháu có thể mời chính mình vào nhóm Gia đình bằng mã QR để tiếp tục theo dõi tiến trình liều đã uống của cha mẹ từ xa, và vào sửa lại lịch nếu đơn thuốc đổi sau lần tái khám kế tiếp.
+Trên điện thoại của cha mẹ, con cháu có thể: quét ảnh hoặc PDF đơn thuốc rõ nét để AI dựng sẵn lịch theo buổi, hoặc nhập tay từng loại thuốc, liều dùng và giờ uống không giới hạn số lần nếu chỉ có lời dặn miệng; chỉnh giờ nhắc theo đúng giờ ăn, giờ ngủ thật của cha mẹ thay vì giờ mặc định của app; và trên iOS 26 trở lên, bật thêm báo thức riêng — vẫn kêu ngay cả khi điện thoại đang im lặng, hữu ích với người hay để chuông nhỏ. Sau đó, con cháu có thể mời chính mình vào nhóm Gia đình bằng mã QR để theo dõi tiến trình từ xa, và sửa lại lịch nếu đơn thuốc đổi sau lần tái khám.
 
 ## Khi nào nên hỏi bác sĩ, dược sĩ
 
