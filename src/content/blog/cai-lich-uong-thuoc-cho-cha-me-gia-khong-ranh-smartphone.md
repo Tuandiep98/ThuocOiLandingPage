@@ -19,7 +19,7 @@ faqs:
     answer: "Vẫn làm được, nhưng nên đọc to lại từng loại thuốc, liều dùng và giờ uống đã nhập cho người ở nhà hoặc chính cha mẹ nghe để đối chiếu với đơn gốc trước khi lưu, vì không có ai bên cạnh kiểm tra lại màn hình giúp."
 ---
 
-Con cháu mở ứng dụng nhắc uống thuốc trên chính điện thoại của cha mẹ, quét hoặc nhập đơn thuốc, chỉnh giờ nhắc theo đúng nhịp ăn ngủ thật của cha mẹ, rồi lưu lại — làm một lần cho đúng. Sau đó cha mẹ chỉ cần nghe thông báo hoặc báo thức kêu đúng giờ và bấm xác nhận, không cần tự mở app hay thao tác gì phức tạp thêm.
+Con cháu mở ứng dụng ngay trên điện thoại của cha mẹ, quét hoặc nhập đơn thuốc, chỉnh giờ nhắc theo đúng nhịp ăn ngủ thật của cha mẹ, rồi lưu lại một lần cho đúng. Sau đó cha mẹ chỉ cần nghe thông báo hoặc báo thức kêu đúng giờ và bấm xác nhận, không cần tự thao tác gì thêm.
 
 ## Khác với việc theo dõi từ xa: đây là làm hộ từ đầu
 
@@ -37,5 +37,6 @@ Luôn đối chiếu lại thông tin thuốc đã nhập hoặc AI đọc đư�
 
 - Có bất kỳ chi tiết nào không chắc chắn — tên thuốc, liều dùng, cách uống, hoặc chữ viết tay trên đơn khó đọc.
 - Đơn thuốc vừa thay đổi sau lần tái khám nhưng chưa rõ cách dùng thuốc mới kết hợp với thuốc đang uống.
-- Cha mẹ có dấu hiệu bất thường sau khi uống thuốc như chóng mặt, mệt lả, phát ban, khó thở.
 - Cha mẹ lỡ quên nhiều liều liên tiếp của một loại thuốc cần dùng đều, hoặc không chắc nên uống bù hay bỏ qua.
+
+Nếu cha mẹ có dấu hiệu bất thường sau khi uống thuốc như chóng mặt nặng, mệt lả, phát ban lan nhanh hoặc khó thở, hãy liên hệ cơ sở y tế hoặc gọi cấp cứu ngay, không chờ tự khỏi.
