@@ -44,7 +44,8 @@ export const previewVideo = {
   width: 720,
   height: 900,
   duration: "PT13S",
-  uploadDate: "2026-10-26",
+  // ISO 8601 có múi giờ — Google báo lỗi nếu chỉ có ngày.
+  uploadDate: "2026-10-26T00:00:00+07:00",
 };
 
 // Clip ngắn cắt từ cùng video, mỗi trang tính năng một clip.

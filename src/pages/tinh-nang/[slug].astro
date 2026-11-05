@@ -9,7 +9,7 @@ import SectionMediaBlock from '../../components/SectionMediaBlock.astro';
 import FAQ from '../../components/FAQ.astro';
 import DownloadCta from '../../components/DownloadCta.astro';
 import MobileDownloadBar from '../../components/MobileDownloadBar.astro';
-import { featurePages, featureHref, featureClips, type FeaturePage } from '../../data/site';
+import { featurePages, featureHref, featureClips, previewVideo, type FeaturePage } from '../../data/site';
 import { withBase } from '../../lib/base';
 import { breadcrumbJsonLd, faqJsonLd, videoJsonLd, webPageJsonLd, type Crumb } from '../../lib/seo';
 
@@ -48,7 +48,7 @@ const jsonLd = [
           mp4: heroClip.mp4,
           poster: heroClip.poster,
           duration: heroClip.duration,
-          uploadDate: '2026-10-26',
+          uploadDate: previewVideo.uploadDate,
         }),
       ]
     : []),
