@@ -45,7 +45,7 @@ Một lưu ý về thời gian: thông tư quy định người bệnh **lĩnh t
 
 ## Nhà thuốc sẽ làm gì với đơn của bạn
 
-Theo GPP, khi bán theo đơn, người bán phải bán đúng thuốc trong đơn, hướng dẫn bạn cách dùng và nhắc thực hiện đúng đơn. Nhà thuốc cũng phải ghi chép thông tin khi bán thuốc kê đơn, chẳng hạn số hiệu đơn, người kê đơn và cơ sở khám — đó là lý do bạn có thể thấy dược sĩ ghi lại hoặc tra cứu thông tin từ đơn.
+Theo GPP, khi bán theo đơn, người bán phải bán đúng thuốc trong đơn, hướng dẫn bạn cách dùng và nhắc thực hiện đúng đơn. Nhà thuốc cũng phải ghi chép thông tin khi bán thuốc kê đơn, chẳng hạn số hiệu đơn, người kê đơn và cơ sở khám — đó là lý do bạn có thể thấy người bán ghi lại các thông tin này từ đơn.
 
 Nếu đơn **không hợp lệ, có sai sót hoặc có điểm nghi vấn**, nhà thuốc có quyền từ chối bán và phải thông báo lại cho người kê đơn khi đơn không rõ tên thuốc, hàm lượng, số lượng. Việc thay một thuốc trong đơn bằng thuốc khác cùng hoạt chất chỉ do người có bằng dược sĩ thực hiện và cần bạn đồng ý. Đơn viết tay thiếu chữ ký hay có chỗ sửa thì xem thêm bài [đơn thuốc viết tay không có dấu, không có chữ ký có hợp lệ không](/blog/don-thuoc-viet-tay-khong-co-dau-co-hop-le-khong/).
 
