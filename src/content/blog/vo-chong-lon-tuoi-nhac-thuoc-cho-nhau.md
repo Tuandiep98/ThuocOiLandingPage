@@ -32,15 +32,15 @@ Khi chỉ có hai vợ chồng, cách nhắc phổ biến nhất là hỏi trự
 
 ### Mỗi người có đơn thuốc và lịch nhắc riêng, không lẫn vào nhau
 
-Vợ chồng có thể quét ảnh đơn thuốc hoặc tự nhập tay từng loại thuốc của mình — đơn thuốc và lịch nhắc của mỗi người được lưu tách riêng theo tài khoản, không gộp chung một danh sách dễ nhầm thuốc của người này với người kia dù dùng chung một chiếc điện thoại hay hai máy khác nhau.
+Vợ chồng có thể quét ảnh đơn thuốc hoặc tự nhập tay từng loại thuốc của mình — đơn thuốc và lịch nhắc được lưu tách riêng theo tài khoản, không gộp chung danh sách dù dùng chung một điện thoại hay hai máy khác nhau.
 
 ### Tham gia chung một nhóm Gia đình để xem tiến trình của nhau
 
-Bằng cách mời nhau vào [nhóm Gia đình](/tinh-nang/gia-dinh/) qua mã QR, hai vợ chồng có thể xem được tiến trình uống thuốc — số liều đã uống trên tổng liều — của người kia ngay trong ứng dụng, thay vì phải hỏi lại bằng miệng mỗi ngày. Ai cũng có thể chủ động kiểm tra xem đối phương đã xác nhận uống thuốc buổi sáng hay chưa, mà không tạo cảm giác bị giám sát vì cả hai đều thấy dữ liệu của nhau như nhau.
+Bằng cách mời nhau vào [nhóm Gia đình](/tinh-nang/gia-dinh/) qua mã QR, hai vợ chồng có thể xem tiến trình uống thuốc — số liều đã uống trên tổng liều — của người kia ngay trong ứng dụng, thay vì hỏi lại bằng miệng mỗi ngày, mà không tạo cảm giác bị giám sát vì cả hai đều thấy dữ liệu của nhau như nhau.
 
 ### Bật báo thức riêng khi một trong hai hay để điện thoại im lặng
 
-Không ít người lớn tuổi có thói quen để điện thoại im lặng hoặc âm lượng nhỏ, đặc biệt vào buổi trưa hoặc tối. Trên iOS 26 trở lên, mỗi người có thể tự bật thêm báo thức riêng cho lời nhắc uống thuốc của mình — vẫn kêu và hiện rõ việc cần làm (như "Uống 2 viên thuốc") ngay cả khi điện thoại đang im lặng hoặc ở chế độ Tập trung, giảm bớt việc phải chờ người kia nhắc miệng.
+Không ít người lớn tuổi để điện thoại im lặng hoặc âm lượng nhỏ, đặc biệt buổi trưa hoặc tối. Trên iOS 26 trở lên, mỗi người có thể tự bật thêm báo thức riêng cho lời nhắc của mình — vẫn kêu và hiện rõ việc cần làm ngay cả khi điện thoại đang im lặng hoặc ở chế độ Tập trung.
 
 ## Mời thêm con cháu khi cần, không bắt buộc
 

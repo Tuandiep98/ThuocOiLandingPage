@@ -18,5 +18,8 @@ trong `blog-notes/refreshes/` và chưa có `updatedDate`; mọi nhánh `claude/
 - Không thêm `sources` — không có số liệu hay quy định chính thức nào cần trích nguồn riêng cho
   góc độ bài này (thói quen nhắc nhau giữa hai vợ chồng), chỉ dựa trên tính năng app đã có trong
   `site.ts`.
+- Cắt gọn ba đoạn giới thiệu app (mục "Cách vợ chồng cùng theo dõi thuốc cho nhau với Thuốc ơi") để
+  tỷ lệ nói về app còn khoảng 24% toàn bài (trước khi làm mới là ~42%), đúng mức "khoảng 1/4" theo
+  CLAUDE.md, không đổi nội dung thực chất.
 
 Backlog: không thêm file mới — `blog-notes/backlog/` đã có đủ 10 file theo yêu cầu tối thiểu.
