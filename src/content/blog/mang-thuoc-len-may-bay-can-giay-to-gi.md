@@ -27,7 +27,7 @@ sources:
 
 Thuốc cá nhân thường mang lên máy bay được. Theo Vietnam Airlines, bay nội địa không giới hạn dung tích chất lỏng xách tay. Với chuyến quốc tế, thuốc lỏng vượt 100ml mỗi lọ, 1 lít mỗi người chỉ được miễn khi có đơn ghi rõ họ tên, địa chỉ người kê đơn và tên người dùng khớp với vé.
 
-## Bay nội địa: thuốc lỏng không bị giới hạn dung tích
+## Bay nội địa: thường không giới hạn dung tích chất lỏng
 
 Theo trang hành lý của Vietnam Airlines, trên các chuyến bay nội địa, hãng **không giới hạn dung tích chất lỏng** trong hành lý xách tay, miễn là đáp ứng quy định về số kiện, trọng lượng và kích thước (trừ chất lỏng có mùi và đồ uống có cồn, có quy định riêng). Nghĩa là một lọ thuốc nước hay siro dùng hằng ngày thường không phải chia nhỏ khi bay trong nước.
 
