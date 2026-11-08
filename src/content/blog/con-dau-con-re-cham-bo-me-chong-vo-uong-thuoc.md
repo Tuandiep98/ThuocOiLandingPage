@@ -17,7 +17,7 @@ faqs:
   - question: "Mới tham gia nhóm Gia đình sau này, con dâu/con rể có xem được đơn thuốc cũ từ trước đó không?"
     answer: "Chỉ những đơn thuốc đã được chủ động thêm vào nhóm mới hiển thị cho mọi thành viên, kể cả người tham gia sau; đơn không được thêm vào nhóm vẫn giữ riêng tư. Nên hỏi người đang giữ đơn cũ thêm lại nếu cần xem."
   - question: "Nếu bố mẹ không quen dùng điện thoại, con dâu/con rể vẫn theo dõi được không?"
-    answer: "Được. Người quản lý trong nhà (chồng/vợ mình hoặc chính con dâu, con rể) có thể nhập đơn thuốc và nhận lời nhắc thay trên điện thoại của mình; bố mẹ không bắt buộc phải tự dùng ứng dụng."
+    answer: "Được, nhưng theo cách khác: chồng/vợ mình hoặc con dâu, con rể có thể nhập đơn và đặt lịch nhắc ngay trên điện thoại của bố mẹ để bố mẹ chỉ cần nghe thông báo và bấm xác nhận, rồi bật Cảnh báo người chăm sóc trong nhóm Gia đình để nhận riêng một thông báo trên điện thoại của mình khi bố mẹ có thể đã bỏ lỡ liều."
 ---
 
 Con dâu, con rể nên chủ động xin xem hoặc chụp lại đơn thuốc gốc của bố mẹ chồng/vợ, ghi rõ tên thuốc và giờ uống vào một nơi cả nhà cùng xem được, thay vì chỉ nghe kể lại — cách này giúp nắm thông tin chính xác dù không theo dõi bệnh sử từ đầu như con ruột.
