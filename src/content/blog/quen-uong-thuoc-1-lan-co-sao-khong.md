@@ -2,8 +2,10 @@
 title: "Quên uống thuốc 1 lần có sao không?"
 description: "Quên một liều thuốc có nguy hiểm không còn tùy loại thuốc và tình trạng sức khỏe từng người. Nguyên tắc chung cần biết và khi nào nên hỏi ngay bác sĩ, dược sĩ."
 publishDate: 2026-09-27
+updatedDate: 2026-11-09
 keyword: "quên uống thuốc 1 lần có sao không"
 segment: "Người đang dùng thuốc theo đơn, thỉnh thoảng quên một liều và không chắc có cần xử trí gì không"
+feature: "theo-doi-lieu-trinh"
 ctaTitle: "Biết ngay mình đã lỡ liều nào, thay vì phải đoán lại"
 ctaDescription: "Thuốc ơi hiển thị số liều đã uống trên tổng liều của cả đợt thuốc, nên bạn biết chắc buổi nào đã uống, buổi nào chưa — thay vì phải nhớ lại hoặc đoán chừng."
 faqs:
@@ -24,7 +26,7 @@ Quên một liều thuốc thỉnh thoảng thường không gây hại nghiêm 
 
 ## Vì sao quên một liều thuốc là chuyện rất thường gặp
 
-Uống thuốc đều đặn mỗi ngày, nhất là trong một liệu trình dài vài tuần hay vài tháng, là việc lặp đi lặp lại dễ bị trí nhớ đánh lừa — càng quen thuộc, càng dễ nhầm giữa "đã uống hôm nay" và "định uống mà quên". Một buổi bận rộn, đổi giờ sinh hoạt, hay đơn giản là quên mang thuốc theo người cũng đủ khiến một liều bị bỏ lỡ. Đây không phải dấu hiệu bất cẩn hiếm gặp; hầu như ai dùng thuốc dài ngày cũng từng gặp ít nhất một lần, đặc biệt khi đơn thuốc có nhiều loại phải uống vào các buổi khác nhau trong ngày.
+Uống thuốc đều đặn mỗi ngày, nhất là trong một liệu trình dài vài tuần hay vài tháng, là việc lặp đi lặp lại dễ bị trí nhớ đánh lừa — càng quen thuộc, càng dễ nhầm giữa "đã uống hôm nay" và "định uống mà quên". Một buổi bận rộn, đổi giờ sinh hoạt, hay đơn giản là quên mang thuốc theo người cũng đủ khiến một liều bị bỏ lỡ. Đây không phải dấu hiệu bất cẩn hiếm gặp; hầu như ai dùng thuốc dài ngày cũng từng gặp ít nhất một lần, đặc biệt khi đơn thuốc có nhiều loại phải uống vào các buổi khác nhau trong ngày. Đặt lời nhắc cố định theo từng buổi là cách phổ biến để giảm bớt tình trạng này — xem thêm trong bài [Cách đặt lời nhắc uống thuốc trên điện thoại](/blog/cach-dat-loi-nhac-uong-thuoc-tren-dien-thoai/).
 
 ## Vì sao không có một câu trả lời chung cho mọi loại thuốc
 
