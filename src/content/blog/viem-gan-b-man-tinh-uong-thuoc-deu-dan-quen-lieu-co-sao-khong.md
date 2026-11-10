@@ -35,9 +35,9 @@ Bệnh viện Đa khoa Tâm Anh cho biết thêm, người bị xơ gan hoặc x
 
 ## Vì sao dễ quên, dễ chủ quan
 
-- **Thường không có triệu chứng.** Nhiều người bị viêm gan B mạn tính vẫn thấy hoàn toàn bình thường, nên uống hay quên một hôm cũng không thấy khác gì. Chính vì vậy dễ nghĩ bỏ vài liều là không sao.
+- **Bệnh có thể âm thầm.** Theo WHO, năm 2024 chỉ khoảng 27% người sống chung với viêm gan B biết mình nhiễm bệnh. Khi bản thân vẫn thấy khỏe, uống hay quên một hôm dường như không khác gì, nên dễ nghĩ bỏ vài liều là không sao.
 - **Uống quá lâu thành nhàm.** Sau vài năm, việc uống thuốc dễ trở thành phản xạ mơ hồ, đến tối không chắc "sáng nay uống chưa".
-- **Hết thuốc giữa chừng.** Quên lịch tái khám hoặc lĩnh thuốc muộn là lý do hay gặp khiến lịch bị đứt vài ngày.
+- **Hết thuốc giữa chừng.** Quên lịch tái khám hoặc lĩnh thuốc muộn có thể khiến lịch uống bị đứt vài ngày.
 
 Tâm Anh lưu ý rằng tự ý ngưng thuốc có thể gây nhiều tác động tiêu cực: nếu ngừng sai thời điểm hoặc không được theo dõi sát, virus viêm gan B có thể tái hoạt động và hoạt động mạnh hơn. Vì vậy, bệnh viện khuyến cáo tuyệt đối không tự ý thay đổi liều hoặc ngưng thuốc khi chưa có sự đồng ý của bác sĩ chuyên khoa.
 

@@ -14,7 +14,7 @@ Mục app liên kết `/tinh-nang/nhac-uong-thuoc/` (`feature: nhac-uong-thuoc`)
 hai sau 45 phút, báo sắp hết thuốc, nhắc ngày tái khám đọc từ đơn).
 
 Nguồn đã đọc trực tiếp bằng WebFetch trong phiên: WHO fact sheet Hepatitis B (điều trị làm chậm
-xơ gan, giảm ung thư gan, cải thiện sống còn; phần lớn người bắt đầu điều trị phải dùng suốt đời)
+xơ gan, giảm ung thư gan, cải thiện sống còn; phần lớn người bắt đầu điều trị phải dùng suốt đời; năm 2024 chỉ 27% người sống chung với viêm gan B biết mình nhiễm)
 và Bệnh viện Đa khoa Tâm Anh "Khi nào ngưng thuốc điều trị viêm gan B" (xơ gan/xơ hóa nặng thường
 dùng suốt đời; tự ngưng có thể khiến virus tái hoạt động mạnh hơn; không tự đổi liều/ngưng; thăm
 khám định kỳ lâu dài; mệt mỏi, chán ăn, vàng da, vàng mắt → đi khám). Không nguồn nào nêu cách xử
