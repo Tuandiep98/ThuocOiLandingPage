@@ -2,13 +2,15 @@
 title: "Đơn thuốc điện tử là gì? Người bệnh cần biết gì khi đi khám"
 description: "Đơn thuốc điện tử là đơn thuốc được kê, ký và lưu trữ bằng phương thức điện tử theo quy định của Bộ Y tế. Người bệnh cần biết gì để không bị động khi nơi khám không đưa bản giấy."
 publishDate: 2026-09-28
+updatedDate: 2026-11-10
 keyword: "đơn thuốc điện tử là gì"
 segment: "Người đi khám bệnh, nghe nhắc đến đơn thuốc điện tử nhưng chưa rõ khác gì đơn giấy và cần chuẩn bị gì"
+feature: "quet-don-thuoc-ai"
 ctaTitle: "Dù là đơn giấy hay đơn thuốc điện tử, vẫn cần một nơi lưu và nhắc đúng giờ"
 ctaDescription: "Thuốc ơi đọc đơn thuốc từ ảnh chụp hoặc tệp PDF — kể cả khi đó là bản PDF hoặc ảnh chụp màn hình đơn thuốc điện tử — rồi tự sắp lịch nhắc theo từng buổi."
 faqs:
   - question: "Đơn thuốc điện tử có thay thế hoàn toàn đơn thuốc giấy không?"
-    answer: "Theo lộ trình của Bộ Y tế, các cơ sở khám chữa bệnh phải chuyển dần sang kê đơn thuốc bằng hình thức điện tử, nhưng cách triển khai cụ thể (có in thêm bản giấy hay không) có thể khác nhau tùy nơi khám. Cách chắc chắn nhất là hỏi trực tiếp quầy tiếp đón hoặc bác sĩ khi nhận đơn."
+    answer: "Theo quy định hiện hành của Bộ Y tế, mốc bắt buộc chuyển sang kê đơn điện tử cho bệnh viện và cho các cơ sở khám chữa bệnh khác đều đã qua, nên phần lớn nơi khám hiện dùng đơn điện tử là chính. Dù vậy, cách triển khai cụ thể (có in thêm bản giấy hay không) vẫn có thể khác nhau tùy nơi khám. Cách chắc chắn nhất là hỏi trực tiếp quầy tiếp đón hoặc bác sĩ khi nhận đơn."
   - question: "Nếu không được đưa tờ giấy in đơn thuốc thì lấy thông tin thuốc ở đâu?"
     answer: "Hỏi ngay tại nơi khám cách xem lại đơn — thường là qua mã tra cứu, ứng dụng của bệnh viện, hoặc email/tin nhắn. Nếu nhà thuốc in ra một bản tóm tắt khi bán thuốc, nên giữ lại bản đó hoặc chụp ảnh lưu vào điện thoại."
   - question: "Đơn thuốc điện tử có giúp tránh nhầm lẫn khi đọc chữ viết tay của bác sĩ không?"
@@ -22,15 +24,15 @@ sources:
     url: "https://baohiemxahoi.gov.vn/tintuc/Pages/chuyen-doi-so.aspx?CateID=0&ItemID=18851"
 ---
 
-Đơn thuốc điện tử là đơn thuốc được bác sĩ kê, lưu trữ và hiển thị bằng phương thức điện tử thay vì viết tay hoặc in trên giấy, theo quy định của Bộ Y tế áp dụng dần tại các cơ sở khám chữa bệnh từ năm 2022. Với người bệnh, khác biệt lớn nhất là có thể không còn nhận một tờ giấy in như trước — nên cần chủ động hỏi cách xem lại đơn của mình.
+Đơn thuốc điện tử là đơn thuốc do bác sĩ kê, ký và lưu trên hệ thống điện tử thay vì viết tay hay in giấy. Mốc bắt buộc chuyển đổi tại bệnh viện và các cơ sở khám chữa bệnh khác đều đã qua, nên người bệnh cần hỏi cách xem lại đơn nếu không được đưa bản giấy.
 
 ## Đơn thuốc điện tử là gì, quy định từ đâu
 
-Bộ Y tế ban hành Thông tư số 27/2021/TT-BYT quy định về nội dung và việc kê đơn thuốc bằng hình thức điện tử, có hiệu lực từ ngày 15/2/2022. Thay vì viết tay hoặc in ra giấy tại chỗ, đơn thuốc được nhập, ký và lưu trên hệ thống điện tử của cơ sở khám chữa bệnh. Đây là một phần trong quá trình chuyển đổi số ngành y tế, áp dụng dần theo lộ trình chứ không phải chuyển đổi cùng lúc ở mọi nơi khám.
+Bộ Y tế quy định việc kê đơn thuốc bằng hình thức điện tử lần đầu tại Thông tư số 27/2021/TT-BYT, có hiệu lực từ ngày 15/2/2022: thay vì viết tay hoặc in ra giấy tại chỗ, đơn thuốc được nhập, ký và lưu trên hệ thống điện tử của cơ sở khám chữa bệnh. Quy định này sau đó được thay bằng Thông tư số 26/2025/TT-BYT (có hiệu lực từ 1/7/2025), vẫn giữ nguyên tinh thần kê đơn điện tử, là một phần trong quá trình chuyển đổi số ngành y tế.
 
 ## Lộ trình áp dụng tại các cơ sở khám chữa bệnh
 
-Theo thông tin từ Bảo hiểm xã hội Việt Nam, lộ trình kê đơn thuốc điện tử từng được điều chỉnh để các cơ sở khám chữa bệnh có thêm thời gian chuẩn bị, với mốc hoàn tất chuyển đổi chung là trước ngày 30/6/2023; trong giai đoạn chuyển tiếp, một số nơi vẫn được tiếp tục dùng mẫu đơn giấy đã in sẵn cho đến hết mốc đó. Vì lộ trình và cách triển khai có thể khác nhau giữa các cơ sở khám chữa bệnh, nơi bạn đang khám có thể đã áp dụng đơn thuốc điện tử hoàn toàn, đang dùng song song cả hai hình thức, hoặc vẫn dùng đơn giấy — cách chắc chắn nhất để biết là hỏi trực tiếp khi đi khám.
+Lộ trình ban đầu theo Thông tư 27/2021/TT-BYT từng đặt mốc hoàn tất chuyển đổi chung là trước ngày 30/6/2023, với giai đoạn chuyển tiếp cho phép một số nơi tiếp tục dùng mẫu đơn giấy đã in sẵn. Thông tư 26/2025/TT-BYT thay thế quy định này bằng lộ trình mới: bệnh viện phải hoàn tất kê đơn điện tử trước ngày 1/10/2025, các cơ sở khám chữa bệnh khác trước ngày 1/1/2026. Cả hai mốc này đến nay đều đã qua, nên phần lớn nơi khám hiện dùng đơn thuốc điện tử là chính. Dù vậy, cách triển khai cụ thể (có in thêm bản giấy hay không, có liên thông dữ liệu với nhà thuốc hay chưa) vẫn có thể khác nhau tùy nơi khám — cách chắc chắn nhất để biết là hỏi trực tiếp khi đi khám.
 
 ## Khác gì so với đơn thuốc giấy, xét từ phía người bệnh
 
@@ -41,7 +43,7 @@ Về nội dung, đơn thuốc điện tử vẫn cần đầy đủ thông tin 
 - Hỏi ngay tại quầy hoặc với bác sĩ cách xem lại đơn của mình nếu không được đưa bản giấy — qua mã tra cứu, ứng dụng, email hay tin nhắn.
 - Nếu nhà thuốc có in một bản tóm tắt thuốc khi bán, giữ lại bản đó thay vì vứt đi ngay.
 - Chủ động chụp lại màn hình đơn (nếu được xem trên máy tại quầy) hoặc lưu file PDF nếu nơi khám gửi qua email, để có bản riêng tra cứu bất cứ lúc nào, kể cả khi đổi nơi khám sau này. Xem thêm gợi ý ở bài [Chuẩn bị gì trước khi tái khám để đơn thuốc mới không bị đọc nhầm?](/blog/chuan-bi-truoc-tai-kham-doc-dung-don-thuoc-moi/).
-- Nếu có bất kỳ tên thuốc, liều dùng hay cách dùng nào chưa rõ trên đơn — dù là đơn giấy hay đơn điện tử — hỏi lại ngay tại chỗ thay vì tự đoán.
+- Nếu có bất kỳ tên thuốc, liều dùng hay cách dùng nào chưa rõ trên đơn — dù là đơn giấy hay đơn điện tử — hỏi lại ngay tại chỗ thay vì tự đoán. Đơn đánh máy cũng có thể viết tắt tên thuốc hoặc cách dùng, xem thêm [cách đọc đơn thuốc bác sĩ ghi tắt](/blog/doc-hieu-don-thuoc-bac-si-ghi-tat/).
 
 ## Khi nào nên hỏi bác sĩ, dược sĩ
 
