@@ -2,6 +2,7 @@
 title: "Cách bảo quản thuốc tại nhà đúng cách: nhiệt độ, độ ẩm và ánh sáng"
 description: "Nhiệt độ, độ ẩm, ánh sáng và cách để xa tầm tay trẻ em ảnh hưởng thế nào đến chất lượng thuốc tại nhà — nguyên tắc chung áp dụng cho hầu hết thuốc viên, thuốc bột thông thường."
 publishDate: 2026-09-29
+updatedDate: 2026-11-11
 keyword: "cách bảo quản thuốc tại nhà"
 segment: "Người có thuốc dùng dài ngày hoặc tủ thuốc dự phòng tại nhà, muốn giữ thuốc còn nguyên chất lượng đến khi dùng hết"
 ctaTitle: "Theo dõi luôn hạn dùng và tồn thuốc trong Thuốc ơi"
@@ -40,13 +41,15 @@ Một ngăn tủ trong phòng khách, phòng ngủ hoặc kệ cao trong nhà, t
 
 Vỉ nhôm, lọ có nắp hoặc hộp giấy đi kèm thuốc không chỉ để đựng — chúng còn giúp hạn chế ẩm, ánh sáng và không khí tiếp xúc trực tiếp với thuốc. Vì vậy nên hạn chế bóc thuốc ra khỏi bao bì gốc để đựng chung vào một hộp khác trừ khi thực sự cần thiết (ví dụ chia sẵn theo ngày), và nếu bóc ra thì chỉ nên bóc đủ dùng trong thời gian ngắn.
 
+Thuốc dạng siro, thuốc nước hoặc thuốc bột pha sẵn thường không còn giữ hạn in trên hộp sau khi mở nắp hoặc pha, vì tiếp xúc không khí dễ làm thuốc nhiễm khuẩn hoặc biến chất nhanh hơn thuốc viên. Xem chi tiết tại [thuốc siro, thuốc nước sau khi mở nắp dùng được bao lâu](/blog/thuoc-siro-thuoc-nuoc-sau-khi-mo-nap-dung-duoc-bao-lau/).
+
 ## Để xa tầm tay trẻ em và người dễ nhầm lẫn
 
 Nơi bảo quản thuốc lý tưởng về nhiệt độ, độ ẩm vẫn cần đi kèm yêu cầu an toàn: đặt ở vị trí cao, có thể khoá được nếu trong nhà có trẻ nhỏ hoặc người lớn tuổi dễ nhầm lẫn thuốc. Không để thuốc uống lẫn với thuốc bôi ngoài da trong cùng một hộp không phân loại, để tránh cầm nhầm khi lấy vội.
 
 ## Kiểm tra định kỳ, bỏ đúng cách khi có dấu hiệu bất thường
 
-Nên kiểm tra tủ thuốc định kỳ để phát hiện thuốc gần hết hạn hoặc đã đổi màu, đổi mùi, kết cấu khác thường — những dấu hiệu này có thể xuất hiện dù thuốc chưa hết hạn trên bao bì nếu đã bị bảo quản sai cách trong thời gian dài. Khi thấy bất thường, không nên tự dùng tiếp; hỏi dược sĩ về cách xử lý hoặc bỏ thuốc đúng cách.
+Nên kiểm tra tủ thuốc định kỳ để phát hiện thuốc gần hết hạn hoặc đã đổi màu, đổi mùi, kết cấu khác thường — những dấu hiệu này có thể xuất hiện dù thuốc chưa hết hạn trên bao bì nếu đã bị bảo quản sai cách trong thời gian dài. Khi thấy bất thường, không nên tự dùng tiếp; hỏi dược sĩ về cách xử lý hoặc bỏ thuốc đúng cách. Cách đọc đúng dãy hạn sử dụng in trên vỉ, hộp xem thêm tại [cách xem hạn sử dụng thuốc](/blog/cach-xem-han-su-dung-thuoc/).
 
 ## Khi nào nên hỏi bác sĩ, dược sĩ
 
