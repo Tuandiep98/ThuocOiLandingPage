@@ -2,8 +2,10 @@
 title: "Uống thuốc cách nhau bao lâu? Hiểu đúng con số bác sĩ ghi trên đơn"
 description: "Khoảng cách giữa các liều tuỳ từng loại thuốc, bác sĩ ghi rõ trên đơn. Vì sao đơn ghi \"cách 6 giờ\", \"cách 8 giờ\" và cách xếp giờ uống trong ngày cho đúng."
 publishDate: 2026-09-30
+updatedDate: 2026-11-12
 keyword: "uống thuốc cách nhau bao lâu"
 segment: "Người có đơn thuốc ghi khoảng cách giữa các liều (ví dụ 'cách 6 giờ', 'cách 8 giờ') và muốn sắp giờ uống trong ngày cho đúng"
+feature: "nhac-uong-thuoc"
 ctaTitle: "Đặt lời nhắc đúng khoảng cách trên đơn, không phải tự tính giờ"
 ctaDescription: "Thuốc ơi đọc đơn thuốc bằng AI và sắp lời nhắc theo đúng buổi sáng, trưa, tối — bạn xem lại và chỉnh giờ từng buổi theo đúng khoảng cách bác sĩ ghi, rồi ứng dụng tự nhắc đúng giờ mỗi ngày."
 faqs:
