@@ -24,7 +24,7 @@ sources:
     url: "https://tamanhhospital.vn/dieu-tri-lao-phoi/"
 ---
 
-Bỏ thuốc lao giữa chừng có thể khiến điều trị thất bại, bệnh quay lại và vi khuẩn trở nên kháng thuốc, làm việc điều trị khó và lâu hơn. Liệu trình lao thường kéo dài nhiều tháng và cần uống đều. Đỡ ho, hết sốt chưa phải là khỏi — bác sĩ mới quyết định khi nào ngừng thuốc.
+Bỏ thuốc lao giữa chừng có thể khiến vi khuẩn lao trở nên kháng thuốc, làm việc điều trị khó và kéo dài hơn nhiều. Liệu trình lao thường kéo dài nhiều tháng và cần uống đều. Đỡ ho, hết sốt chưa phải là khỏi — bác sĩ mới quyết định khi nào ngừng thuốc.
 
 ## Vì sao điều trị lao phải kéo dài nhiều tháng
 
@@ -44,7 +44,7 @@ WHO nói rõ: ngừng thuốc sớm hoặc không có chỉ dẫn của nhân vi
 
 - **Thấy đỡ nhanh.** Sau vài tuần, ho và sốt có thể giảm, người bệnh dễ nghĩ mình đã khỏi. Nhưng theo Tâm Anh, bác sĩ dựa vào kết quả các xét nghiệm theo dõi để kết luận người bệnh đã khỏi hoàn toàn hay chưa, không dựa vào cảm giác.
 - **Liệu trình dài, dễ nhàm.** Uống thuốc mỗi ngày trong nhiều tháng dễ biến thành việc làm theo quán tính, đến tối không chắc sáng nay đã uống chưa.
-- **Khó chịu khi dùng thuốc.** Một số người gặp buồn nôn, chóng mặt, mệt mỏi và muốn "nghỉ vài hôm". Đây là lúc cần báo bác sĩ, không phải tự dừng.
+- **Khó chịu khi dùng thuốc.** Một số người gặp buồn nôn, chóng mặt và muốn "nghỉ vài hôm". Đây là lúc cần báo bác sĩ, không phải tự dừng.
 - **Gián đoạn vì lịch sinh hoạt.** Đi làm xa, về quê, hết thuốc trước ngày tái khám đều có thể làm đứt lịch vài ngày.
 
 ## Cách giữ lịch uống thuốc lao mỗi ngày
