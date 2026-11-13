@@ -1,6 +1,6 @@
 ---
 title: "Cảm cúm khi nào cần đi khám bác sĩ ngay?"
-description: "Phần lớn người bị cúm mùa tự hồi phục trong khoảng một tuần, nhưng một số dấu hiệu ở người lớn, trẻ nhỏ và nhóm nguy cơ cao cần đi khám ngay. Không hướng dẫn dùng thuốc."
+description: "Phần lớn người bị cúm mùa tự hồi phục trong khoảng một tuần, nhưng một số dấu hiệu ở người lớn, trẻ nhỏ và nhóm nguy cơ cao là lúc cần đi khám ngay."
 publishDate: 2026-10-01
 updatedDate: 2026-11-13
 keyword: "cảm cúm khi nào cần đi khám bác sĩ"
