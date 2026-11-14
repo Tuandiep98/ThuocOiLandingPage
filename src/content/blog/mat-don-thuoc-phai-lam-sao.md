@@ -2,8 +2,10 @@
 title: "Mất đơn thuốc phải làm sao?"
 description: "Làm mất đơn thuốc giấy không nên tự mua lại thuốc theo trí nhớ. Nên làm gì ngay, vì sao đơn thuốc điện tử đỡ rủi ro hơn, và cách tránh mất đơn lần sau."
 publishDate: 2026-10-02
+updatedDate: 2026-11-14
 keyword: "mất đơn thuốc phải làm sao"
 segment: "Người đang uống thuốc theo đơn nhưng vừa làm mất đơn giấy (thất lạc, nhàu rách, mất điện thoại chứa ảnh chụp), chưa biết nên làm gì trước khi mua tiếp thuốc hoặc đi tái khám"
+feature: "quet-don-thuoc-ai"
 ctaTitle: "Đừng để một lần mất đơn giấy làm gián đoạn cả liệu trình"
 ctaDescription: "Mỗi đơn thuốc thêm vào Thuốc ơi — dù quét AI hay nhập tay — đều lưu lại ảnh gốc ngay trên điện thoại, nên dù làm thất lạc bản giấy bạn vẫn mở lại được ảnh gốc để đối chiếu hoặc đưa bác sĩ, dược sĩ xem."
 faqs:
@@ -12,7 +14,7 @@ faqs:
   - question: "Chỉ còn ảnh chụp đơn thuốc trên điện thoại, không còn bản giấy, có dùng được không?"
     answer: "Ảnh chụp rõ nét vẫn giúp ích rất nhiều khi cần đối chiếu tên thuốc, liều dùng hoặc trình bày lại với bác sĩ, dược sĩ, dù không hẳn thay thế được bản gốc trong mọi tình huống. Đây cũng là lý do nên chụp và lưu lại đơn thuốc ngay từ khi mới nhận, thay vì chỉ giữ duy nhất bản giấy."
   - question: "Mất đơn thuốc mua theo diện bảo hiểm y tế thì phải làm sao?"
-    answer: "Nên liên hệ ngay cơ sở khám chữa bệnh đã kê đơn để được hướng dẫn cụ thể, vì quy trình có thể khác nhau tuỳ cơ sở. Không nên tự suy đoán hoặc trì hoãn vì sợ phiền — hỏi càng sớm càng tránh được gián đoạn thuốc đang uống dở."
+    answer: "Nên liên hệ ngay cơ sở khám chữa bệnh đã kê đơn để được hướng dẫn cụ thể, vì quy trình có thể khác nhau tuỳ cơ sở. Không nên tự suy đoán hoặc trì hoãn vì sợ phiền — hỏi càng sớm càng tránh được gián đoạn thuốc đang uống dở. Đây là chuyện khác với làm mất thẻ bảo hiểm y tế — xem bài [mất thẻ bảo hiểm y tế có lĩnh thuốc được không?](/blog/mat-the-bao-hiem-y-te-co-linh-thuoc-duoc-khong/) nếu bạn mất thẻ chứ không phải mất đơn."
   - question: "Mất đơn thuốc thuộc nhóm kiểm soát đặc biệt có giống mất đơn thuốc thông thường không?"
     answer: "Không. Thuốc thuộc danh mục kiểm soát đặc biệt được quản lý chặt hơn, nên khi mất đơn cần báo ngay cho bác sĩ hoặc cơ sở đã kê đơn để được hướng dẫn đúng quy trình riêng, không tự tìm mua thay thế dưới bất kỳ hình thức nào."
 sources:
