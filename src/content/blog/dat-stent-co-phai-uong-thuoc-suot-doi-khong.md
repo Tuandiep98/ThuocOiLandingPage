@@ -49,7 +49,7 @@ Giảm liều cũng vậy: bác sĩ Tâm Anh cho biết nếu bệnh đang ổn 
 
 - **Thấy khỏe nhanh.** Sau đặt stent, đau ngực thường hết và người bệnh dễ nghĩ mình đã khỏi. Đây chính là lý do người bệnh trong ca kể trên bỏ thuốc.
 - **Nhiều thuốc, nhiều cữ.** Đơn sau đặt stent thường có vài loại thuốc. Uống mỗi ngày trong nhiều năm rất dễ thành thói quen làm theo quán tính, đến tối không chắc sáng nay đã uống đủ chưa.
-- **Lo tác dụng phụ.** Một số người thấy buồn nôn, đau bụng, dễ bầm tím và muốn "nghỉ vài hôm". Đây là lúc cần báo bác sĩ, không phải tự dừng.
+- **Lo tác dụng phụ.** Một số người thấy buồn nôn, đau bụng, chảy máu bất thường và muốn "nghỉ vài hôm". Đây là lúc cần báo bác sĩ, không phải tự dừng.
 - **Đứt lịch vì hết thuốc.** Hết thuốc trước ngày tái khám, đi xa quên mang theo đều có thể làm gián đoạn vài ngày.
 
 ## Cách giữ lịch uống thuốc mỗi ngày sau đặt stent
@@ -59,7 +59,7 @@ Giảm liều cũng vậy: bác sĩ Tâm Anh cho biết nếu bệnh đang ổn 
 - **Mua hoặc lĩnh thuốc trước khi hết vài ngày.** Đừng để đến hôm hết thuốc mới đi. Xem thêm bài [canh ngày lĩnh thuốc mới](/blog/uong-thuoc-bao-hiem-y-te-canh-ngay-linh-thuoc-moi/).
 - **Giữ lịch tái khám.** Bệnh viện Tâm Anh dẫn khuyến nghị tái khám định kỳ, giai đoạn đầu có thể khoảng mỗi tháng một lần, sau đó thưa hơn theo chỉ định. Mang theo danh sách thuốc và câu hỏi của bạn.
 - **Hỏi trước nếu lỡ quên thì làm gì.** Khi nhận thuốc, hỏi luôn dược sĩ cách xử lý nếu quên một liều với từng thuốc. Nguyên tắc chung có trong bài [quên uống thuốc 1 lần có sao không](/blog/quen-uong-thuoc-1-lan-co-sao-khong/).
-- **Đi kèm thay đổi lối sống.** Thuốc hiệu quả hơn khi đi cùng bỏ thuốc lá, hạn chế muối, rượu bia và vận động đều theo hướng dẫn của bác sĩ — điều cả Tổ chức Y tế Thế giới (WHO) và Bệnh viện Tâm Anh đều khuyến nghị.
+- **Song song với thuốc là lối sống.** Bỏ thuốc lá, hạn chế muối, rượu bia và vận động đều theo hướng dẫn của bác sĩ là những điều cả Tổ chức Y tế Thế giới (WHO) và Bệnh viện Tâm Anh đều khuyến nghị.
 
 ## Thuốc ơi giúp nhắc thuốc tim mạch hằng ngày thế nào
 
@@ -68,7 +68,7 @@ Bạn nhập các thuốc theo đúng đơn bác sĩ kê, hoặc chụp đơn đ
 ## Khi nào nên hỏi bác sĩ, dược sĩ
 
 - Khi lỡ quên nhiều liều hoặc đã gián đoạn thuốc vài ngày — báo bác sĩ điều trị sớm.
-- Khi gặp tác dụng không mong muốn như buồn nôn, đau bụng, dễ bầm tím, chảy máu bất thường, phân hoặc nước tiểu có máu — báo bác sĩ thay vì tự nghỉ thuốc.
+- Khi gặp tác dụng không mong muốn như buồn nôn, đau bụng, chảy máu bất thường, phân hoặc nước tiểu có máu — báo bác sĩ thay vì tự nghỉ thuốc.
 - Khi thấy đã khỏe và muốn giảm hay ngưng thuốc — mang câu hỏi đến buổi tái khám.
 - Trước khi nhổ răng, làm thủ thuật, phẫu thuật, hoặc khi được kê thêm thuốc ở nơi khác — cho bác sĩ, dược sĩ biết bạn đã đặt stent và đang dùng thuốc gì.
 - Khi đau hoặc tức ngực, đặc biệt ở giữa ngực, có thể lan ra tay, vai trái, hàm hoặc lưng, kèm khó thở, buồn nôn, choáng hay tái mặt — gọi cấp cứu 115 hoặc đến cơ sở y tế gần nhất ngay, không chờ xem có tự hết không.
