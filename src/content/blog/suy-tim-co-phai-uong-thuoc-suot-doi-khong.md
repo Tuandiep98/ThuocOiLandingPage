@@ -43,7 +43,7 @@ Trong danh sách các yếu tố làm suy tim nặng thêm, Bệnh viện Tâm A
 
 - **Thấy đỡ nhiều sau đợt điều trị.** Hết khó thở, hết phù làm nhiều người nghĩ mình đã khỏi.
 - **Đơn có nhiều thuốc, nhiều cữ.** Uống mỗi ngày trong nhiều năm rất dễ thành thói quen làm theo quán tính, đến tối không chắc sáng nay đã uống đủ chưa.
-- **Một số thuốc gây bất tiện.** Có thuốc khiến đi tiểu nhiều, chóng mặt khi đứng dậy hoặc mệt — người bệnh muốn tự bớt cho đỡ. Đây là lúc cần báo bác sĩ: Vinmec khuyên báo ngay cho bác sĩ điều trị khi gặp tác dụng phụ của thuốc.
+- **Gặp tác dụng phụ khó chịu.** Người bệnh thấy không thoải mái sau khi uống thuốc và muốn tự bớt cho đỡ. Đây là lúc cần báo bác sĩ: Vinmec khuyên báo ngay cho bác sĩ điều trị khi gặp tác dụng phụ của thuốc.
 - **Đứt lịch vì hết thuốc.** Hết thuốc trước ngày tái khám, đi xa quên mang theo đều có thể làm gián đoạn vài ngày.
 
 ## Giữ lịch uống thuốc và theo dõi bản thân mỗi ngày
