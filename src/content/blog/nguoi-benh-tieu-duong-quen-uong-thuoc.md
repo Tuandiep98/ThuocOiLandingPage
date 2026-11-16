@@ -7,6 +7,7 @@ segment: "Người đang điều trị tiểu đường (đái tháo đường) 
 ctaTitle: "Giữ đúng giờ uống thuốc tiểu đường mỗi ngày, không cần tự nhớ"
 ctaDescription: "Nhập đơn thuốc tiểu đường một lần, Thuốc ơi tự sắp lịch nhắc theo đúng buổi gắn với bữa ăn của bạn và theo dõi tiến trình liều đã uống, kể cả khi điện thoại đang im lặng."
 imageTag: "thiet-lap-gio-uong"
+updatedDate: 2026-11-16
 faqs:
   - question: "Quên uống thuốc tiểu đường một lần có cần uống bù không?"
     answer: "Không có quy tắc chung cho mọi loại thuốc tiểu đường. Cách xử trí (uống bù ngay, chờ đến liều kế tiếp, hay bỏ qua) phụ thuộc vào loại thuốc đang dùng và thời điểm phát hiện quên — hãy hỏi bác sĩ hoặc dược sĩ đang điều trị để được hướng dẫn cụ thể, không tự quyết định theo cảm tính."
@@ -21,7 +22,7 @@ sources:
     url: "https://www.vinmec.com/vie/bai-viet/lam-gi-neu-ban-quen-uong-thuoc-tieu-duong-loai-2-vi"
 ---
 
-Quên uống thuốc tiểu đường một lần, khi đường huyết đang ổn định, thường chưa gây hại ngay. Nhưng quên lặp lại nhiều lần có thể làm đường huyết tăng cao kéo dài mà không có triệu chứng rõ rệt để nhận biết sớm, ảnh hưởng dần đến thần kinh, thận, tim và mắt. Cách xử trí liều đã quên khác nhau theo từng loại thuốc — luôn hỏi bác sĩ hoặc dược sĩ, không tự quyết định.
+Quên uống thuốc tiểu đường một lần thường chưa gây hại ngay nếu đường huyết đang ổn định. Nhưng quên lặp lại nhiều lần có thể làm đường huyết tăng cao kéo dài, ảnh hưởng đến thần kinh, thận, tim và mắt. Cách xử trí liều đã quên khác nhau theo từng loại thuốc — luôn hỏi bác sĩ hoặc dược sĩ.
 
 ## Vì sao quên thuốc tiểu đường dễ bị xem nhẹ
 
@@ -37,7 +38,7 @@ Nhiều loại thuốc tiểu đường được bác sĩ chỉ định uống v
 
 ## Theo dõi bằng số liệu, không chỉ dựa vào cảm giác "chắc mình uống đều"
 
-Với đơn thuốc tiểu đường cần uống đều đặn trong thời gian dài, Thuốc ơi cho phép thiết lập giờ nhắc theo từng buổi sáng, trưa, chiều, tối đúng theo nhịp sinh hoạt thật của người dùng, nên có thể đặt trùng với mốc bữa ăn quen thuộc thay vì giờ cố định ứng dụng tự gán. Ứng dụng cũng tính số liều thực tế đã uống trên tổng liều của cả liệu trình, giúp thấy rõ bằng số liệu thay vì chỉ tin vào cảm giác chung — một cách cụ thể hơn để nhận ra sớm nếu mình đang quên thường xuyên hơn mình nghĩ.
+Với đơn thuốc tiểu đường cần uống đều đặn trong thời gian dài, Thuốc ơi cho phép thiết lập giờ nhắc theo từng buổi sáng, trưa, tối đúng theo nhịp sinh hoạt thật của người dùng, nên có thể đặt trùng với mốc bữa ăn quen thuộc thay vì giờ cố định ứng dụng tự gán. Ứng dụng cũng tính số liều thực tế đã uống trên tổng liều của cả liệu trình, giúp thấy rõ bằng số liệu thay vì chỉ tin vào cảm giác chung — một cách cụ thể hơn để nhận ra sớm nếu mình đang quên thường xuyên hơn mình nghĩ.
 
 ## Khi nào nên hỏi bác sĩ, dược sĩ
 
