@@ -2,8 +2,10 @@
 title: "Có nên dùng lại đơn thuốc cũ để mua thuốc không?"
 description: "Bị lại triệu chứng giống lần trước, nhiều người lục đơn thuốc cũ ra mua thuốc cho nhanh. Vì sao cách này không an toàn và khi nào thật sự cần tái khám."
 publishDate: 2026-10-05
+updatedDate: 2026-11-17
 keyword: "có nên dùng lại đơn thuốc cũ"
 segment: "Người đang có triệu chứng giống lần bệnh trước và định lấy đơn thuốc cũ ra mua lại thuốc thay vì đi khám lại"
+feature: "theo-doi-lieu-trinh"
 ctaTitle: "Giữ lại đơn thuốc cũ để đối chiếu, không phải để tự dùng lại"
 ctaDescription: "Thuốc ơi lưu ảnh gốc của mọi đơn thuốc đã thêm — kể cả đơn cũ đã hết liệu trình — ngay trên điện thoại, để bạn mang đúng thông tin đó đến buổi tái khám mới thay vì phải nhớ lại hoặc tự đoán."
 faqs:
