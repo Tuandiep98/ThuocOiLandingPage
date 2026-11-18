@@ -2,6 +2,7 @@
 title: "Vứt bỏ thuốc hết hạn đúng cách: không chỉ là bỏ vào thùng rác"
 description: "Thuốc hết hạn không nên đổ xuống bồn cầu, cho người khác dùng lại hay vứt chung thùng rác mà không bọc kỹ. Cách xử lý an toàn và khi nào cần hỏi dược sĩ."
 publishDate: 2026-10-06
+updatedDate: 2026-11-18
 keyword: "cách vứt bỏ thuốc hết hạn đúng cách"
 segment: "Người có thuốc hết hạn trong tủ thuốc gia đình, muốn xử lý an toàn thay vì vứt tuỳ ý"
 feature: "theo-doi-lieu-trinh"
@@ -21,7 +22,7 @@ sources:
     url: "https://www.vinmec.com/vie/bai-viet/vi-sao-thuoc-phai-co-han-su-dung-vi"
 ---
 
-Thuốc hết hạn không nên tự dùng tiếp, và cũng không nên vứt tuỳ ý: đổ xuống bồn cầu/cống nước hay bỏ chung thùng rác mà không bọc kỹ đều có thể gây hại cho môi trường hoặc để trẻ em, vật nuôi tiếp cận nhầm. Cách an toàn nhất là mang đến hiệu thuốc hoặc cơ sở y tế gần nhà để họ xử lý đúng quy trình.
+Thuốc hết hạn không nên tiếp tục dùng, đổ xuống bồn cầu/cống, hay vứt thẳng vào rác mà không bọc kỹ — hoạt chất có thể gây hại môi trường, hoặc bị trẻ em, vật nuôi nhặt nhầm. Cách an toàn nhất: mang đến hiệu thuốc hay cơ sở y tế gần nhà để xử lý đúng quy trình.
 
 ## Vì sao không nên tuỳ tiện vứt thuốc hết hạn
 
@@ -56,4 +57,4 @@ Cách đỡ mất công xử lý nhất là không để thuốc tồn quá nhi�
 - Thuốc hết hạn là loại đang dùng dở, cần biết có nên tiếp tục mua thuốc mới ngay hay chờ đến lịch tái khám.
 - Thuốc dạng tiêm, thuốc nhỏ mắt/mũi hoặc thuốc có kèm dụng cụ (kim tiêm, ống hít) cần xử lý theo cách khác thuốc viên thông thường.
 
-Tìm hiểu thêm về [cách bảo quản thuốc tại nhà](/blog/cach-bao-quan-thuoc-tai-nha/) để hạn chế thuốc hỏng trước hạn, hoặc [quản lý tủ thuốc gia đình không kê đơn](/blog/quan-ly-tu-thuoc-gia-dinh-khong-ke-don/) để biết còn gì và khi nào cần mua thêm.
+Tìm hiểu thêm về [cách bảo quản thuốc tại nhà](/blog/cach-bao-quan-thuoc-tai-nha/) để hạn chế thuốc hỏng trước hạn, [cách xem hạn sử dụng thuốc](/blog/cach-xem-han-su-dung-thuoc/) để nhận biết sớm thuốc nào cần xử lý, hoặc [quản lý tủ thuốc gia đình không kê đơn](/blog/quan-ly-tu-thuoc-gia-dinh-khong-ke-don/) để biết còn gì và khi nào cần mua thêm.
