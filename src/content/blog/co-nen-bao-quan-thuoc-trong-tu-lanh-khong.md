@@ -2,10 +2,12 @@
 title: "Có nên bảo quản thuốc trong tủ lạnh không?"
 description: "Phần lớn thuốc viên, thuốc bột không nên để tủ lạnh vì độ ẩm dễ làm hỏng thuốc — trừ một số loại như insulin cần giữ lạnh theo đúng nhãn. Cách phân biệt và lưu ý khi cần giữ lạnh."
 publishDate: 2026-10-07
+updatedDate: 2026-11-19
 keyword: "có nên bảo quản thuốc trong tủ lạnh"
 segment: "Người đang cân nhắc có nên cho một loại thuốc nào đó vào tủ lạnh để bảo quản hay không"
-ctaTitle: "Ghi lại hướng dẫn bảo quản ngay khi thêm thuốc vào Thuốc ơi"
-ctaDescription: "Nhập tay hoặc quét ảnh đơn thuốc vào Thuốc ơi, ảnh gốc được lưu lại trong ứng dụng — để xem lại hướng dẫn bảo quản ghi trên đơn hoặc nhãn thuốc bất cứ khi nào cần, không phải nhớ trong đầu."
+feature: "quet-don-thuoc-ai"
+ctaTitle: "Thêm thuốc cần bảo quản đặc biệt vào Thuốc ơi"
+ctaDescription: "Quét ảnh đơn thuốc bằng AI hoặc nhập tay tên thuốc, liều dùng và giờ uống — lịch nhắc uống thuốc trong Thuốc ơi vẫn hoạt động bình thường, dù thuốc đó cần được giữ lạnh hay bảo quản riêng."
 faqs:
   - question: "Để thuốc viên quên ngoài tủ lạnh một đêm có sao không?"
     answer: "Phần lớn thuốc viên, thuốc bột không cần giữ lạnh nên để ở nhiệt độ phòng bình thường không ảnh hưởng gì, miễn không phải nơi quá nóng hoặc quá ẩm. Chỉ khi thuốc có ghi rõ phải bảo quản trong tủ lạnh (như insulin) mà bị để ở nhiệt độ phòng quá lâu, nên hỏi dược sĩ trước khi dùng tiếp."
@@ -22,7 +24,7 @@ sources:
     url: "https://www.vinmec.com/vie/bai-viet/cac-loai-insulin-dieu-tri-dai-thao-duong-va-cach-dung-vi"
 ---
 
-Phần lớn thuốc viên, thuốc bột thông thường không nên để trong tủ lạnh — độ ẩm trong tủ dễ làm thuốc hút ẩm, chảy nước hoặc biến chất. Chỉ một số loại thuốc đặc biệt, điển hình là insulin dạng lọ/bút chưa dùng, mới cần giữ lạnh theo đúng nhiệt độ ghi trên nhãn. Luôn đọc tờ hướng dẫn sử dụng hoặc hỏi dược sĩ cho từng loại thuốc cụ thể trước khi quyết định.
+Phần lớn thuốc viên, thuốc bột không nên để tủ lạnh vì độ ẩm dễ làm thuốc hút ẩm, chảy nước hoặc biến chất. Chỉ một số thuốc đặc biệt, như insulin dạng lọ hoặc bút tiêm chưa dùng, mới cần giữ lạnh đúng nhiệt độ trên nhãn — còn lại nên hỏi dược sĩ nếu chưa chắc.
 
 ## Vì sao đa số thuốc viên, thuốc bột không hợp với tủ lạnh
 
@@ -61,8 +63,8 @@ Thay vì đoán theo cảm tính hoặc theo thói quen chung, nên:
 - Khi thuốc (dù giữ lạnh hay không) có dấu hiệu đổi màu, đổi mùi hoặc kết cấu khác thường.
 - Khi cần đổi cách bảo quản thường ngày do hoàn cảnh thay đổi (mất điện kéo dài, chuyển nhà, đi xa dài ngày).
 
-## Ghi lại hướng dẫn bảo quản cùng đơn thuốc trong Thuốc ơi
+## Thêm thuốc cần bảo quản đặc biệt vào Thuốc ơi
 
-Hướng dẫn bảo quản của mỗi loại thuốc thường chỉ được đọc một lần lúc mới mua rồi dễ quên theo thời gian, đặc biệt với thuốc dùng dài ngày. Khi thêm đơn thuốc vào Thuốc ơi bằng ảnh chụp hoặc PDF, ảnh gốc của đơn được lưu lại trong ứng dụng, nên có thể xem lại phần hướng dẫn bảo quản ghi trên đơn hoặc đối chiếu với tờ hướng dẫn sử dụng bất cứ khi nào cần, không phải nhớ trong đầu hay tìm lại tờ giấy đã cất đâu đó. Với thuốc không có đơn kèm theo, vẫn có thể nhập tay để ghi lại tên thuốc mà không cần dùng đến AI.
+Một loại thuốc cần giữ lạnh hay bảo quản riêng không có nghĩa là phải bỏ qua lịch nhắc uống thuốc đều đặn. Trong Thuốc ơi, bạn có thể thêm thuốc đó bằng cách quét ảnh chụp hoặc tệp PDF đơn thuốc để AI đọc tên thuốc và cách dùng, hoặc nhập tay tên thuốc, liều dùng và giờ uống nếu không có đơn kèm theo — cách nhập tay này không dùng AI và không tính vào lượt quét đơn hằng tháng. Dù thêm bằng cách nào, lịch nhắc vẫn hoạt động như bình thường, tách biệt với việc thuốc được giữ ở đâu; hướng dẫn bảo quản cụ thể vẫn nên đọc trên nhãn hoặc tờ hướng dẫn sử dụng đi kèm.
 
 Tìm hiểu thêm về [cách bảo quản thuốc tại nhà](/blog/cach-bao-quan-thuoc-tai-nha/) nói chung, hoặc [vì sao người bệnh tiểu đường không nên xem nhẹ việc quên uống thuốc](/blog/nguoi-benh-tieu-duong-quen-uong-thuoc/).
