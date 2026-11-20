@@ -2,8 +2,10 @@
 title: "Cách nhớ uống thuốc tuyến giáp mỗi ngày"
 description: "Thuốc tuyến giáp thường chỉ uống một lần mỗi ngày nhưng cần đúng giờ và đúng cách mỗi lần — cách xây thói quen để không quên, không lệch giờ tuỳ tiện."
 publishDate: 2026-10-08
+updatedDate: 2026-11-20
 keyword: "cách nhớ uống thuốc tuyến giáp mỗi ngày"
 segment: "Người đang điều trị bệnh tuyến giáp, cần uống thuốc hormon tuyến giáp đều đặn mỗi ngày nhưng dễ quên vì chỉ uống một lần duy nhất"
+feature: "nhac-uong-thuoc"
 ctaTitle: "Giữ đúng một giờ uống thuốc tuyến giáp mỗi ngày"
 ctaDescription: "Nhập đơn thuốc tuyến giáp một lần, Thuốc ơi tự sắp lịch nhắc đúng giờ bạn chọn mỗi ngày và theo dõi tiến trình liều đã uống, kể cả khi điện thoại đang im lặng."
 imageTag: "thiet-lap-gio-uong"
@@ -23,7 +25,7 @@ sources:
     url: "https://www.vinmec.com/vie/bai-viet/thong-tin-can-biet-ve-thuoc-levothyroxine-vi"
 ---
 
-Thuốc tuyến giáp thường chỉ cần uống một lần mỗi ngày nhờ tác dụng kéo dài, nhưng lại nhạy với thời điểm uống hơn nhiều loại thuốc khác. Cách dễ nhớ nhất: chọn đúng một giờ cố định mỗi ngày (thường là sáng sớm, cách xa bữa ăn theo chỉ định), giữ nguyên giờ đó mỗi ngày, và hỏi bác sĩ/dược sĩ trước khi đổi giờ hoặc thêm thuốc khác cùng lúc.
+Thuốc tuyến giáp thường chỉ uống một lần mỗi ngày, nhưng nhạy với thời điểm uống hơn nhiều loại thuốc khác. Cách dễ nhớ nhất: chọn một giờ cố định mỗi ngày (thường sáng sớm, cách xa bữa ăn theo chỉ định), giữ nguyên giờ đó, và hỏi bác sĩ, dược sĩ trước khi đổi giờ hoặc thêm thuốc khác.
 
 ## Vì sao thuốc tuyến giáp dễ bị lệch giờ hơn thuốc khác
 
