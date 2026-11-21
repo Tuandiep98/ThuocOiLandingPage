@@ -2,6 +2,7 @@
 title: "Đơn thuốc có thời hạn bao lâu?"
 description: "Đơn thuốc giấy hoặc điện tử có thời hạn lĩnh thuốc tối đa 5 ngày từ ngày kê đơn theo quy định hiện hành — khác với số ngày thuốc được kê cho một đợt điều trị."
 publishDate: 2026-10-09
+updatedDate: 2026-11-21
 keyword: "đơn thuốc có thời hạn bao lâu"
 segment: "Người đang cầm một đơn thuốc giấy hoặc điện tử, muốn biết rõ còn bao nhiêu ngày để đi mua/lĩnh thuốc trước khi đơn hết hiệu lực"
 ctaTitle: "Đừng để lỡ hạn lĩnh thuốc làm gián đoạn liệu trình"
@@ -22,7 +23,7 @@ sources:
     url: "https://luatvietnam.vn/y-te/thong-tu-52-2017-tt-byt-bo-y-te-158156-d1.html"
 ---
 
-Theo quy định hiện hành, người bệnh cần đi mua hoặc lĩnh thuốc trong thời hạn tối đa 5 ngày kể từ ngày kê đơn — mốc này không đổi dù quy định về kê đơn đã được thay thế từ 1/7/2025. Đây là mốc khác hẳn với số ngày thuốc được kê cho một đợt điều trị, vốn có thể lên tới 30 hoặc 90 ngày.
+Theo quy định hiện hành, người bệnh cần mua hoặc lĩnh thuốc trong tối đa 5 ngày kể từ ngày kê đơn — mốc này không đổi dù quy định kê đơn đã thay bằng Thông tư mới từ 1/7/2025. Đây khác với số ngày thuốc được kê cho một đợt điều trị, có thể tới 30 hoặc 90 ngày.
 
 ## Thời hạn lĩnh thuốc 5 ngày: còn áp dụng hay đã bỏ?
 
@@ -37,7 +38,7 @@ Vì cách trình bày trong văn bản mới có thay đổi, một số thông 
 - **Thời hạn lĩnh thuốc (tối đa 5 ngày):** tính từ ngày bác sĩ kê đơn đến ngày bạn cần đi mua hoặc lĩnh thuốc đó — nếu để quá mốc này, đơn có thể không còn được chấp nhận.
 - **Số ngày thuốc được kê (thường tối đa 30 ngày, một số bệnh mạn tính trong danh mục quy định có thể đến 90 ngày):** là lượng thuốc dùng cho một đợt điều trị, tính từ khi bạn đã mua/lĩnh thuốc về.
 
-Nói cách khác, bạn có tối đa 5 ngày để đi lấy thuốc, nhưng sau khi lấy về rồi thì đợt thuốc đó có thể đủ dùng cho 30 hay 90 ngày tiếp theo, tuỳ chỉ định của bác sĩ và loại bệnh.
+Nói cách khác, bạn có tối đa 5 ngày để đi lấy thuốc, nhưng sau khi lấy về rồi thì đợt thuốc đó có thể đủ dùng cho 30 hay 90 ngày tiếp theo, tuỳ chỉ định của bác sĩ và loại bệnh. Nếu bạn đang khám BHYT ở bệnh viện cấp trên, một loại giấy tờ khác cũng có mốc thời hạn riêng dễ nhầm là giấy chuyển tuyến — xem thêm [giấy chuyển tuyến khám bệnh BHYT có thời hạn bao lâu?](/blog/giay-chuyen-tuyen-kham-benh-co-thoi-han-bao-lau/) để biết cách tính hạn của giấy này.
 
 ## Nếu để quá hạn lĩnh thuốc thì nên làm gì
 
