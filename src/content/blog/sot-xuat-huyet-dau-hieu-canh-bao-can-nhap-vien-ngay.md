@@ -2,8 +2,10 @@
 title: "Sốt xuất huyết: dấu hiệu cảnh báo nào cần đi khám hoặc nhập viện ngay?"
 description: "Sốt xuất huyết có thể trở nặng ngay sau khi hết sốt. Dấu hiệu cảnh báo cụ thể cần đi khám hoặc nhập viện ngay, không hướng dẫn dùng thuốc hạ sốt cụ thể."
 publishDate: 2026-10-11
+updatedDate: 2026-11-23
 keyword: "sốt xuất huyết dấu hiệu nào cần nhập viện ngay"
 segment: "Người đang sốt xuất huyết hoặc đang chăm sóc người thân mắc sốt xuất huyết tại nhà, cần biết khi nào nên đi khám hoặc nhập viện ngay thay vì tiếp tục tự theo dõi"
+feature: "nhac-uong-thuoc"
 ctaTitle: "Theo dõi đúng liều thuốc trong những ngày sốt xuất huyết"
 ctaDescription: "Sau khi được bác sĩ kê đơn theo dõi tại nhà, Thuốc ơi cho nhập tay thuốc không giới hạn và không tính vào lượt quét AI, rồi tự nhắc theo buổi và theo dõi tiến trình liều đã uống — phù hợp với đơn thuốc ngắn ngày, cần theo dõi sát trong vài ngày."
 faqs:
@@ -58,4 +60,4 @@ Thuốc ơi không chẩn đoán hay tư vấn y khoa; mọi quyết định the
 
 Nếu được bác sĩ cho theo dõi tại nhà, việc còn lại là giữ đúng giờ các lần uống thuốc và lần đo theo dõi được dặn, trong lúc người bệnh đang mệt. Thuốc ơi cho nhập tay thuốc không giới hạn và không tính vào lượt quét đơn bằng AI — phù hợp với đơn ngắn ngày của một đợt sốt xuất huyết — rồi tự nhắc theo buổi và theo dõi tiến trình liều đã uống, đồng thời có thể mời người thân vào nhóm Gia đình để cùng theo dõi sát trong những ngày cần chú ý.
 
-Xem thêm bài [cảm cúm khi nào cần đi khám bác sĩ ngay?](/blog/cum-mua-khi-nao-can-di-kham-bac-si/) nếu chưa chắc đang bị cảm cúm thông thường hay cần phân biệt với các bệnh sốt theo mùa khác.
+Xem thêm bài [cảm cúm khi nào cần đi khám bác sĩ ngay?](/blog/cum-mua-khi-nao-can-di-kham-bac-si/) nếu chưa chắc đang bị cảm cúm thông thường hay cần phân biệt với các bệnh sốt theo mùa khác. Nếu sau khi dùng thuốc hạ sốt lại thấy nổi mẩn, ngứa hoặc khó thở, xem thêm bài [bị dị ứng thuốc phải làm sao?](/blog/bi-di-ung-thuoc-phai-lam-sao/) để biết dấu hiệu nào cần gọi cấp cứu ngay.
