@@ -44,7 +44,7 @@ Hiểu theo cách đơn giản: với nhiều người bệnh Parkinson, lịch 
 - **Triệu chứng quay lại trước liều sau.** Đây là điều người bệnh và người chăm sóc hay nhận thấy nhất: đang đi lại được thì chậm dần, cứng người hoặc run hơn khi gần tới giờ uống.
 - **Khó vận động, dễ mất thăng bằng.** WHO liệt kê chậm vận động, run, cứng cơ, khó đi lại và mất thăng bằng là những triệu chứng vận động của bệnh — những lúc thuốc chưa kịp tác dụng là lúc cần cẩn thận hơn khi đi lại, lên xuống cầu thang.
 - **Cẩn thận khi lái xe hay vận hành máy.** Parkinson's UK nhắc rằng nếu đã quên thuốc, triệu chứng có thể tăng nên cần thận trọng khi lái xe hoặc dùng máy móc.
-- **Khi nằm viện, trễ thuốc là chuyện có thật.** Chiến dịch "Get It On Time" của Parkinson's UK nêu rằng người bệnh Parkinson cần được uống thuốc đúng giờ mọi lần, và trễ thuốc có thể gây căng thẳng, lo âu, bất động, run nặng.
+- **Khi nằm viện, lịch thuốc cũng có thể bị trễ.** Chiến dịch "Get It On Time" của Parkinson's UK (Anh) nêu rằng người bệnh Parkinson cần được uống thuốc đúng giờ mọi lần, và trễ thuốc có thể gây căng thẳng, lo âu, bất động, run nặng.
 
 Quên một liều, hãy xem tờ hướng dẫn đi kèm và hỏi bác sĩ hoặc dược sĩ — cách xử lý khác nhau tùy loại thuốc và tùy người. Đừng tự uống gộp hai liều, và đừng tự giảm, ngưng hay đổi giờ thuốc. Bài [quên uống thuốc 1 lần có sao không](/blog/quen-uong-thuoc-1-lan-co-sao-khong/) có thêm nguyên tắc chung khi lỡ liều.
 
