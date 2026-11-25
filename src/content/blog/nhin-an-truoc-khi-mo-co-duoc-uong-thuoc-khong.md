@@ -15,7 +15,7 @@ faqs:
   - question: "Lỡ uống thuốc hoặc ăn uống trong thời gian phải nhịn thì làm gì?"
     answer: "Báo ngay cho điều dưỡng hoặc bác sĩ, nói rõ đã ăn uống hay uống thuốc gì và lúc mấy giờ. Bệnh viện Vinmec lưu ý người bệnh cần khai báo với bác sĩ gây mê thời gian và loại thức ăn, đồ uống cuối cùng. Đừng giấu, vì thông tin này giúp bác sĩ quyết định an toàn cho cuộc mổ."
   - question: "Gây tê thì có cần nhịn ăn như gây mê không?"
-    answer: "Tùy loại phẫu thuật. Theo Bệnh viện Vinmec, khi có chỉ định gây tê người bệnh vẫn nên tuân thủ chế độ nhịn ăn uống, vì không loại trừ được trường hợp dị ứng thuốc tê hoặc gây tê không thành công và phải chuyển sang gây mê. Hãy làm đúng theo dặn dò của bệnh viện nơi bạn mổ."
+    answer: "Tùy loại phẫu thuật. Theo Bệnh viện Vinmec, khi có chỉ định gây tê người bệnh vẫn nên tuân thủ chế độ nhịn ăn uống, vì không loại trừ được trường hợp dị ứng thuốc tê hoặc gây tê không thành công. Hãy làm đúng theo dặn dò của bệnh viện nơi bạn mổ."
 sources:
   - title: "Hướng dẫn người bệnh chuẩn bị phẫu thuật Kỳ 2: Ngày phẫu thuật — Bệnh viện Đa khoa Quốc tế Vinmec"
     url: "https://www.vinmec.com/vie/bai-viet/huong-dan-nguoi-benh-chuan-bi-phau-thuat-ky-2-ngay-phau-thuat-vi"
