@@ -2,6 +2,7 @@
 title: "Có nên nghiền thuốc viên để dễ uống không?"
 description: "Không phải viên thuốc nào cũng nghiền hay bẻ được. Một số dạng viên mất tác dụng, gây hại nếu nghiền sai — cách nhận biết và nên làm gì khi khó nuốt thuốc viên."
 publishDate: 2026-10-13
+updatedDate: 2026-11-25
 keyword: "có nên nghiền thuốc viên để dễ uống không"
 segment: "Người khó nuốt viên thuốc hoặc người chăm sóc người già, trẻ nhỏ muốn nghiền/bẻ thuốc cho dễ uống"
 feature: "nhac-uong-thuoc"
@@ -34,7 +35,7 @@ Một vài dạng bào chế phổ biến dễ bị ảnh hưởng nếu nghiề
 - **Viên bao tan ở ruột:** được thiết kế để không tan trong dạ dày mà tan ở ruột, nhằm bảo vệ dạ dày khỏi kích ứng hoặc bảo vệ dược chất khỏi bị acid dạ dày phá huỷ. Cần uống nguyên vẹn cả viên, không bẻ nhỏ, không nhai hay ngậm.
 - **Viên giải phóng kéo dài:** chứa lượng dược chất lớn hơn bình thường, được thiết kế để tan dần trong nhiều giờ. Bẻ nhỏ hoặc nghiền có thể khiến toàn bộ liều được hấp thu gần như cùng lúc, tạo cảm giác như dùng quá liều.
 - **Viên đặt hoặc ngậm dưới lưỡi:** cần giữ nguyên hình dạng để tan đúng vị trí, bẻ nhỏ làm mất đường hấp thu dự kiến.
-- **Viên sủi:** phải hoà tan hoàn toàn trong nước trước khi uống, không bẻ nhỏ hoặc bỏ nguyên viên vào miệng.
+- **Viên sủi:** phải hoà tan hoàn toàn trong nước trước khi uống, không bẻ nhỏ hoặc bỏ nguyên viên vào miệng — xem thêm [viên sủi pha xong để được bao lâu](/blog/thuoc-vien-sui-pha-xong-de-duoc-bao-lau/) nếu đang pha trước để dành.
 
 Vỏ hộp hoặc tờ hướng dẫn sử dụng đôi khi ghi ký hiệu viết tắt cho dạng giải phóng kéo dài (ví dụ SR, XR, CR, LP), nhưng không phải nhà sản xuất nào cũng ghi rõ — cách chắc chắn nhất vẫn là hỏi dược sĩ về đúng loại thuốc đang có trong tay, không tự nhận diện qua tên hay hình dạng viên.
 
