@@ -2,8 +2,10 @@
 title: "Uống thuốc giảm đau lúc bụng đói có hại dạ dày không?"
 description: "Một số thuốc giảm đau dễ gây khó chịu dạ dày khi uống lúc đói; thuốc khác lại cần uống đói mới hấp thu tốt. Cách phân biệt và khi nào nên hỏi dược sĩ."
 publishDate: 2026-10-14
+updatedDate: 2026-11-26
 keyword: "uống thuốc giảm đau lúc bụng đói có hại dạ dày không"
 segment: "Người đang dùng thuốc giảm đau (kê đơn hoặc mua tại nhà thuốc) muốn biết nên uống lúc bụng đói hay sau khi ăn để tránh hại dạ dày"
+feature: "nhac-uong-thuoc"
 ctaTitle: "Giữ đúng thời điểm uống theo đơn, không tự suy đoán"
 ctaDescription: "Thuốc ơi đọc đơn thuốc bằng AI và tự sắp lịch nhắc theo đúng buổi bạn chọn; với thuốc cần tách riêng theo mốc bụng đói hay no, bạn vẫn nhập tay không giới hạn để đặt giờ đúng ý mình."
 faqs:
@@ -39,7 +41,7 @@ Ngược lại, một số thuốc được bào chế dạng viên để tan v�
 ## Cách uống thuốc giảm đau an toàn hơn cho dạ dày
 
 - Uống cùng bữa ăn hoặc ngay sau khi ăn, không uống khi bụng hoàn toàn trống, trừ khi có chỉ định khác.
-- Uống với một cốc nước đầy, tránh uống chung với quá ít nước.
+- Uống với một cốc nước đầy, tránh uống chung với quá ít nước — nuốt khan hoặc uống thiếu nước còn có thể khiến viên thuốc mắc lại ở thực quản, xem thêm bài [uống thuốc không có nước, nuốt khan có hại không](/blog/uong-thuoc-ma-khong-co-nuoc-nuot-khan-co-hai-khong/).
 - Không tự kéo dài thời gian dùng hoặc tự tăng số lần uống trong ngày so với hướng dẫn.
 - Báo cho bác sĩ hoặc dược sĩ biết nếu có tiền sử bệnh dạ dày, đường ruột hoặc dị ứng trước khi dùng.
 
