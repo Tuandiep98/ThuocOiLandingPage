@@ -2,8 +2,10 @@
 title: "Uống thuốc có cần kiêng rượu, bia không?"
 description: "Rượu, bia có thể tăng tác dụng phụ hoặc giảm hiệu quả của nhiều loại thuốc, tuỳ loại thuốc. Nguyên tắc chung cần biết và khi nào nên hỏi dược sĩ."
 publishDate: 2026-10-15
+updatedDate: 2026-11-27
 keyword: "uống thuốc có cần kiêng rượu bia không"
 segment: "Người đang dùng thuốc điều trị (ngắn ngày hoặc dài ngày) và cân nhắc có cần kiêng rượu, bia trong thời gian dùng thuốc hay không"
+feature: "theo-doi-lieu-trinh"
 ctaTitle: "Ghi đầy đủ danh sách thuốc đang dùng, để hỏi dược sĩ cho chắc"
 ctaDescription: "Thuốc ơi lưu lại đơn gốc và theo dõi tiến trình từng loại thuốc đang dùng, giúp bạn có danh sách đầy đủ, rõ ràng khi cần hỏi bác sĩ hoặc dược sĩ về việc kết hợp với rượu bia — không phải nhớ lại từ đầu."
 faqs:
@@ -43,7 +45,7 @@ Một số nhóm thuốc thường được dược sĩ nhắc kỹ hơn về vi
 
 ## Thuốc ơi giúp gì khi cân nhắc chuyện này
 
-Thuốc ơi không kiểm tra hay cảnh báo tương tác giữa thuốc và rượu bia — việc này cần hỏi trực tiếp bác sĩ hoặc dược sĩ cho đúng loại thuốc đang dùng. Điều app có thể giúp là giữ cho danh sách thuốc đang dùng luôn đầy đủ và rõ ràng: mỗi đơn thêm vào đều lưu lại ảnh gốc, và tiến trình liều đã uống/tổng liều của từng loại được theo dõi riêng, nên khi cần hỏi dược sĩ "tôi đang dùng những thuốc gì, còn bao nhiêu liều nữa", bạn có ngay danh sách đầy đủ để tham khảo thay vì phải nhớ lại từ đầu. Với thuốc không có đơn giấy (mua ngoài không kê đơn), vẫn nhập tay được mà không cần dùng đến lượt quét AI.
+Thuốc ơi không kiểm tra hay cảnh báo tương tác giữa thuốc và rượu bia — việc này cần hỏi trực tiếp bác sĩ hoặc dược sĩ cho đúng loại thuốc đang dùng. Điều app có thể giúp là giữ cho danh sách thuốc đang dùng luôn đầy đủ và rõ ràng: mỗi đơn thêm vào đều lưu lại ảnh gốc, và tiến trình liều đã uống/tổng liều của từng loại được [theo dõi liệu trình](/tinh-nang/theo-doi-lieu-trinh/) riêng. Mục Báo cáo & dữ liệu còn xuất được báo cáo PDF hoặc CSV theo khoảng thời gian bạn chọn, nên khi cần hỏi dược sĩ "tôi đang dùng những thuốc gì, còn bao nhiêu liều nữa", bạn có ngay danh sách đầy đủ để tham khảo hoặc mang theo, thay vì phải nhớ lại từ đầu. Với thuốc không có đơn giấy (mua ngoài không kê đơn), vẫn nhập tay được mà không cần dùng đến lượt quét AI.
 
 ## Khi nào nên hỏi bác sĩ, dược sĩ ngay
 
