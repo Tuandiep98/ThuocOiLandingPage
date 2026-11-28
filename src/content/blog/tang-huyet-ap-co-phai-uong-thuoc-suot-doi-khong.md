@@ -2,8 +2,10 @@
 title: "Tăng huyết áp có phải uống thuốc suốt đời không?"
 description: "Huyết áp ổn định không có nghĩa bệnh đã khỏi. Vì sao đa số người tăng huyết áp cần uống thuốc lâu dài và vì sao tự ý ngừng thuốc khi thấy khỏe lại nguy hiểm."
 publishDate: 2026-10-16
+updatedDate: 2026-11-28
 keyword: "tăng huyết áp có phải uống thuốc suốt đời không"
 segment: "Người đang điều trị tăng huyết áp, thấy huyết áp đã ổn định và thắc mắc có cần uống thuốc mãi không"
+feature: "theo-doi-lieu-trinh"
 ctaTitle: "Giữ đúng lịch tái khám để bác sĩ theo dõi lâu dài"
 ctaDescription: "Thuốc ơi đọc ngày tái khám ghi trên đơn và tự thêm vào lịch tuần, đồng thời theo dõi tỉ lệ liều đã uống trên tổng liều — để bạn có số liệu cụ thể mang theo khi gặp lại bác sĩ, thay vì chỉ nhớ chung chung là 'vẫn uống đều'."
 faqs:
